@@ -16,6 +16,6 @@ graph TD;
     Tech_Interview_Prepare_Suggestion-->Learning-Resource;
     Tech_Interview_Prepare_Suggestion-->Mock_live_coding_Interview;
     Improving_Resume-->Automatic_Coverletter_writer;
-    Automatic_Coverletter_writer->Auto_Apply;
-    Improving_Resume-->Auto_Apply;
+    Automatic_Coverletter_writer_->Auto_Job_Apply;
+    Improving_Resume-->Auto_Job_Apply;
 ```
