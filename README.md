@@ -3,10 +3,10 @@ Here is a simple flow chart:
 ```mermaid
 graph TD;
     Linkedin_Profile-->Automatic_Resume_Creator;
-    Automatic_Resume_Creator-->Recommedation_Job;
-    Resume-->Recommedation_Job;
+    Automatic_Resume_Creator-->Recommendation_Job;
+    Resume-->Recommendation_Job;
     Recommendation_Job-->Job_filtering;
-    Job_filtering-->Recommedation_Job;
+    Job_filtering-->Recommendation_Job;
     Recommendation_Job-->Company_Review;
     Company_Review-->Company_Interview_Review;
     Recommendation_Job-->Improving_Resume;
