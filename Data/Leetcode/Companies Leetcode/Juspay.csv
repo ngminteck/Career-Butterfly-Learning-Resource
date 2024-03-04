@@ -1,0 +1,4 @@
+No,Title,Tags,Acceptance,Difficulty,Frequency
+1993,Operations on Tree,[Array][Hash Table][Tree][Depth-First Search][Breadth-First Search][Design],45.5%,Medium,1.6558803962513937
+2359,Find Closest Node to Given Two Nodes,[Depth-First Search][Graph],45.6%,Medium,0.984584984910847
+2360,Longest Cycle in a Graph,[Depth-First Search][Graph][Topological Sort],50.0%,Hard,0.6712954113405467

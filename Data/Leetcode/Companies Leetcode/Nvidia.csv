@@ -1,0 +1,38 @@
+No,Title,Tags,Acceptance,Difficulty,Frequency
+1046,Last Stone Weight,[Array][Heap (Priority Queue)],65.3%,Easy,1.2215314813527138
+2571,Minimum Operations to Reduce an Integer to 0,[Dynamic Programming][Greedy][Bit Manipulation],53.7%,Medium,0.9186459991486194
+1664,Ways to Make a Fair Array,[Array][Prefix Sum],63.3%,Medium,0.6157605169445252
+146,LRU Cache,[Hash Table][Linked List][Design][Doubly-Linked List],42.2%,Medium,0.3866059883710684
+384,Shuffle an Array,[Array][Math][Randomized],58.2%,Medium,0.291910408561302
+1146,Snapshot Array,[Array][Hash Table][Binary Search][Design],37.1%,Medium,0.291910408561302
+2816,Double a Number Represented as a Linked List,[Linked List][Math][Stack],49.3%,Medium,0.22314355131420976
+1319,Number of Operations to Make Network Connected,[Depth-First Search][Breadth-First Search][Union Find][Graph],62.6%,Medium,0.19014428247516366
+2433,Find The Original Array of Prefix Xor,[Array][Bit Manipulation],88.2%,Medium,0.1451820098444979
+1570,Dot Product of Two Sparse Vectors,[Array][Hash Table][Two Pointers][Design],89.9%,Medium,0.12796988096337653
+221,Maximal Square,[Array][Dynamic Programming][Matrix],46.3%,Medium,0.11641035184441127
+921,Minimum Add to Make Parentheses Valid,[String][Stack][Greedy],75.1%,Medium,0.09622803209455377
+188,Best Time to Buy and Sell Stock IV,[Array][Dynamic Programming],42.2%,Hard,0.09599691440839975
+160,Intersection of Two Linked Lists,[Hash Table][Linked List][Two Pointers],57.0%,Easy,0.08552217343816201
+121,Best Time to Buy and Sell Stock,[Array][Dynamic Programming],53.5%,Easy,0.06449225803932324
+509,Fibonacci Number,[Math][Dynamic Programming][Recursion][Memoization],70.8%,Easy,0.061960627359177074
+190,Reverse Bits,[Divide and Conquer][Bit Manipulation],57.9%,Easy,0.061939299440290606
+48,Rotate Image,[Array][Math][Matrix],73.8%,Medium,0.05672598140077752
+540,Single Element in a Sorted Array,[Array][Binary Search],59.0%,Medium,0.05421381659414747
+92,Reverse Linked List II,[Linked List],47.5%,Medium,0.047122970130097065
+274,H-Index,[Array][Sorting][Counting Sort],38.8%,Medium,0.04587960575069364
+138,Copy List with Random Pointer,[Hash Table][Linked List],55.5%,Medium,0.04505266394094313
+2,Add Two Numbers,[Linked List][Math][Recursion],42.4%,Medium,0.03825472432302424
+287,Find the Duplicate Number,[Array][Two Pointers][Binary Search][Bit Manipulation],59.4%,Medium,0.02777956410707571
+42,Trapping Rain Water,[Array][Two Pointers][Dynamic Programming][Stack][Monotonic Stack],60.8%,Hard,0.021402636114384706
+215,Kth Largest Element in an Array,[Array][Divide and Conquer][Sorting][Heap (Priority Queue)][Quickselect],66.8%,Medium,0.02075839977178062
+98,Validate Binary Search Tree,[Tree][Depth-First Search][Binary Search Tree][Binary Tree],32.8%,Medium,0.02065122435043174
+56,Merge Intervals,[Array][Sorting],47.1%,Medium,0.020101179321087244
+268,Missing Number,[Array][Hash Table][Math][Binary Search][Bit Manipulation][Sorting],66.4%,Easy,0.01900294712561538
+19,Remove Nth Node From End of List,[Linked List][Two Pointers],44.8%,Medium,0.01748296278034749
+20,Valid Parentheses,[String][Stack],40.5%,Easy,0.016556669594447675
+3,Longest Substring Without Repeating Characters,[Hash Table][String][Sliding Window],34.5%,Medium,0.016529301951210565
+49,Group Anagrams,[Array][Hash Table][String][Sorting],68.2%,Medium,0.014604129584815372
+70,Climbing Stairs,[Math][Dynamic Programming][Memoization],52.8%,Easy,0.012890929396928217
+169,Majority Element,[Array][Hash Table][Divide and Conquer][Sorting][Counting],64.7%,Easy,0.010672459890771873
+15,3Sum,[Array][Two Pointers][Sorting],34.2%,Medium,0.009636306800180707
+1,Two Sum,[Array][Hash Table],52.0%,Easy,0.006919910744152597

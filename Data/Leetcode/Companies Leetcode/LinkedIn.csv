@@ -1,0 +1,36 @@
+No,Title,Tags,Acceptance,Difficulty,Frequency
+1797,Design Authentication Manager,[Hash Table][Design],56.8%,Medium,2.6723732275725807
+716,Max Stack,[Linked List][Stack][Design][Doubly-Linked List][Ordered Set],45.0%,Hard,2.1288158310808494
+432,All O`one Data Structure,[Hash Table][Linked List][Design][Doubly-Linked List],36.6%,Hard,1.9608105315232005
+364,Nested List Weight Sum II,[Stack][Depth-First Search][Breadth-First Search],65.5%,Medium,1.430860591492634
+272,Closest Binary Search Tree Value II,[Two Pointers][Stack][Tree][Depth-First Search][Binary Search Tree][Heap (Priority Queue)][Binary Tree],58.9%,Hard,0.8873031950009028
+1117,Building H2O,[Concurrency],56.0%,Medium,0.8347976976229722
+724,Find Pivot Index,[Array][Prefix Sum],57.1%,Easy,0.6402789449071344
+1974,Minimum Time to Type Word Using Special Typewriter,[String][Greedy],74.6%,Easy,0.4737843520856416
+1041,Robot Bounded In Circle,[Math][String][Simulation],55.6%,Medium,0.4269293467764643
+149,Max Points on a Line,[Array][Hash Table][Math][Geometry],26.4%,Hard,0.33520721431462625
+339,Nested List Weight Sum,[Depth-First Search][Breadth-First Search],83.3%,Medium,0.2858421455297737
+341,Flatten Nested List Iterator,[Stack][Tree][Depth-First Search][Design][Queue][Iterator],64.3%,Medium,0.21825356602001797
+636,Exclusive Time of Functions,[Array][Stack],62.2%,Medium,0.1986706947954841
+349,Intersection of Two Arrays,[Array][Hash Table][Two Pointers][Binary Search][Sorting],72.4%,Easy,0.19313724549582356
+297,Serialize and Deserialize Binary Tree,[String][Tree][Depth-First Search][Breadth-First Search][Design][Binary Tree],56.5%,Hard,0.18571714579509285
+658,Find K Closest Elements,[Array][Two Pointers][Binary Search][Sliding Window][Sorting][Heap (Priority Queue)],47.2%,Medium,0.17869178874337593
+367,Valid Perfect Square,[Math][Binary Search],43.6%,Easy,0.15441568579144338
+516,Longest Palindromic Subsequence,[String][Dynamic Programming],62.4%,Medium,0.13220542557941892
+200,Number of Islands,[Array][Depth-First Search][Breadth-First Search][Union Find][Matrix],58.5%,Medium,0.1305974051897351
+215,Kth Largest Element in an Array,[Array][Divide and Conquer][Sorting][Heap (Priority Queue)][Quickselect],66.8%,Medium,0.12318704078873731
+65,Valid Number,[String],19.5%,Hard,0.09330773169945256
+380,Insert Delete GetRandom O(1),[Array][Hash Table][Math][Design][Randomized],54.4%,Medium,0.06222847139840936
+33,Search in Rotated Sorted Array,[Array][Binary Search],40.5%,Medium,0.05775693818576618
+236,Lowest Common Ancestor of a Binary Tree,[Tree][Depth-First Search][Binary Tree],61.6%,Medium,0.03025949476311255
+152,Maximum Product Subarray,[Array][Dynamic Programming],35.0%,Medium,0.02987526143382911
+146,LRU Cache,[Hash Table][Linked List][Design][Doubly-Linked List],42.2%,Medium,0.029071814821976905
+605,Can Place Flowers,[Array][Greedy],29.4%,Easy,0.026351985988424496
+31,Next Permutation,[Array][Two Pointers],39.5%,Medium,0.025891413932741594
+98,Validate Binary Search Tree,[Tree][Depth-First Search][Binary Search Tree][Binary Tree],32.8%,Medium,0.02065122435043174
+198,House Robber,[Array][Dynamic Programming],50.9%,Medium,0.02035693706874412
+56,Merge Intervals,[Array][Sorting],47.1%,Medium,0.020101179321087244
+4,Median of Two Sorted Arrays,[Array][Binary Search][Divide and Conquer],39.4%,Hard,0.015510198481701449
+100,Same Tree,[Tree][Depth-First Search][Breadth-First Search][Binary Tree],61.7%,Easy,0.014809600547287
+53,Maximum Subarray,[Array][Divide and Conquer][Dynamic Programming],50.6%,Medium,0.012783811042270835
+88,Merge Sorted Array,[Array][Two Pointers][Sorting],49.2%,Easy,0.008154989129306142

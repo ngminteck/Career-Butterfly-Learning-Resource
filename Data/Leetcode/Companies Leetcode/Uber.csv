@@ -1,0 +1,70 @@
+No,Title,Tags,Acceptance,Difficulty,Frequency
+815,Bus Routes,[Array][Hash Table][Breadth-First Search],48.2%,Hard,2.50493659445441
+564,Find the Closest Palindrome,[Math][String],22.2%,Hard,1.9320451089181416
+2468,Split Message Based on Limit,[String][Binary Search],43.5%,Hard,1.9317589695090702
+1428,Leftmost Column with at Least a One,[Array][Binary Search][Matrix][Interactive],54.2%,Medium,1.7434408919572473
+427,Construct Quad Tree,[Array][Divide and Conquer][Tree][Matrix],75.3%,Medium,1.6326947745983675
+737,Sentence Similarity II,[Array][Hash Table][String][Depth-First Search][Breadth-First Search][Union Find],49.7%,Medium,1.4384801142904609
+399,Evaluate Division,[Array][Depth-First Search][Breadth-First Search][Union Find][Graph][Shortest Path],61.5%,Medium,0.8655886287541927
+1438,Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit,[Array][Queue][Sliding Window][Heap (Priority Queue)][Ordered Set][Monotonic Queue],49.1%,Medium,0.7407752295491999
+2251,Number of Flowers in Full Bloom,[Array][Hash Table][Binary Search][Sorting][Prefix Sum][Ordered Set],56.8%,Hard,0.41836851294407224
+1631,Path With Minimum Effort,[Array][Binary Search][Depth-First Search][Breadth-First Search][Union Find][Heap (Priority Queue)][Matrix],59.4%,Medium,0.3860812412871159
+2115,Find All Possible Recipes from Given Supplies,[Array][Hash Table][String][Graph][Topological Sort],49.4%,Medium,0.36101334553733055
+343,Integer Break,[Math][Dynamic Programming],60.2%,Medium,0.32423966818557853
+1092,Shortest Common Supersequence,[String][Dynamic Programming],59.0%,Hard,0.27380672595816385
+953,Verifying an Alien Dictionary,[Array][Hash Table][String],54.9%,Easy,0.2113090936672069
+332,Reconstruct Itinerary,[Depth-First Search][Graph][Eulerian Circuit],43.3%,Hard,0.21106039931128698
+1,Two Sum,[Array][Hash Table],52.0%,Easy,0.20128774137451758
+2610,Convert an Array Into a 2D Array With Conditions,[Array][Hash Table],87.3%,Medium,0.19574457712609533
+212,Word Search II,[Array][String][Backtracking][Trie][Matrix],36.2%,Hard,0.17623598225838671
+692,Top K Frequent Words,[Hash Table][String][Trie][Sorting][Heap (Priority Queue)][Bucket Sort][Counting],57.8%,Medium,0.17284281283941086
+802,Find Eventual Safe States,[Depth-First Search][Breadth-First Search][Graph][Topological Sort],62.2%,Medium,0.16229864091884685
+1922,Count Good Numbers,[Math][Recursion],43.9%,Medium,0.13534134786976212
+79,Word Search,[Array][String][Backtracking][Matrix],41.4%,Medium,0.13341987882457434
+931,Minimum Falling Path Sum,[Array][Dynamic Programming][Matrix],64.7%,Medium,0.13047795513763227
+1009,Complement of Base 10 Integer,[Bit Manipulation],60.8%,Easy,0.11883400790235846
+279,Perfect Squares,[Math][Dynamic Programming][Breadth-First Search],54.7%,Medium,0.1147388932751553
+1207,Unique Number of Occurrences,[Array][Hash Table],77.0%,Easy,0.10610650599454778
+55,Jump Game,[Array][Dynamic Programming][Greedy],38.5%,Medium,0.10130111471960927
+528,Random Pick with Weight,[Array][Math][Binary Search][Prefix Sum][Randomized],46.6%,Medium,0.09463320809845266
+981,Time Based Key-Value Store,[Hash Table][String][Binary Search][Design],49.6%,Medium,0.09463320809845266
+417,Pacific Atlantic Water Flow,[Array][Depth-First Search][Breadth-First Search][Matrix],55.1%,Medium,0.09138775158942865
+200,Number of Islands,[Array][Depth-First Search][Breadth-First Search][Union Find][Matrix],58.5%,Medium,0.08552217343816201
+22,Generate Parentheses,[String][Dynamic Programming][Backtracking],74.2%,Medium,0.08368707237308971
+5,Longest Palindromic Substring,[String][Dynamic Programming],33.7%,Medium,0.08340944432060635
+658,Find K Closest Elements,[Array][Two Pointers][Binary Search][Sliding Window][Sorting][Heap (Priority Queue)],47.2%,Medium,0.08338160893905106
+42,Trapping Rain Water,[Array][Two Pointers][Dynamic Programming][Stack][Monotonic Stack],60.8%,Hard,0.08299213342780958
+230,Kth Smallest Element in a BST,[Tree][Depth-First Search][Binary Search Tree][Binary Tree],72.2%,Medium,0.07605014611885268
+88,Merge Sorted Array,[Array][Two Pointers][Sorting],49.2%,Easy,0.07110595635351444
+300,Longest Increasing Subsequence,[Array][Binary Search][Dynamic Programming],55.0%,Medium,0.06552561844679733
+228,Summary Ranges,[Array],50.3%,Easy,0.06485254217956125
+146,LRU Cache,[Hash Table][Linked List][Design][Doubly-Linked List],42.2%,Medium,0.06426193421836912
+4,Median of Two Sorted Arrays,[Array][Binary Search][Divide and Conquer],39.4%,Hard,0.0606476084726819
+66,Plus One,[Array][Math],45.0%,Easy,0.058029331468870154
+540,Single Element in a Sorted Array,[Array][Binary Search],59.0%,Medium,0.05421381659414747
+572,Subtree of Another Tree,[Tree][Depth-First Search][String Matching][Binary Tree][Hash Function],47.6%,Easy,0.053994220576736765
+189,Rotate Array,[Array][Math][Two Pointers],40.3%,Medium,0.051959738930711055
+278,First Bad Version,[Binary Search][Interactive],44.2%,Easy,0.050261834780888255
+162,Find Peak Element,[Array][Binary Search],45.9%,Medium,0.047602852773724856
+121,Best Time to Buy and Sell Stock,[Array][Dynamic Programming],53.5%,Easy,0.045223839173446176
+229,Majority Element II,[Array][Hash Table][Sorting][Counting],51.2%,Medium,0.04180336980436055
+1512,Number of Good Pairs,[Array][Hash Table][Math][Counting],88.9%,Easy,0.04124295853404909
+14,Longest Common Prefix,[String][Trie],42.4%,Easy,0.04070773195514398
+424,Longest Repeating Character Replacement,[Hash Table][String][Sliding Window],53.5%,Medium,0.039925462409183855
+217,Contains Duplicate,[Array][Hash Table][Sorting],61.4%,Easy,0.0398558354356662
+202,Happy Number,[Hash Table][Math][Two Pointers],55.9%,Easy,0.033060862260888106
+207,Course Schedule,[Depth-First Search][Breadth-First Search][Graph][Topological Sort],46.6%,Medium,0.030653741091002412
+7,Reverse Integer,[Math],28.4%,Medium,0.029365894804364495
+35,Search Insert Position,[Array][Binary Search],45.5%,Easy,0.028710105882431374
+287,Find the Duplicate Number,[Array][Two Pointers][Binary Search][Bit Manipulation],59.4%,Medium,0.02777956410707571
+36,Valid Sudoku,[Array][Hash Table][Matrix],59.3%,Medium,0.024892386692628724
+73,Set Matrix Zeroes,[Array][Hash Table][Matrix],55.0%,Medium,0.02419960801635886
+56,Merge Intervals,[Array][Sorting],47.1%,Medium,0.020101179321087244
+102,Binary Tree Level Order Traversal,[Tree][Breadth-First Search][Binary Tree],66.8%,Medium,0.019980684690483426
+27,Remove Element,[Array][Two Pointers],56.2%,Easy,0.019388802116478133
+69,Sqrt(x),[Math][Binary Search],38.5%,Easy,0.018797545967502362
+283,Move Zeroes,[Array][Two Pointers],61.6%,Easy,0.01405504514364441
+21,Merge Two Sorted Lists,[Linked List][Recursion],64.0%,Easy,0.010629916728600282
+2,Add Two Numbers,[Linked List][Math][Recursion],42.4%,Medium,0.009701749635215725
+15,3Sum,[Array][Two Pointers][Sorting],34.2%,Medium,0.009636306800180707
+20,Valid Parentheses,[String][Stack],40.5%,Easy,0.007392382583176544

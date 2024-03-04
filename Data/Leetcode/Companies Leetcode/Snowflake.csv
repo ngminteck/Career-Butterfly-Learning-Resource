@@ -1,0 +1,18 @@
+No,Title,Tags,Acceptance,Difficulty,Frequency
+2851,String Transformation,[Math][String][Dynamic Programming][String Matching],29.0%,Hard,2.830768361990634
+588,Design In-Memory File System,[Hash Table][String][Design][Trie],48.2%,Hard,2.0531556794089107
+2742,Painting the Walls,[Array][Dynamic Programming],51.1%,Hard,1.2755429968271879
+1639,Number of Ways to Form a Target String Given a Dictionary,[Array][String][Dynamic Programming],51.8%,Hard,1.252762968495368
+2303,Calculate Amount Paid in Taxes,[Array][Simulation],65.0%,Easy,0.8472978603872036
+2291,Maximum Profit From Trading Stocks,[Array][Dynamic Programming],45.0%,Medium,0.8286926725561692
+2444,Count Subarrays With Fixed Bounds,[Array][Queue][Sliding Window][Monotonic Queue],61.5%,Hard,0.7328875092094594
+2050,Parallel Courses III,[Array][Dynamic Programming][Graph][Topological Sort],67.7%,Hard,0.5042466526679481
+1235,Maximum Profit in Job Scheduling,[Array][Binary Search][Dynamic Programming][Sorting],54.8%,Hard,0.5026288565618121
+261,Graph Valid Tree,[Depth-First Search][Breadth-First Search][Union Find][Graph],47.9%,Medium,0.401795379219202
+273,Integer to English Words,[Math][String][Recursion],30.5%,Hard,0.2322522675124501
+117,Populating Next Right Pointers in Each Node II,[Linked List][Tree][Depth-First Search][Breadth-First Search][Binary Tree],52.1%,Medium,0.22094333040460734
+438,Find All Anagrams in a String,[Hash Table][String][Sliding Window],50.8%,Medium,0.18012616623051897
+25,Reverse Nodes in k-Group,[Linked List][Recursion],58.1%,Hard,0.16635770580494058
+116,Populating Next Right Pointers in Each Node,[Linked List][Tree][Depth-First Search][Breadth-First Search][Binary Tree],62.3%,Medium,0.08303522860999034
+212,Word Search II,[Array][String][Backtracking][Trie][Matrix],36.2%,Hard,0.08218174592228585
+787,Cheapest Flights Within K Stops,[Dynamic Programming][Depth-First Search][Breadth-First Search][Graph][Heap (Priority Queue)][Shortest Path],39.2%,Medium,0.047514875607513184

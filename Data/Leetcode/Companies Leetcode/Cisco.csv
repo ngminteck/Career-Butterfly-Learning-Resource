@@ -1,0 +1,14 @@
+No,Title,Tags,Acceptance,Difficulty,Frequency
+741,Cherry Pickup,[Array][Dynamic Programming][Matrix],36.7%,Hard,0.9263140483853056
+1380,Lucky Numbers in a Matrix,[Array][Matrix],71.3%,Easy,0.5827718687255699
+48,Rotate Image,[Array][Math][Matrix],73.8%,Medium,0.23922968906583414
+909,Snakes and Ladders,[Array][Breadth-First Search][Matrix],43.8%,Medium,0.17666954336260812
+394,Decode String,[String][Stack][Recursion],59.0%,Medium,0.16018178138390143
+198,House Robber,[Array][Dynamic Programming],50.9%,Medium,0.11607217125275403
+5,Longest Palindromic Substring,[String][Dynamic Programming],33.7%,Medium,0.08152996649488248
+54,Spiral Matrix,[Array][Matrix][Simulation],48.9%,Medium,0.040619302399678
+412,Fizz Buzz,[Math][String][Simulation],71.8%,Easy,0.03524593906167478
+202,Happy Number,[Hash Table][Math][Two Pointers],55.9%,Easy,0.0233110788684471
+56,Merge Intervals,[Array][Sorting],47.1%,Medium,0.013097764190063614
+15,3Sum,[Array][Two Pointers][Sorting],34.2%,Medium,0.006245141296780882
+1,Two Sum,[Array][Hash Table],52.0%,Easy,0.0021239321954525975

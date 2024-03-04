@@ -1,0 +1,8 @@
+No,Title,Tags,Acceptance,Difficulty,Frequency
+214,Shortest Palindrome,[String][Rolling Hash][String Matching][Hash Function],33.2%,Hard,0.1641359607946063
+212,Word Search II,[Array][String][Backtracking][Trie][Matrix],36.2%,Hard,0.11840357554598269
+210,Course Schedule II,[Depth-First Search][Breadth-First Search][Graph][Topological Sort],50.1%,Medium,0.07267119029735908
+103,Binary Tree Zigzag Level Order Traversal,[Tree][Breadth-First Search][Binary Tree],58.6%,Medium,0.052490182621396674
+200,Number of Islands,[Array][Depth-First Search][Breadth-First Search][Union Find][Matrix],58.5%,Medium,0.03236528450203167
+139,Word Break,[Array][Hash Table][String][Dynamic Programming][Trie][Memoization],46.6%,Medium,0.022422464055832356
+12,Integer to Roman,[Hash Table][Math][String],64.3%,Medium,0.02123222010577413

@@ -1,366 +1,370 @@
 Facebook
-Amazon
 Google
-Apple
-Uber
+Amazon
 Microsoft
+Uber
+Apple
 Oracle
 TikTok
 Goldman Sachs
 Walmart Labs
 Bloomberg
 Adobe
-Nvidia
 DoorDash
+Nvidia
 LinkedIn
 Citadel
 Pinterest
 Atlassian
+JPMorgan
 Airbnb
 Tesla
-JPMorgan
 IBM
 Yandex
 Intuit
 Salesforce
 Snapchat
 Roblox
+Capital One
 ByteDance
 Snowflake
-Capital One
 ServiceNow
 Expedia
 Netflix
 Databricks
-PayPal
 Yahoo
+PayPal
 Infosys
-Visa
 Cisco
-Zoho
+Visa
 tcs
+Zoho
 Lyft
 DE Shaw
 Samsung
 eBay
 Twitter
 Accenture
-SAP
 Morgan Stanley
+SAP
 Qualcomm
-Flipkart
 Palantir Technologies
+Flipkart
 MathWorks
-Intel
 Coupang
+Intel
 Square
 Two Sigma
-Booking.com
-Datadog
 Splunk
+Datadog
+Booking.com
 Rubrik
 Coinbase
-Affirm
 Dropbox
-Wayfair
 Nutanix
+Wayfair
+Affirm
 Jane Street
 Reddit
-Quora
 Karat
-Yelp
 Robinhood
-Qualtrics
+Quora
 Stripe
+Qualtrics
+Yelp
 PhonePe
-Akuna Capital
 Rippling
+Akuna Capital
 VMware
 Palo Alto Networks
-Epic Systems
 Huawei
+Epic Systems
+Indeed
 HRT
 Zillow
 Agoda
 Hudson River Trading
-Alibaba
-Indeed
 Twilio
-Juspay
-Confluent
-Zoox
 Tencent
-Deloitte
-instacart
-Workday
-Anduril
-Verkada
+Juspay
+Zoox
+Confluent
 Pure Storage
-Grab
+Workday
 American Express
+Alibaba
+Verkada
+Grab
 Veeva
+Anduril
+instacart
 Cloudflare
-EPAM Systems
-Docusign
 Spotify
+EPAM Systems
 Siemens
-Optiver
+Docusign
+Deloitte
+Media.net
 ZScaler
+Optiver
 Arcesium
 CrowdStrike
-Media.net
-BlackRock
 LiveRamp
+BlackRock
 Deutsche Bank
+MongoDB
+Box
+Cohesity
 Tinkoff
 Disney
-Cohesity
-Box
-MongoDB
+Hulu
+warnermedia
 AMD
 IXL
-warnermedia
-Rivian
 Shopee
 Shopify
 C3 IoT
-UiPath
-Dell
-Swiggy
 Arista Networks
-Autodesk
-Hulu
+UiPath
+Rivian
+Dell
 TripAdvisor
+Swiggy
 SIG
-turing
-Coursera
-Barclays
-Zoom
-Cloudera
-Cruise Automation
-GE Healthcare
 Waymo
+Zoom
+Cruise Automation
+Coursera
+Autodesk
+turing
+Cloudera
+GE Healthcare
+SoFi
+Barclays
+Moveworks
 MakeMyTrip
 Roku
-SoFi
-IMC
 Myntra
-Asana
 Akamai
-Upstart
+IMC
 Paytm
-Moveworks
-Wix
+Upstart
+Asana
 Patreon
-Cognizant
 Sumologic
-Nuro
 Capgemini
+Squarepoint Capital
+Wells Fargo
+Nuro
 Nagarro
-BNY Mellon
-Okta
+Wix
 PornHub
+Jump Trading
+BNY Mellon
+Cognizant
 Bolt
 Hubspot
-Jump Trading
-Wells Fargo
-Duolingo
-Squarepoint Capital
 Niantic
-Verily
-Grammarly
-Riot Games
+Accolite
+Okta
+Duolingo
 The Trade Desk
-DRW
-thoughtspot
+Verily
 NetApp
-Virtu Financial
-Fidelity
-Pony.ai
-Audible
-Zomato
-HPE
-Avito
-Zalando
-Samsara
-Lucid
-Axon
-Honeywell
-Meesho
 GoDaddy
-HCL
-zeta
-Bank of America
-wipro
+DRW
+Riot Games
+Pony.ai
+thoughtspot
+Fidelity
+Audible
+Virtu Financial
+Samsara
+Grammarly
+Zomato
+Lucid
+HPE
+Meesho
+Honeywell
+Zalando
+Axon
 Point72
-Remitly
+Avito
+HCL
+Bank of America
 tekion
-Activision
+zeta
+wipro
+Remitly
 Cadence
 General Motors
+Activision
 Ozon
 FreshWorks
 Tiger Analytics
 Smartsheet
-Tower Research
 ola
-opentext
-Rakuten
 Lowe
+Rakuten
 RBC
-Citi
-PayPay
-Juniper
 Commvault
-Ripple
-Accolite
-Fortinet
-Zendesk
+PayPay
+opentext
+McKinsey
+Tower Research
+Citi
+Juniper
 Amdocs
+Ripple
+Fortinet
 Chewy
 Sony
-Nordstrom
 Bosch
-Toptal
+Nordstrom
+Zendesk
 Netskope
-athenahealth
+Toptal
 Clari
-WorldQuant
-Deliveroo
+athenahealth
 Pwc
+Deliveroo
 DP world
+WorldQuant
 Baidu
-citibank
 Societe Generale
-Miro
 Zynga
+citibank
 UBS
+Miro
 Twitch
 FactSet
-McKinsey
-Airtel
+Hotstar
+jio
+Groww
 ShareChat
 MAQ Software
-Citrix
 HSBC
 Flexport
 Gusto
 Sprinklr
-Hotstar
-jio
 AQR Capital Management LLC
-Groww
-Virtusa
+Airtel
 GE Digital
 Publicis Sapient
-Opendoor
-Groupon
+spinny
 Dream11
-general electric
+Virtusa
+Opendoor
+Citrix
+Groupon
+Microstrategy
 Faire
 razorpay
-Info Edge
+Mercari
 Cashfree
+Wealthfront
 CRED
-Thomson Reuters
+Synology
 Yext
 Amadeus
 Optum
-Peloton
-Microstrategy
+Sigmoid
+general electric
 Directi
 TuSimple
 persistent systems
-Mercari
+MindTree
 NetEase
 BitGo
-Wealthfront
-Criteo
+Info Edge
 Druva
-F5 Networks
+Thomson Reuters
 AppDynamics
 Navi
-Synology
+Criteo
 Hive
-Chime
 ASUS
+Peloton
 United Health Group
-Sigmoid
-MindTree
+Gap
+Chime
 Quip (Salesforce)
 Zopsmart
-Careem
-CVENT
+F5 Networks
 sabre
 observe.ai
 National Instruments
-Netsuite
 Zappos
 carwale
 zeta suite
+Careem
 Mindtickle
 Altimetrik
 Kakao
 Garena
 Avalara
 CureFit
-Canonical
 Luxoft
-Gap
 Whatfix
 Quince
+Canonical
 Zenefits
 WePay
 Slice
-Dataminr
 ThousandEyes
-Sapient
-Trilogy
+Addepar
 smartnews
 Snapdeal
-Addepar
+Netsuite
 SoundHound
 Turvo
 Vimeo
+CVENT
 Thumbtack
 Works Applications
+FPT
 Cleartrip
 Discord
-Wish
-Redfin
-FPT
-Affinity
 Tesco
 Squarespace
+Wish
+Redfin
+Affinity
 InMobi
 Meituan
 Valve
 oyo
 Veritas
+TripleByte
 Gilt Groupe
+Dataminr
+Sapient
+Trilogy
 Houzz
 Fallible
 Pocket Gems
 Helix
 IIT Bombay
 josh technology
-spinny
 Code Studio
 Aetion
 Bloomreach
+Poynt
 instagram
 Delhivery
 TIAA
+Fleetx
 Strava
 Dunzo
 Toast
+DailyHunt
 Postmates
 payu
+Leap Motion
 Poshmark
 Moengage
 Drawbridge
 Urban Company
-TripleByte
 fourkites
 ForUsAll
 Machine Zone
@@ -371,42 +375,38 @@ Yatra
 T-mobile
 Newzera
 Jingchi
-Poynt
 Brex
-Leap Motion
+RetailMeNot
 Wayve
 Softwire
-Fleetx
 MoneyLion
-Bridgewater Associates
-DailyHunt
 HiLabs
 Radius
+Bridgewater Associates
 Xing
-RetailMeNot
 Analytics quotient
 Accelya
 GSN Games
 alphonso
+AllinCall
 purplle
 TA Digital
+MachineZone
 Ascend
-Polar
 ION
 1Kosmos
 BT Group
 Edelweiss
-AllinCall
 Auriga
 NextJump
 Mobisy
 MishiPay
 Pickrr
 Qumulo
-MachineZone
 T System
 Jeavio
 Unbxd
+Polar
 Clutter
 edabit
 DTCC

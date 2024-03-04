@@ -1,0 +1,10 @@
+No,Title,Tags,Acceptance,Difficulty,Frequency
+849,Maximize Distance to Closest Person,[Array],48.0%,Medium,0.2876906293702635
+841,Keys and Rooms,[Depth-First Search][Breadth-First Search][Graph],72.7%,Medium,0.20294084399669032
+844,Backspace String Compare,[Two Pointers][String][Stack][Simulation],49.1%,Easy,0.18610227963386067
+155,Min Stack,[Stack][Design],53.8%,Medium,0.10135249426028749
+1493,Longest Subarray of 1's After Deleting One Element,[Array][Dynamic Programming][Sliding Window],67.1%,Medium,0.09055957704572704
+71,Simplify Path,[String][Stack],41.9%,Medium,0.04320326300889895
+3,Longest Substring Without Repeating Characters,[Hash Table][String][Sliding Window],34.5%,Medium,0.030507609023886943
+5,Longest Palindromic Substring,[String][Dynamic Programming],33.7%,Medium,0.014545711002378767
+977,Squares of a Sorted Array,[Array][Two Pointers][Sorting],72.7%,Easy,0.0005488700276382721

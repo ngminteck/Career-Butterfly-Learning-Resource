@@ -1,0 +1,38 @@
+No,Title,Tags,Acceptance,Difficulty,Frequency
+1041,Robot Bounded In Circle,[Math][String][Simulation],55.6%,Medium,3.3179612260168723
+780,Reaching Points,[Math],33.1%,Hard,2.753346323148564
+166,Fraction to Recurring Decimal,[Hash Table][Math][String],24.9%,Medium,2.4490679364069003
+1086,High Five,[Array][Hash Table][Sorting][Heap (Priority Queue)],74.7%,Easy,2.3917592212124537
+42,Trapping Rain Water,[Array][Two Pointers][Dynamic Programming][Stack][Monotonic Stack],60.8%,Hard,1.9360941782030583
+387,First Unique Character in a String,[Hash Table][String][Queue][Counting],62.0%,Easy,1.37147927533475
+2513,Minimize the Maximum of Two Arrays,[Math][Binary Search][Number Theory],29.0%,Medium,1.2202573980904365
+1507,Reformat Date,[String],65.3%,Easy,0.9808292530117262
+1823,Find the Winner of the Circular Game,[Array][Math][Recursion][Queue][Simulation],78.2%,Medium,0.7293949709522863
+844,Backspace String Compare,[Two Pointers][String][Stack][Simulation],49.1%,Easy,0.6639286345608053
+845,Longest Mountain in Array,[Array][Two Pointers][Dynamic Programming][Enumeration],40.3%,Medium,0.5543107357057295
+1306,Jump Game III,[Array][Depth-First Search][Breadth-First Search],64.6%,Medium,0.5168226432383649
+1190,Reverse Substrings Between Each Pair of Parentheses,[String][Stack],66.2%,Medium,0.4572413776318843
+4,Median of Two Sorted Arrays,[Array][Binary Search][Divide and Conquer],39.4%,Hard,0.38719315710734664
+647,Palindromic Substrings,[String][Dynamic Programming],69.9%,Medium,0.2646925542270822
+1413,Minimum Value to Get Positive Step by Step Sum,[Array][Prefix Sum],65.9%,Easy,0.22067136216882066
+300,Longest Increasing Subsequence,[Array][Binary Search][Dynamic Programming],55.0%,Medium,0.17236495554239675
+443,String Compression,[Two Pointers][String],54.0%,Medium,0.16653125439681243
+1356,Sort Integers by The Number of 1 Bits,[Array][Bit Manipulation][Sorting][Counting],78.2%,Easy,0.16430305129127631
+2006,Count Number of Pairs With Absolute Difference K,[Array][Hash Table][Counting],83.5%,Easy,0.1541506798272583
+153,Find Minimum in Rotated Sorted Array,[Array][Binary Search],50.1%,Medium,0.136302083423621
+74,Search a 2D Matrix,[Array][Binary Search][Matrix],49.8%,Medium,0.12944622163249433
+657,Robot Return to Origin,[String][Simulation],75.7%,Easy,0.12879510820557039
+49,Group Anagrams,[Array][Hash Table][String][Sorting],68.2%,Medium,0.12434070329202965
+64,Minimum Path Sum,[Array][Dynamic Programming][Matrix],63.6%,Medium,0.09865606331051037
+239,Sliding Window Maximum,[Array][Queue][Sliding Window][Heap (Priority Queue)][Monotonic Queue],46.5%,Hard,0.09342889799792191
+200,Number of Islands,[Array][Depth-First Search][Breadth-First Search][Union Find][Matrix],58.5%,Medium,0.08552217343816201
+1011,Capacity To Ship Packages Within D Days,[Array][Binary Search],69.1%,Medium,0.0790925888372161
+53,Maximum Subarray,[Array][Divide and Conquer][Dynamic Programming],50.6%,Medium,0.07734217955353893
+706,Design HashMap,[Array][Hash Table][Linked List][Design][Hash Function],65.7%,Easy,0.07133147800542972
+735,Asteroid Collision,[Array][Stack][Simulation],44.6%,Medium,0.050135812424355455
+121,Best Time to Buy and Sell Stock,[Array][Dynamic Programming],53.5%,Easy,0.045223839173446176
+209,Minimum Size Subarray Sum,[Array][Binary Search][Sliding Window][Prefix Sum],46.8%,Medium,0.03207973561022761
+146,LRU Cache,[Hash Table][Linked List][Design][Doubly-Linked List],42.2%,Medium,0.029071814821976905
+122,Best Time to Buy and Sell Stock II,[Array][Dynamic Programming][Greedy],66.0%,Medium,0.024141184452073947
+198,House Robber,[Array][Dynamic Programming],50.9%,Medium,0.02035693706874412
+20,Valid Parentheses,[String][Stack],40.5%,Easy,0.007392382583176544
