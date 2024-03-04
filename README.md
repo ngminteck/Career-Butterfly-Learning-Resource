@@ -2,17 +2,18 @@ Here is a simple flow chart:
 
 ```mermaid
 graph TD;
-    Linkedin Profile-->Automatic Resume Creator;
-    Automatic Resume Creator-->Recommedation Job;
-    Resume-->Recommedation Job;
-    Recommedation Job-->Job filtering;
-    Job filtering-->Recommedation Job;
-    Recommedation Job-->Company Review;
-    Company Review-->Company Interview Review;
-    Recommedation Job-->Improving Resume;
-    Recommedation Job-->Tech Interview Prepare Suggestion;
-    Company Interview Review-->Tech Interview Prepare Suggestion;
-    Tech Interview Prepare Suggestion-->Leetcode;
-    Tech Interview Prepare Suggestion-->Learning Resource;
-    Tech Interview Prepare Suggestion-->Mock live coding Interview;
+    Linkedin_Profile-->Automatic_Resume_Creator;
+    Automatic_Resume_Creator-->Recommedation_Job;
+    Resume-->Recommedation_Job;
+    Recommendation_Job-->Job_filtering;
+    Job_filtering-->Recommedation_Job;
+    Recommendation_Job-->Company_Review;
+    Company_Review-->Company_Interview_Review;
+    Recommendation_Job-->Improving_Resume;
+    Recommendation_Job-->Tech_Interview_Prepare_Suggestion;
+    Company_Interview_Review-->Tech_Interview_Prepare_Suggestion;
+    Tech_Interview_Prepare_Suggestion-->Leetcode;
+    Tech_Interview_Prepare_Suggestion-->Learning-Resource;
+    Tech_Interview_Prepare_Suggestion-->Mock_live_coding_Interview;
+    Recommendation_Job-->Auto_Applying;
 ```
