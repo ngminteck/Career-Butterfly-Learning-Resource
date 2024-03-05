@@ -1,4 +1,4 @@
-No,Title,Acceptance,Frequency,Hard,Medium,Depth-First Search,Breadth-First Search,Union Find,Graph,Array,Greedy,Sorting,String
-2204,Distance to a Cycle in Undirected Graph,70.2%,1.4248875182643763,1,0,1,1,1,1,0,0,0,0
-2895,Minimum Processing Time,68.1%,0.7812544480702122,0,1,0,0,0,0,1,1,1,0
-38,Count and Say,54.5%,0.1376213778760477,0,1,0,0,0,0,0,0,0,1
+No,Title,Acceptance,Difficulty,Frequency,Depth-First Search,Breadth-First Search,Union Find,Graph,Array,Greedy,Sorting,String
+2204,Distance to a Cycle in Undirected Graph,70.2%,Hard,1.4248875182643763,1,1,1,1,0,0,0,0
+2895,Minimum Processing Time,68.1%,Medium,0.7812544480702122,0,0,0,0,1,1,1,0
+38,Count and Say,54.5%,Medium,0.1376213778760477,0,0,0,0,0,0,0,1

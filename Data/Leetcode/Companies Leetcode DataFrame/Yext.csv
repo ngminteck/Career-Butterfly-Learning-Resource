@@ -1,3 +1,3 @@
-No,Title,Acceptance,Frequency,Easy,Medium,Hash Table,String,Greedy,Sorting,Heap (Priority Queue),Counting,Math
-767,Reorganize String,54.5%,0.2268718593267434,0,1,1,1,1,1,1,1,0
-168,Excel Sheet Column Title,40.3%,0.1134359296633717,1,0,0,1,0,0,0,0,1
+No,Title,Acceptance,Difficulty,Frequency,Hash Table,String,Greedy,Sorting,Heap (Priority Queue),Counting,Math
+767,Reorganize String,54.5%,Medium,0.2268718593267434,1,1,1,1,1,1,0
+168,Excel Sheet Column Title,40.3%,Easy,0.1134359296633717,0,1,0,0,0,0,1

@@ -1,6 +1,6 @@
-No,Title,Acceptance,Frequency,Hard,Medium,Depth-First Search,Breadth-First Search,Graph,Topological Sort,Array,Hash Table,Backtracking,Matrix,Linked List,Design,Doubly-Linked List,Two Pointers,Dynamic Programming,Stack,Monotonic Stack,Sorting
-210,Course Schedule II,50.1%,0.0639930713852248,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0
-37,Sudoku Solver,60.5%,0.041672696400568,1,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0
-146,LRU Cache,42.2%,0.0193523214159112,0,1,0,0,0,0,0,1,0,0,1,1,1,0,0,0,0,0
-42,Trapping Rain Water,60.8%,0.0137601070289507,1,0,0,0,0,0,1,0,0,0,0,0,0,1,1,1,1,0
-15,3Sum,34.2%,0.0062451412967808,0,1,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,1
+No,Title,Acceptance,Difficulty,Frequency,Depth-First Search,Breadth-First Search,Graph,Topological Sort,Array,Hash Table,Backtracking,Matrix,Linked List,Design,Doubly-Linked List,Two Pointers,Dynamic Programming,Stack,Monotonic Stack,Sorting
+210,Course Schedule II,50.1%,Medium,0.0639930713852248,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0
+37,Sudoku Solver,60.5%,Hard,0.041672696400568,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0
+146,LRU Cache,42.2%,Medium,0.0193523214159112,0,0,0,0,0,1,0,0,1,1,1,0,0,0,0,0
+42,Trapping Rain Water,60.8%,Hard,0.0137601070289507,0,0,0,0,1,0,0,0,0,0,0,1,1,1,1,0
+15,3Sum,34.2%,Medium,0.0062451412967808,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,1

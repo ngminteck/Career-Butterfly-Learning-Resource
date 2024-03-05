@@ -1,4 +1,4 @@
-No,Title,Acceptance,Frequency,Easy,Medium,Array,Hash Table,Divide and Conquer,Sorting,Heap (Priority Queue),Bucket Sort,Counting,Quickselect,Math,String,Simulation,Linked List,Recursion
-347,Top K Frequent Elements,62.7%,0.1265205569538986,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0
-415,Add Strings,51.7%,0.0677077495155851,1,0,0,0,0,0,0,0,0,0,1,1,1,0,0
-2,Add Two Numbers,42.4%,0.0588128074383135,0,1,0,0,0,0,0,0,0,0,1,0,0,1,1
+No,Title,Acceptance,Difficulty,Frequency,Array,Hash Table,Divide and Conquer,Sorting,Heap (Priority Queue),Bucket Sort,Counting,Quickselect,Math,String,Simulation,Linked List,Recursion
+347,Top K Frequent Elements,62.7%,Medium,0.1265205569538986,1,1,1,1,1,1,1,1,0,0,0,0,0
+415,Add Strings,51.7%,Easy,0.0677077495155851,0,0,0,0,0,0,0,0,1,1,1,0,0
+2,Add Two Numbers,42.4%,Medium,0.0588128074383135,0,0,0,0,0,0,0,0,1,0,0,1,1

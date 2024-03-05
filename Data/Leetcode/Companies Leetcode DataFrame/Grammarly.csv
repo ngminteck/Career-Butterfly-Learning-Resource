@@ -1,6 +1,6 @@
-No,Title,Acceptance,Frequency,Easy,Medium,Hash Table,String,Bit Manipulation,Sliding Window,Rolling Hash,Hash Function,Stack,Two Pointers,Simulation,Array,Math,Design,Randomized
-187,Repeated DNA Sequences,48.6%,0.2634935175362785,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0
-1047,Remove All Adjacent Duplicates In String,69.3%,0.1933193110034959,1,0,0,1,0,0,0,0,1,0,0,0,0,0,0
-1209,Remove All Adjacent Duplicates in String II,57.4%,0.1571855835224123,0,1,0,1,0,0,0,0,1,0,0,0,0,0,0
-844,Backspace String Compare,49.1%,0.0870113769896297,1,0,0,1,0,0,0,0,1,1,1,0,0,0,0
-380,Insert Delete GetRandom O(1),54.4%,0.054658412537864,0,1,1,0,0,0,0,0,0,0,0,1,1,1,1
+No,Title,Acceptance,Difficulty,Frequency,Hash Table,String,Bit Manipulation,Sliding Window,Rolling Hash,Hash Function,Stack,Two Pointers,Simulation,Array,Math,Design,Randomized
+187,Repeated DNA Sequences,48.6%,Medium,0.2634935175362785,1,1,1,1,1,1,0,0,0,0,0,0,0
+1047,Remove All Adjacent Duplicates In String,69.3%,Easy,0.1933193110034959,0,1,0,0,0,0,1,0,0,0,0,0,0
+1209,Remove All Adjacent Duplicates in String II,57.4%,Medium,0.1571855835224123,0,1,0,0,0,0,1,0,0,0,0,0,0
+844,Backspace String Compare,49.1%,Easy,0.0870113769896297,0,1,0,0,0,0,1,1,1,0,0,0,0
+380,Insert Delete GetRandom O(1),54.4%,Medium,0.054658412537864,1,0,0,0,0,0,0,0,0,1,1,1,1

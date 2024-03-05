@@ -1,10 +1,10 @@
-No,Title,Acceptance,Frequency,Easy,Medium,Array,Depth-First Search,Breadth-First Search,Graph,Two Pointers,String,Stack,Simulation,Design,Dynamic Programming,Sliding Window,Hash Table,Sorting
-849,Maximize Distance to Closest Person,48.0%,0.2876906293702635,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0
-841,Keys and Rooms,72.7%,0.2029408439966903,0,1,0,1,1,1,0,0,0,0,0,0,0,0,0
-844,Backspace String Compare,49.1%,0.1861022796338606,1,0,0,0,0,0,1,1,1,1,0,0,0,0,0
-155,Min Stack,53.8%,0.1013524942602874,0,1,0,0,0,0,0,0,1,0,1,0,0,0,0
-1493,Longest Subarray of 1's After Deleting One Element,67.1%,0.090559577045727,0,1,1,0,0,0,0,0,0,0,0,1,1,0,0
-71,Simplify Path,41.9%,0.0432032630088989,0,1,0,0,0,0,0,1,1,0,0,0,0,0,0
-3,Longest Substring Without Repeating Characters,34.5%,0.0305076090238869,0,1,0,0,0,0,0,1,0,0,0,0,1,1,0
-5,Longest Palindromic Substring,33.7%,0.0145457110023787,0,1,0,0,0,0,0,1,0,0,0,1,0,0,0
-977,Squares of a Sorted Array,72.7%,0.0005488700276382,1,0,1,0,0,0,1,0,0,0,0,0,0,0,1
+No,Title,Acceptance,Difficulty,Frequency,Array,Depth-First Search,Breadth-First Search,Graph,Two Pointers,String,Stack,Simulation,Design,Dynamic Programming,Sliding Window,Hash Table,Sorting
+849,Maximize Distance to Closest Person,48.0%,Medium,0.2876906293702635,1,0,0,0,0,0,0,0,0,0,0,0,0
+841,Keys and Rooms,72.7%,Medium,0.2029408439966903,0,1,1,1,0,0,0,0,0,0,0,0,0
+844,Backspace String Compare,49.1%,Easy,0.1861022796338606,0,0,0,0,1,1,1,1,0,0,0,0,0
+155,Min Stack,53.8%,Medium,0.1013524942602874,0,0,0,0,0,0,1,0,1,0,0,0,0
+1493,Longest Subarray of 1's After Deleting One Element,67.1%,Medium,0.090559577045727,1,0,0,0,0,0,0,0,0,1,1,0,0
+71,Simplify Path,41.9%,Medium,0.0432032630088989,0,0,0,0,0,1,1,0,0,0,0,0,0
+3,Longest Substring Without Repeating Characters,34.5%,Medium,0.0305076090238869,0,0,0,0,0,1,0,0,0,0,1,1,0
+5,Longest Palindromic Substring,33.7%,Medium,0.0145457110023787,0,0,0,0,0,1,0,0,0,1,0,0,0
+977,Squares of a Sorted Array,72.7%,Easy,0.0005488700276382,1,0,0,0,1,0,0,0,0,0,0,0,1

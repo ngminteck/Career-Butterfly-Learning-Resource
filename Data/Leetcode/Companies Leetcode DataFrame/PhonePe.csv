@@ -1,5 +1,5 @@
-No,Title,Acceptance,Frequency,Hard,Medium,String,Stack,Array,Dynamic Programming,Sorting,Hash Table,Breadth-First Search,Binary Search
-880,Decoded String at Index,36.4%,0.4956162051024618,0,1,1,1,0,0,0,0,0,0
-1547,Minimum Cost to Cut a Stick,61.9%,0.322773392263051,1,0,0,0,1,1,1,0,0,0
-815,Bus Routes,48.2%,0.2876820724517809,1,0,0,0,1,0,0,1,1,0
-1235,Maximum Profit in Job Scheduling,54.8%,0.1728428128394108,1,0,0,0,1,1,1,0,0,1
+No,Title,Acceptance,Difficulty,Frequency,String,Stack,Array,Dynamic Programming,Sorting,Hash Table,Breadth-First Search,Binary Search
+880,Decoded String at Index,36.4%,Medium,0.4956162051024618,1,1,0,0,0,0,0,0
+1547,Minimum Cost to Cut a Stick,61.9%,Hard,0.322773392263051,0,0,1,1,1,0,0,0
+815,Bus Routes,48.2%,Hard,0.2876820724517809,0,0,1,0,0,1,1,0
+1235,Maximum Profit in Job Scheduling,54.8%,Hard,0.1728428128394108,0,0,1,1,1,0,0,1

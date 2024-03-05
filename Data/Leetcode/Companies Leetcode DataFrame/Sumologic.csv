@@ -1,4 +1,4 @@
-No,Title,Acceptance,Frequency,Medium,Hash Table,Two Pointers,Tree,Binary Tree,Depth-First Search,String,Sliding Window
-1650,Lowest Common Ancestor of a Binary Tree III,79.1%,0.055134248256248,1,1,1,1,1,0,0,0
-236,Lowest Common Ancestor of a Binary Tree,61.7%,0.0314244238757891,1,0,0,1,1,1,0,0
-3,Longest Substring Without Repeating Characters,34.5%,0.0077145994953303,1,1,0,0,0,0,1,1
+No,Title,Acceptance,Difficulty,Frequency,Hash Table,Two Pointers,Tree,Binary Tree,Depth-First Search,String,Sliding Window
+1650,Lowest Common Ancestor of a Binary Tree III,79.1%,Medium,0.055134248256248,1,1,1,1,0,0,0
+236,Lowest Common Ancestor of a Binary Tree,61.7%,Medium,0.0314244238757891,0,0,1,1,1,0,0
+3,Longest Substring Without Repeating Characters,34.5%,Medium,0.0077145994953303,1,0,0,0,0,1,1

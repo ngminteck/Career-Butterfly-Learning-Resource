@@ -1,4 +1,4 @@
-No,Title,Acceptance,Frequency,Easy,Medium,Array,String,Greedy,Sorting,Math,Matrix,Hash Table
-179,Largest Number,35.8%,0.0469128606655086,0,1,1,1,1,1,0,0,0
-48,Rotate Image,73.8%,0.0251585596361549,0,1,1,0,0,0,1,1,0
-1,Two Sum,52.0%,0.0034042586068012,1,0,1,0,0,0,0,0,1
+No,Title,Acceptance,Difficulty,Frequency,Array,String,Greedy,Sorting,Math,Matrix,Hash Table
+179,Largest Number,35.8%,Medium,0.0469128606655086,1,1,1,1,0,0,0
+48,Rotate Image,73.8%,Medium,0.0251585596361549,1,0,0,0,1,1,0
+1,Two Sum,52.0%,Easy,0.0034042586068012,1,0,0,0,0,0,1

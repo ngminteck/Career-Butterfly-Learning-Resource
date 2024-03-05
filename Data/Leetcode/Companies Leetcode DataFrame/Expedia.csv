@@ -1,5 +1,5 @@
-No,Title,Acceptance,Frequency,Medium,Dynamic Programming,Graph,Shortest Path,Two Pointers,String,Stack,Greedy,Array,Binary Search
-1334,Find the City With the Smallest Number of Neighbors at a Threshold Distance,59.4%,0.5108027949524505,1,1,1,1,0,0,0,0,0,0
-1963,Minimum Number of Swaps to Make the String Balanced,71.0%,0.3102675916658334,1,0,0,0,1,1,1,1,0,0
-1011,Capacity To Ship Packages Within D Days,69.1%,0.1097323883792164,1,0,0,0,0,0,0,0,1,1
-45,Jump Game II,40.3%,0.015923903356723,1,1,0,0,0,0,0,1,1,0
+No,Title,Acceptance,Difficulty,Frequency,Dynamic Programming,Graph,Shortest Path,Two Pointers,String,Stack,Greedy,Array,Binary Search
+1334,Find the City With the Smallest Number of Neighbors at a Threshold Distance,59.4%,Medium,0.5108027949524505,1,1,1,0,0,0,0,0,0
+1963,Minimum Number of Swaps to Make the String Balanced,71.0%,Medium,0.3102675916658334,0,0,0,1,1,1,1,0,0
+1011,Capacity To Ship Packages Within D Days,69.1%,Medium,0.1097323883792164,0,0,0,0,0,0,0,1,1
+45,Jump Game II,40.3%,Medium,0.015923903356723,1,0,0,0,0,0,1,1,0

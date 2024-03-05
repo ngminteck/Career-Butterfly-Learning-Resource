@@ -1,3 +1,3 @@
-No,Title,Acceptance,Frequency,Easy,Medium,String,Counting,Array,Dynamic Programming
-1419,Minimum Number of Frogs Croaking,50.2%,0.0598735076811688,0,1,1,1,0,0
-121,Best Time to Buy and Sell Stock,53.5%,0.0299367538405844,1,0,0,0,1,1
+No,Title,Acceptance,Difficulty,Frequency,String,Counting,Array,Dynamic Programming
+1419,Minimum Number of Frogs Croaking,50.2%,Medium,0.0598735076811688,1,1,0,0
+121,Best Time to Buy and Sell Stock,53.5%,Easy,0.0299367538405844,0,0,1,1

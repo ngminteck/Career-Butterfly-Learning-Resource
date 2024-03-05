@@ -1,4 +1,4 @@
-No,Title,Acceptance,Frequency,Hard,Medium,Array,Hash Table,String,Backtracking,Union Find,Simulation,Dynamic Programming,Trie,Memoization
-1258,Synonymous Sentences,56.2%,1.4283349717196443,0,1,1,1,1,1,1,0,0,0,0
-68,Text Justification,42.7%,0.8855917449853484,1,0,1,0,1,0,0,1,0,0,0
-140,Word Break II,47.5%,0.5427432267342958,1,0,1,1,1,1,0,0,1,1,1
+No,Title,Acceptance,Difficulty,Frequency,Array,Hash Table,String,Backtracking,Union Find,Simulation,Dynamic Programming,Trie,Memoization
+1258,Synonymous Sentences,56.2%,Medium,1.4283349717196443,1,1,1,1,1,0,0,0,0
+68,Text Justification,42.7%,Hard,0.8855917449853484,1,0,1,0,0,1,0,0,0
+140,Word Break II,47.5%,Hard,0.5427432267342958,1,1,1,1,0,0,1,1,1

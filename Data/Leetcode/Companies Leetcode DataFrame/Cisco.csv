@@ -1,14 +1,14 @@
-No,Title,Acceptance,Frequency,Easy,Hard,Medium,Array,Dynamic Programming,Matrix,Math,Breadth-First Search,String,Stack,Recursion,Simulation,Hash Table,Two Pointers,Sorting
-741,Cherry Pickup,36.7%,0.9263140483853056,0,1,0,1,1,1,0,0,0,0,0,0,0,0,0
-1380,Lucky Numbers in a Matrix,71.3%,0.5827718687255699,1,0,0,1,0,1,0,0,0,0,0,0,0,0,0
-48,Rotate Image,73.8%,0.2392296890658341,0,0,1,1,0,1,1,0,0,0,0,0,0,0,0
-909,Snakes and Ladders,43.8%,0.1766695433626081,0,0,1,1,0,1,0,1,0,0,0,0,0,0,0
-394,Decode String,59.0%,0.1601817813839014,0,0,1,0,0,0,0,0,1,1,1,0,0,0,0
-198,House Robber,50.9%,0.116072171252754,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0
-5,Longest Palindromic Substring,33.7%,0.0815299664948824,0,0,1,0,1,0,0,0,1,0,0,0,0,0,0
-54,Spiral Matrix,48.9%,0.040619302399678,0,0,1,1,0,1,0,0,0,0,0,1,0,0,0
-412,Fizz Buzz,71.8%,0.0352459390616747,1,0,0,0,0,0,1,0,1,0,0,1,0,0,0
-202,Happy Number,55.9%,0.0233110788684471,1,0,0,0,0,0,1,0,0,0,0,0,1,1,0
-56,Merge Intervals,47.1%,0.0130977641900636,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1
-15,3Sum,34.2%,0.0062451412967808,0,0,1,1,0,0,0,0,0,0,0,0,0,1,1
-1,Two Sum,52.0%,0.0021239321954525,1,0,0,1,0,0,0,0,0,0,0,0,1,0,0
+No,Title,Acceptance,Difficulty,Frequency,Array,Dynamic Programming,Matrix,Math,Breadth-First Search,String,Stack,Recursion,Simulation,Hash Table,Two Pointers,Sorting
+741,Cherry Pickup,36.7%,Hard,0.9263140483853056,1,1,1,0,0,0,0,0,0,0,0,0
+1380,Lucky Numbers in a Matrix,71.3%,Easy,0.5827718687255699,1,0,1,0,0,0,0,0,0,0,0,0
+48,Rotate Image,73.8%,Medium,0.2392296890658341,1,0,1,1,0,0,0,0,0,0,0,0
+909,Snakes and Ladders,43.8%,Medium,0.1766695433626081,1,0,1,0,1,0,0,0,0,0,0,0
+394,Decode String,59.0%,Medium,0.1601817813839014,0,0,0,0,0,1,1,1,0,0,0,0
+198,House Robber,50.9%,Medium,0.116072171252754,1,1,0,0,0,0,0,0,0,0,0,0
+5,Longest Palindromic Substring,33.7%,Medium,0.0815299664948824,0,1,0,0,0,1,0,0,0,0,0,0
+54,Spiral Matrix,48.9%,Medium,0.040619302399678,1,0,1,0,0,0,0,0,1,0,0,0
+412,Fizz Buzz,71.8%,Easy,0.0352459390616747,0,0,0,1,0,1,0,0,1,0,0,0
+202,Happy Number,55.9%,Easy,0.0233110788684471,0,0,0,1,0,0,0,0,0,1,1,0
+56,Merge Intervals,47.1%,Medium,0.0130977641900636,1,0,0,0,0,0,0,0,0,0,0,1
+15,3Sum,34.2%,Medium,0.0062451412967808,1,0,0,0,0,0,0,0,0,0,1,1
+1,Two Sum,52.0%,Easy,0.0021239321954525,1,0,0,0,0,0,0,0,0,1,0,0

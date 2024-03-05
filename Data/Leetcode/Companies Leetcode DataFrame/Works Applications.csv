@@ -1,5 +1,5 @@
-No,Title,Acceptance,Frequency,Hard,Medium,Array,String,Greedy,Sorting,Two Pointers,Dynamic Programming,Heap (Priority Queue)
-179,Largest Number,35.8%,0.0281782995542064,0,1,1,1,1,1,0,0,0
-15,3Sum,34.2%,0.0140891497771032,0,1,1,0,0,1,1,0,0
-629,K Inverse Pairs Array,50.1%,0.0,1,0,0,0,0,0,0,1,0
-630,Course Schedule III,40.1%,0.0,1,0,1,0,1,1,0,0,1
+No,Title,Acceptance,Difficulty,Frequency,Array,String,Greedy,Sorting,Two Pointers,Dynamic Programming,Heap (Priority Queue)
+179,Largest Number,35.8%,Medium,0.0281782995542064,1,1,1,1,0,0,0
+15,3Sum,34.2%,Medium,0.0140891497771032,1,0,0,1,1,0,0
+629,K Inverse Pairs Array,50.1%,Hard,0.0,0,0,0,0,0,1,0
+630,Course Schedule III,40.1%,Hard,0.0,1,0,1,1,0,0,1

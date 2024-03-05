@@ -1,4 +1,4 @@
-No,Title,Acceptance,Frequency,Hard,Medium,Hash Table,String,Stack,Sorting,Array,Dynamic Programming,Matrix,Recursion
-726,Number of Atoms,52.7%,0.5634980759111095,1,0,1,1,1,1,0,0,0,0
-63,Unique Paths II,41.4%,0.3031426755581592,0,1,0,0,0,0,1,1,1,0
-10,Regular Expression Matching,28.1%,0.0427872752052089,1,0,0,1,0,0,0,1,0,1
+No,Title,Acceptance,Difficulty,Frequency,Hash Table,String,Stack,Sorting,Array,Dynamic Programming,Matrix,Recursion
+726,Number of Atoms,52.7%,Hard,0.5634980759111095,1,1,1,1,0,0,0,0
+63,Unique Paths II,41.4%,Medium,0.3031426755581592,0,0,0,0,1,1,1,0
+10,Regular Expression Matching,28.1%,Hard,0.0427872752052089,0,1,0,0,0,1,0,1

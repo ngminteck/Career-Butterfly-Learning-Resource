@@ -1,25 +1,25 @@
-No,Title,Acceptance,Frequency,Easy,Hard,Medium,String,Greedy,Math,Game Theory,Array,Bit Manipulation,Sorting,Counting,Hash Table,Heap (Priority Queue),Dynamic Programming,Backtracking,Breadth-First Search,Two Pointers,Stack,Monotonic Stack,Simulation,Prefix Sum,Binary Search,Memoization,Divide and Conquer
-1529,Minimum Suffix Flips,73.1%,2.934339670650899,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-780,Reaching Points,33.1%,2.6781451107113803,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-2038,Remove Colored Pieces if Both Neighbors are the Same Color,62.8%,2.343709851093071,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-1356,Sort Integers by The Number of 1 Bits,78.2%,2.1268538312099032,1,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
-2068,Check Whether Two Strings are Almost Equivalent,63.7%,2.080856964946084,1,0,0,1,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0
-1200,Minimum Absolute Difference,69.5%,1.8774634598861009,1,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-1328,Break a Palindrome,51.8%,1.8549201157262607,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-1481,Least Number of Unique Integers after K Removals,62.8%,1.648266458272776,0,0,1,0,1,0,0,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0
-2273,Find Resultant Array After Removing Anagrams,58.0%,1.11365016603265,1,0,0,1,0,0,0,1,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
-1167,Minimum Cost to Connect Sticks,69.7%,0.5790338737925242,0,0,1,0,1,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
-1710,Maximum Units on a Truck,73.6%,0.4992480704235479,1,0,0,0,1,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-357,Count Numbers with Unique Digits,52.8%,0.4096756406445079,0,0,1,0,0,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
-752,Open the Lock,56.0%,0.3782789678040075,0,0,1,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0
-31,Next Permutation,39.5%,0.2786247853392714,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
-2104,Sum of Subarray Ranges,61.1%,0.2561688067457042,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0
-412,Fizz Buzz,71.8%,0.1071177647606979,1,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
-263,Ugly Number,42.0%,0.0897462878562754,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-560,Subarray Sum Equals K,43.4%,0.0628259604413972,0,0,1,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0
-349,Intersection of Two Arrays,72.4%,0.0518923160035191,1,0,0,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,0,0,0,1,0,0
-56,Merge Intervals,47.1%,0.0446724400515925,0,0,1,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-22,Generate Parentheses,74.2%,0.0215874546043835,0,0,1,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
-5,Longest Palindromic Substring,33.7%,0.0138219201161799,0,0,1,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
-70,Climbing Stairs,52.8%,0.0128909293969282,1,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0
-53,Maximum Subarray,50.6%,0.0127838110422708,0,0,1,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1
+No,Title,Acceptance,Difficulty,Frequency,String,Greedy,Math,Game Theory,Array,Bit Manipulation,Sorting,Counting,Hash Table,Heap (Priority Queue),Dynamic Programming,Backtracking,Breadth-First Search,Two Pointers,Stack,Monotonic Stack,Simulation,Prefix Sum,Binary Search,Memoization,Divide and Conquer
+1529,Minimum Suffix Flips,73.1%,Medium,2.934339670650899,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+780,Reaching Points,33.1%,Hard,2.6781451107113803,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+2038,Remove Colored Pieces if Both Neighbors are the Same Color,62.8%,Medium,2.343709851093071,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+1356,Sort Integers by The Number of 1 Bits,78.2%,Easy,2.1268538312099032,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+2068,Check Whether Two Strings are Almost Equivalent,63.7%,Easy,2.080856964946084,1,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0
+1200,Minimum Absolute Difference,69.5%,Easy,1.8774634598861009,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+1328,Break a Palindrome,51.8%,Medium,1.8549201157262607,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+1481,Least Number of Unique Integers after K Removals,62.8%,Medium,1.648266458272776,0,1,0,0,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0
+2273,Find Resultant Array After Removing Anagrams,58.0%,Easy,1.11365016603265,1,0,0,0,1,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+1167,Minimum Cost to Connect Sticks,69.7%,Medium,0.5790338737925242,0,1,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+1710,Maximum Units on a Truck,73.6%,Easy,0.4992480704235479,0,1,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+357,Count Numbers with Unique Digits,52.8%,Medium,0.4096756406445079,0,0,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+752,Open the Lock,56.0%,Medium,0.3782789678040075,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0
+31,Next Permutation,39.5%,Medium,0.2786247853392714,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+2104,Sum of Subarray Ranges,61.1%,Medium,0.2561688067457042,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0
+412,Fizz Buzz,71.8%,Easy,0.1071177647606979,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+263,Ugly Number,42.0%,Easy,0.0897462878562754,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+560,Subarray Sum Equals K,43.4%,Medium,0.0628259604413972,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0
+349,Intersection of Two Arrays,72.4%,Easy,0.0518923160035191,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,0,0,0,1,0,0
+56,Merge Intervals,47.1%,Medium,0.0446724400515925,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+22,Generate Parentheses,74.2%,Medium,0.0215874546043835,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+5,Longest Palindromic Substring,33.7%,Medium,0.0138219201161799,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+70,Climbing Stairs,52.8%,Easy,0.0128909293969282,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0
+53,Maximum Subarray,50.6%,Medium,0.0127838110422708,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1

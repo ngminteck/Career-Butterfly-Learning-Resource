@@ -1,5 +1,5 @@
-No,Title,Acceptance,Frequency,Easy,Medium,Array,Dynamic Programming,Hash Table,String,Sorting,Stack,Monotonic Stack
-309,Best Time to Buy and Sell Stock with Cooldown,57.9%,0.0863379246208939,0,1,1,1,0,0,0,0,0
-49,Group Anagrams,68.2%,0.0571788459797051,0,1,1,0,1,1,1,0,0
-739,Daily Temperatures,65.9%,0.0365337433324559,0,1,1,0,0,0,0,1,1
-121,Best Time to Buy and Sell Stock,53.5%,0.0073746646912672,1,0,1,1,0,0,0,0,0
+No,Title,Acceptance,Difficulty,Frequency,Array,Dynamic Programming,Hash Table,String,Sorting,Stack,Monotonic Stack
+309,Best Time to Buy and Sell Stock with Cooldown,57.9%,Medium,0.0863379246208939,1,1,0,0,0,0,0
+49,Group Anagrams,68.2%,Medium,0.0571788459797051,1,0,1,1,1,0,0
+739,Daily Temperatures,65.9%,Medium,0.0365337433324559,1,0,0,0,0,1,1
+121,Best Time to Buy and Sell Stock,53.5%,Easy,0.0073746646912672,1,1,0,0,0,0,0
