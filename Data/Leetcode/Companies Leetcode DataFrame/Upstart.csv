@@ -1,4 +1,4 @@
-No,Title,Acceptance,Difficulty,Frequency,String,Stack,Array,Two Pointers,Divide and Conquer,Dynamic Programming
-71,Simplify Path,41.9%,Medium,0.0391604279429972,1,1,0,0,0,0
-31,Next Permutation,39.5%,Medium,0.0258579371373883,0,0,1,1,0,0
-53,Maximum Subarray,50.6%,Medium,0.0133024908056088,0,0,1,0,1,1
+No,Title,Acceptance,Difficulty,Frequency,Array,Divide and Conquer,Dynamic Programming,String,Stack,Two Pointers
+71,Simplify Path,41.9%,Medium,0.0391604279429972,0,0,0,1.0,1.0,
+31,Next Permutation,39.5%,Medium,0.0258579371373883,1,0,0,,,1.0
+53,Maximum Subarray,50.6%,Medium,0.0133024908056088,1,1,1,,,

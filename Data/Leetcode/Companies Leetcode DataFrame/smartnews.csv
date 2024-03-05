@@ -1,3 +1,3 @@
-No,Title,Acceptance,Difficulty,Frequency,Graph,Hash Table,String,Greedy
-1615,Maximal Network Rank,65.1%,Medium,0.1921476601792442,1,0,0,0
-2384,Largest Palindromic Number,33.3%,Medium,0.0960738300896221,0,1,1,1
+No,Title,Acceptance,Difficulty,Frequency,Hash Table,String,Greedy,Graph
+1615,Maximal Network Rank,65.1%,Medium,0.1921476601792442,0,0,0,1.0
+2384,Largest Palindromic Number,33.3%,Medium,0.0960738300896221,1,1,1,

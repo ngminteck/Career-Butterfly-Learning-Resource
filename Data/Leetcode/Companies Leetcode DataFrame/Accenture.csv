@@ -1,12 +1,12 @@
-No,Title,Acceptance,Difficulty,Frequency,Array,String,Greedy,Sorting,Math,Dynamic Programming,Hash Table,Two Pointers,Trie,Memoization
-179,Largest Number,35.8%,Medium,0.2138646659870941,1,1,1,1,0,0,0,0,0,0
-343,Integer Break,60.2%,Medium,0.1597758036767491,0,0,0,0,1,1,0,0,0,0
-202,Happy Number,55.9%,Easy,0.1039599390673551,0,0,0,0,1,0,1,1,0,0
-647,Palindromic Substrings,69.9%,Medium,0.0481440744579612,0,1,0,0,0,1,0,0,0,0
-121,Best Time to Buy and Sell Stock,53.5%,Easy,0.0430997996237226,1,0,0,0,0,1,0,0,0,0
-189,Rotate Array,40.3%,Medium,0.0342133006260534,1,0,0,0,1,0,0,1,0,0
-14,Longest Common Prefix,42.4%,Easy,0.0162253424291263,0,1,0,0,0,0,0,0,1,0
-392,Is Subsequence,47.9%,Easy,0.0143783929277148,0,1,0,0,0,1,0,1,0,0
-7,Reverse Integer,28.4%,Medium,0.008888947417246,0,0,0,0,1,0,0,0,0,0
-70,Climbing Stairs,52.8%,Easy,0.0087241556603383,0,0,0,0,1,1,0,0,0,1
-26,Remove Duplicates from Sorted Array,55.0%,Easy,0.0049541840244114,1,0,0,0,0,0,0,1,0,0
+No,Title,Acceptance,Difficulty,Frequency,Array,Two Pointers,String,Greedy,Sorting,Math,Dynamic Programming,Hash Table,Trie,Memoization
+179,Largest Number,35.8%,Medium,0.2138646659870941,1,0,1.0,1.0,1.0,,,,,
+343,Integer Break,60.2%,Medium,0.1597758036767491,0,0,,,,1.0,1.0,,,
+202,Happy Number,55.9%,Easy,0.1039599390673551,0,1,,,,1.0,,1.0,,
+647,Palindromic Substrings,69.9%,Medium,0.0481440744579612,0,0,1.0,,,,1.0,,,
+121,Best Time to Buy and Sell Stock,53.5%,Easy,0.0430997996237226,1,0,,,,,1.0,,,
+189,Rotate Array,40.3%,Medium,0.0342133006260534,1,1,,,,1.0,,,,
+14,Longest Common Prefix,42.4%,Easy,0.0162253424291263,0,0,1.0,,,,,,1.0,
+392,Is Subsequence,47.9%,Easy,0.0143783929277148,0,1,1.0,,,,1.0,,,
+7,Reverse Integer,28.4%,Medium,0.008888947417246,0,0,,,,1.0,,,,
+70,Climbing Stairs,52.8%,Easy,0.0087241556603383,0,0,,,,1.0,1.0,,,1.0
+26,Remove Duplicates from Sorted Array,55.0%,Easy,0.0049541840244114,1,1,,,,,,,,

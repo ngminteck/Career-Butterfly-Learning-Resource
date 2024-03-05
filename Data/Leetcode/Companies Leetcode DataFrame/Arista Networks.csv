@@ -1,4 +1,4 @@
-No,Title,Acceptance,Difficulty,Frequency,Array,Binary Search,String,Backtracking,Linked List
-1060,Missing Element in Sorted Array,56.4%,Medium,0.6970333062438849,1,1,0,0,0
-93,Restore IP Addresses,49.4%,Medium,0.3731218633879398,0,0,1,1,0
-92,Reverse Linked List II,47.5%,Medium,0.0492104205319947,0,0,0,0,1
+No,Title,Acceptance,Difficulty,Frequency,Linked List,Array,Binary Search,String,Backtracking
+1060,Missing Element in Sorted Array,56.4%,Medium,0.6970333062438849,0,1.0,1.0,,
+93,Restore IP Addresses,49.4%,Medium,0.3731218633879398,0,,,1.0,1.0
+92,Reverse Linked List II,47.5%,Medium,0.0492104205319947,1,,,,

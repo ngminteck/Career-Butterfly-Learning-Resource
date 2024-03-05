@@ -1,7 +1,7 @@
-No,Title,Acceptance,Difficulty,Frequency,Math,String,Recursion,Array,Matrix,Simulation,Two Pointers,String Matching,Hash Table,Binary Search,Bit Manipulation,Sorting,Linked List,Divide and Conquer,Heap (Priority Queue),Merge Sort,Prefix Sum
-273,Integer to English Words,30.5%,Hard,0.179662997743483,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-289,Game of Life,68.8%,Medium,0.1344302690895397,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0
-28,Find the Index of the First Occurrence in a String,41.9%,Easy,0.0896014456857071,0,1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
-268,Missing Number,66.4%,Easy,0.0728587949288744,1,0,0,1,0,0,0,0,1,1,1,1,0,0,0,0,0
-23,Merge k Sorted Lists,52.2%,Hard,0.0276260662749311,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0
-238,Product of Array Except Self,65.3%,Medium,0.0130934767470196,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1
+No,Title,Acceptance,Difficulty,Frequency,Array,Prefix Sum,Math,String,Recursion,Matrix,Simulation,Two Pointers,String Matching,Hash Table,Binary Search,Bit Manipulation,Sorting,Linked List,Divide and Conquer,Heap (Priority Queue),Merge Sort
+273,Integer to English Words,30.5%,Hard,0.179662997743483,0,0,1.0,1.0,1.0,,,,,,,,,,,,
+289,Game of Life,68.8%,Medium,0.1344302690895397,1,0,,,,1.0,1.0,,,,,,,,,,
+28,Find the Index of the First Occurrence in a String,41.9%,Easy,0.0896014456857071,0,0,,1.0,,,,1.0,1.0,,,,,,,,
+268,Missing Number,66.4%,Easy,0.0728587949288744,1,0,1.0,,,,,,,1.0,1.0,1.0,1.0,,,,
+23,Merge k Sorted Lists,52.2%,Hard,0.0276260662749311,0,0,,,,,,,,,,,,1.0,1.0,1.0,1.0
+238,Product of Array Except Self,65.3%,Medium,0.0130934767470196,1,1,,,,,,,,,,,,,,,

@@ -1,4 +1,4 @@
-No,Title,Acceptance,Difficulty,Frequency,Array,Backtracking,Bit Manipulation,Enumeration,Binary Search,Dynamic Programming,Tree,Depth-First Search,Binary Tree
-2151,Maximum Good People Based on Statements,49.6%,Hard,0.0794357500920454,1,1,1,1,0,0,0,0,0
-300,Longest Increasing Subsequence,55.0%,Medium,0.0441898110303706,1,0,0,0,1,1,0,0,0
-124,Binary Tree Maximum Path Sum,39.9%,Hard,0.0352459390616747,0,0,0,0,0,1,1,1,1
+No,Title,Acceptance,Difficulty,Frequency,Dynamic Programming,Tree,Depth-First Search,Binary Tree,Array,Backtracking,Bit Manipulation,Enumeration,Binary Search
+2151,Maximum Good People Based on Statements,49.6%,Hard,0.0794357500920454,0,0,0,0,1.0,1.0,1.0,1.0,
+300,Longest Increasing Subsequence,55.0%,Medium,0.0441898110303706,1,0,0,0,1.0,,,,1.0
+124,Binary Tree Maximum Path Sum,39.9%,Hard,0.0352459390616747,1,1,1,1,,,,,

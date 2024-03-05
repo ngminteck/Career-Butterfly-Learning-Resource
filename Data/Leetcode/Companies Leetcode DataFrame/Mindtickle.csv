@@ -1,3 +1,3 @@
-No,Title,Acceptance,Difficulty,Frequency,Array,Hash Table,Binary Search,Greedy,Heap (Priority Queue),Dynamic Programming,Matrix
-1488,Avoid Flood in The City,27.0%,Medium,0.2281673744607444,1,1,1,1,1,0,0
-221,Maximal Square,46.3%,Medium,0.1140836872303722,1,0,0,0,0,1,1
+No,Title,Acceptance,Difficulty,Frequency,Array,Dynamic Programming,Matrix,Hash Table,Binary Search,Greedy,Heap (Priority Queue)
+1488,Avoid Flood in The City,27.0%,Medium,0.2281673744607444,1,0,0,1.0,1.0,1.0,1.0
+221,Maximal Square,46.3%,Medium,0.1140836872303722,1,1,1,,,,

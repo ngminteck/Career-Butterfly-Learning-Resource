@@ -1,4 +1,4 @@
-No,Title,Acceptance,Difficulty,Frequency,Depth-First Search,Graph,Topological Sort,Array,Dynamic Programming,Greedy,Heap (Priority Queue),Hash Table
-2127,Maximum Employees to Be Invited to a Meeting,36.8%,Hard,0.3653281331626312,1,1,1,0,0,0,0,0
-871,Minimum Number of Refueling Stops,40.0%,Hard,0.1843661958847162,0,0,0,1,1,1,1,0
-1,Two Sum,52.0%,Easy,0.0034042586068012,0,0,0,1,0,0,0,1
+No,Title,Acceptance,Difficulty,Frequency,Array,Hash Table,Depth-First Search,Graph,Topological Sort,Dynamic Programming,Greedy,Heap (Priority Queue)
+2127,Maximum Employees to Be Invited to a Meeting,36.8%,Hard,0.3653281331626312,0,0,1.0,1.0,1.0,,,
+871,Minimum Number of Refueling Stops,40.0%,Hard,0.1843661958847162,1,0,,,,1.0,1.0,1.0
+1,Two Sum,52.0%,Easy,0.0034042586068012,1,1,,,,,,

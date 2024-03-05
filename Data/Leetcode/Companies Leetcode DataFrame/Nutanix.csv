@@ -1,5 +1,5 @@
-No,Title,Acceptance,Difficulty,Frequency,Array,Queue,Sliding Window,Heap (Priority Queue),Ordered Set,Monotonic Queue,Two Pointers,Binary Search,Sorting,Depth-First Search,Breadth-First Search,Matrix,Graph,Topological Sort
-1438,Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit,49.1%,Medium,0.1622099525857069,1,1,1,1,1,1,0,0,0,0,0,0,0,0
-475,Heaters,37.6%,Medium,0.1487417355348403,1,0,0,0,0,0,1,1,1,0,0,0,0,0
-417,Pacific Atlantic Water Flow,55.1%,Medium,0.0887500039126699,1,0,0,0,0,0,0,0,0,1,1,1,0,0
-207,Course Schedule,46.6%,Medium,0.0287582722904996,0,0,0,0,0,0,0,0,0,1,1,0,1,1
+No,Title,Acceptance,Difficulty,Frequency,Depth-First Search,Breadth-First Search,Graph,Topological Sort,Array,Queue,Sliding Window,Heap (Priority Queue),Ordered Set,Monotonic Queue,Two Pointers,Binary Search,Sorting,Matrix
+1438,Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit,49.1%,Medium,0.1622099525857069,0,0,0,0,1.0,1.0,1.0,1.0,1.0,1.0,,,,
+475,Heaters,37.6%,Medium,0.1487417355348403,0,0,0,0,1.0,,,,,,1.0,1.0,1.0,
+417,Pacific Atlantic Water Flow,55.1%,Medium,0.0887500039126699,1,1,0,0,1.0,,,,,,,,,1.0
+207,Course Schedule,46.6%,Medium,0.0287582722904996,1,1,1,1,,,,,,,,,,
