@@ -1,0 +1,197 @@
+C
+C++
+C#
+Java
+Python
+JavaScript
+PHP
+Visual Basic .Net
+R
+SQL
+Go
+Swift
+Perl
+Assembly Language
+Ruby
+MATLAB
+Visual Basic
+Apache Groovy
+Objective-C
+Rust
+SAS
+D
+Dart
+PL/SQL
+Delphi
+COBOL
+Kotlin
+OpenEdge ABL
+Julia
+ABAP
+Scala
+Transact-SQL
+Scheme
+Prolog
+Ada
+Lisp
+Apex
+Lua
+Fortran
+Haskell
+VBScript
+TypeScript
+ActionScript
+Bash
+C shell
+CoffeeScript
+OpenCL
+Q
+Visual FoxPro
+Powershell
+Boost
+OpenGL
+Vulkan
+Directx
+Cuda
+WPF
+QT
+Unreal Engine
+Unity
+JSON
+Junit
+Jenkin
+Pytest
+Selenium
+React
+ReactJS
+Angular
+AngularJS
+HTML
+CSS
+Beauitful Soup
+Spring
+.Net
+matplotlib
+pandas
+NumPy
+Seaborn
+Scikit-learn
+Scipy
+spaCy
+nltk
+OpenCV
+TensorFlow
+Keras
+SimpleCV
+PyTorch
+Scikit-Image
+Pillow
+Hugging Face
+MMCV
+TorchVision
+NVIDIA Performance Primitives
+OpenVINO
+Albumentations
+Caffe
+Detectron2
+FANN
+Shogun
+CNTK
+Mlpack
+Armadillo
+OpenNN
+Theano
+SHARK
+PaLM
+IBM Wastson
+GPT-4
+GPT-3
+BERT
+ALBERT
+Gemini
+LLaMA
+Whisper
+LangChain
+MongoDB
+Cassandra
+Elasticsearch
+MariaDB
+MS SQL
+Oracle
+PostgreSQL
+Redis
+Snowflake
+MySQL
+SQLite
+Neo4j
+AWS
+Azure
+Google Cloud
+Amazon RDS
+Amazon DynamoDB
+Kubernetes
+Docker
+Databrick
+Spark
+PySpark
+Hadoop
+Kafka
+RabbitMQ
+Confluent
+Flink
+Django
+Flask
+JDBC
+JPA
+Godot
+kdb+
+InfluxDB
+SAP
+Data Structures
+OOP
+Parallel
+Multithread
+Concurrent
+Stable Diffusion
+NeRF
+ASP.NET
+Chatbot
+Big data
+Algorithm
+Autonomous Testing
+Data Mining
+Text Mining
+Translate
+Transcribe
+Scrapy 
+NVIDIA PhysX
+Cucumber
+Test Automation
+postman
+JMeter
+Soap
+CLion
+Xcode
+PyCharm
+Visual Studio Code
+IntelliJ
+NetBeans
+Eclipse
+Git
+SVN
+Jira
+Agile
+Ubuntu
+Linux
+Mac
+Window
+Microsoft Office
+Android
+IOS
+Tableau
+XML
+Maven
+Pip
+npm
+Node.js
+Mojo
