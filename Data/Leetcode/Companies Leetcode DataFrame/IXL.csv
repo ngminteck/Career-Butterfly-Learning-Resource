@@ -1,4 +1,4 @@
-No,Title,Acceptance,Difficulty,Frequency,Array,Sorting,Hash Table,Design,Queue,Simulation,Two Pointers,Heap (Priority Queue),Data Stream
-353,Design Snake Game,38.7%,Medium,0.099725966789354,1,0,1.0,1.0,1.0,1.0,,,
-295,Find Median from Data Stream,51.8%,Hard,0.054808236494995,0,1,,1.0,,,1.0,1.0,1.0
-56,Merge Intervals,47.1%,Medium,0.044917730294359,1,1,,,,,,,
+No,Title,Acceptance,Difficulty,Frequency,Array,Hash Table,Design,Queue,Simulation,Two Pointers,Sorting,Heap (Priority Queue),Data Stream
+353,Design Snake Game,38.7%,Medium,0.099725966789354,1,1,1,1,1,0,0,0,0
+295,Find Median from Data Stream,51.8%,Hard,0.054808236494995,0,0,1,0,0,1,1,1,1
+56,Merge Intervals,47.1%,Medium,0.044917730294359,1,0,0,0,0,0,1,0,0

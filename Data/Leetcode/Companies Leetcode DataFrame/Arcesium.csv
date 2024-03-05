@@ -1,4 +1,4 @@
-No,Title,Acceptance,Difficulty,Frequency,Array,Binary Search,Math,Greedy,Sorting,Heap (Priority Queue),Game Theory,Depth-First Search,Breadth-First Search,Union Find,Graph
-1686,Stone Game VI,56.7%,Medium,1.3310125837139513,1,0,1.0,1.0,1.0,1.0,1.0,,,,
-886,Possible Bipartition,50.5%,Medium,0.6931471805599453,0,0,,,,,,1.0,1.0,1.0,1.0
-33,Search in Rotated Sorted Array,40.5%,Medium,0.0552817774059393,1,1,,,,,,,,,
+No,Title,Acceptance,Difficulty,Frequency,Array,Math,Greedy,Sorting,Heap (Priority Queue),Game Theory,Depth-First Search,Breadth-First Search,Union Find,Graph,Binary Search
+1686,Stone Game VI,56.7%,Medium,1.3310125837139513,1,1,1,1,1,1,0,0,0,0,0
+886,Possible Bipartition,50.5%,Medium,0.6931471805599453,0,0,0,0,0,0,1,1,1,1,0
+33,Search in Rotated Sorted Array,40.5%,Medium,0.0552817774059393,1,0,0,0,0,0,0,0,0,0,1

@@ -1,5 +1,5 @@
 No,Title,Acceptance,Difficulty,Frequency,Array,Hash Table,Greedy,String,Sliding Window
-2910,Minimum Number of Groups to Create a Valid Assignment,25.0%,Medium,0.0704203368864887,1,1,1.0,,
-134,Gas Station,45.6%,Medium,0.0390674681909095,1,0,1.0,,
-3,Longest Substring Without Repeating Characters,34.5%,Medium,0.0077145994953303,0,1,,1.0,1.0
-1,Two Sum,52.0%,Easy,0.0034042586068012,1,1,,,
+2910,Minimum Number of Groups to Create a Valid Assignment,25.0%,Medium,0.0704203368864887,1,1,1,0,0
+134,Gas Station,45.6%,Medium,0.0390674681909095,1,0,1,0,0
+3,Longest Substring Without Repeating Characters,34.5%,Medium,0.0077145994953303,0,1,0,1,1
+1,Two Sum,52.0%,Easy,0.0034042586068012,1,1,0,0,0

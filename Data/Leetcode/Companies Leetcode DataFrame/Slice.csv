@@ -1,3 +1,3 @@
-No,Title,Acceptance,Difficulty,Frequency,Array,String,Dynamic Programming,Hash Table,Binary Search,Sorting
-2008,Maximum Earnings From Taxi,44.1%,Medium,1.4663370687934272,1,0,1,1.0,1.0,1.0
-1639,Number of Ways to Form a Target String Given a Dictionary,51.8%,Hard,1.133098464739279,1,1,1,,,
+No,Title,Acceptance,Difficulty,Frequency,Array,Hash Table,Binary Search,Dynamic Programming,Sorting,String
+2008,Maximum Earnings From Taxi,44.1%,Medium,1.4663370687934272,1,1,1,1,1,0
+1639,Number of Ways to Form a Target String Given a Dictionary,51.8%,Hard,1.133098464739279,1,0,0,1,0,1

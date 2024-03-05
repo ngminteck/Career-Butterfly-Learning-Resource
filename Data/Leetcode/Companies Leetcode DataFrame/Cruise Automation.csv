@@ -1,6 +1,6 @@
-No,Title,Acceptance,Difficulty,Frequency,Array,Depth-First Search,Breadth-First Search,Union Find,Matrix,Hash Table,String,Backtracking,Bit Manipulation,Dynamic Programming,Linked List,Design,Doubly-Linked List
-267,Palindrome Permutation II,41.1%,Medium,1.021524647460165,0,0,0,0,0,1.0,1.0,1.0,,,,,
-980,Unique Paths III,81.7%,Hard,0.6102215761181126,1,0,0,0,1,,,1.0,1.0,,,,
-63,Unique Paths II,41.4%,Medium,0.1989185047760601,1,0,0,0,1,,,,,1.0,,,
-146,LRU Cache,42.2%,Medium,0.0666419734859414,0,0,0,0,0,1.0,,,,,1.0,1.0,1.0
-200,Number of Islands,58.5%,Medium,0.0508009902494925,1,1,1,1,1,,,,,,,,
+No,Title,Acceptance,Difficulty,Frequency,Hash Table,String,Backtracking,Array,Bit Manipulation,Matrix,Dynamic Programming,Linked List,Design,Doubly-Linked List,Depth-First Search,Breadth-First Search,Union Find
+267,Palindrome Permutation II,41.1%,Medium,1.021524647460165,1,1,1,0,0,0,0,0,0,0,0,0,0
+980,Unique Paths III,81.7%,Hard,0.6102215761181126,0,0,1,1,1,1,0,0,0,0,0,0,0
+63,Unique Paths II,41.4%,Medium,0.1989185047760601,0,0,0,1,0,1,1,0,0,0,0,0,0
+146,LRU Cache,42.2%,Medium,0.0666419734859414,1,0,0,0,0,0,0,1,1,1,0,0,0
+200,Number of Islands,58.5%,Medium,0.0508009902494925,0,0,0,1,0,1,0,0,0,0,1,1,1

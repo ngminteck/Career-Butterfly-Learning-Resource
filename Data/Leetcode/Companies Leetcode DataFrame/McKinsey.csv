@@ -1,3 +1,3 @@
-No,Title,Acceptance,Difficulty,Frequency,Dynamic Programming,Bit Manipulation,Memoization,Depth-First Search,Breadth-First Search,Union Find,Graph
-1319,Number of Operations to Make Network Connected,62.6%,Medium,0.7722381389458031,0,0,0,1.0,1.0,1.0,1.0
-1611,Minimum One Bit Operations to Make Integers Zero,74.5%,Hard,0.3861190694729015,1,1,1,,,,
+No,Title,Acceptance,Difficulty,Frequency,Depth-First Search,Breadth-First Search,Union Find,Graph,Dynamic Programming,Bit Manipulation,Memoization
+1319,Number of Operations to Make Network Connected,62.6%,Medium,0.7722381389458031,1,1,1,1,0,0,0
+1611,Minimum One Bit Operations to Make Integers Zero,74.5%,Hard,0.3861190694729015,0,0,0,0,1,1,1

@@ -1,9 +1,9 @@
-No,Title,Acceptance,Difficulty,Frequency,Array,Binary Search,Dynamic Programming,Prefix Sum,Hash Table,Depth-First Search,Breadth-First Search,Graph,Topological Sort,Union Find,Matrix,Divide and Conquer,Sorting,Heap (Priority Queue),Quickselect
-2420,Find All Good Indices,38.3%,Medium,0.437808264792926,1,0,1.0,1.0,,,,,,,,,,,
-697,Degree of an Array,56.4%,Easy,0.245122458032985,1,0,,,1.0,,,,,,,,,,
-210,Course Schedule II,50.1%,Medium,0.0524366512730439,0,0,,,,1.0,1.0,1.0,1.0,,,,,,
-207,Course Schedule,46.6%,Medium,0.0306537410910024,0,0,,,,1.0,1.0,1.0,1.0,,,,,,
-200,Number of Islands,58.5%,Medium,0.0220759516991997,1,0,,,,1.0,1.0,,,1.0,1.0,,,,
-215,Kth Largest Element in an Array,66.8%,Medium,0.0207583997717806,1,0,,,,,,,,,,1.0,1.0,1.0,1.0
-198,House Robber,50.9%,Medium,0.0203569370687441,1,0,1.0,,,,,,,,,,,,
-33,Search in Rotated Sorted Array,40.5%,Medium,0.0147549707467991,1,1,,,,,,,,,,,,,
+No,Title,Acceptance,Difficulty,Frequency,Array,Dynamic Programming,Prefix Sum,Hash Table,Depth-First Search,Breadth-First Search,Graph,Topological Sort,Union Find,Matrix,Divide and Conquer,Sorting,Heap (Priority Queue),Quickselect,Binary Search
+2420,Find All Good Indices,38.3%,Medium,0.437808264792926,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0
+697,Degree of an Array,56.4%,Easy,0.245122458032985,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+210,Course Schedule II,50.1%,Medium,0.0524366512730439,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0
+207,Course Schedule,46.6%,Medium,0.0306537410910024,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0
+200,Number of Islands,58.5%,Medium,0.0220759516991997,1,0,0,0,1,1,0,0,1,1,0,0,0,0,0
+215,Kth Largest Element in an Array,66.8%,Medium,0.0207583997717806,1,0,0,0,0,0,0,0,0,0,1,1,1,1,0
+198,House Robber,50.9%,Medium,0.0203569370687441,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+33,Search in Rotated Sorted Array,40.5%,Medium,0.0147549707467991,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1

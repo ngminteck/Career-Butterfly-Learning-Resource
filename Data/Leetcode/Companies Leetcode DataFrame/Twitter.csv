@@ -1,3 +1,3 @@
-No,Title,Acceptance,Difficulty,Frequency,Stack,Tree,Depth-First Search,Design,Queue,Iterator,Array,Hash Table,Math,Randomized
-380,Insert Delete GetRandom O(1),54.4%,Medium,0.0206856925193006,0,0,0,1,0,0,1.0,1.0,1.0,1.0
-341,Flatten Nested List Iterator,64.3%,Medium,0.0103428462596503,1,1,1,1,1,1,,,,
+No,Title,Acceptance,Difficulty,Frequency,Array,Hash Table,Math,Design,Randomized,Stack,Tree,Depth-First Search,Queue,Iterator
+380,Insert Delete GetRandom O(1),54.4%,Medium,0.0206856925193006,1,1,1,1,1,0,0,0,0,0
+341,Flatten Nested List Iterator,64.3%,Medium,0.0103428462596503,0,0,0,1,0,1,1,1,1,1

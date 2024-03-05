@@ -1,4 +1,4 @@
-No,Title,Acceptance,Difficulty,Frequency,Array,String,Dynamic Programming,Greedy,Bit Manipulation,Brainteaser
-2419,Longest Subarray With Maximum Bitwise AND,49.2%,Medium,0,1,0,0,0,1.0,1.0
-2901,Longest Unequal Adjacent Groups Subsequence II,26.9%,Medium,0,1,1,1,0,,
-2900,Longest Unequal Adjacent Groups Subsequence I,65.1%,Easy,0,1,1,1,1,,
+No,Title,Acceptance,Difficulty,Frequency,Array,Bit Manipulation,Brainteaser,String,Dynamic Programming,Greedy
+2419,Longest Subarray With Maximum Bitwise AND,49.2%,Medium,0,1,1,1,0,0,0
+2901,Longest Unequal Adjacent Groups Subsequence II,26.9%,Medium,0,1,0,0,1,1,0
+2900,Longest Unequal Adjacent Groups Subsequence I,65.1%,Easy,0,1,0,0,1,1,1

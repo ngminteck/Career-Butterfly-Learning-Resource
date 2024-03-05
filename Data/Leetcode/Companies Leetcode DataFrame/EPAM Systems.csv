@@ -1,5 +1,5 @@
-No,Title,Acceptance,Difficulty,Frequency,Hash Table,String,Sliding Window,Array,Sorting,Two Pointers,Linked List,Recursion
-49,Group Anagrams,68.2%,Medium,0.011769234547798,1,1,0,1.0,1.0,,,
-125,Valid Palindrome,47.0%,Easy,0.007723761937909,0,1,0,,,1.0,,
-21,Merge Two Sorted Lists,64.0%,Easy,0.0074297661826075,0,0,0,,,,1.0,1.0
-3,Longest Substring Without Repeating Characters,34.5%,Medium,0.0040454726098889,1,1,1,,,,,
+No,Title,Acceptance,Difficulty,Frequency,Array,Hash Table,String,Sorting,Two Pointers,Linked List,Recursion,Sliding Window
+49,Group Anagrams,68.2%,Medium,0.011769234547798,1,1,1,1,0,0,0,0
+125,Valid Palindrome,47.0%,Easy,0.007723761937909,0,0,1,0,1,0,0,0
+21,Merge Two Sorted Lists,64.0%,Easy,0.0074297661826075,0,0,0,0,0,1,1,0
+3,Longest Substring Without Repeating Characters,34.5%,Medium,0.0040454726098889,0,1,1,0,0,0,0,1

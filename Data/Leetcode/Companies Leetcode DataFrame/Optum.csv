@@ -1,3 +1,3 @@
-No,Title,Acceptance,Difficulty,Frequency,Two Pointers,String,Database
-1555,Bank Account Summary,51.1%,Medium,0,0,0,1.0
-2000,Reverse Prefix of Word,80.6%,Easy,0,1,1,
+No,Title,Acceptance,Difficulty,Frequency,Database,Two Pointers,String
+1555,Bank Account Summary,51.1%,Medium,0,1,0,0
+2000,Reverse Prefix of Word,80.6%,Easy,0,0,1,1

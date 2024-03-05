@@ -1,8 +1,8 @@
-No,Title,Acceptance,Difficulty,Frequency,Array,Matrix,Simulation,Dynamic Programming,Binary Search,Prefix Sum,Ordered Set,Hash Table,String,Backtracking,Breadth-First Search,Stack,Monotonic Stack,Math
-446,Arithmetic Slices II - Subsequence,54.6%,Hard,0.2756163764688535,1,0,0,1.0,,,,,,,,,,
-363,Max Sum of Rectangle No Larger Than K,44.1%,Hard,0.2300406714331951,1,1,0,,1.0,1.0,1.0,,,,,,,
-126,Word Ladder II,27.3%,Hard,0.1751186444998966,0,0,0,,,,,1.0,1.0,1.0,1.0,,,
-907,Sum of Subarray Minimums,37.4%,Medium,0.1255565339897638,1,0,0,1.0,,,,,,,,1.0,1.0,
-279,Perfect Squares,54.7%,Medium,0.112162257095649,0,0,0,1.0,,,,,,,1.0,,,1.0
-542,01 Matrix,48.2%,Medium,0.0572402301623505,1,1,0,1.0,,,,,,,1.0,,,
-54,Spiral Matrix,48.9%,Medium,0.0268652825939715,1,1,1,,,,,,,,,,,
+No,Title,Acceptance,Difficulty,Frequency,Array,Dynamic Programming,Binary Search,Matrix,Prefix Sum,Ordered Set,Hash Table,String,Backtracking,Breadth-First Search,Stack,Monotonic Stack,Math,Simulation
+446,Arithmetic Slices II - Subsequence,54.6%,Hard,0.2756163764688535,1,1,0,0,0,0,0,0,0,0,0,0,0,0
+363,Max Sum of Rectangle No Larger Than K,44.1%,Hard,0.2300406714331951,1,0,1,1,1,1,0,0,0,0,0,0,0,0
+126,Word Ladder II,27.3%,Hard,0.1751186444998966,0,0,0,0,0,0,1,1,1,1,0,0,0,0
+907,Sum of Subarray Minimums,37.4%,Medium,0.1255565339897638,1,1,0,0,0,0,0,0,0,0,1,1,0,0
+279,Perfect Squares,54.7%,Medium,0.112162257095649,0,1,0,0,0,0,0,0,0,1,0,0,1,0
+542,01 Matrix,48.2%,Medium,0.0572402301623505,1,1,0,1,0,0,0,0,0,1,0,0,0,0
+54,Spiral Matrix,48.9%,Medium,0.0268652825939715,1,0,0,1,0,0,0,0,0,0,0,0,0,1

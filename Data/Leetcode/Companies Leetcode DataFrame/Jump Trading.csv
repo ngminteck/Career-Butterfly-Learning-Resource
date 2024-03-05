@@ -1,3 +1,3 @@
-No,Title,Acceptance,Difficulty,Frequency,Array,Hash Table,Matrix,Bit Manipulation,Counting
-2275,Largest Combination With Bitwise AND Greater Than Zero,72.5%,Medium,0.0509906522396947,1,1,0,1.0,1.0
-36,Valid Sudoku,59.3%,Medium,0.0254953261198473,1,1,1,,
+No,Title,Acceptance,Difficulty,Frequency,Array,Hash Table,Bit Manipulation,Counting,Matrix
+2275,Largest Combination With Bitwise AND Greater Than Zero,72.5%,Medium,0.0509906522396947,1,1,1,1,0
+36,Valid Sudoku,59.3%,Medium,0.0254953261198473,1,1,0,0,1

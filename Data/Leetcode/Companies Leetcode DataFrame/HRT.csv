@@ -1,9 +1,9 @@
-No,Title,Acceptance,Difficulty,Frequency,Math,String,Bit Manipulation,Simulation,Array,Backtracking,Tree,Depth-First Search,Graph,Topological Sort,Hash Table,Greedy,Counting,Stack,Sorting,Binary Search,Dynamic Programming,Prefix Sum,Queue,Sliding Window,Heap (Priority Queue),Monotonic Queue
-1307,Verbal Arithmetic Puzzle,34.0%,Hard,4.393543741585368,1,1,0,0,1.0,1.0,,,,,,,,,,,,,,,,
-722,Remove Comments,38.5%,Medium,3.298955603216984,0,1,0,0,1.0,,,,,,,,,,,,,,,,,
-2246,Longest Path With Different Adjacent Characters,54.8%,Hard,2.2043674648486,0,1,0,0,1.0,,1.0,1.0,1.0,1.0,,,,,,,,,,,,
-1775,Equal Sum Arrays With Minimum Number of Operations,53.5%,Medium,1.55814461804655,0,0,0,0,1.0,,,,,,1.0,1.0,1.0,,,,,,,,,
-726,Number of Atoms,52.7%,Hard,1.4053425560905852,0,1,0,0,,,,,,,1.0,,,1.0,1.0,,,,,,,
-410,Split Array Largest Sum,55.0%,Hard,0.3953127366441464,0,0,0,0,1.0,,,,,,,1.0,,,,1.0,1.0,1.0,,,,
-239,Sliding Window Maximum,46.5%,Hard,0.1637973111297861,0,0,0,0,1.0,,,,,,,,,,,,,,1.0,1.0,1.0,1.0
-67,Add Binary,53.3%,Easy,0.0709517359722844,1,1,1,1,,,,,,,,,,,,,,,,,,
+No,Title,Acceptance,Difficulty,Frequency,Array,Math,String,Backtracking,Tree,Depth-First Search,Graph,Topological Sort,Hash Table,Greedy,Counting,Stack,Sorting,Binary Search,Dynamic Programming,Prefix Sum,Queue,Sliding Window,Heap (Priority Queue),Monotonic Queue,Bit Manipulation,Simulation
+1307,Verbal Arithmetic Puzzle,34.0%,Hard,4.393543741585368,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+722,Remove Comments,38.5%,Medium,3.298955603216984,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+2246,Longest Path With Different Adjacent Characters,54.8%,Hard,2.2043674648486,1,0,1,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+1775,Equal Sum Arrays With Minimum Number of Operations,53.5%,Medium,1.55814461804655,1,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0
+726,Number of Atoms,52.7%,Hard,1.4053425560905852,0,0,1,0,0,0,0,0,1,0,0,1,1,0,0,0,0,0,0,0,0,0
+410,Split Array Largest Sum,55.0%,Hard,0.3953127366441464,1,0,0,0,0,0,0,0,0,1,0,0,0,1,1,1,0,0,0,0,0,0
+239,Sliding Window Maximum,46.5%,Hard,0.1637973111297861,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0
+67,Add Binary,53.3%,Easy,0.0709517359722844,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1

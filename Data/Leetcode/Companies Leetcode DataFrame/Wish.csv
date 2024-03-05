@@ -1,3 +1,3 @@
-No,Title,Acceptance,Difficulty,Frequency,Array,Hash Table,String,Dynamic Programming,Trie,Memoization,Binary Search,Sorting
-436,Find Right Interval,51.8%,Medium,0.2617425160984213,1,0,0,0,0,0,1.0,1.0
-139,Word Break,46.6%,Medium,0.1308712580492106,1,1,1,1,1,1,,
+No,Title,Acceptance,Difficulty,Frequency,Array,Binary Search,Sorting,Hash Table,String,Dynamic Programming,Trie,Memoization
+436,Find Right Interval,51.8%,Medium,0.2617425160984213,1,1,1,0,0,0,0,0
+139,Word Break,46.6%,Medium,0.1308712580492106,1,0,0,1,1,1,1,1

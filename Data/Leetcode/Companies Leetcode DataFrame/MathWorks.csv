@@ -1,5 +1,5 @@
-No,Title,Acceptance,Difficulty,Frequency,Array,Hash Table,Two Pointers,String,Dynamic Programming,Queue,Sliding Window,Monotonic Queue,Math,String Matching,Binary Search
-2444,Count Subarrays With Fixed Bounds,61.5%,Hard,1.9544731264711357,1,0,0,0,0,1.0,1.0,1.0,,,
-2851,String Transformation,29.0%,Hard,1.4640534414022888,0,0,0,1,1,,,,1.0,1.0,
-2861,Maximum Number of Alloys,37.6%,Medium,0.8109302162163288,1,0,0,0,0,,,,,,1.0
-1048,Longest String Chain,61.0%,Medium,0.1578069910303688,1,1,1,1,1,,,,,,
+No,Title,Acceptance,Difficulty,Frequency,Array,Queue,Sliding Window,Monotonic Queue,Math,String,Dynamic Programming,String Matching,Binary Search,Hash Table,Two Pointers
+2444,Count Subarrays With Fixed Bounds,61.5%,Hard,1.9544731264711357,1,1,1,1,0,0,0,0,0,0,0
+2851,String Transformation,29.0%,Hard,1.4640534414022888,0,0,0,0,1,1,1,1,0,0,0
+2861,Maximum Number of Alloys,37.6%,Medium,0.8109302162163288,1,0,0,0,0,0,0,0,1,0,0
+1048,Longest String Chain,61.0%,Medium,0.1578069910303688,1,0,0,0,0,1,1,0,0,1,1

@@ -1,5 +1,5 @@
-No,Title,Acceptance,Difficulty,Frequency,Array,Dynamic Programming,Bit Manipulation,Recursion,Bitmask,Design,Heap (Priority Queue),Ordered Set,String
-855,Exam Room,43.3%,Medium,3.218875824868201,0,0,0,0,0,1.0,1.0,1.0,
-761,Special Binary String,60.9%,Hard,1.6094379124341005,0,0,0,1,0,,,,1.0
-1309,Decrypt String from Alphabet to Integer Mapping,79.6%,Easy,0.0,0,0,0,0,0,,,,1.0
-2992,Number of Self-Divisible Permutations,76.8%,Medium,0.0,1,1,1,1,1,,,,
+No,Title,Acceptance,Difficulty,Frequency,Design,Heap (Priority Queue),Ordered Set,String,Recursion,Array,Dynamic Programming,Bit Manipulation,Bitmask
+855,Exam Room,43.3%,Medium,3.218875824868201,1,1,1,0,0,0,0,0,0
+761,Special Binary String,60.9%,Hard,1.6094379124341005,0,0,0,1,1,0,0,0,0
+1309,Decrypt String from Alphabet to Integer Mapping,79.6%,Easy,0.0,0,0,0,1,0,0,0,0,0
+2992,Number of Self-Divisible Permutations,76.8%,Medium,0.0,0,0,0,0,1,1,1,1,1
