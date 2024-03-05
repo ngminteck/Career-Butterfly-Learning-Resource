@@ -1,0 +1,10 @@
+No,Title,Acceptance,Frequency,Easy,Hard,Medium,Array,Binary Search,Design,Queue,Data Stream,String,Linked List,Stack,Doubly-Linked List,Hash Table,Greedy,Sorting,Heap (Priority Queue),Counting,Math,Game Theory
+362,Design Hit Counter,68.6%,1.1718597400324042,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0
+2468,Split Message Based on Limit,43.5%,1.104973765679068,0,1,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+1472,Design Browser History,77.5%,1.0420368949972143,0,0,1,1,0,1,0,1,0,1,1,1,0,0,0,0,0,0,0
+767,Reorganize String,54.5%,0.7521211830194965,0,0,1,0,0,0,0,0,1,0,0,0,1,1,1,1,1,0,0
+1419,Minimum Number of Frogs Croaking,50.2%,0.6576404921030354,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0
+2038,Remove Colored Pieces if Both Neighbors are the Same Color,62.8%,0.3677247801253173,0,0,1,0,0,0,0,0,1,0,0,0,0,1,0,0,0,1,1
+56,Merge Intervals,47.1%,0.167834724827712,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+41,First Missing Positive,37.8%,0.0363016266762147,0,1,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+20,Valid Parentheses,40.5%,0.0073923825831765,1,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0

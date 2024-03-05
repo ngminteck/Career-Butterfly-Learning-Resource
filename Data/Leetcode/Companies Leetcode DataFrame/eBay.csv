@@ -1,0 +1,8 @@
+No,Title,Acceptance,Frequency,Hard,Medium,String,Rolling Hash,String Matching,Hash Function,Array,Backtracking,Trie,Matrix,Depth-First Search,Breadth-First Search,Graph,Topological Sort,Tree,Binary Tree,Union Find,Hash Table,Dynamic Programming,Memoization,Math
+214,Shortest Palindrome,33.2%,0.1641359607946063,1,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+212,Word Search II,36.2%,0.1184035755459826,1,0,1,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0
+210,Course Schedule II,50.1%,0.072671190297359,0,1,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0
+103,Binary Tree Zigzag Level Order Traversal,58.6%,0.0524901826213966,0,1,0,0,0,0,0,0,0,0,0,1,0,0,1,1,0,0,0,0,0
+200,Number of Islands,58.5%,0.0323652845020316,0,1,0,0,0,0,1,0,0,1,1,1,0,0,0,0,1,0,0,0,0
+139,Word Break,46.6%,0.0224224640558323,0,1,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,1,1,1,0
+12,Integer to Roman,64.3%,0.0212322201057741,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1

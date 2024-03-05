@@ -1,0 +1,9 @@
+No,Title,Acceptance,Frequency,Easy,Hard,Medium,Array,Greedy,Bit Manipulation,Dynamic Programming,Shell,Linked List,Recursion,Two Pointers,Stack,Monotonic Stack
+2835,Minimum Operations to Form Subsequence With Target Sum,31.7%,2.128670130852174,0,1,0,1,1,1,0,0,0,0,0,0,0
+2742,Painting the Walls,51.1%,1.3514780542676954,0,1,0,1,0,0,1,0,0,0,0,0,0
+193,Valid Phone Numbers,25.8%,0.5742859776832164,1,0,0,0,0,0,0,1,0,0,0,0,0
+21,Merge Two Sorted Lists,64.0%,0.0957159416277049,1,0,0,0,0,0,0,0,1,1,0,0,0
+121,Best Time to Buy and Sell Stock,53.5%,0.0463905071195269,1,0,0,1,0,0,1,0,0,0,0,0,0
+122,Best Time to Buy and Sell Stock II,66.0%,0.0247537391529382,0,0,1,1,1,0,1,0,0,0,0,0,0
+42,Trapping Rain Water,60.8%,0.0211312669961643,0,1,0,1,0,0,1,0,0,0,1,1,1
+55,Jump Game,38.5%,0.0168071183163812,0,0,1,1,1,0,1,0,0,0,0,0,0

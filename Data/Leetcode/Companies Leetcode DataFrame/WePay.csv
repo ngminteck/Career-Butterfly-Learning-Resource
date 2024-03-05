@@ -1,0 +1,4 @@
+No,Title,Acceptance,Frequency,Easy,Medium,Array,Math,Stack,Dynamic Programming,Recursion,Memoization,Hash Table,String,Sorting
+150,Evaluate Reverse Polish Notation,51.0%,0.047357623124054,0,1,1,1,1,0,0,0,0,0,0
+509,Fibonacci Number,70.8%,0.0291991546922623,1,0,0,1,0,1,1,1,0,0,0
+242,Valid Anagram,64.3%,0.0110406862604705,1,0,0,0,0,0,0,0,1,1,1

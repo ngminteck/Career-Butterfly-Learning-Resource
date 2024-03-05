@@ -1,0 +1,14 @@
+No,Title,Acceptance,Frequency,Easy,Hard,Medium,Math,String,Dynamic Programming,String Matching,Array,Hash Table,Design,Queue,Simulation,Sorting,Counting,Binary Search,Two Pointers,Stack,Heap (Priority Queue),Data Stream,Ordered Set,Trie
+2851,String Transformation,29.0%,1.8241564192888635,0,1,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+353,Design Snake Game,38.7%,1.644400871060686,0,0,1,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0
+1366,Rank Teams by Votes,58.1%,1.5944230582955978,0,0,1,0,1,0,0,1,1,0,0,0,1,1,0,0,0,0,0,0,0
+911,Online Election,51.9%,1.129149012528191,0,0,1,0,0,0,0,1,1,1,0,0,0,0,1,0,0,0,0,0,0
+1048,Longest String Chain,61.0%,1.0479685558493548,0,0,1,0,1,1,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0
+1598,Crawler Log Folder,64.9%,0.8109302162163288,1,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0
+2034,Stock Price Fluctuation,48.6%,0.7777045685880084,0,0,1,0,0,0,0,0,1,1,0,0,0,0,0,0,0,1,1,1,0
+359,Logger Rate Limiter,75.8%,0.5020919437972361,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,1,0,0
+1166,Design File System,62.5%,0.4978384282391795,0,0,1,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1
+49,Group Anagrams,68.2%,0.0325643824717729,0,0,1,0,1,0,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0
+12,Integer to Roman,64.3%,0.030677252247047,0,0,1,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+300,Longest Increasing Subsequence,55.0%,0.0296537665752035,0,0,1,0,0,1,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0
+88,Merge Sorted Array,49.2%,0.0081549891293061,1,0,0,0,0,0,0,1,0,0,0,0,1,0,0,1,0,0,0,0,0

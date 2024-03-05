@@ -1,0 +1,4 @@
+No,Title,Acceptance,Frequency,Hard,Medium,Array,Binary Search,Dynamic Programming,Sorting,Hash Table,Greedy,Heap (Priority Queue),Counting,Depth-First Search,Breadth-First Search,Union Find,Graph,Shortest Path
+1235,Maximum Profit in Job Scheduling,54.8%,0.1605966640662709,1,0,1,1,1,1,0,0,0,0,0,0,0,0,0
+621,Task Scheduler,58.3%,0.0926588304827047,0,1,1,0,0,1,1,1,1,1,0,0,0,0,0
+399,Evaluate Division,61.5%,0.0679378335835661,0,1,1,0,0,0,0,0,0,0,1,1,1,1,1

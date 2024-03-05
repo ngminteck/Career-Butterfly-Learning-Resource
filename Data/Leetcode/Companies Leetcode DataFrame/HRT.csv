@@ -1,0 +1,9 @@
+No,Title,Acceptance,Frequency,Easy,Hard,Medium,Array,Math,String,Backtracking,Tree,Depth-First Search,Graph,Topological Sort,Hash Table,Greedy,Counting,Stack,Sorting,Binary Search,Dynamic Programming,Prefix Sum,Queue,Sliding Window,Heap (Priority Queue),Monotonic Queue,Bit Manipulation,Simulation
+1307,Verbal Arithmetic Puzzle,34.0%,4.393543741585368,0,1,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+722,Remove Comments,38.5%,3.298955603216984,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+2246,Longest Path With Different Adjacent Characters,54.8%,2.2043674648486,0,1,0,1,0,1,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+1775,Equal Sum Arrays With Minimum Number of Operations,53.5%,1.55814461804655,0,0,1,1,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0
+726,Number of Atoms,52.7%,1.4053425560905852,0,1,0,0,0,1,0,0,0,0,0,1,0,0,1,1,0,0,0,0,0,0,0,0,0
+410,Split Array Largest Sum,55.0%,0.3953127366441464,0,1,0,1,0,0,0,0,0,0,0,0,1,0,0,0,1,1,1,0,0,0,0,0,0
+239,Sliding Window Maximum,46.5%,0.1637973111297861,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0
+67,Add Binary,53.3%,0.0709517359722844,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1

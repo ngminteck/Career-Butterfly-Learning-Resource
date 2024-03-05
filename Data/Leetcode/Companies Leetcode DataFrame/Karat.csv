@@ -1,0 +1,5 @@
+No,Title,Acceptance,Frequency,Easy,Hard,Medium,Array,Hash Table,Matrix,String,Simulation,Depth-First Search,Breadth-First Search,Graph,Topological Sort
+2133,Check if Every Row and Column Contains All Numbers,51.7%,0.5866832728309206,1,0,0,1,1,1,0,0,0,0,0,0
+1160,Find Words That Can Be Formed by Characters,70.7%,0.4095430747789635,1,0,0,1,1,0,1,0,0,0,0,0
+68,Text Justification,42.7%,0.2324028767270065,0,1,0,1,0,0,1,1,0,0,0,0
+207,Course Schedule,46.6%,0.1103807160953693,0,0,1,0,0,0,0,0,1,1,1,1
