@@ -194,4 +194,7 @@ Maven
 Pip
 npm
 Node.js
+SIMD
+React Native
+Rails
 Mojo
