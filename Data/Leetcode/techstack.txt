@@ -9,7 +9,7 @@ Visual Basic .Net
 R
 SQL
 Go
-Swift
+Swift programming
 Perl
 Assembly Language
 Ruby
@@ -19,9 +19,9 @@ Apache Groovy
 Objective-C
 Rust
 SAS
-D
+D programming
 Dart
-PL/SQL
+PL-SQL
 Delphi
 COBOL
 Kotlin
@@ -30,7 +30,7 @@ Julia
 ABAP
 Scala
 Transact-SQL
-Scheme
+Scheme programming 
 Prolog
 Ada
 Lisp
