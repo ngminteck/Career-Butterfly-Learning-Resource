@@ -1,0 +1,69 @@
+
+      
+      <!----><div class="ac-container ac-adaptiveCard" style=""><div class="ac-textBlock" style=""><p><strong>Datalog</strong> is a declarative logic programming language that shares syntactic similarities with <strong>Prolog</strong>. <a href="https://en.wikipedia.org/wiki/Datalog" class="tooltip-target" data-citationid="5eb224c1-44d1-e3e3-f17a-53f76dfa8482-9-group" h="ID=SERP,5026.1">It is often used as a <strong>query language for deductive databases</strong> and has found applications in various domains, including data integration, information extraction, networking, program analysis, security, cloud computing, and machine learning</a><a href="https://en.wikipedia.org/wiki/Datalog" class="ac-anchor sup-target" target="_blank" data-citationid="5eb224c1-44d1-e3e3-f17a-53f76dfa8482-5" aria-label="1: query language for deductive databases" h="ID=SERP,5026.1"><sup class="citation-sup">1</sup></a><a href="https://datalog.dev/article/Introduction_to_Datalog_programming_language.html" class="ac-anchor sup-target" target="_blank" data-citationid="5eb224c1-44d1-e3e3-f17a-53f76dfa8482-7" aria-label="2: query language for deductive databases" h="ID=SERP,5026.1"><sup class="citation-sup">2</sup></a><a href="https://codedocs.org/what-is/datalog" class="ac-anchor sup-target" target="_blank" data-citationid="5eb224c1-44d1-e3e3-f17a-53f76dfa8482-9" aria-label="3: query language for deductive databases" h="ID=SERP,5026.1"><sup class="citation-sup">3</sup></a>.</p>
+<p>Here are some key points about Datalog:</p>
+<ol>
+<li><strong>Logic-Based</strong>: Datalog is based on <strong>first-order logic</strong> and expresses logical clauses using <strong>Horn clauses</strong>.</li>
+<li><strong>Declarative</strong>: In Datalog, you specify <strong>what you want to achieve</strong> rather than how to achieve it.</li>
+<li><strong>Rules and Facts</strong>: A Datalog program consists of <strong>facts</strong> (statements considered true) and <strong>rules</strong> (instructions for deducing new facts from known facts).</li>
+<li><strong>Example Program</strong>:
+<ul>
+<li>Facts:
+<ul>
+<li><code>parent(xerces, brooke).</code></li>
+<li><code>parent(brooke, damocles).</code></li>
+</ul>
+</li>
+<li>Rules:
+<ul>
+<li><code>ancestor(X, Y) :- parent(X, Y).</code></li>
+<li><code>ancestor(X, Y) :- parent(X, Z), ancestor(Z, Y).</code></li>
+</ul>
+</li>
+<li>Meaning of the Program:
+<ul>
+<li>The program deduces facts like <code>ancestor(xerces, brooke)</code> and <code>ancestor(xerces, damocles)</code> based on the initial facts and rules.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Comparison to Relational Databases</strong>:
+<ul>
+<li>Non-recursive Datalog is closely related to <strong>query languages for relational databases</strong>, such as SQL.</li>
+<li>Datalog corresponds to <strong>unions of conjunctive queries</strong> in relational algebra.</li>
+<li><a href="https://en.wikipedia.org/wiki/Datalog" class="tooltip-target" data-citationid="5eb224c1-44d1-e3e3-f17a-53f76dfa8482-52-group" h="ID=SERP,5026.1">Schematic translation from non-recursive Datalog to SQL can be done</a><a href="https://en.wikipedia.org/wiki/Datalog" class="ac-anchor sup-target" target="_blank" data-citationid="5eb224c1-44d1-e3e3-f17a-53f76dfa8482-52" aria-label="1: " h="ID=SERP,5026.1"><sup class="citation-sup">1</sup></a>.</li>
+</ul>
+</li>
+</ol>
+<p>In summary, Datalog provides an elegant way to express complex relationships and queries in a concise and logical manner.</p>
+</div><div class="ac-horizontal-separator" aria-hidden="true" style=""></div></div>
+      <div class="ad-container"> </div>
+      
+      <cib-overlay>
+        
+      </cib-overlay>
+    
+      
+      <!----><div class="ac-container ac-adaptiveCard" style=""><div class="ac-textBlock" style=""><p>Certainly! <strong>Datalog</strong> is a fascinating declarative logic programming language with roots in logic programming. It’s often used as a query language for deductive databases. Here are some resources where you can dive deeper into Datalog:</p>
+<ol>
+<li>
+<p><a href="https://datalog.dev/article/Introduction_to_Datalog_programming_language.html" class="tooltip-target" data-citationid="2bdf6209-1a57-f522-b4bd-21d71e87e25c-8-group" h="ID=SERP,5026.1"><strong></strong></a><strong><a href="https://datalog.dev/article/Introduction_to_Datalog_programming_language.html" class="ac-anchor" target="_blank" is="cib-link" appearance="system-link" h="ID=SERP,5026.1">Introduction to Datalog Programming Language</a></strong>: This website provides tutorials, examples, and resources to help you get started with Datalog programming<a href="https://datalog.dev/article/Introduction_to_Datalog_programming_language.html" class="ac-anchor sup-target" target="_blank" data-citationid="2bdf6209-1a57-f522-b4bd-21d71e87e25c-8" aria-label="1: Introduction to Datalog Programming Language" h="ID=SERP,5026.1"><sup class="citation-sup">1</sup></a>.</p>
+</li>
+<li>
+<p><strong><a href="https://www.learndatalogtoday.org/" class="ac-anchor" target="_blank" is="cib-link" appearance="system-link" h="ID=SERP,5026.1">Learn Datalog Today!</a></strong>: Explore Datalog’s expressive power, which is similar to SQL. <a href="https://datalog.dev/article/Introduction_to_Datalog_programming_language.html" class="tooltip-target" data-citationid="2bdf6209-1a57-f522-b4bd-21d71e87e25c-15-group" h="ID=SERP,5026.1">Additionally, you’ll find information about Datomic, a database with a unique architecture, at </a><a href="https://datomic.com" class="ac-anchor" target="_blank" is="cib-link" appearance="system-link" h="ID=SERP,5026.1">Datomic’s official website</a><a href="https://www.learndatalogtoday.org/" class="ac-anchor sup-target" target="_blank" data-citationid="2bdf6209-1a57-f522-b4bd-21d71e87e25c-15" aria-label="2: Datomic’s official website" h="ID=SERP,5026.1"><sup class="citation-sup">2</sup></a>.</p>
+</li>
+<li>
+<p><strong><a href="https://en.wikipedia.org/wiki/Datalog" class="ac-anchor" target="_blank" is="cib-link" appearance="system-link" h="ID=SERP,5026.1">Datalog on Wikipedia</a></strong>: Learn about Datalog’s declarative nature and how it differs from Prolog. <a href="https://datalog.dev/article/Introduction_to_Datalog_programming_language.html" class="tooltip-target" data-citationid="2bdf6209-1a57-f522-b4bd-21d71e87e25c-21-group" h="ID=SERP,5026.1">It’s a powerful language often used for querying deductive databases</a><a href="https://en.wikipedia.org/wiki/Datalog" class="ac-anchor sup-target" target="_blank" data-citationid="2bdf6209-1a57-f522-b4bd-21d71e87e25c-21" aria-label="3: Datalog on Wikipedia" h="ID=SERP,5026.1"><sup class="citation-sup">3</sup></a>.</p>
+</li>
+<li>
+<p><a href="https://datalog.dev/article/Introduction_to_Datalog_programming_language.html" class="tooltip-target" data-citationid="2bdf6209-1a57-f522-b4bd-21d71e87e25c-27-group" h="ID=SERP,5026.1"><strong></strong></a><strong><a href="https://codedocs.org/what-is/datalog" class="ac-anchor" target="_blank" is="cib-link" appearance="system-link" h="ID=SERP,5026.1">Datalog on CodeDocs</a></strong>: Discover Datalog’s applications in data integration, information extraction, networking, program analysis, security, cloud computing, and even machine learning<a href="https://codedocs.org/what-is/datalog" class="ac-anchor sup-target" target="_blank" data-citationid="2bdf6209-1a57-f522-b4bd-21d71e87e25c-27" aria-label="4: Datalog on CodeDocs" h="ID=SERP,5026.1"><sup class="citation-sup">4</sup></a>.</p>
+</li>
+</ol>
+<p>Happy exploring! 🚀🔍</p>
+</div><div class="ac-horizontal-separator" aria-hidden="true" style=""></div></div>
+      <div class="ad-container"> </div>
+      
+      <cib-overlay>
+        
+      </cib-overlay>
+    

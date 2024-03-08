@@ -1,0 +1,86 @@
+
+      
+      <!----><div class="ac-container ac-adaptiveCard" style=""><div class="ac-textBlock" style=""><p><strong>Drogon</strong> is a <strong>C++17/20-based HTTP application framework</strong> that allows developers to build various types of web application server programs using C++. It’s designed to be fast, asynchronous, and portable across different platforms. Here are some key features of Drogon:</p>
+<ol>
+<li>
+<p><strong>Fast and Asynchronous</strong>:</p>
+<ul>
+<li>Drogon is fully asynchronous, ensuring low overhead without sacrificing usability.</li>
+<li>It can process more than <strong>150,000 HTTP requests per second</strong> on a single core of a Ryzen 3700X.</li>
+<li>The framework uses <strong>C++ coroutines</strong>, making it easier to write asynchronous code without dealing with callback hell.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cross-Platform Support</strong>:</p>
+<ul>
+<li>Drogon runs on a wide range of platforms, including *<em>Linux, Windows, OS X, and <em>BSD</em></em>.</li>
+<li>It’s compatible with different CPUs like <strong>x86, ARM, and s390x</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Database Connectivity</strong>:</p>
+<ul>
+<li>Drogon supports <strong>ORM (Object-Relational Mapping)</strong> and can connect to major open-source databases.</li>
+<li>It also communicates with <strong>Redis</strong> for in-memory data storage.</li>
+</ul>
+</li>
+<li>
+<p><strong>Additional Utilities</strong>:</p>
+<ul>
+<li>Beyond being a <strong>HTTP server</strong>, Drogon can act as a client, handle <strong>WebSockets</strong>, and provides helpful utilities.</li>
+</ul>
+</li>
+</ol>
+<p>Here’s a simple example of a Drogon application:</p>
+<cib-code-block code-lang="cpp" clipboard-data="// Hello World using Drogon
+Callback = std::function<void(const HttpResponsePtr&amp;)>;
+app().registerHandler(&quot;/&quot;,  {
+    auto resp = HttpResponse::newHttpResponse();
+    resp->setBody(&quot;Hello World&quot;);
+    callback(resp);
+});
+"><pre><code class="language-cpp"><span class="hljs-comment">// Hello World using Drogon</span>
+Callback = std::function&lt;<span class="hljs-built_in">void</span>(<span class="hljs-type">const</span> HttpResponsePtr&amp;)&gt;;
+<span class="hljs-built_in">app</span>().<span class="hljs-built_in">registerHandler</span>(<span class="hljs-string">"/"</span>,  {
+    <span class="hljs-keyword">auto</span> resp = HttpResponse::<span class="hljs-built_in">newHttpResponse</span>();
+    resp-&gt;<span class="hljs-built_in">setBody</span>(<span class="hljs-string">"Hello World"</span>);
+    <span class="hljs-built_in">callback</span>(resp);
+});
+</code></pre>
+</cib-code-block><p><a href="https://github.com/drogonframework/drogon/wiki/ENG-01-Overview" class="tooltip-target" data-citationid="9d4d365b-b56f-08e9-e779-6964b562d5f7-56-group" h="ID=SERP,5026.1">Drogon is named after the dragon in the American TV series “Game of Thrones” </a><a href="https://github.com/drogonframework/drogon/wiki/ENG-01-Overview" class="ac-anchor sup-target" target="_blank" data-citationid="9d4d365b-b56f-08e9-e779-6964b562d5f7-54" aria-label="1: " h="ID=SERP,5026.1"><sup class="citation-sup">1</sup></a><a href="https://en.wikipedia.org/wiki/Drogon_%28software%29" class="ac-anchor sup-target" target="_blank" data-citationid="9d4d365b-b56f-08e9-e779-6964b562d5f7-56" aria-label="2: " h="ID=SERP,5026.1"><sup class="citation-sup">2</sup></a>. <a href="https://github.com/drogonframework/drogon/wiki/ENG-01-Overview" class="tooltip-target" data-citationid="9d4d365b-b56f-08e9-e779-6964b562d5f7-59-group" h="ID=SERP,5026.1">If you’re interested in exploring Drogon further, you can find examples and installation instructions on the </a><a href="https://drogon.org/" class="ac-anchor" target="_blank" is="cib-link" appearance="system-link" h="ID=SERP,5026.1">official Drogon website</a><a href="https://drogon.org/" class="ac-anchor sup-target" target="_blank" data-citationid="9d4d365b-b56f-08e9-e779-6964b562d5f7-59" aria-label="3: official Drogon website" h="ID=SERP,5026.1"><sup class="citation-sup">3</sup></a>.</p>
+</div><div class="ac-horizontal-separator" aria-hidden="true" style=""></div></div>
+      <div class="ad-container"> 
+    
+     <slot name="slot-d46b3a90-6409-dfd5-aa66-7dc9f06c3bcb"></slot> 
+    
+  </div>
+      
+      <cib-overlay>
+        
+      </cib-overlay>
+    
+      
+      <!----><div class="ac-container ac-adaptiveCard" streaming="" style=""><div class="ac-textBlock" style=""><p>Certainly! <strong>Drogon</strong> is a powerful <strong>C++ web framework</strong> designed for building high-performance web applications. Here are some resources where you can learn more about it:</p>
+<ol>
+<li>
+<p><strong>Official Website</strong>: Visit the <a href="https://drogon.org/" class="ac-anchor" target="_blank" is="cib-link" appearance="system-link" h="ID=SERP,5026.1">Drogon homepage</a> to explore its features, documentation, and examples. <a href="https://drogon.org/" class="tooltip-target" data-citationid="51c5ad0e-2dc8-1496-e418-c8a5182c810b-11-group" h="ID=SERP,5026.1">Drogon is fully <strong>asynchronous</strong>, portable across various platforms (Linux, Windows, OS X, and <em>BSD</em>), and optimized for speed without compromising usability</a><a href="https://drogon.org/" class="ac-anchor sup-target" target="_blank" data-citationid="51c5ad0e-2dc8-1496-e418-c8a5182c810b-11" aria-label="1: BSD" h="ID=SERP,5026.1"><sup class="citation-sup">1</sup></a>.</p>
+</li>
+<li>
+<p><strong>Documentation on GitHub</strong>: The <a href="https://github.com/drogonframework/drogon-docs" class="ac-anchor" target="_blank" is="cib-link" appearance="system-link" h="ID=SERP,5026.1">Drogon documentation</a> is hosted on GitHub Pages using Docsify. <a href="https://drogon.org/" class="tooltip-target" data-citationid="51c5ad0e-2dc8-1496-e418-c8a5182c810b-17-group" h="ID=SERP,5026.1">It covers essential topics, examples, and usage instructions</a><a href="https://github.com/drogonframework/drogon-docs" class="ac-anchor sup-target" target="_blank" data-citationid="51c5ad0e-2dc8-1496-e418-c8a5182c810b-17" aria-label="2: Drogon documentation" h="ID=SERP,5026.1"><sup class="citation-sup">2</sup></a>.</p>
+</li>
+<li>
+<p><strong>GitHub Repository</strong>: Dive into the <a href="https://github.com/drogonframework/drogon" class="ac-anchor" target="_blank" is="cib-link" appearance="system-link" h="ID=SERP,5026.1">Drogon GitHub repository</a> to explore the source code, contribute, and discover how Drogon can be used to build various types of web application server programs. <a href="https://drogon.org/" class="tooltip-target" data-citationid="51c5ad0e-2dc8-1496-e418-c8a5182c810b-23-group" h="ID=SERP,5026.1">It’s a cross-platform framework supporting Linux, macOS, FreeBSD, OpenBSD, HaikuOS, and Windows</a><a href="https://github.com/drogonframework/drogon" class="ac-anchor sup-target" target="_blank" data-citationid="51c5ad0e-2dc8-1496-e418-c8a5182c810b-23" aria-label="3: Drogon GitHub repository" h="ID=SERP,5026.1"><sup class="citation-sup">3</sup></a>.</p>
+</li>
+</ol>
+<p>Whether you’re interested in creating REST APIs, web services, or full-fledged web applications, Drogon provides a robust foundation for your C++ projects. Happy coding! 🚀🌟</p>
+</div><div class="ac-horizontal-separator" aria-hidden="true" style=""></div></div>
+      <div class="ad-container"> 
+    
+     <slot name="slot-a5b21e0a-5bbc-4e1b-8179-27aa35f58bce"></slot> 
+    
+  </div>
+      
+      <cib-overlay>
+        
+      </cib-overlay>
+    

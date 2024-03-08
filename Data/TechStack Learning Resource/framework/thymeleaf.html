@@ -1,0 +1,119 @@
+
+      
+      <!----><div class="ac-container ac-adaptiveCard" id="entity-image-top" style=""><div style=""><button class="entity-image-button"><div class="entity-image"><div class="shower-glass"><img class="ac-image" src="https://www.bing.com/th?id=OSK.c23e06d70e3fc048548d64f35034b580&amp;pid=cdx&amp;w=320&amp;h=189&amp;c=7&amp;rs=1" alt="Thymeleaf" style="min-width: 0px; width: 320px; height: 189px;"></div><div class="overlay-image"><img src="https://www.bing.com/th?id=OSK.c23e06d70e3fc048548d64f35034b580&amp;pid=cdx&amp;w=320&amp;h=58&amp;c=7" class="ac-image shower-glass-entity-image"></div></div><div class="entity-explore-pill"><svg-icon type="wand" size="16" style="--icon-size: 16px;" aria-hidden="true"></svg-icon><div class="entity-explore-text">Explore</div></div></button></div><div class="ac-horizontal-separator" aria-hidden="true" style=""></div><div class="ac-textBlock" style=""><p><strong>Thymeleaf</strong> is a modern server-side <strong>Java template engine</strong> that brings elegance and natural templates to your development workflow. It’s designed for both web and standalone environments. Let’s dive into the details:</p>
+<ol>
+<li>
+<p><strong>Natural Templates</strong>:</p>
+<ul>
+<li>
+<p>Thymeleaf allows you to write HTML templates that look and work like regular HTML. These templates can be correctly displayed in browsers and also serve as static prototypes, fostering stronger collaboration within development teams.</p>
+</li>
+<li>
+<p>Here’s an example snippet of a Thymeleaf template for displaying a table of products:</p>
+<cib-code-block code-lang="html" clipboard-data="<table>
+    <thead>
+        <tr>
+            <th th:text=&quot;#{msgs.headers.name}&quot;>Name</th>
+            <th th:text=&quot;#{msgs.headers.price}&quot;>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each=&quot;prod: ${allProducts}&quot;>
+            <td th:text=&quot;${prod.name}&quot;>Oranges</td>
+            <td th:text=&quot;${#numbers.formatDecimal(prod.price, 1, 2)}&quot;>0.99</td>
+        </tr>
+    </tbody>
+</table>
+"><pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">table</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">thead</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">th:text</span>=<span class="hljs-string">"#{msgs.headers.name}"</span>&gt;</span>Name<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">th:text</span>=<span class="hljs-string">"#{msgs.headers.price}"</span>&gt;</span>Price<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">thead</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">tbody</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">th:each</span>=<span class="hljs-string">"prod: ${allProducts}"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">th:text</span>=<span class="hljs-string">"${prod.name}"</span>&gt;</span>Oranges<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">th:text</span>=<span class="hljs-string">"${#numbers.formatDecimal(prod.price, 1, 2)}"</span>&gt;</span>0.99<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
+</code></pre>
+</cib-code-block></li>
+</ul>
+</li>
+<li>
+<p><strong>Integrations Galore</strong>:</p>
+<ul>
+<li>Thymeleaf seamlessly integrates with various tools and frameworks, making it ideal for modern-day HTML5 JVM web development.</li>
+<li>You can write Thymeleaf templates in your favorite tools, including Eclipse, IntelliJ IDEA, Spring, Play, and even the up-and-coming Model-View-Controller API for Java EE 8.</li>
+<li>Explore the <a href="https://www.thymeleaf.org/" class="ac-anchor" target="_blank" is="cib-link" appearance="system-link" h="ID=SERP,5026.1">Thymeleaf Ecosystem</a> to discover more integrations, including community-written plugins that speed up your development process.</li>
+</ul>
+</li>
+<li>
+<p><strong>Getting Started</strong>:</p>
+<ul>
+<li>If you’re looking to get started with Thymeleaf, visit the <a href="https://www.thymeleaf.org/" class="ac-anchor" target="_blank" is="cib-link" appearance="system-link" h="ID=SERP,5026.1">Download section</a> to obtain Thymeleaf.</li>
+<li>Then head over to the <a href="https://www.thymeleaf.org/doc/tutorials/2.1/usingthymeleaf.html" class="ac-anchor" target="_blank" is="cib-link" appearance="system-link" h="ID=SERP,5026.1">Docs pages</a> for tutorials that will ease you into using this powerful template engine.</li>
+</ul>
+</li>
+<li>
+<p><strong>Who’s Using Thymeleaf?</strong>:</p>
+<ul>
+<li>Many people have embraced Thymeleaf. Check out testimonials from those who use it and learn about their experiences on the <a href="https://www.thymeleaf.org/" class="ac-anchor" target="_blank" is="cib-link" appearance="system-link" h="ID=SERP,5026.1">Thymeleaf website</a>.</li>
+</ul>
+</li>
+</ol>
+<p>Remember, Thymeleaf isn’t just about templates; it’s about making your development process smoother and more collaborative! 🌟🚀</p>
+</div><div class="ac-horizontal-separator" aria-hidden="true" style=""></div></div>
+      <div class="ad-container"> 
+    
+     <slot name="slot-733b80e0-2517-d8a9-49b4-8afa9569e312"></slot> 
+    
+  </div>
+      
+      <cib-overlay>
+        
+      </cib-overlay>
+    
+      
+      <!----><div class="ac-container ac-adaptiveCard" id="entity-image-top" streaming="" style=""><div style=""><button class="entity-image-button"><div class="entity-image"><div class="shower-glass"><img class="ac-image" src="https://www.bing.com/th?id=OSK.c23e06d70e3fc048548d64f35034b580&amp;pid=cdx&amp;w=320&amp;h=189&amp;c=7&amp;rs=1" alt="Thymeleaf" style="min-width: 0px; width: 320px; height: 189px;"></div><div class="overlay-image"><img src="https://www.bing.com/th?id=OSK.c23e06d70e3fc048548d64f35034b580&amp;pid=cdx&amp;w=320&amp;h=58&amp;c=7" class="ac-image shower-glass-entity-image"></div></div><div class="entity-explore-pill"><svg-icon type="wand" size="16" style="--icon-size: 16px;" aria-hidden="true"></svg-icon><div class="entity-explore-text">Explore</div></div></button></div><div class="ac-horizontal-separator" aria-hidden="true" style=""></div><div class="ac-textBlock" style=""><p>Certainly! <strong>Thymeleaf</strong> is a modern server-side Java template engine that can process HTML, XML, JavaScript, CSS, and plain text. It’s widely used for creating elegant and maintainable templates in web applications. Here are some resources to help you learn more about Thymeleaf:</p>
+<ol>
+<li>
+<p><strong>Official Documentation</strong>:</p>
+<ul>
+<li>The <a href="https://www.thymeleaf.org/documentation.html" class="ac-anchor" target="_blank" is="cib-link" appearance="system-link" h="ID=SERP,5026.1">Thymeleaf documentation</a> provides comprehensive information. <a href="https://www.thymeleaf.org/documentation.html" class="tooltip-target" data-citationid="d534c006-016d-c077-1971-f94d41813c55-13-group" h="ID=SERP,5026.1">It covers everything from the basics to advanced topics, including processors, utilities, and Spring integration</a><a href="https://www.thymeleaf.org/documentation.html" class="ac-anchor sup-target" target="_blank" data-citationid="d534c006-016d-c077-1971-f94d41813c55-13" aria-label="1: Thymeleaf documentation" h="ID=SERP,5026.1"><sup class="citation-sup">1</sup></a>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Tutorials</strong>:</p>
+<ul>
+<li><strong>Using Thymeleaf</strong>: This tutorial covers all the basics, making it a must-read for both new and experienced Thymeleaf users. It explains how to use Thymeleaf, its features, and provides examples. <a href="https://www.thymeleaf.org/documentation.html" class="tooltip-target" data-citationid="d534c006-016d-c077-1971-f94d41813c55-22-group" h="ID=SERP,5026.1">You can find it </a><a href="https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html" class="ac-anchor" target="_blank" is="cib-link" appearance="system-link" h="ID=SERP,5026.1">here</a><a href="https://www.thymeleaf.org/documentation.html" class="ac-anchor sup-target" target="_blank" data-citationid="d534c006-016d-c077-1971-f94d41813c55-22" aria-label="1: here" h="ID=SERP,5026.1"><sup class="citation-sup">1</sup></a>.</li>
+<li><strong>Extending Thymeleaf</strong>: If you want to customize Thymeleaf by creating your own custom dialects, processors, or utilities, this guide is your starting point. It helps you take Thymeleaf beyond its standard features. <a href="https://www.thymeleaf.org/documentation.html" class="tooltip-target" data-citationid="d534c006-016d-c077-1971-f94d41813c55-27-group" h="ID=SERP,5026.1">Check it out </a><a href="https://www.thymeleaf.org/" class="ac-anchor" target="_blank" is="cib-link" appearance="system-link" h="ID=SERP,5026.1">here</a><a href="https://www.thymeleaf.org/documentation.html" class="ac-anchor sup-target" target="_blank" data-citationid="d534c006-016d-c077-1971-f94d41813c55-27" aria-label="1: here" h="ID=SERP,5026.1"><sup class="citation-sup">1</sup></a>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Books</strong>:</p>
+<ul>
+<li><strong>Taming Thymeleaf</strong>: This book teaches you how to build web applications using Spring Boot and Thymeleaf. It covers security, validation, internationalization, testing, and more. <a href="https://www.thymeleaf.org/documentation.html" class="tooltip-target" data-citationid="d534c006-016d-c077-1971-f94d41813c55-36-group" h="ID=SERP,5026.1">Visit the </a><a href="https://www.thymeleaf.org/" class="ac-anchor" target="_blank" is="cib-link" appearance="system-link" h="ID=SERP,5026.1">book’s site</a><a href="https://www.thymeleaf.org/documentation.html" class="ac-anchor sup-target" target="_blank" data-citationid="d534c006-016d-c077-1971-f94d41813c55-36" aria-label="1: book’s site" h="ID=SERP,5026.1"><sup class="citation-sup">1</sup></a>.</li>
+</ul>
+</li>
+<li>
+<p><strong>GitHub Repository</strong>:</p>
+<ul>
+<li>Explore the <a href="https://github.com/thymeleaf" class="ac-anchor" target="_blank" is="cib-link" appearance="system-link" h="ID=SERP,5026.1">Thymeleaf GitHub repository</a><a href="https://www.thymeleaf.org/documentation.html" class="tooltip-target" data-citationid="d534c006-016d-c077-1971-f94d41813c55-44-group" h="ID=SERP,5026.1"> for the latest updates, issues, and community contributions</a><a href="https://github.com/thymeleaf" class="ac-anchor sup-target" target="_blank" data-citationid="d534c006-016d-c077-1971-f94d41813c55-44" aria-label="2: Thymeleaf GitHub repository" h="ID=SERP,5026.1"><sup class="citation-sup">2</sup></a>.</li>
+</ul>
+</li>
+</ol>
+<p>Remember to start with the official documentation, and then dive into tutorials and examples to enhance your understanding of Thymeleaf! 🌟</p>
+</div><div class="ac-horizontal-separator" aria-hidden="true" style=""></div></div>
+      <div class="ad-container"> 
+    
+     <slot name="slot-16cde687-e4e4-d2a5-f649-7f4c19891e4f"></slot> 
+    
+  </div>
+      
+      <cib-overlay>
+        
+      </cib-overlay>
+    
