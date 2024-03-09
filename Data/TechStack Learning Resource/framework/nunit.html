@@ -1,0 +1,120 @@
+
+      
+      <!----><div class="ac-container ac-adaptiveCard" id="entity-image-top" style=""><div style=""><button class="entity-image-button"><div class="entity-image"><div class="shower-glass"><img class="ac-image" src="https://www.bing.com/th?id=OSK.bd10efe1590efb1e4083e8af2be04e4f&amp;pid=cdx&amp;w=320&amp;h=189&amp;c=7&amp;rs=1" alt="NUnit" style="min-width: 0px; width: 320px; height: 189px;"></div><div class="overlay-image"><img src="https://www.bing.com/th?id=OSK.bd10efe1590efb1e4083e8af2be04e4f&amp;pid=cdx&amp;w=320&amp;h=133&amp;c=7" class="ac-image shower-glass-entity-image"></div></div><div class="entity-explore-pill"><svg-icon type="wand" size="16" style="--icon-size: 16px;" aria-hidden="true"></svg-icon><div class="entity-explore-text">Explore</div></div></button></div><div class="ac-horizontal-separator" aria-hidden="true" style=""></div><div class="ac-textBlock" style=""><p><strong>NUnit</strong> is a <strong>unit-testing framework</strong> designed for all .NET languages. It is <strong>open-source software</strong> and is released under the <strong>MIT license</strong>. <a href="https://www.c-sharpcorner.com/article/introduction-to-nunit-testing-framework/" class="tooltip-target" data-citationid="fde91746-1ba0-a356-d6bf-310a46055c3c-10-group" h="ID=SERP,5026.1">This framework is <strong>user-friendly</strong> and provides convenient attributes for working with unit tests</a><a href="https://www.c-sharpcorner.com/article/introduction-to-nunit-testing-framework/" class="ac-anchor sup-target" target="_blank" data-citationid="fde91746-1ba0-a356-d6bf-310a46055c3c-10" aria-label="1: user-friendly" h="ID=SERP,5026.1"><sup class="citation-sup">1</sup></a>.</p>
+<p>Here are some key points about NUnit:</p>
+<ol>
+<li><strong>Purpose</strong>: NUnit is primarily used for writing and executing unit tests in .NET applications.</li>
+<li><strong>Attributes</strong>: It offers a set of attributes that allow developers to define test cases, setup and teardown methods, and more.</li>
+<li><strong>Test Runners</strong>: NUnit provides test runners that execute test methods and report results.</li>
+<li><strong>Assertions</strong>: Developers can use built-in assertions to verify expected behavior in their code.</li>
+<li><strong>Integration</strong>: NUnit integrates well with various development environments and build systems.</li>
+</ol>
+<p>To illustrate how NUnit works, let’s walk through a simple example using .NET Core:</p>
+<ol>
+<li>
+<p><strong>Prerequisites</strong>:</p>
+<ul>
+<li>Install <strong>.NET 6.0</strong> or a later version.</li>
+<li>Use a text editor or code editor of your choice.</li>
+</ul>
+</li>
+<li>
+<p><strong>Creating a Source Project</strong>:</p>
+<ul>
+<li>Open a shell window and create a directory called <code>unit-testing-using-nunit</code>.</li>
+<li>Inside this directory, create a new solution file for the class library and the test project using the following command:<cib-code-block code-lang="" clipboard-data="dotnet new sln
+"><pre><code>dotnet new sln
+</code></pre>
+</cib-code-block></li>
+<li>Create a <code>PrimeService</code> directory within the project.</li>
+<li>Inside the <code>PrimeService</code> directory, create a source project:<cib-code-block code-lang="" clipboard-data="dotnet new classlib
+"><pre><code>dotnet new classlib
+</code></pre>
+</cib-code-block></li>
+<li>Rename <code>Class1.cs</code> to <code>PrimeService.cs</code> and implement a failing method (for demonstration purposes):<cib-code-block code-lang="csharp" clipboard-data="using System;
+
+namespace Prime.Services
+{
+    public class PrimeService
+    {
+        public bool IsPrime(int candidate)
+        {
+            throw new NotImplementedException(&quot;Please create a test first.&quot;);
+        }
+    }
+}
+"><pre><code class="language-csharp"><span class="hljs-keyword">using</span> System;
+
+<span class="hljs-keyword">namespace</span> <span class="hljs-title">Prime.Services</span>
+{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">PrimeService</span>
+    {
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-built_in">bool</span> <span class="hljs-title">IsPrime</span>(<span class="hljs-params"><span class="hljs-built_in">int</span> candidate</span>)</span>
+        {
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> NotImplementedException(<span class="hljs-string">"Please create a test first."</span>);
+        }
+    }
+}
+</code></pre>
+</cib-code-block></li>
+</ul>
+</li>
+<li>
+<p><strong>Creating the Test Project</strong>:</p>
+<ul>
+<li>Create a <code>PrimeService.Tests</code> directory.</li>
+<li>Inside this directory, create a new NUnit test project:<cib-code-block code-lang="" clipboard-data="dotnet new nunit
+"><pre><code>dotnet new nunit
+</code></pre>
+</cib-code-block></li>
+<li>The generated template configures the test runner and includes necessary packages for testing.</li>
+</ul>
+</li>
+<li>
+<p><strong>Adding Dependencies</strong>:</p>
+<ul>
+<li>The test project already includes references to NUnit and other required packages.</li>
+<li>Add the <code>PrimeService</code> class library as a dependency to the test project.</li>
+</ul>
+</li>
+</ol>
+<p>Now you’re ready to write and run unit tests using NUnit! 🚀</p>
+</div><div class="ac-horizontal-separator" aria-hidden="true" style=""></div></div>
+      <div class="ad-container"> 
+    
+     <slot name="slot-64b3669a-b1fb-adcb-d536-9c8e943b2876"></slot> 
+    
+  </div>
+      
+      <cib-overlay>
+        
+      </cib-overlay>
+    
+      
+      <!----><div class="ac-container ac-adaptiveCard" id="entity-image-top" style=""><div style=""><button class="entity-image-button"><div class="entity-image"><div class="shower-glass"><img class="ac-image" src="https://www.bing.com/th?id=OSK.bd10efe1590efb1e4083e8af2be04e4f&amp;pid=cdx&amp;w=320&amp;h=189&amp;c=7&amp;rs=1" alt="NUnit" style="min-width: 0px; width: 320px; height: 189px;"></div><div class="overlay-image"><img src="https://www.bing.com/th?id=OSK.bd10efe1590efb1e4083e8af2be04e4f&amp;pid=cdx&amp;w=320&amp;h=133&amp;c=7" class="ac-image shower-glass-entity-image"></div></div><div class="entity-explore-pill"><svg-icon type="wand" size="16" style="--icon-size: 16px;" aria-hidden="true"></svg-icon><div class="entity-explore-text">Explore</div></div></button></div><div class="ac-horizontal-separator" aria-hidden="true" style=""></div><div class="ac-textBlock" style=""><p>Certainly! The <strong>NUnit framework</strong> is a powerful unit testing library that allows developers to write tests for their software in a declarative and modular fashion. Here are some resources where you can learn more about it:</p>
+<ol>
+<li>
+<p><strong>Microsoft Learn</strong>: You can explore the tutorial on <strong>unit testing C# with NUnit and .NET Core</strong> on Microsoft Learn. This interactive experience guides you step-by-step through building a sample solution while learning unit testing concepts. <a href="https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-nunit" class="tooltip-target" data-citationid="76b9c892-ebf5-25c6-2250-9189fe0d8c1f-11-group" h="ID=SERP,5026.1">If you prefer to use a pre-built solution, you can also view or download the sample code</a><a href="https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-nunit" class="ac-anchor sup-target" target="_blank" data-citationid="76b9c892-ebf5-25c6-2250-9189fe0d8c1f-11" aria-label="1: unit testing C# with NUnit and .NET Core" h="ID=SERP,5026.1"><sup class="citation-sup">1</sup></a>.</p>
+</li>
+<li>
+<p><strong>Convent Learning</strong>: Their article provides a concise overview of the NUnit framework. It’s an open-source testing framework available under the Apache License. <a href="https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-nunit" class="tooltip-target" data-citationid="76b9c892-ebf5-25c6-2250-9189fe0d8c1f-16-group" h="ID=SERP,5026.1">You’ll find information on writing tests, mocking objects, assertions, and exceptions</a><a href="https://conventlearning.com/what-is-the-nunit-framework/" class="ac-anchor sup-target" target="_blank" data-citationid="76b9c892-ebf5-25c6-2250-9189fe0d8c1f-16" aria-label="2: Convent Learning" h="ID=SERP,5026.1"><sup class="citation-sup">2</sup></a>.</p>
+</li>
+<li>
+<p><strong>GitHub Repository</strong>: The official <strong>NUnit GitHub repository</strong> contains detailed documentation, examples, and community discussions. <a href="https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-nunit" class="tooltip-target" data-citationid="76b9c892-ebf5-25c6-2250-9189fe0d8c1f-22-group" h="ID=SERP,5026.1">You can explore NUnit’s features, usage, and best practices there</a><a href="https://github.com/nunit/nunit" class="ac-anchor sup-target" target="_blank" data-citationid="76b9c892-ebf5-25c6-2250-9189fe0d8c1f-22" aria-label="3: NUnit GitHub repository" h="ID=SERP,5026.1"><sup class="citation-sup">3</sup></a>.</p>
+</li>
+<li>
+<p><a href="https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-nunit" class="tooltip-target" data-citationid="76b9c892-ebf5-25c6-2250-9189fe0d8c1f-28-group" h="ID=SERP,5026.1"><strong>BrowserStack Guide</strong>: If you’re interested in using NUnit with Selenium, the <strong>BrowserStack guide</strong> offers practical examples and sample code to get you started</a><a href="https://www.browserstack.com/guide/getting-started-with-selenium-and-nunit-framework" class="ac-anchor sup-target" target="_blank" data-citationid="76b9c892-ebf5-25c6-2250-9189fe0d8c1f-28" aria-label="4: BrowserStack guide" h="ID=SERP,5026.1"><sup class="citation-sup">4</sup></a>.</p>
+</li>
+</ol>
+<p>Feel free to dive into these resources to enhance your understanding of NUnit and improve your testing practices! 🚀</p>
+</div><div class="ac-horizontal-separator" aria-hidden="true" style=""></div></div>
+      <div class="ad-container"> 
+    
+     <slot name="slot-9c16be1b-2a39-c020-55cf-dd013a8dc311"></slot> 
+    
+  </div>
+      
+      <cib-overlay>
+        
+      </cib-overlay>
+    

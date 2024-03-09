@@ -1,0 +1,121 @@
+
+      
+      <!----><div class="ac-container ac-adaptiveCard" style=""><div class="ac-textBlock" style=""><p><strong>Theano</strong> is a Python library and optimizing compiler designed for manipulating and evaluating mathematical expressions, particularly those involving <strong>matrix-valued operations</strong>. Here are some key points about Theano:</p>
+<ol>
+<li>
+<p><strong>Purpose and Features</strong>:</p>
+<ul>
+<li>Theano allows you to define, optimize, and evaluate mathematical expressions efficiently.</li>
+<li>It is especially popular in the <strong>machine learning community</strong> due to its ability to work with both <strong>CPU and GPU architectures</strong>.</li>
+<li>Expressions in Theano are written using a <strong>NumPy-like syntax</strong>.</li>
+<li>The library compiles these expressions to run efficiently on the chosen hardware.</li>
+</ul>
+</li>
+<li>
+<p><strong>History and Development</strong>:</p>
+<ul>
+<li>Theano was primarily developed by the <strong>Montreal Institute for Learning Algorithms (MILA)</strong> at the <strong>Université de Montréal</strong>.</li>
+<li>The name “Theano” pays homage to the ancient philosopher <strong>Theano</strong>, who was associated with the development of the golden mean.</li>
+<li>After the 1.0 release, major development ceased due to competition from other industrial players.</li>
+<li>Theano 1.0.0 was released in November 2017.</li>
+<li>The PyMC development team later assumed control of Theano maintenance and even forked it under the names <strong>Aesara</strong> and <strong>PyTensor</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Sample Code</strong>:</p>
+<cib-code-block code-lang="python" clipboard-data="import theano
+from theano import tensor
+
+# Declare two symbolic floating-point scalars
+a = tensor.dscalar()
+b = tensor.dscalar()
+
+# Create a simple expression (addition)
+c = a + b
+
+# Convert the expression into a callable function
+f = theano.function([a, b], c)
+
+# Evaluate with specific values
+assert 4.0 == f(1.5, 2.5)
+"><pre><code class="language-python"><span class="hljs-keyword">import</span> theano
+<span class="hljs-keyword">from</span> theano <span class="hljs-keyword">import</span> tensor
+
+<span class="hljs-comment"># Declare two symbolic floating-point scalars</span>
+a = tensor.dscalar()
+b = tensor.dscalar()
+
+<span class="hljs-comment"># Create a simple expression (addition)</span>
+c = a + b
+
+<span class="hljs-comment"># Convert the expression into a callable function</span>
+f = theano.function([a, b], c)
+
+<span class="hljs-comment"># Evaluate with specific values</span>
+<span class="hljs-keyword">assert</span> <span class="hljs-number">4.0</span> == f(<span class="hljs-number">1.5</span>, <span class="hljs-number">2.5</span>)
+</code></pre>
+</cib-code-block></li>
+</ol>
+<p>For more details, you can explore the official Theano documentation. 🚀📚</p>
+</div></div>
+      <div class="ad-container"> 
+    
+     <slot name="slot-49a5ff76-cf8d-895d-d5da-444b667468ff"></slot> 
+    
+  </div>
+      
+      <cib-overlay>
+        
+      </cib-overlay>
+    
+      
+      <!----><div class="ac-container ac-adaptiveCard" style=""><div class="ac-textBlock" style=""><p>Certainly! <strong>Theano</strong> is a powerful Python library for fast numerical computation, especially in the context of deep learning. Let me provide you with some information about it:</p>
+<ol>
+<li>
+<p><strong>Introduction to Theano</strong>:</p>
+<ul>
+<li>Theano is an open-source project developed by the LISA (now MILA) group at the University of Montreal, Canada.</li>
+<li>It serves as a <strong>compiler for mathematical expressions in Python</strong>.</li>
+<li>Theano efficiently translates your mathematical structures into code that runs on CPUs or GPUs using native libraries like BLAS and C++.</li>
+<li>Although its syntax is symbolic (which might be different from typical software development), it’s specifically designed for large neural network computations used in deep learning.</li>
+<li>Theano has been an industry standard for deep learning research and development since its inception in 2007.</li>
+<li><a href="https://machinelearningmastery.com/introduction-python-deep-learning-library-theano/" class="tooltip-target" data-citationid="3fe89af3-848a-dc75-9f33-c0a3540d5caa-15-group" h="ID=SERP,5026.1">You can use it directly to create deep learning models or as a foundation for wrapper libraries that simplify the process</a><a href="https://machinelearningmastery.com/introduction-python-deep-learning-library-theano/" class="ac-anchor sup-target" target="_blank" data-citationid="3fe89af3-848a-dc75-9f33-c0a3540d5caa-15" aria-label="1: " h="ID=SERP,5026.1"><sup class="citation-sup">1</sup></a>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Installation</strong>:</p>
+<ul>
+<li>To get started, ensure you have a working Python 2 or Python 3 environment with SciPy.</li>
+<li>Follow the installation instructions provided in the <a href="https://machinelearningmastery.com/introduction-python-deep-learning-library-theano/" class="ac-anchor" target="_blank" is="cib-link" appearance="system-link" h="ID=SERP,5026.1">Installing Theano guide</a>.</li>
+<li>You can install Theano via pip using the following command:<cib-code-block code-lang="" clipboard-data="pip install Theano
+"><pre><code>pip install Theano
+</code></pre>
+</cib-code-block></li>
+<li>Keep in mind that the last official release of Theano was version 0.8 (released in March 2016). <a href="https://machinelearningmastery.com/introduction-python-deep-learning-library-theano/" class="tooltip-target" data-citationid="3fe89af3-848a-dc75-9f33-c0a3540d5caa-29-group" h="ID=SERP,5026.1">You may want to upgrade to newer versions for bug fixes and efficiency improvements</a><a href="https://machinelearningmastery.com/introduction-python-deep-learning-library-theano/" class="ac-anchor sup-target" target="_blank" data-citationid="3fe89af3-848a-dc75-9f33-c0a3540d5caa-29" aria-label="1: " h="ID=SERP,5026.1"><sup class="citation-sup">1</sup></a>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Documentation and Learning Resources</strong>:</p>
+<ul>
+<li>Dive deeper into Theano by exploring the following resources:
+<ul>
+<li><a href="https://machinelearningmastery.com/introduction-python-deep-learning-library-theano/" class="ac-anchor" target="_blank" is="cib-link" appearance="system-link" h="ID=SERP,5026.1">Machine Learning Mastery’s Introduction to Theano</a>: This comprehensive guide provides insights into Theano’s features and usage.</li>
+<li><a href="https://arxiv.org/abs/1605.02688" class="ac-anchor" target="_blank" is="cib-link" appearance="system-link" h="ID=SERP,5026.1">Theano’s Official Documentation</a>: The original research paper that describes Theano’s capabilities.</li>
+<li><a href="https://recodeminds.com/blog/a-beginners-guide-to-theano-for-deep-learning/" class="ac-anchor" target="_blank" is="cib-link" appearance="system-link" h="ID=SERP,5026.1">A Beginner’s Guide to Theano for Deep Learning</a><a href="https://machinelearningmastery.com/introduction-python-deep-learning-library-theano/" class="tooltip-target" data-citationid="3fe89af3-848a-dc75-9f33-c0a3540d5caa-45-group" h="ID=SERP,5026.1">: A beginner-friendly overview of Theano’s concepts and practical usage</a><a href="https://arxiv.org/abs/1605.02688" class="ac-anchor sup-target" target="_blank" data-citationid="3fe89af3-848a-dc75-9f33-c0a3540d5caa-43" aria-label="2: A Beginner’s Guide to Theano for Deep Learning" h="ID=SERP,5026.1"><sup class="citation-sup">2</sup></a><a href="https://recodeminds.com/blog/a-beginners-guide-to-theano-for-deep-learning/" class="ac-anchor sup-target" target="_blank" data-citationid="3fe89af3-848a-dc75-9f33-c0a3540d5caa-45" aria-label="3: A Beginner’s Guide to Theano for Deep Learning" h="ID=SERP,5026.1"><sup class="citation-sup">3</sup></a>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>Happy learning! 🚀📚</p>
+</div><div class="ac-horizontal-separator" aria-hidden="true" style=""></div></div>
+      <div class="ad-container"> 
+    
+     <slot name="slot-3d5f9497-18f4-a99a-de53-4cb1eb87eb2e"></slot> 
+    
+  </div>
+      
+      <cib-overlay>
+        
+      </cib-overlay>
+    

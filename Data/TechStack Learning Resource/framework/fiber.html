@@ -1,0 +1,164 @@
+
+      
+      <!----><div class="ac-container ac-adaptiveCard" style=""><div class="ac-textBlock" style=""><p><strong>Fiber</strong> is an <strong>Express-inspired web framework</strong> written in <strong>Go</strong>. It aims to <strong>ease development</strong> with <strong>zero memory allocation</strong> and <strong>fast performance</strong>. Here are some key features of Fiber:</p>
+<ol>
+<li><strong>Robust Routing</strong>: Setting up routes for your application is straightforward. The Express-like route definitions are easy to understand and work with. For example:<cib-code-block code-lang="go" clipboard-data="app.Get(&quot;/&quot;, func(c *fiber.Ctx) error {
+    return c.SendString(&quot;GET request&quot;)
+})
+app.Get(&quot;/:param&quot;, func(c *fiber.Ctx) error {
+    return c.SendString(&quot;param: &quot; + c.Params(&quot;param&quot;))
+})
+app.Post(&quot;/&quot;, func(c *fiber.Ctx) error {
+    return c.SendString(&quot;POST request&quot;)
+})
+"><pre><code class="language-go">app.Get(<span class="hljs-string">"/"</span>, <span class="hljs-function"><span class="hljs-keyword">func</span><span class="hljs-params">(c *fiber.Ctx)</span></span> <span class="hljs-type">error</span> {
+    <span class="hljs-keyword">return</span> c.SendString(<span class="hljs-string">"GET request"</span>)
+})
+app.Get(<span class="hljs-string">"/:param"</span>, <span class="hljs-function"><span class="hljs-keyword">func</span><span class="hljs-params">(c *fiber.Ctx)</span></span> <span class="hljs-type">error</span> {
+    <span class="hljs-keyword">return</span> c.SendString(<span class="hljs-string">"param: "</span> + c.Params(<span class="hljs-string">"param"</span>))
+})
+app.Post(<span class="hljs-string">"/"</span>, <span class="hljs-function"><span class="hljs-keyword">func</span><span class="hljs-params">(c *fiber.Ctx)</span></span> <span class="hljs-type">error</span> {
+    <span class="hljs-keyword">return</span> c.SendString(<span class="hljs-string">"POST request"</span>)
+})
+</code></pre>
+</cib-code-block></li>
+<li><strong>Serve Static Files</strong>: You can easily serve static HTML, CSS, and JavaScript files by defining static routes. For instance:<cib-code-block code-lang="go" clipboard-data="app.Static(&quot;/&quot;, &quot;./public&quot;) // Serve files from the &quot;public&quot; directory
+"><pre><code class="language-go">app.Static(<span class="hljs-string">"/"</span>, <span class="hljs-string">"./public"</span>) <span class="hljs-comment">// Serve files from the "public" directory</span>
+</code></pre>
+</cib-code-block></li>
+<li><strong>Extreme Performance</strong>: Fiber is built on top of <strong>Fasthttp</strong>, which ensures unmatched performance for your applications.</li>
+<li><strong>API-Ready</strong>: If you’re building an API server, Fiber is an excellent choice. Receiving and sending data is fast and straightforward.<cib-code-block code-lang="go" clipboard-data="app.Get(&quot;/api/posts&quot;, func(c *fiber.Ctx) error {
+    posts := getPosts() // Your logic
+    if len(posts) == 0 {
+        return c.Status(404).JSON(&amp;fiber.Map{
+            &quot;success&quot;: false,
+            &quot;error&quot;:   &quot;There are no posts!&quot;,
+        })
+    }
+    return c.JSON(&amp;fiber.Map{
+        &quot;success&quot;: true,
+        &quot;posts&quot;:   posts,
+    })
+})
+"><pre><code class="language-go">app.Get(<span class="hljs-string">"/api/posts"</span>, <span class="hljs-function"><span class="hljs-keyword">func</span><span class="hljs-params">(c *fiber.Ctx)</span></span> <span class="hljs-type">error</span> {
+    posts := getPosts() <span class="hljs-comment">// Your logic</span>
+    <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(posts) == <span class="hljs-number">0</span> {
+        <span class="hljs-keyword">return</span> c.Status(<span class="hljs-number">404</span>).JSON(&amp;fiber.Map{
+            <span class="hljs-string">"success"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">"error"</span>:   <span class="hljs-string">"There are no posts!"</span>,
+        })
+    }
+    <span class="hljs-keyword">return</span> c.JSON(&amp;fiber.Map{
+        <span class="hljs-string">"success"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-string">"posts"</span>:   posts,
+    })
+})
+</code></pre>
+</cib-code-block></li>
+<li><strong>Flexible Middleware Support</strong>: Choose from existing middleware or create your own. Middleware allows you to verify and manipulate requests before they reach your controller. For example:<cib-code-block code-lang="go" clipboard-data="app.Use(cors.New()) // Enable CORS
+app.Use(func(c *fiber.Ctx) error {
+    if c.Is(&quot;json&quot;) {
+        return c.Next()
+    }
+    return c.SendString(&quot;Only JSON allowed!&quot;)
+})
+"><pre><code class="language-go">app.Use(cors.New()) <span class="hljs-comment">// Enable CORS</span>
+app.Use(<span class="hljs-function"><span class="hljs-keyword">func</span><span class="hljs-params">(c *fiber.Ctx)</span></span> <span class="hljs-type">error</span> {
+    <span class="hljs-keyword">if</span> c.Is(<span class="hljs-string">"json"</span>) {
+        <span class="hljs-keyword">return</span> c.Next()
+    }
+    <span class="hljs-keyword">return</span> c.SendString(<span class="hljs-string">"Only JSON allowed!"</span>)
+})
+</code></pre>
+</cib-code-block></li>
+</ol>
+<p>Fiber’s low memory footprint allows you to focus on your application’s business logic without worrying too much about memory usage. <a href="https://gofiber.io/" class="tooltip-target" data-citationid="5e3e5a59-91df-f3c6-83ca-5ff9e2b5376c-93-group" h="ID=SERP,5026.1">If you’re familiar with Express.js, you’ll find Fiber’s API well-designed and easy to learn</a><a href="https://gofiber.io/" class="ac-anchor sup-target" target="_blank" data-citationid="5e3e5a59-91df-f3c6-83ca-5ff9e2b5376c-87" aria-label="1: " h="ID=SERP,5026.1"><sup class="citation-sup">1</sup></a><a href="https://github.com/gofiber/fiber" class="ac-anchor sup-target" target="_blank" data-citationid="5e3e5a59-91df-f3c6-83ca-5ff9e2b5376c-89" aria-label="2: " h="ID=SERP,5026.1"><sup class="citation-sup">2</sup></a><a href="https://zetcode.com/golang/fiber/" class="ac-anchor sup-target" target="_blank" data-citationid="5e3e5a59-91df-f3c6-83ca-5ff9e2b5376c-91" aria-label="3: " h="ID=SERP,5026.1"><sup class="citation-sup">3</sup></a><a href="https://fiber.wiki/" class="ac-anchor sup-target" target="_blank" data-citationid="5e3e5a59-91df-f3c6-83ca-5ff9e2b5376c-93" aria-label="4: " h="ID=SERP,5026.1"><sup class="citation-sup">4</sup></a>.</p>
+</div><div class="ac-horizontal-separator" aria-hidden="true" style=""></div></div>
+      <div class="ad-container"> 
+    
+     <slot name="slot-81ac334a-a97f-6ed7-7b27-d2608003f64c"></slot> 
+    
+  </div>
+      
+      <cib-overlay>
+        
+      </cib-overlay>
+    
+      
+      <!----><div class="ac-container ac-adaptiveCard" style=""><div class="ac-textBlock" style=""><p>Certainly! <strong>Fiber</strong> is an <strong>Express-inspired web framework</strong> written in <strong>Go</strong>. It’s designed to make web development faster and more efficient, with a focus on <strong>performance</strong> and <strong>low memory allocation</strong>. Here are some key points about Fiber:</p>
+<ol>
+<li>
+<p><strong>Official Documentation</strong>: You can start building web apps with Fiber right away by referring to the <a href="https://docs.gofiber.io/" class="ac-anchor" target="_blank" is="cib-link" appearance="system-link" h="ID=SERP,5026.1">official API documentation</a>. <a href="https://docs.gofiber.io/" class="tooltip-target" data-citationid="1f32d600-ca24-b738-bd8b-90721a49f63c-12-group" h="ID=SERP,5026.1">It provides examples and guides to help you get started quickly</a><a href="https://docs.gofiber.io/" class="ac-anchor sup-target" target="_blank" data-citationid="1f32d600-ca24-b738-bd8b-90721a49f63c-12" aria-label="1: official API documentation" h="ID=SERP,5026.1"><sup class="citation-sup">1</sup></a>.</p>
+</li>
+<li>
+<p><strong>Features</strong>:</p>
+<ul>
+<li><strong>Robust Routing</strong>: Define routes for your application easily using Express-like route definitions.</li>
+<li><strong>Serve Static Files</strong>: Effortlessly serve static HTML, CSS, and JavaScript files by defining static routes.</li>
+<li><strong>Extreme Performance</strong>: Fiber is built on top of Fasthttp, ensuring unmatched performance.</li>
+<li><strong>API-Ready</strong>: Ideal for building REST APIs in Go.</li>
+<li><strong>Flexible Middleware Support</strong>: Choose from existing middleware or create your own to handle requests before they reach your controller.</li>
+<li><strong>Low Memory Footprint</strong>: Implement features without worrying about excessive memory usage.</li>
+<li><a href="https://docs.gofiber.io/" class="tooltip-target" data-citationid="1f32d600-ca24-b738-bd8b-90721a49f63c-32-group" h="ID=SERP,5026.1"><strong>Rapid Programming</strong>: Develop applications quickly with the well-designed and easy-to-learn API, especially if you’re familiar with Express.js</a><a href="https://gofiber.io/" class="ac-anchor sup-target" target="_blank" data-citationid="1f32d600-ca24-b738-bd8b-90721a49f63c-32" aria-label="2: Rapid Programming" h="ID=SERP,5026.1"><sup class="citation-sup">2</sup></a>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Example Code</strong>:</p>
+</li>
+</ol>
+<cib-code-block code-lang="go" clipboard-data="package main
+
+import (
+    &quot;log&quot;
+    &quot;github.com/gofiber/fiber/v2&quot;
+)
+
+func main() {
+    app := fiber.New()
+
+    // Define routes
+    app.Get(&quot;/&quot;, func(c *fiber.Ctx) error {
+        return c.SendString(&quot;Hello, World!&quot;)
+    })
+
+    // Serve static files
+    app.Static(&quot;/&quot;, &quot;./public&quot;)
+
+    log.Fatal(app.Listen(&quot;:3000&quot;))
+}
+"><pre><code class="language-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">"log"</span>
+    <span class="hljs-string">"github.com/gofiber/fiber/v2"</span>
+)
+
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+    app := fiber.New()
+
+    <span class="hljs-comment">// Define routes</span>
+    app.Get(<span class="hljs-string">"/"</span>, <span class="hljs-function"><span class="hljs-keyword">func</span><span class="hljs-params">(c *fiber.Ctx)</span></span> <span class="hljs-type">error</span> {
+        <span class="hljs-keyword">return</span> c.SendString(<span class="hljs-string">"Hello, World!"</span>)
+    })
+
+    <span class="hljs-comment">// Serve static files</span>
+    app.Static(<span class="hljs-string">"/"</span>, <span class="hljs-string">"./public"</span>)
+
+    log.Fatal(app.Listen(<span class="hljs-string">":3000"</span>))
+}
+</code></pre>
+</cib-code-block><ol start="4">
+<li><strong>Benchmark Comparison</strong>: Fiber outperforms other frameworks. Check out this <a href="https://gofiber.io/" class="ac-anchor" target="_blank" is="cib-link" appearance="system-link" h="ID=SERP,5026.1">benchmark</a><a href="https://docs.gofiber.io/" class="tooltip-target" data-citationid="1f32d600-ca24-b738-bd8b-90721a49f63c-64-group" h="ID=SERP,5026.1"> to see how it shines</a><a href="https://gofiber.io/" class="ac-anchor sup-target" target="_blank" data-citationid="1f32d600-ca24-b738-bd8b-90721a49f63c-64" aria-label="2: benchmark" h="ID=SERP,5026.1"><sup class="citation-sup">2</sup></a>.</li>
+</ol>
+<p>Remember, Fiber is a powerful choice for web development in Go, and its Express-like syntax makes it accessible even if you’re transitioning from Node.js. Happy coding! 🚀🌐</p>
+</div><div class="ac-horizontal-separator" aria-hidden="true" style=""></div></div>
+      <div class="ad-container"> 
+    
+     <slot name="slot-14c7f660-b2d3-38af-a3bf-b62001a318fe"></slot> 
+    
+  </div>
+      
+      <cib-overlay>
+        
+      </cib-overlay>
+    

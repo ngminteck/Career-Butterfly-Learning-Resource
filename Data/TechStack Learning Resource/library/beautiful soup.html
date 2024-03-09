@@ -1,0 +1,141 @@
+
+      
+      <!----><div class="ac-container ac-adaptiveCard" style=""><div class="ac-textBlock" style=""><p><strong>Beautiful Soup</strong> is a Python library that simplifies the process of <strong>scraping information from web pages</strong>. It acts as a bridge between your Python code and the raw HTML or XML content of a webpage, allowing you to extract relevant data with ease.</p>
+<p>Here are the key points about Beautiful Soup:</p>
+<ol>
+<li>
+<p><strong>Purpose</strong>: Beautiful Soup is primarily used for <strong>web scraping</strong>. It helps you navigate and manipulate the structure of HTML and XML documents.</p>
+</li>
+<li>
+<p><strong>Features</strong>:</p>
+<ul>
+<li><strong>Parsing</strong>: Beautiful Soup creates a <strong>parse tree</strong> from the HTML or XML content, which you can then explore and extract data from.</li>
+<li><strong>Search and Navigation</strong>: It provides Pythonic idioms for <strong>searching</strong>, <strong>iterating</strong>, and <strong>modifying</strong> the parse tree.</li>
+<li><strong>Integration</strong>: Beautiful Soup sits on top of an HTML or XML parser (such as <code>lxml</code> or Python’s built-in <code>html.parser</code>), making it easy to work with the document’s elements.</li>
+</ul>
+</li>
+<li>
+<p><strong>Example Usage</strong>:</p>
+<cib-code-block code-lang="python" clipboard-data="from bs4 import BeautifulSoup
+
+# Create a Beautiful Soup object from raw HTML
+raw_html = &quot;<p>Some<b>bad<i>HTML</i></b></p>&quot;
+soup = BeautifulSoup(raw_html, &quot;html.parser&quot;)
+
+# Print the prettified version of the parse tree
+print(soup.prettify())
+
+# Find the text &quot;bad&quot; within the parse tree
+print(soup.find(text=&quot;bad&quot;))
+
+# Access the <i> tag
+print(soup.i)
+"><pre><code class="language-python"><span class="hljs-keyword">from</span> bs4 <span class="hljs-keyword">import</span> BeautifulSoup
+
+<span class="hljs-comment"># Create a Beautiful Soup object from raw HTML</span>
+raw_html = <span class="hljs-string">"&lt;p&gt;Some&lt;b&gt;bad&lt;i&gt;HTML&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;"</span>
+soup = BeautifulSoup(raw_html, <span class="hljs-string">"html.parser"</span>)
+
+<span class="hljs-comment"># Print the prettified version of the parse tree</span>
+<span class="hljs-built_in">print</span>(soup.prettify())
+
+<span class="hljs-comment"># Find the text "bad" within the parse tree</span>
+<span class="hljs-built_in">print</span>(soup.find(text=<span class="hljs-string">"bad"</span>))
+
+<span class="hljs-comment"># Access the &lt;i&gt; tag</span>
+<span class="hljs-built_in">print</span>(soup.i)
+</code></pre>
+</cib-code-block></li>
+<li>
+<p><strong>Python 2 Sunset</strong>: Beautiful Soup officially <strong>discontinued support for Python 2</strong> on December 31, 2020. All new development targets Python 3 exclusively.</p>
+</li>
+<li>
+<p><strong>Documentation</strong>: For comprehensive details and advanced usage, refer to the <a href="https://pypi.org/project/beautifulsoup4/" class="ac-anchor" target="_blank" is="cib-link" appearance="system-link" h="ID=SERP,5026.1">official documentation</a>.</p>
+</li>
+</ol>
+<p>Remember, Beautiful Soup is a powerful tool for extracting data from web pages, and it’s widely used by developers for various scraping tasks! 🌐🔍</p>
+</div></div>
+      <div class="ad-container"> </div>
+      
+      <cib-overlay>
+        
+      </cib-overlay>
+    
+      
+      <!----><div class="ac-container ac-adaptiveCard" style=""><div class="ac-textBlock" style=""><p>Certainly! <strong>Beautiful Soup</strong> is a Python library that allows you to extract data from HTML and XML files. It’s particularly useful for web scraping and parsing. Let me guide you to some resources where you can learn more:</p>
+<ol>
+<li>
+<p><strong>Official Documentation</strong>:</p>
+<ul>
+<li>The <strong>Beautiful Soup 4 documentation</strong> provides comprehensive information on how to use the library. It covers major features, examples, and usage instructions. You’ll find everything you need to get started and explore its capabilities.</li>
+<li><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/" class="ac-anchor" target="_blank" is="cib-link" appearance="system-link" h="ID=SERP,5026.1">Beautiful Soup Documentation</a> (Version 4.12.2)</li>
+</ul>
+</li>
+<li>
+<p><strong>Quick Start Example</strong>:</p>
+<ul>
+<li>Here’s a snippet of code that demonstrates how to use Beautiful Soup to parse an HTML document:<cib-code-block code-lang="python" clipboard-data="from bs4 import BeautifulSoup
+
+html_doc = &quot;&quot;&quot;
+<html>
+    <head>
+        <title>The Dormouse's story</title>
+    </head>
+    <body>
+        <p class=&quot;title&quot;><b>The Dormouse's story</b></p>
+        <p class=&quot;story&quot;>Once upon a time there were three little sisters; and their names were
+            <a href=&quot;http://example.com/elsie&quot; class=&quot;sister&quot; id=&quot;link1&quot;>Elsie</a>,
+            <a href=&quot;http://example.com/lacie&quot; class=&quot;sister&quot; id=&quot;link2&quot;>Lacie</a>, and
+            <a href=&quot;http://example.com/tillie&quot; class=&quot;sister&quot; id=&quot;link3&quot;>Tillie</a>;
+            and they lived at the bottom of a well.
+        </p>
+        <p class=&quot;story&quot;>...</p>
+    </body>
+</html>
+&quot;&quot;&quot;
+
+soup = BeautifulSoup(html_doc, 'html.parser')
+print(soup.prettify())
+"><pre><code class="language-python"><span class="hljs-keyword">from</span> bs4 <span class="hljs-keyword">import</span> BeautifulSoup
+
+html_doc = <span class="hljs-string">"""
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;The Dormouse's story&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p class="title"&gt;&lt;b&gt;The Dormouse's story&lt;/b&gt;&lt;/p&gt;
+        &lt;p class="story"&gt;Once upon a time there were three little sisters; and their names were
+            &lt;a href="http://example.com/elsie" class="sister" id="link1"&gt;Elsie&lt;/a&gt;,
+            &lt;a href="http://example.com/lacie" class="sister" id="link2"&gt;Lacie&lt;/a&gt;, and
+            &lt;a href="http://example.com/tillie" class="sister" id="link3"&gt;Tillie&lt;/a&gt;;
+            and they lived at the bottom of a well.
+        &lt;/p&gt;
+        &lt;p class="story"&gt;...&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+"""</span>
+
+soup = BeautifulSoup(html_doc, <span class="hljs-string">'html.parser'</span>)
+<span class="hljs-built_in">print</span>(soup.prettify())
+</code></pre>
+</cib-code-block></li>
+<li>This example shows how to create a BeautifulSoup object and navigate the parse tree.</li>
+</ul>
+</li>
+<li>
+<p><strong>Additional Resources</strong>:</p>
+<ul>
+<li>If you encounter any issues or have questions, consider joining the <strong>Beautiful Soup discussion group</strong>. They can provide help and guidance.</li>
+<li>Beautiful Soup Discussion Group</li>
+</ul>
+</li>
+</ol>
+<p>Happy web scraping! 🌐🔍</p>
+</div></div>
+      <div class="ad-container"> </div>
+      
+      <cib-overlay>
+        
+      </cib-overlay>
+    

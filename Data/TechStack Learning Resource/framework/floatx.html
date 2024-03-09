@@ -1,0 +1,74 @@
+
+      
+      <!----><div class="ac-container ac-adaptiveCard" style=""><div class="ac-textBlock" style=""><p><strong>FloatX</strong> is a fascinating <strong>C++ library</strong> that extends the capabilities of floating-point types beyond the standard single and double precision. Let me break it down for you:</p>
+<ol>
+<li>
+<p><strong>Purpose and Features</strong>:</p>
+<ul>
+<li><strong>FloatX</strong> provides <strong>template types</strong> that allow users to <strong>customize</strong> the number of bits used for the <strong>exponent</strong> and <strong>significand</strong> parts of a floating-point number.</li>
+<li>It’s <strong>header-only</strong>, meaning there’s no compiled component, and it heavily utilizes inlining for <strong>relatively high performance</strong>.</li>
+<li>The library introduces two main class templates:
+<ul>
+<li><strong><code>floatx&lt;exp_bits, sig_bits, backend_float&gt;</code></strong>: This template allows emulation of non-native types with a specified number of exponent bits (<code>exp_bits</code>) and significand bits (<code>sig_bits</code>). It uses a natively supported <code>backend_float</code> type for arithmetic operations.</li>
+<li><strong><code>floatxr&lt;backend_float&gt;</code></strong>: Similar to <code>floatx</code>, but it allows changing the precision of the type at <strong>runtime</strong>. While easier to experiment with, it’s not as efficient as <code>floatx</code>.</li>
+</ul>
+</li>
+<li><strong>Conversions</strong>, <strong>assignments</strong>, <strong>relational operations</strong>, and <strong>arithmetic operations</strong> are supported for <code>floatx</code> and <code>floatxr</code> types.</li>
+<li>It even provides <strong>CUDA support</strong>!</li>
+</ul>
+</li>
+<li>
+<p><strong>What FloatX Is NOT</strong>:</p>
+<ul>
+<li><strong>FloatX</strong> doesn’t implement arbitrary floating-point types. It focuses on <strong>custom precision</strong> within the constraints of natively supported hardware types.</li>
+<li>If you need larger types, consider using the <strong>SoftFloat library</strong>.</li>
+</ul>
+</li>
+</ol>
+<p><a href="https://github.com/oprecomp/FloatX" class="tooltip-target" data-citationid="7d84726b-fa3f-f357-1646-9ad3c34d4f35-56-group" h="ID=SERP,5026.1">In summary, <strong>FloatX</strong> lets you explore customized floating-point formats, making it a powerful tool for investigating numerical applications with tailored precision</a><a href="https://github.com/oprecomp/FloatX" class="ac-anchor sup-target" target="_blank" data-citationid="7d84726b-fa3f-f357-1646-9ad3c34d4f35-52" aria-label="1: FloatX" h="ID=SERP,5026.1"><sup class="citation-sup">1</sup></a><a href="https://research.ibm.com/publications/floatx-a-c-library-for-customized-floating-point-arithmetic" class="ac-anchor sup-target" target="_blank" data-citationid="7d84726b-fa3f-f357-1646-9ad3c34d4f35-54" aria-label="2: FloatX" h="ID=SERP,5026.1"><sup class="citation-sup">2</sup></a><a href="https://www.academia.edu/80374800/FloatX" class="ac-anchor sup-target" target="_blank" data-citationid="7d84726b-fa3f-f357-1646-9ad3c34d4f35-56" aria-label="3: FloatX" h="ID=SERP,5026.1"><sup class="citation-sup">3</sup></a>.</p>
+</div><div class="ac-horizontal-separator" aria-hidden="true" style=""></div></div>
+      <div class="ad-container"> 
+    
+     <slot name="slot-45dcf269-5eae-ca49-daf6-cda306085200"></slot> 
+    
+  </div>
+      
+      <cib-overlay>
+        
+      </cib-overlay>
+    
+      
+      <!----><div class="ac-container ac-adaptiveCard" style=""><div class="ac-textBlock" style=""><p>Certainly! The <strong>FloatX</strong> framework is a fascinating tool for exploring customized floating-point formats in numerical applications. Let me provide you with some resources to learn more about it:</p>
+<ol>
+<li>
+<p><strong>GitHub Repository</strong>:</p>
+<ul>
+<li>The <strong>FloatX</strong> library is available as a <strong>header-only C++ library</strong>. It extends floating point types beyond the native single and double precision, allowing users to select the number of bits for the exponent and significand parts of the floating point number.</li>
+<li><a href="https://github.com/oprecomp/FloatX" class="tooltip-target" data-citationid="36082d0e-deb3-d3d7-e167-5442848fc7fb-15-group" h="ID=SERP,5026.1">You can find the <strong>source code</strong>, <strong>examples</strong>, and detailed information in the </a><a href="https://github.com/oprecomp/FloatX" class="ac-anchor" target="_blank" is="cib-link" appearance="system-link" h="ID=SERP,5026.1">FloatX GitHub repository</a><a href="https://github.com/oprecomp/FloatX" class="ac-anchor sup-target" target="_blank" data-citationid="36082d0e-deb3-d3d7-e167-5442848fc7fb-15" aria-label="1: FloatX GitHub repository" h="ID=SERP,5026.1"><sup class="citation-sup">1</sup></a>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Research Paper</strong>:</p>
+<ul>
+<li>If you’re interested in the technical details and design principles behind <strong>FloatX</strong>, there’s a research paper titled “<a href="https://www.academia.edu/80374800/FloatX" class="ac-anchor" target="_blank" is="cib-link" appearance="system-link" h="ID=SERP,5026.1">FloatX</a><a href="https://github.com/oprecomp/FloatX" class="tooltip-target" data-citationid="36082d0e-deb3-d3d7-e167-5442848fc7fb-24-group" h="ID=SERP,5026.1">” that delves into the framework’s concepts and implementation </a><a href="https://www.academia.edu/80374800/FloatX" class="ac-anchor sup-target" target="_blank" data-citationid="36082d0e-deb3-d3d7-e167-5442848fc7fb-24" aria-label="2: FloatX" h="ID=SERP,5026.1"><sup class="citation-sup">2</sup></a>.</li>
+</ul>
+</li>
+<li>
+<p><strong>TensorFlow Documentation</strong>:</p>
+<ul>
+<li>While not directly related to the <strong>FloatX</strong> library, if you’re already familiar with TensorFlow, you might want to explore the <a href="https://www.tensorflow.org/api_docs/python/tf/keras/backend/floatx" class="ac-anchor" target="_blank" is="cib-link" appearance="system-link" h="ID=SERP,5026.1"><code>tf.keras.backend.floatx</code></a> module. <a href="https://github.com/oprecomp/FloatX" class="tooltip-target" data-citationid="36082d0e-deb3-d3d7-e167-5442848fc7fb-34-group" h="ID=SERP,5026.1">It provides information about the default floating point type used by TensorFlow </a><a href="https://www.tensorflow.org/api_docs/python/tf/keras/backend/floatx" class="ac-anchor sup-target" target="_blank" data-citationid="36082d0e-deb3-d3d7-e167-5442848fc7fb-34" aria-label="3: tf.keras.backend.floatx" h="ID=SERP,5026.1"><sup class="citation-sup">3</sup></a>.</li>
+</ul>
+</li>
+</ol>
+<p>Remember that <strong>FloatX</strong> is not about arbitrary floating point types; it emulates custom precision types based on those natively supported by hardware. Dive into these resources to uncover more about this intriguing framework! 🚀</p>
+</div><div class="ac-horizontal-separator" aria-hidden="true" style=""></div></div>
+      <div class="ad-container"> 
+    
+     <slot name="slot-c896e151-8b20-de4e-61bd-5662efdc742f"></slot> 
+    
+  </div>
+      
+      <cib-overlay>
+        
+      </cib-overlay>
+    
