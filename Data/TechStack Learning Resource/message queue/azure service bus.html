@@ -1,0 +1,82 @@
+
+      
+      <!----><div class="ac-container ac-adaptiveCard" style=""><div class="ac-textBlock" style=""><p><strong>Azure Service Bus</strong> is a managed messaging service provided by <strong>Microsoft Azure</strong>. It offers reliable message queuing and durable publish/subscribe messaging. Let’s delve into the details:</p>
+<ol>
+<li>
+<p><strong>Queues</strong>:</p>
+<ul>
+<li><strong>Queues</strong> in Azure Service Bus provide <strong>First In, First Out (FIFO)</strong> message delivery to one or more competing consumers.</li>
+<li>When messages are added to the queue, receivers typically process them in the order they were added.</li>
+<li>Only one consumer receives and processes each message.</li>
+<li><strong>Temporal decoupling</strong> is a key benefit of using queues. Producers (senders) and consumers (receivers) don’t need to operate simultaneously because messages are durably stored in the queue.</li>
+<li>Load-leveling is another advantage. Producers and consumers can operate at different rates, adapting to varying system loads.</li>
+<li>The competing consumer pattern ensures that multiple worker processes can read from the queue, processing each message once.</li>
+<li>Using queues fosters <strong>loose coupling</strong> between components, allowing upgrades to consumers without affecting producers.</li>
+<li>You can create queues via the Azure portal, PowerShell, CLI, or Azure Resource Manager templates. Send and receive messages using programming languages like C#, Java, Python, and JavaScript.</li>
+<li>Two receive modes are available: <strong>Receive and delete</strong> (where Service Bus marks the message as consumed and returns it to the consumer) and <strong>Peek and lock</strong> (where the message remains in the queue until explicitly deleted).</li>
+</ul>
+</li>
+<li>
+<p><strong>Topics and Subscriptions</strong>:</p>
+<ul>
+<li><strong>Topics</strong> allow for <strong>publish-subscribe</strong> messaging.</li>
+<li>Producers send messages to a topic, and subscribers (consumers) receive messages from subscriptions.</li>
+<li>Subscriptions filter messages based on criteria, enabling selective message delivery.</li>
+<li>Topics and subscriptions enhance scalability and flexibility in message distribution.</li>
+</ul>
+</li>
+</ol>
+<p>In summary, Azure Service Bus provides a robust foundation for building distributed systems, enabling reliable communication between components and applications. If you’re new to Azure Service Bus, I recommend reading the introductory article on <a href="https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-queues-topics-subscriptions" class="ac-anchor" target="_blank" is="cib-link" appearance="system-link" h="ID=SERP,5026.1">What is Azure Service Bus?</a> for a deeper understanding.</p>
+</div></div>
+      <div class="ad-container"> </div>
+      
+      <cib-overlay>
+        
+      </cib-overlay>
+    
+      
+      <!----><div class="ac-container ac-adaptiveCard" streaming="" style=""><div class="ac-textBlock" style=""><p>Certainly! If you’re interested in learning more about <strong>Azure Service Bus Messaging</strong> and its various components, here are some valuable resources:</p>
+<ol>
+<li>
+<p><strong>Microsoft Learn Documentation</strong>:</p>
+<ul>
+<li>The <strong>Azure Service Bus Messaging documentation</strong> on Microsoft Learn provides comprehensive information on setting up messaging that connects applications and services across on-premises and cloud environments. It covers topics such as:
+<ul>
+<li><strong>Overview</strong>: What is Service Bus Messaging?</li>
+<li>Using Service Bus with <strong>Java Message Service (JMS) 2.0</strong>.</li>
+<li>Comparing <strong>Azure queues</strong> and <strong>Service Bus queues</strong>.</li>
+<li>Premium messaging features.</li>
+<li>Reference architecture for queues and events.</li>
+<li>Step-by-step guides for creating Service Bus queues and topics using the <strong>Azure portal</strong>, <strong>Azure CLI</strong>, <strong>Azure PowerShell</strong>, and <strong>Azure Resource Manager templates</strong>.</li>
+<li>Quickstarts for sending and receiving messages using various programming languages like <strong>.NET</strong>, <strong>Java</strong>, <strong>Spring</strong>, <strong>Node.js</strong>, and <strong>Python</strong>.</li>
+<li>Tutorials on updating inventory using topics and subscriptions.</li>
+<li>Handling Service Bus events using <strong>Logic Apps</strong> and <strong>Functions</strong>.</li>
+<li>Choosing a messaging model in Azure to loosely connect your services.</li>
+<li>Enabling asynchronous messaging in Java apps with JMS and Azure Service Bus.</li>
+<li>And much more!</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://learn.microsoft.com/en-us/azure/service-bus-messaging/" class="tooltip-target" data-citationid="4876dc5d-6012-16c4-e358-28239e79d194-40-group" h="ID=SERP,5026.1">You can explore the full documentation here: </a><a href="https://learn.microsoft.com/en-us/azure/service-bus-messaging/" class="ac-anchor" target="_blank" is="cib-link" appearance="system-link" h="ID=SERP,5026.1">Azure Service Bus Messaging documentation</a><a href="https://learn.microsoft.com/en-us/azure/service-bus-messaging/" class="ac-anchor sup-target" target="_blank" data-citationid="4876dc5d-6012-16c4-e358-28239e79d194-40" aria-label="1: Azure Service Bus Messaging documentation" h="ID=SERP,5026.1"><sup class="citation-sup">1</sup></a>.</p>
+</li>
+<li>
+<p><strong>Specific Entity Overview</strong>:</p>
+<ul>
+<li>If you want to dive deeper into specific messaging entities like <strong>queues</strong>, <strong>topics</strong>, and <strong>subscriptions</strong>, check out the article on <strong>Azure Service Bus messaging - queues, topics, and subscriptions</strong>. <a href="https://learn.microsoft.com/en-us/azure/service-bus-messaging/" class="tooltip-target" data-citationid="4876dc5d-6012-16c4-e358-28239e79d194-52-group" h="ID=SERP,5026.1">It provides an overview of these entities and their functionalities: </a><a href="https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-queues-topics-subscriptions" class="ac-anchor" target="_blank" is="cib-link" appearance="system-link" h="ID=SERP,5026.1">Azure Service Bus messaging - queues, topics, and subscriptions</a><a href="https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-queues-topics-subscriptions" class="ac-anchor sup-target" target="_blank" data-citationid="4876dc5d-6012-16c4-e358-28239e79d194-52" aria-label="2: Azure Service Bus messaging - queues, topics, and subscriptions" h="ID=SERP,5026.1"><sup class="citation-sup">2</sup></a>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Message Payloads and Serialization</strong>:</p>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/azure/service-bus-messaging/" class="tooltip-target" data-citationid="4876dc5d-6012-16c4-e358-28239e79d194-61-group" h="ID=SERP,5026.1">For details on <strong>Azure Service Bus messages</strong>, payloads, message routing, and serialization, you can refer to this article: </a><a href="https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messages-payloads" class="ac-anchor" target="_blank" is="cib-link" appearance="system-link" h="ID=SERP,5026.1">Azure Service Bus messages, payloads, and serialization</a><a href="https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messages-payloads" class="ac-anchor sup-target" target="_blank" data-citationid="4876dc5d-6012-16c4-e358-28239e79d194-61" aria-label="3: Azure Service Bus messages, payloads, and serialization" h="ID=SERP,5026.1"><sup class="citation-sup">3</sup></a>.</li>
+</ul>
+</li>
+</ol>
+<p>Feel free to explore these resources to enhance your understanding of Azure Service Bus and its messaging capabilities! 🚀🔗</p>
+</div><div class="ac-horizontal-separator" aria-hidden="true" style=""></div></div>
+      <div class="ad-container"> </div>
+      
+      <cib-overlay>
+        
+      </cib-overlay>
+    

@@ -1,0 +1,89 @@
+
+      
+      <!----><div class="ac-container ac-adaptiveCard" id="entity-image-top" streaming="" style=""><div style=""><button class="entity-image-button"><div class="entity-image"><div class="shower-glass"><img class="ac-image" src="https://www.bing.com/th?id=OSK.603e371fe9dc858466c03985059fd008&amp;pid=cdx&amp;w=320&amp;h=189&amp;c=7&amp;rs=1" alt="Apache Flume" style="min-width: 0px; width: 320px; height: 189px;"></div><div class="overlay-image"><img src="https://www.bing.com/th?id=OSK.603e371fe9dc858466c03985059fd008&amp;pid=cdx&amp;w=189&amp;h=189&amp;c=7" class="ac-image shower-glass-entity-image"></div></div><div class="entity-explore-pill"><svg-icon type="wand" size="16" style="--icon-size: 16px;" aria-hidden="true"></svg-icon><div class="entity-explore-text">Explore</div></div></button></div><div class="ac-horizontal-separator" aria-hidden="true" style=""></div><div class="ac-textBlock" style=""><p><strong>Apache Flume</strong> is a powerful tool for <strong>distributed data processing</strong>. Let’s dive into the details:</p>
+<ol>
+<li>
+<p><strong>Overview</strong>:</p>
+<ul>
+<li><strong>Apache Flume</strong> is a <strong>distributed</strong>, <strong>reliable</strong>, and <strong>available system</strong> designed for efficiently collecting, aggregating, and moving large amounts of <strong>log data</strong> from various sources to a centralized data store.</li>
+<li>While its primary use case is <strong>log data aggregation</strong>, it’s not limited to that. Flume can transport massive quantities of <strong>event data</strong> from diverse sources, including network traffic data, social media content, email messages, and more.</li>
+<li>Flume is a <strong>top-level project</strong> at the <strong>Apache Software Foundation</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Data Flow Model</strong>:</p>
+<ul>
+<li>A <strong>Flume event</strong> consists of a <strong>byte payload</strong> and an optional set of <strong>string attributes</strong>.</li>
+<li>A <strong>Flume agent</strong> (a JVM process) hosts components through which events flow from an <strong>external source</strong> to the next destination (hop).</li>
+<li>A <strong>Flume source</strong> consumes events delivered by an external source (e.g., a web server). The source formats the events for recognition by the target Flume source (e.g., Avro Flume source or Thrift Flume source).</li>
+<li>Events received by a Flume source are stored in one or more <strong>channels</strong> (passive stores).</li>
+<li>The <strong>sink</strong> removes events from the channel and either:
+<ul>
+<li>Stores them in an external repository (e.g., HDFS via Flume HDFS sink).</li>
+<li>Forwards them to the next Flume agent (next hop) in the flow.</li>
+</ul>
+</li>
+<li>Sources and sinks within an agent run asynchronously, with events staged in the channel.</li>
+<li>Flume allows <strong>multi-hop flows</strong>, <strong>fan-in</strong>, <strong>fan-out</strong>, <strong>contextual routing</strong>, and <strong>backup routes</strong> for failed hops.</li>
+</ul>
+</li>
+<li>
+<p><strong>Reliability</strong>:</p>
+<ul>
+<li>Events are staged in a channel on each agent.</li>
+<li>Events are delivered to the next agent or terminal repository (e.g., HDFS) in the flow.</li>
+<li>Events are removed from a channel only after they are stored in the channel of the next agent or terminal repository.</li>
+<li>This single-hop message delivery semantics ensure <strong>end-to-end reliability</strong>.</li>
+</ul>
+</li>
+</ol>
+<p>In summary, <strong>Apache Flume</strong> facilitates efficient data movement across distributed systems, making it a valuable tool for handling diverse data streams. 🚀</p>
+<p><a href="https://flume.apache.org/FlumeUserGuide.html" class="tooltip-target" data-citationid="6f11d73a-c697-d271-0970-da94422fd10c-64-group" h="ID=SERP,5026.1">For more details, you can explore the </a><a href="https://flume.apache.org/FlumeUserGuide.html" class="ac-anchor" target="_blank" is="cib-link" appearance="system-link" h="ID=SERP,5026.1">official Apache Flume documentation</a><a href="https://flume.apache.org/FlumeUserGuide.html" class="ac-anchor sup-target" target="_blank" data-citationid="6f11d73a-c697-d271-0970-da94422fd10c-64" aria-label="1: official Apache Flume documentation" h="ID=SERP,5026.1"><sup class="citation-sup">1</sup></a>.</p>
+</div><div class="ac-horizontal-separator" aria-hidden="true" style=""></div></div>
+      <div class="ad-container"> </div>
+      
+      <cib-overlay>
+        
+      </cib-overlay>
+    
+      
+      <!----><div class="ac-container ac-adaptiveCard" id="entity-image-top" style=""><div style=""><button class="entity-image-button"><div class="entity-image"><div class="shower-glass"><img class="ac-image" src="https://www.bing.com/th?id=OSK.603e371fe9dc858466c03985059fd008&amp;pid=cdx&amp;w=320&amp;h=189&amp;c=7&amp;rs=1" alt="Apache Flume" style="min-width: 0px; width: 320px; height: 189px;"></div><div class="overlay-image"><img src="https://www.bing.com/th?id=OSK.603e371fe9dc858466c03985059fd008&amp;pid=cdx&amp;w=189&amp;h=189&amp;c=7" class="ac-image shower-glass-entity-image"></div></div><div class="entity-explore-pill"><svg-icon type="wand" size="16" style="--icon-size: 16px;" aria-hidden="true"></svg-icon><div class="entity-explore-text">Explore</div></div></button></div><div class="ac-horizontal-separator" aria-hidden="true" style=""></div><div class="ac-textBlock" style=""><p>Certainly! <strong>Apache Flume</strong> is a powerful tool for efficiently collecting, aggregating, and moving large amounts of data in distributed systems. Let’s dive into some resources where you can learn more about it:</p>
+<ol>
+<li>
+<p><strong><a href="https://flume.apache.org/FlumeUserGuide.html" class="ac-anchor" target="_blank" is="cib-link" appearance="system-link" h="ID=SERP,5026.1">Apache Flume User Guide</a></strong>:</p>
+<ul>
+<li>This comprehensive guide by the <strong>Apache Software Foundation</strong> provides detailed information about Flume’s architecture, data flow model, and usage scenarios.</li>
+<li>It covers topics such as log data aggregation, customizable data sources, and transporting event data from various sources to centralized data stores.</li>
+<li><a href="https://flume.apache.org/FlumeUserGuide.html" class="tooltip-target" data-citationid="4bdf2c6c-046e-149a-8b47-dde0f46c36dc-16-group" h="ID=SERP,5026.1">Whether you’re interested in log data or other event data, this guide has you covered</a><a href="https://flume.apache.org/FlumeUserGuide.html" class="ac-anchor sup-target" target="_blank" data-citationid="4bdf2c6c-046e-149a-8b47-dde0f46c36dc-16" aria-label="1: " h="ID=SERP,5026.1"><sup class="citation-sup">1</sup></a>.</li>
+</ul>
+</li>
+<li>
+<p><strong><a href="https://www.confluent.io/learn/apache-flume/" class="ac-anchor" target="_blank" is="cib-link" appearance="system-link" h="ID=SERP,5026.1">Introduction to Data Extraction and Movement with Apache Flume</a></strong>:</p>
+<ul>
+<li>Confluent offers a concise introduction to Flume, emphasizing its role in efficient data extraction, aggregation, and movement.</li>
+<li><a href="https://flume.apache.org/FlumeUserGuide.html" class="tooltip-target" data-citationid="4bdf2c6c-046e-149a-8b47-dde0f46c36dc-25-group" h="ID=SERP,5026.1">Learn how Flume can seamlessly transport data from diverse sources to centralized storage or processing systems</a><a href="https://www.confluent.io/learn/apache-flume/" class="ac-anchor sup-target" target="_blank" data-citationid="4bdf2c6c-046e-149a-8b47-dde0f46c36dc-25" aria-label="2: " h="ID=SERP,5026.1"><sup class="citation-sup">2</sup></a>.</li>
+</ul>
+</li>
+<li>
+<p><strong><a href="https://www.atlantis-press.com/proceedings/icmii-15/25844467" class="ac-anchor" target="_blank" is="cib-link" appearance="system-link" h="ID=SERP,5026.1">Distributed Data Streams Processing Based on Flume/Kafka/Spark</a></strong>:</p>
+<ul>
+<li>This research paper discusses a distributed data streams processing system based on Flume, Kafka, and Spark.</li>
+<li><a href="https://flume.apache.org/FlumeUserGuide.html" class="tooltip-target" data-citationid="4bdf2c6c-046e-149a-8b47-dde0f46c36dc-34-group" h="ID=SERP,5026.1">It explores how Flume’s high scalability and reliability allow accurate collection of data from multiple sources</a><a href="https://www.atlantis-press.com/proceedings/icmii-15/25844467" class="ac-anchor sup-target" target="_blank" data-citationid="4bdf2c6c-046e-149a-8b47-dde0f46c36dc-34" aria-label="3: " h="ID=SERP,5026.1"><sup class="citation-sup">3</sup></a>.</li>
+</ul>
+</li>
+<li>
+<p><strong><a href="https://datascientest.com/en/hadoop-what-is-it" class="ac-anchor" target="_blank" is="cib-link" appearance="system-link" h="ID=SERP,5026.1">Hadoop: What Is It and How to Learn to Use It?</a></strong>:</p>
+<ul>
+<li>While this resource covers Hadoop in general, it briefly mentions Flume as a distributed service for data streaming.</li>
+<li><a href="https://flume.apache.org/FlumeUserGuide.html" class="tooltip-target" data-citationid="4bdf2c6c-046e-149a-8b47-dde0f46c36dc-43-group" h="ID=SERP,5026.1">Understanding Flume within the broader Hadoop ecosystem can provide valuable context</a><a href="https://datascientest.com/en/hadoop-what-is-it" class="ac-anchor sup-target" target="_blank" data-citationid="4bdf2c6c-046e-149a-8b47-dde0f46c36dc-43" aria-label="4: " h="ID=SERP,5026.1"><sup class="citation-sup">4</sup></a>.</li>
+</ul>
+</li>
+</ol>
+<p>Remember, Flume is not limited to log data—it can handle various event data types. Dive into these resources to explore Flume’s capabilities and unleash its potential! 🚀🌟</p>
+</div><div class="ac-horizontal-separator" aria-hidden="true" style=""></div></div>
+      <div class="ad-container"> </div>
+      
+      <cib-overlay>
+        
+      </cib-overlay>
+    
