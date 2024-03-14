@@ -1,0 +1,12 @@
+Name,Search Keyword,Resource Path,Skills,Groups
+architecture,architecture role,role/architecture.html,[java][python][javascript][typescript][sql][c#][c][c++],[database][cloud services]
+system administrator,system administrator role,role/system administrator.html,[account management],[monitoring]
+reliability engineering,reliability engineering role,role/reliability engineering.html,[data migration][replication][maintenance][disaster recovery],[database][ci cd][cloud services][monitoring]
+cybersecurity,cybersecurity role,role/cybersecurity.html,,[security][cloud services][network]
+data analytics,data analytics role,role/data analytics.html,[python],[machine learning]
+data science,data science role,role/data science.html,[python],[machine learning]
+web developer,web developer role,role/web developer.html,[css][html][javascript][typescript],[web development][frontend]
+network administration,network administration role,role/network administration.html,,[cloud services][network]
+qa engineering,qa engineering role,role/qa engineering.html,,[automation testing]
+software engineering,software engineering role,role/software engineering.html,,[programming]
+data engineering,data engineering role,role/data engineering.html,,[big data][data warehouse]
