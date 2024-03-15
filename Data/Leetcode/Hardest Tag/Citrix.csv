@@ -1,0 +1,10 @@
+Tag,Acceptance rate
+String,[0.4898]
+Greedy,[0.4985]
+Sorting,[0.4985]
+Heap (Priority Queue),[0.4985]
+Hash Table,[0.5126]
+Array,[0.5354]
+Depth-First Search,[0.5495]
+Breadth-First Search,[0.5495]
+Matrix,[0.5495]

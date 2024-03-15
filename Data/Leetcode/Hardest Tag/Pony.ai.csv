@@ -1,0 +1,9 @@
+Tag,Acceptance rate
+Greedy,[0.5076]
+Sliding Window,[0.5076]
+Prefix Sum,[0.5076]
+Array,[0.53053333]
+Binary Search,[0.53053333]
+Sorting,[0.53053333]
+Dynamic Programming,[0.53926667]
+Heap (Priority Queue),[0.54473333]

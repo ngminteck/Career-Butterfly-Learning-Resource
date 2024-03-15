@@ -1,0 +1,10 @@
+Tag,Acceptance rate
+Matrix,[0.46547059]
+Depth-First Search,[0.53470588]
+Breadth-First Search,[0.53470588]
+Graph,[0.53470588]
+Topological Sort,[0.53470588]
+Simulation,[0.55188235]
+Hash Table,[0.56905882]
+Array,[0.56905882]
+String,[0.65547059]
