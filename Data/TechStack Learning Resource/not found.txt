@@ -1,956 +1,615 @@
-informatics
-presenter
-image processing
-data design
-traceability
-methodologies
-applications
-monitoring systems
-technology transfer
-quick learning
-avaya aura
-staffing services
-public policy
-proofreading
-visual force
-bash/shell/powershell
-linear algebra
-rtgs
-authentication
-subject matter expert
-code review
-evidence
-mainframe based applications
-rail
-salesforce.com certified administrator
-upselling
-leisure
-vending
-computer hardware
-visual studio 2012
-bridge
-phishing
-asap
-telerik
-togaf
-mcitp
-vb script
-iras
-predictive maintenance
-it strategic plan
-uav
-it knowledge
-restful api
-bgp
-ssis
-pro/desktop
-software debugging
-tracking systems
-wireless
-mes
-bluetooth
-wsus
-orchestration
-samba
-project risk
-statistics
-troubleshooting
-avionics
-spreadsheets
-applications development
-scrum
-apex data loader
-project execution
-design research
-infrastructure
-qa engineering
-alm
-cad
-cl
-troubleshooting hardware
-vhf
-vulnerability assessment
-cmmi
-ui
-zoning
-fx trading
-signal processing
-aes
-sensors
-arc
-it equipments
-version control svn
-broadband
-physics
-full sdlc
-pki
-formulation
-wiring
-active directory
-typography
-servers
-workflow
-imperva
-vsat
-siteminder
-mcsd
-adfs
-visualforce
-db2/sql
-videography
-seo
-switching protocols
-kanban
-information technology and services industry
-pmp
-translating
-jes2
-technical knowledge
-sybase
-product backlog
-stylus
-cobit
-sepa
-bamboo
-resolve systems errors
-vdi
-payment gateway
-vlan
-radius
-postcss
-prediction
-pmos
-axure
-unix shell
-standard operating procedures
-tuning
-synology
-lifestyle
-hibernate
-unix shell scripting
-loss prevention
-ccnp
-streamlining
-vpn
-hipaa
-intrusion detection
-rendering
-cissp
-targeting
-data manipulation
-hyper-v
-middle office
-terminology
-video conferencing
-gmp
-defense
-translation
-performance tuning
-hyperion
-roi analysis
-transmission
-architectural design
-regional planning
-huet
-software documentation
-decision making
-sabre
-automated monitoring
-dwdm
-service orientation
-technical reports
-quantitative
-data protection
-office automation
-udp
-verilog
-vsts
-ethernet
-data engineering
-invention
-jms
-public service
-wlan
-adobe framemaker
-webmaster
-computer engineering
-hardening
-tax
-systems engineering
-connector
-front-end design
-data marts
-nist
-cecil
-it end user computing
-artificial intelligence application
-algorithm design
-macos
-hardware maintenance
-robotics
-facilitation
-workflow analysis
-data quality checks
-desktops pc
-mutual funds
-wildlife
-3d
-epc
-sla adherence
-self driven
-switches
-camera
-video editing
-target oriented
-group policy
-artifactory
-literature review
-uiux
-hris
-disaster recovery strategies
-virtual servers
-theatre
-wan
-threat analysis
-asset tracking
-graphics software
-forging
-user flows
-general ledger
-middleware integration
-technical design
-tricentis tosca
-employment law
-technical assistance
-openssl
-organisational design
-usability
-systems analysis
-set up email accounts
-threat modeling
-amqp
-maintenance
-artistic
-snmp
-vnx
-virtual desktop infrastructure
-technical skillset
-application servers
-ips
-supervisory skills
-olap
-job search
-technical analysis
-pattern recognition
-operations documentation
-architecting
-mcse
-payment processing systems
-on time
-econometrics
-technical services
-shell scripting
-xp
-it solutions
-tcpdump
-health
-data validation
-process automation
-simulations
-semantics
-aws lambda
-software troubleshooting
-cisa
-computing
-fedora core 6
-data classification
-mybatis
-authorization
-usability design
-machine tools
-automate workflow
-process improvement
-iis configuration
-ran
-tom
-prisma
-troubleshoot
-denodo
-bss
-user scenarios
-power systems
-project coordination
-automation design
-tuning systems performance
-jabber
-variance analysis
-hybris
-lims
-vertex
-data modelling
-flash
-it application
-fortinet
-sccm
-research design
-simulink
-ats
-data structures
-actuarial
-sampling
-troubleshooting laptop
-technology application
-it infrastructure management.
-uml modelling language
-vios
-scheduling
-persona
-epic systems
-scalability
-provide documentation
-cyberark
-itsm
-xendesktop
-articulation
-product development
-program development
-soft skills
-archiving
-rman
-oop
-jira
-architectural patterns
-pega prpc
-ecc
-aesthetics
-organise workshops
-software coding
-data transformation
-software development
-c#.net
-waterfall
-oauth
-analysis
-derivatives
-solidworks
-subnetting
-virtualization technology
-erwin
-tcp/ip protocols
-top secret
-capm
-uml
-avaya technologies
-public sector
-webservices
-translations
-fmea
-humility
-customerfacing
-quality control
-cryptography
-integration
-data analysis and interpretation
-embedded software
-pl/sql
-development
-waterfall methodologies
-middleware
-fmcg
-pcf
-cpa
-anaplan
-openshift
-planner
-production
-soc
-language models
-mainframe
-tennis
-product engineering
-consultancy services
-transcription
-kee
-payroll
-big 4
-cyberlaw
-upstream
-brokerage
-sftp
-professional services
-pl/sql procedure
-currency
-routers
-ifrs
-access points
-intrusion detection systems
-power distribution
-gcc
-photos
-as400
-loan origination
-assurances
-piloting
-xilinx
-vb6
-spatial analysis
-inventory
-workbench
-x12
-life sciences
-action planning
-grants
-iso
-kaizen
-product knowledge
-encryption technology
-production line
-event planning
-winshuttle
-webpack
-cantonese
-iphone
-screening
-iso 27001
-pharmaceutical industry
-commercialization
-mendix
-wcf
-application development
-sprint
-information systems
-obiee
-analytics
-schedule
-adaptive
-converge
-technical engineering
-data visualisation
-airwatch
-batch processing
-automation tools
-architectures
-big data analysis
-basic it skills
-assessment
-research and development
-iis
-computer systems
-it infrastructure design
-disaster recovery plans
-calibration
-account planning
-unix servers
-webdynpro
-consolidation
-project planning
-dashboard
-information technology
-metal
-reinsurance
-organized
-dimensional modeling
-actuarial services
-composites
-enterprise software
-middleware components
-xenapp
-police
-managed services
-av
-vbscript
-mqtt
-ccie
-alteryx
-firewalls
-awk
-it infrastructure
-ic
-asic
-content development
-data analysis
-intelligent systems
-root cause analysis
-glueing
-application integration
-desktop computers
-docusign
-adobe certified
-segmentation
-autosys
-dns
-publications
-vlookup
-webgl
-predictive analytics
-analyze information
-trading
-coordination
-waterfall methodology
-investigation
-systemverilog
-anti money laundering
-rollout
-documentum
-user friendly
-technology solutions
-ingredients
-iam
-malware analysis
-equities
-tactics
-freight
-avid
-unix operating systems
-software requirement gathering
-technical expertise
-jovial
-accessibility
-preventive maintenance
-bonds
-rest
-quality engineering
-vcp
-it operations
-functional specification
-load balancing
-ncss
-systems
-data sharing
-data
-styling
-platforms
-enterprise it infrastructure
-virtualisation
-interaction design
-usb
-endpoint protection
-threat intelligence and detection
-batch processes
-payment systems
-cics
-quality improvement
-statistical knowledge
-experimentation
-cell
-systems integrators
-tenant
-apm
-tfs
-process optimisation
-opera
-documentation skills
-troubleshoot systems failures
-edm
-bank reconciliation
-traffic analysis
-ecology
-electronic payments
-acl
-analog
-visual analytics
-active learning
-chatbot
-zephyr
-fine tuning
-solarwind
-siem
-producing
-vms
-software application development
-atdd
-information technology and services
-building automation
-resourcing
-composition
-prevention
-fitness
-technical direction
-project manage
-visual studio
-africa
-statistical modeling
-metrics analysis
-cluster
-data analytics
-advocate
-tracking
-front office
-technical solution
-crisc
-tamil
-account servicing
-open source
-qnx
-cloud-based
-routing protocols
-capex
-sdlc methodology
-benchmarking
-salesforce.com
-pmp certificate
-crop
-protocol
-it-security
-assessing
-documentation
-servlets
-encryption
-pharma industry
-saas solutions
-resource planning
-allegro
-applied mathematics
-configuring operating systems
-solutioning
-endpoint encryption
-cakephp
-data integration
-software deployment
-autocad
-desktop applications
-interpreting
-multicast
-workflow design
-photography
-cyber forensics
-engineering design
-search engine optimisation
-itil certified
-rexx
-jee
-service design
-atm application
-tolerance
-mapping
-transparency
-microcontrollers
-imagination
-research
-edi
-judgement and decision making skills
-audiovisual
-scripting
-data entry
-headcount planning
-graphic design
-automation script
-html/css
-predictive modeling
-online payments
-environment
-aix
-vc
-interest rate derivatives
-focus groups
-trading systems
-valuation
-disaster recovery
-cms
-roi optimization
-strategic planning
-securities
-websphere
-grocery
-ocr
-windchill
-evangelism
-defect tracking
-front-end coding
-voip
-san
-multi tasking
-infrastructure planning
-data pipeline
-cyber-security
-algorithms
-product design
-back office
-application deployment
-it risk
-api development
-technical coding
-infrastructure deployment
-quality processes
-user experience
-cognos
-mis
-ti
-statistical analysis
-genetics
-data warehousing
-architect
-technical deployment
-paas
-weblogic
-comit
-hardware
-progress reports
-data guard
-project documentation
-vcs
-multimedia
-unix
-e-payments
-feed
-operations
-user research
-atlassian jira
-debugging
-project resources
-devsecops
-technology evaluation
-data reconciliation
-characterization
-wireframes
-replication
-fedora
-animation
-canvas
-branding
-architectural
-exadata
-project quality
-rapid prototyping
-websphere mq
-uc
-tape
-ip
-software applications
-failover
-jamf
-current affairs
-software maintenance
-predictive analysis
-product design and development
-technical aspects
-dispatching
-modeling
-vocal
-big data analytics
-x509
-application monitoring
-temenos t24
-code maintenance
-functional design
-revolution
-rtl design
-project managment
-burp suite
-applied research
-trello
-succession planning
-ehs
-exhibitions
-thorough research
-risk control
-virtualization
-dell poweredge servers
-systems deployment
-software engineering
-forecasting
-defence
-video analytics
-usercentered design
-arduino
-ceh
-risk assessment
-product improvement
-deposits
-video production
-opc
-fast learning
-actuarial science
-outlook
-mipi
-aml
-syslog
-data domain
-health systems
-production plan
-raid
-staging
-six sigma
-technical documentation
-online research
-opentext
-data fusion
-hvac
-press releases
-dna
-owasp
-joint ventures
-due diligence
-develop solutions
-payments
-office 365
-process optimization
-vertica
-design patterns
-visual identity
-plc
-saas
-deep learning
-spss
-quantitative analysis
-desktop infrastructure
-internal controls
-onboarding
-sapscript
-tenacious
-metadata
-computer networks
-layout
-atmega
-itil
-remediation
-throughput
-ms-exchange
-directing
-resellers
-cyber warfare
-rpg
-prophet
+behat
+nunit
+twistlock
+dbaas
 autonomy
-avaya
-dbms
-arcsight
-public transport
-osi model
-svm
-automated processes
-entertainment
-deployment plan
-scientific computing
-geospatial
-sentiment analysis
-alterations
-api
-rest apis
-architects
-staff development
-navision
-service recovery
-pacs
-tcp/ip
-enforcement
-engineering mathematics
-vda
-massive
-graphics
-firmware
-hazard identification
-ids
-front end developer
-computer forensics
-focal
-vb scripting
-cybercrime
-continuous integration
-abap
-back-end development
-experimental design
-x86
-automation
-http protocol
-tcp
-embedded systems
-data integration projects
-coding
-it systems development
-automated operation monitoring
-vtam
-software
-it infrastructure operations
-robotic process automation
-warehousing
-vtl
-scada
-user experience design
-as400 systems
-appraisals
-routing
-assessor
-cyber investigations
-fpga
-dreamweaver
-product analysis
-adobe experience manager
-application configuration
-cloudformation
-program design
-sem
-juniper
-rtos
-netcool
-asana
-nsn
-pci dss
-intelligence analysis
-reports
-private label
-analysis services
-remittances
-family medicine
-cism
-vm
-turnkey projects
-hands-on experience
-estimates
-computer graphics
-visual design
-solution deployment
-service-oriented
-zsh
-gcp
-salesforce.com certified developer
-dcs
-ui design
-appeals
-drawing
-css3
-resource tracking
-population health
-software design
-hplc
-systems configuration
-forensic analysis
-sdlc
-wincc
-technical operations
-update operating systems
-outsystems
-reserves
-apt
-tandem
-recommender systems
-monetization
-vsam
-lighting
-asa
-semiconductor industry
-trading strategies
-amazon aws
-automotive technology
-confluence
-genesys
-computer science
-gui
-vulnerability scanning
-technology development
+ui automator
+protractor
+mybatis
+stm32wl
+route53
+locust
+sparksql
+glusterfs
+aquadata
+cognos tm1
+gemalto
+strata
+streamsets
+es5
+plc
+elasticip
+reactivex
+apigee
+mq
+lando
+gwt
+pagerduty
+telegraf
+meteor
+hilt
+espresso
+gephi
+essbase
+sybase
+undertow
+cloudflare
+jakarta ee
+gurobi
+buildforge
+autoprefixer
+yarn
+mesos
+nose
+geronimo
+dubbo
+spotfire
+scikit
+jcr
+swagger
+cnn
+fabric
+aquasec
+durandaljs
+tanzu
+retrofit
+mockito
+gstreamer
+linkerd
+xampp
+jws
+bazel
+oidc
+podman
+aws device farm
+chef
+trac
+calabash
+afnetworking
+axway
+dask
+voldemort
+swarm
+shell script
+xmlrpc
+elk
+activiti
+pentaho
+guava
+glacier
+eventbus
+clair
+cloudfoundry
+squid proxy
+stata
+ribbon
+liquibase
+camunda
+websphere
+elastic bean stalk
+vreazlise
+jest
+kinesis
+servlets
+red hat fuse
+celery
+mocha
+ast
+jsdoc
+fortify
+zuul
+mermaid
+okhttp
+pinpoint
+artifactory
+mqtt
+pullreview
+jackson
+coroutines
+jax-rs
+pwa
+greenplum
+kepler
+mvicore
+jinja
+xarray
+cvs
+bourne
+jsf
+less
+retrofit 2
+toad
+mercurial
+odata
+alfresco
+j2se
+hd insights
+quasar
+karate
+pyspider
+fedora
+kaggle
+filezilla
+buildkite
+graylog
+dbeaver
+openstack
+composer
+mvrx
+hyperion
+iis
+ovirt
+studs
+rundeck
+jersey
+data extraction
+microstrategy
+aiops
+es2015
+wcf
+elementor
+restassured
+tensorrt
+ws02 apim
+lightgbm
+javaee
+vb script
+http
+geoserver
+jena
+jaeger
+oop
+sailsjs
+etcd
+xray
+dagger 2
+lerna
+knn
+casperjs
+xen
+rancher
+wpbakery
+mvp
+zipkin
+blackduck
+hal
+datarobot
+oauth
+entity
+jobserver
+zeplin
+maximo
+mootools
+elasticcache
+knime
+jruby
+vkey
+quartz
+osgi
+alerta
+sonarcloud
+core data
+periscope
+canal
+mode
+metal
+papertrail
+jmp
+vanillajs
+devexpress
+eslint
+combine
+yaml
+cognito
+jee
+coreos
+codedeploy
+rnn
+socketio
+es6
+epoxy
+lake formation
+drone
+backbone
+babel
+stripe
+openapi
+c4.js
+vagrant
+nixos
+graphite
+dremio
+tosca
+fluentd
+hazelcast
+opencart
+chai
+validata qs
+htmlunit
+graven
+filebeat
+ie10+
+flaskapi
+msmq
+experian
+jade template
+fiddler
+digitalocean
 ssrs
-beauty industry
-threat intelligence
-engineering
-video encoding
-data dictionary
-mcsa
-data quality
-atlassian confluence
-accountability
-electronic payment systems
-mathematics
-prepare capex
-troubleshooting skills
-labels
-systems integration
+playcanvas
+sonarqube
+memcached
+beelin
+jslint
+mojolicious
+bamboo
+structs
+unix
+inversify
+vercel
+ses
+codepush
+vertica
+hashicorp
+bower
+tfx
+canvasjs
+sentry
+hyperv
+sonatype nexus
+testrail
+aws cdk
+sonar qube
+iam
+kms
+ood
+hysterix
+boomi
+ehcache
+flux
+webgl
+liferay
+qubole
+leaflet
+fisheye
+clearquest
+open vpn
+datastax
+immutable.js
+gocd
+ipython
+tiered
+argocd
+workbench
+jmx
+charles
+specflow
+fink
+virtuozzo
+salt
+aliyun
+mlib
+mvt
+sonarlint
+fresco
+high charts
+pixijs
+sr sam 34 35
+nats
+birt report
+alteryx
+dax
+insomnia
+greensock
+appcheck
+stylus
+dataflow
+amqp
+karma
+jwt
+bugzilla
+debian
+code commit
+elb
+arkit
+kubeflow
+elastalert
+parcel
+shell
+ble
+mailgun
+axios
+kapacitor
+gherkin
+aks
+codepipeline
+datalake
+jasmine
+visual studio
+storybook
+rvest
+oauth2
+webpack
+helm
+delta lake
+analytics
+phpunit
+mule
+travis ci
+ado.net
+ecmascript
+udb
+geneos
+efs
+winform
+browserstack
+antd
+nexus
+weka
+caches
+codeigniter
+rxkotlin
+carthage
+scalding
+tcpflow
+scss
+onemap
+netegrity
+scout
+pillow
+sinonjs
+pcf
+datastage
+posix
+dojo
+ftp
+riak
+gulp
+rhel
+jasper
+asyncio
+nhibernate
+jndi
+metricbeat
+hibernate
+data mart
+varnish
+grunt
+realm
+opsgenie
+httpunit
+openauth
+reactivecocoa
+pojo
+spss
+ggplot
+phabricator
+×
+glue
+bitrise
+cft
+ibatis
+glide
+octave
+segment
+dat
+three.js
+rxswift
+weblogic
+sprint
+charts.js
+iss
+uml
+aspx
+rest api
+polymer
+vpc
+vsts
+sparkr
+silverlight
+rackspace
+mantis
+codebuild
+hpux
+titan
+web3.js
+cloudfront
+vault
+tcp ip
+rwd
+bsd
+zeppelin
+coredns
+paw
+redux-saga
+openshift
+perforce
+signalr
+alamofire
+fn
+ranger
+azkaban
+jms
+geojson
+syslog
+aws sam
+api
+jamstack
+amcharts
+d3
+sketch
+fission
+nethereum
+enzyme
+assertj
+ranorex
+spock
+gke
+viz
+swing
+respondjs
+tfs
+solace
+clickhouse
+viper
+newsql
+jwe
+polly.js
+grails
+websockets
+edb
+zigbee
+amplitude
+jshint
+core animation
+alluxio
+lucene
+sass
+spinnaker
+zend
+checkmarx
+istio
+cakephp
+redux
+scikit-image
+esp32
+phonegap
+dagger
+awk
+gogs
+nuget
+grpc
+karaf
+sqoop
+sockets
+hudson
+ali-cloud
+nomad
+koin
+octopus deploy
+envoy
+openssl
+sparkml
+phpspec
+bottle
+busted
+dhtml
+aerospike
+concourse
+amplify
+cocoa touch
+kustomize
+cloudformation
+maxwell
+luigi
+ci
+pug
+drools
+h2o
+cpanel
+api gateway
+hortonworks
+konga
+webrtc
+graphql
+conan
+siebel
+wsk
+gemfire
+dataiku
+qilkview
+mapbox
+webhooks
+hooks
+toplink
+jfrog
+featherjs
+crashlytics
+udp
+lora
+eks
+orm
+cesiumjs
+kvm
+gatling
+esri-leaflet
+babylon.js
+ember
+statsd
+markdown
+rapidminer
+raspberry pi
+attunity
+x-pack
+clearcase
+leakcanary
+ssis
+labview
+ecr
+maxscale
+knockoutjs
+elastic
+odoo
+skimage
+rxjava
+garden
+messagepack
+kedro
+cmake
+tencent
+geopandas
+sysdig
+postgis
+saml
+dom
+loopback
+figma
+mapr
+whitesource
+abc
+pax
+lambda
+consul
+gauge
+fastlane
+mobx
+aws appsync
+gemnasium
+openvz
+mcv
+modular
+openid
+hdp
+ceph
+dapper
+appkit
+postcss
+boost
+tcp
+datax
+endur
+dds
+butterknife
+relay
+amber
+es7
+mixpanel
+dotnetnuke
+knative
+kvs
+phaser
+dapresy
+unicon
+zenoss
+adobe
+mstest
+magento
+sonar
+metastore
+ireport
+intelij idea
+cplex
+npm
+fcm
+haproxy
+packer
