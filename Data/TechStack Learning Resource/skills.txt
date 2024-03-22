@@ -1,0 +1,1424 @@
+javascript
+typescript
+html
+css
+python
+bash
+java
+c++
+c
+php
+rust
+kotlin
+ruby
+lua
+dart
+assembly
+r
+matlab
+delphi
+scala
+perl
+elixir
+objective c
+haskell
+gdscript
+lisp
+solidity
+clojure
+julia
+erlang
+fortran
+prolog
+zig
+ada
+ocaml
+sas
+crystal
+apl
+flow
+raku
+racket
+xhtml
+d
+scratch
+sql
+socket
+rpc
+checksum
+multiprocessing
+multithreading
+asynchronous
+serialization
+deserialization
+file io
+encrypt
+decrypt
+requests
+lru cache
+windows
+windows server
+mircosoft sql
+word
+excel
+powerpoint
+visio
+sharepoint
+dynamics
+exchange
+mircosoft visual studio
+mircosoft visual code
+power bi
+c#
+f#
+powershell
+visual basic
+visual basic .net
+vba
+asp.mvc
+asp.net
+asp.net core
+.net
+.net core
+wpf
+linq
+directx
+microsoft game developer kit
+microsoft quantum
+microsoft systems center
+cosmodb
+azure sql database
+azure blobs
+azure file
+azure elastic san
+azure tables
+azure queues
+azure managed disks
+azure container storage
+azure container
+azure data lake
+service bus
+hdinsight
+azure synapse analytics
+azure ai
+azure pipelines
+arm
+azure virtual machines
+azure montior
+azure migration
+android
+go
+android studio
+android sdk
+google docs
+google sheets
+google slides
+google analytics
+cloud sql
+alloydb
+spanner
+bigtable
+firestore
+firebase realtime database
+memorystore
+mongodb atlas
+bigquery
+dataproc
+google cloud storage
+vertex ai
+cloud tasks
+pub sub
+google kubernetes engine
+google cloud monitoring
+cloud build
+google compute engine
+s3
+fsx
+ebs
+amazon file cache
+drs
+neptune
+rds
+aurora
+dynamodb
+redshift
+elasticache
+memorydb
+documentdb
+timestream
+athena
+emr
+sns
+amazon lake formation
+sagemaker
+ecs
+fargate
+amazon lambda
+amazon vpc
+cloudwatch
+sqs
+amazon codepipeline
+ec2
+mac
+ios
+swift
+swiftui
+ios sdk
+xcode
+oracle sql
+pl sql
+adf
+oracle cloud
+oracle virtual box
+oracle c
+oracle monitoring
+soa
+epm
+oracle linux
+oracle net
+solaris
+db2
+netezza
+ibm server
+ibm mq
+ibm aix
+ibm watson
+qiskit
+z-os
+informix
+jcl
+vsphere
+vcenter
+esxi
+vcloud
+sdn
+vmware certified professional
+hana
+sap bi
+sap bw
+sap basis
+sap abap
+accumulo
+activemq
+airavata
+airflow
+allura
+ambari
+ant
+ivy
+apisix
+aries
+arrow
+avro
+axis
+rampart
+beam
+bloodhound
+brooklyn
+calcite
+camel
+carbondata
+cassandra
+cayenne
+celix
+cloudstack
+cacoon
+commons
+bcel
+logging
+ognl
+cordova
+couchdb
+cxf
+derby
+jdo
+ldap
+fortress
+scimple
+drill
+druid
+empire-db
+felix
+flex
+flink
+flume
+fluo
+freemarker
+geronimmo
+groovy
+gump
+hadoop
+hbase
+helix
+hive
+http server
+iceberg
+ignite
+impala
+iotdb
+jackrabbit
+james
+jmeter
+kafka
+kudu
+kylin
+log4j
+log4net
+lucene core
+solr
+mahout
+maven
+doxia
+messos
+ftp server
+mina
+myface
+mynewt
+netbeans
+nifi
+nutch
+nuttx
+ofbix
+oozie
+openjpa
+opennlp
+openoffice
+orc
+parquet
+pdfbox
+mod perl
+phoenix
+pig
+pinot
+pivot
+poi
+xmlbeans
+pr
+qpid
+rocketmq
+roller
+royale
+samza
+shiro
+singa
+sling
+spamassassin
+spark
+storm
+struts
+subversion
+superset
+synapse
+systemsds
+tapestry
+tcl
+tika
+tinkerpop
+tomcat
+tomee
+traffic server
+turbine
+velocity
+axiom
+wicket
+xalan
+xerces
+batik
+fop
+yetus
+zookeeper
+hdfs
+ansible
+jboss
+mysql
+postgresql
+mongodb
+redis
+neo4j
+sqlite
+mariadb
+elasticsearch
+couchbase
+orientdb
+firebirdsql
+influxdb
+kdb
+prometheus
+chroma
+pinecone
+faiss
+tibero
+percona xtradb
+timescaledb
+scylladb
+foundationdb
+opentsdb
+yugabytedb
+newsql
+docker
+lxc
+container linux
+portainer
+kubernetes
+suse
+snowflake
+databricks
+citrix
+salesforce
+servicenow
+akamai
+teradata
+qualys
+heroku
+alibaba cloud
+cloudera
+firebase
+sensu
+talend
+sharegate
+carbonite
+fivetran
+cloudsfer
+appdynamics
+informatica
+turbonomic
+dynatrace
+appdna
+laplink
+datadog
+new relic
+manageengine
+solarwinds
+elastic apm
+splunk
+instana
+raygun
+signoz
+eg innovations
+nmap
+w3af
+tenable nessus
+onsecurity
+wireshark
+zap
+nikto
+cobalt
+rapid7
+astra
+algosec
+security onion
+elk stack
+cisco stealthwatch
+snort
+suricata
+zeek
+logz.io
+nagios
+prtg
+zabbix
+whatsup gold
+auvik
+icinga
+ninjaone
+cacti
+spiceworks
+checkmk
+kentik
+netcrunch
+observium
+whatgraph
+grafana
+kibana
+tableau
+infogram
+sisense
+looker
+domo
+chartblocks
+fusioncharts
+datawrapper
+zoho analytics
+qlik
+qilkview
+qliksense
+chart.js
+idrive
+veeam
+acronis cyber protect
+backblaze
+easeus
+druva
+veritas
+nakivo
+rubrik
+r-drive image
+retrospect solo
+fbackup
+shadowprotect
+hevo data
+stitch data
+glassfish
+jetty
+wildfly
+mapreduce
+heron
+presto
+centos
+pyspark
+rabbitmq
+ironmq
+mulesoft
+pubsub+
+zeromq
+tibco
+torch
+pytorch
+scikit-learn
+tensorflow
+keras
+langchain
+cuda
+transformers
+opennn
+openai
+pybrain
+cntk
+dl4j
+theano
+mxnet
+caffe
+xgboost
+opencv
+viso suite
+yolo
+boofcv
+openvino
+simplecv
+deepface
+spacy
+xlm
+chainer
+gensim
+nltk
+matplotlib
+seaborn
+pandas
+numpy
+streamlit
+gradio
+plotly
+dash
+panel
+anvil
+data mining
+data modeling
+language model
+cadence
+scipy
+dataset
+dataframe
+spring
+spring boot
+spring cloud
+expressjs
+django
+django rest
+go kit
+micronaut
+fastapi
+helidon
+lagom
+quarkus
+unreal engine
+unity
+godot
+cocos2d
+rpg maker
+vulkan
+opengl
+physx
+bullet
+open dynamics engine
+fmod
+glm
+assimp
+shader
+tensorflow quantum
+cuquantum
+react
+react.js
+angular
+angular.js
+vue.js
+tailwind css
+bootstrap
+mdl
+bulma
+semantic ui
+foundation
+ulkit
+node.js
+nextjs
+nestjs
+nuxtjs
+gatsby
+flask
+jquery
+express
+wordpress
+laravel
+svelte
+ruby on rails
+blazor
+symfony
+deno
+qwik
+lit
+play
+remix
+solidjs
+fastify
+drupal
+codelgniter
+rollup.js
+babylon.js
+featherjs
+koajs
+flutter
+react native
+angular native
+swiftic
+ionic
+xamarin
+corona
+titanium
+nativescript
+jquery mobile
+kivy
+pyqt
+tkinter
+pysimplegui
+pyside2
+wxpython
+wax
+java awt
+javafx
+libavg
+pyforms
+java swing
+swt
+libgdx
+imgui
+qt
+gtk
+winforms
+uwp
+winui
+.net maui
+platform uno
+avalonia ui
+material ui
+uikit
+chakra ui
+selenium
+appium
+testng
+junit
+cucumber
+testcomplete
+robot
+cypress
+junit jupiter
+pytest
+rspec
+jenkins
+galen
+qtp
+uft
+nunit
+selenium base
+scrapy
+mechanicalsoup
+beautiful soup
+pyspider
+electron
+lonic
+tauri
+capacitor
+tidyverse
+ktor
+mfc
+jax
+jdbc
+jpa
+sqlalchemy
+jsp
+extjs
+ejb
+j2ee
+durandaljs
+web3.js
+casperjs
+pixijs
+canvasjs
+c4.js
+vanillajs
+cesiumjs
+three.js
+jshint
+immutable.js
+knockoutjs
+polly.js
+jslint
+sailsjs
+sinonjs
+jsdoc
+jsf
+respondjs
+geojson
+ado.net
+ipython
+j2se
+jwt
+boost
+rxjava
+jax-rs
+jee
+dotnetnuke
+webpack
+winform
+jcr
+ethereum
+ibm blockchain
+hyperledger
+eos
+corda
+ripple
+quorum
+iota
+neo
+tezos
+stellar
+sui network
+hedera
+aptos
+fantom
+solana
+tron
+binance smart chain
+icp
+fleet
+intellij
+pycharm
+webstorm
+phpstorm
+rider
+clion
+datalore
+datagrip
+rubymine
+goland
+resharper c++
+rustrover
+aqua
+anaconda
+jupyter
+eclipse
+vert.x
+gitlab
+bitbucket
+github
+preforce
+buddy
+teamcity
+circleci
+tracisci
+semaphore
+puppet
+gradle
+xml
+json
+binary
+xpath
+query
+ajax
+csv
+hexadecimal
+xsl
+wsdl
+xslt
+xsd
+yaml
+terraform
+spacelift
+ip address
+mac address
+firewall
+domain name systems
+area network
+storage area network
+dhcp
+network protocol
+network topology
+network devices
+broadcasting
+subnet
+subnet mask
+ospf
+access control
+xmpp
+eigrp
+nfs
+vrrp
+mpls
+array
+list
+tuple
+stack
+queue
+tree
+graph
+trie
+hash table
+abstraction
+encapsulation
+inheritance
+polymorphism
+object
+class
+factory
+builder
+dependency injection
+lazy
+object pool
+multition
+raii
+prototype
+singleton
+visitor
+join
+lock
+mvc
+actors
+component
+strategy
+observer
+adapter
+state
+creational
+structural
+behavioral
+decorator
+facade
+mvvm
+monolithic systems
+distributed systems
+structured analysis
+structured design
+systems design strategy
+database sharding
+scaling
+caching
+ooad
+public cloud
+private cloud
+hybrid cloud
+file storage
+block storage
+object storage
+availability
+linux
+vxworks
+soap
+soapui
+postman
+esri
+control m
+loadrunner
+tibco ems
+akka
+logstash
+ubuntu
+nginx
+ccna
+nessus
+ssl
+dlp
+software development life cycle
+agile
+gis
+pax
+mermaid
+core data
+dask
+elastalert
+elb
+codebuild
+alfresco
+retrofit 2
+fabric
+cmake
+zend
+filezilla
+geronimo
+zipkin
+garden
+pillow
+zeplin
+websphere
+postcss
+sonatype nexus
+bower
+dbaas
+lerna
+datastax
+periscope
+jasmine
+pcf
+hortonworks
+hyperion
+elementor
+fink
+dom
+elastic bean stalk
+appkit
+nethereum
+saml
+protractor
+jackson
+aws device farm
+mocha
+fastlane
+websockets
+chai
+knn
+socketio
+mvt
+viper
+hysterix
+enzyme
+podman
+alteryx
+jamstack
+es6
+dojo
+openid
+maxwell
+redux
+delta lake
+gephi
+microstrategy
+bottle
+api gateway
+scout
+graphql
+zigbee
+jmp
+behat
+eslint
+ireport
+gemfire
+openauth
+ssrs
+digitalocean
+spock
+aws sam
+sonarcloud
+statsd
+drools
+cloudformation
+xmlrpc
+xarray
+es5
+cvs
+activiti
+unix
+consul
+udb
+odata
+skimage
+geoserver
+hpux
+clearcase
+mapbox
+rwd
+less
+sketch
+backbone
+oauth2
+ood
+canal
+axios
+asyncio
+autonomy
+lake formation
+kaggle
+twistlock
+hudson
+gemnasium
+mailgun
+hal
+octave
+x-pack
+babel
+pojo
+konga
+nats
+dubbo
+wpbakery
+webgl
+tfx
+elasticip
+nexus
+sonarqube
+jms
+rhel
+scikit
+datax
+es2015
+appcheck
+salt
+vb script
+attunity
+labview
+jakarta ee
+oop
+metricbeat
+vagrant
+ranorex
+alamofire
+karaf
+opsgenie
+graven
+liferay
+paw
+charles
+rvest
+core animation
+httpunit
+gwt
+weblogic
+quartz
+butterknife
+fortify
+aws cdk
+rxkotlin
+grunt
+uml
+mvicore
+open vpn
+messagepack
+drone
+leakcanary
+pinpoint
+loopback
+entity
+servlets
+sqoop
+crashlytics
+mq
+ehcache
+figma
+structs
+gocd
+ecmascript
+cloudfoundry
+posix
+endur
+dataiku
+sysdig
+data extraction
+boomi
+liquibase
+autoprefixer
+odoo
+realm
+fiddler
+reactivex
+openstack
+http
+swarm
+hyperv
+analytics
+buildforge
+phpspec
+gauge
+epoxy
+xray
+dapresy
+carthage
+composer
+karate
+sybase
+adobe
+es7
+coreos
+openvz
+kustomize
+amcharts
+jwe
+afnetworking
+sonarlint
+mstest
+grpc
+elasticcache
+amber
+flux
+spinnaker
+lora
+stripe
+jest
+spotfire
+gherkin
+osgi
+nuget
+aquadata
+aerospike
+oauth
+amplitude
+mootools
+vkey
+vreazlise
+ibatis
+blackduck
+sprint
+openapi
+phaser
+stylus
+whitesource
+parcel
+opencart
+ses
+nixos
+qubole
+etcd
+datalake
+data mart
+istio
+lambda
+code commit
+graphite
+viz
+cloudfront
+fisheye
+tcp
+reactivecocoa
+signalr
+rest api
+pagerduty
+dapper
+vercel
+buildkite
+webrtc
+luigi
+polymer
+ssis
+sonar
+raspberry pi
+playcanvas
+riak
+essbase
+redux-saga
+nomad
+ci
+geneos
+lucene
+aliyun
+pentaho
+awk
+storybook
+siebel
+esp32
+vault
+swagger
+segment
+sparkml
+studs
+ast
+rapidminer
+alerta
+zeppelin
+squid proxy
+grails
+swing
+clearquest
+npm
+camunda
+sass
+bsd
+dhtml
+glacier
+dagger
+mcv
+scalding
+papertrail
+jade template
+magento
+mapr
+bitrise
+ranger
+toad
+pwa
+fcm
+codedeploy
+aks
+phabricator
+cplex
+ble
+azkaban
+streamsets
+syslog
+high charts
+cft
+devexpress
+mule
+octopus deploy
+jfrog
+combine
+guava
+mercurial
+nose
+elastic
+htmlunit
+knative
+mobx
+api
+oidc
+koin
+webhooks
+scss
+workbench
+codepush
+tcpflow
+lightgbm
+dataflow
+codeigniter
+fission
+d3
+dbeaver
+kinesis
+jndi
+vsts
+mockito
+vpc
+weka
+restassured
+hibernate
+kms
+mlib
+undertow
+packer
+jasper
+fresco
+fedora
+beelin
+rxswift
+tensorrt
+markdown
+cpanel
+perforce
+alluxio
+qlikview
+red hat fuse
+apigee
+edb
+helm
+cognos tm1
+phpunit
+amplify
+iss
+bourne
+kedro
+toplink
+codepipeline
+glusterfs
+tencent
+silverlight
+wsk
+kapacitor
+mvp
+strata
+jersey
+metastore
+aquasec
+xampp
+fn
+dremio
+bamboo
+postgis
+gemalto
+gogs
+caches
+validata qs
+gstreamer
+testrail
+jws
+jobserver
+shell script
+coroutines
+cnn
+tfs
+plc
+mantis
+eventbus
+clair
+netegrity
+inversify
+hazelcast
+rundeck
+efs
+fluentd
+glue
+assertj
+gurobi
+birt report
+dax
+pug
+aspx
+hilt
+quasar
+experian
+insomnia
+ecr
+graylog
+antd
+virtuozzo
+specflow
+celery
+hdp
+linkerd
+wcf
+okhttp
+stm32wl
+charts.js
+udp
+espresso
+ali-cloud
+hd insights
+dds
+envoy
+ws02 apim
+scikit-image
+tosca
+hooks
+meteor
+cocoa touch
+tanzu
+ember
+ie10+
+sockets
+iam
+flaskapi
+titan
+gke
+artifactory
+zenoss
+rancher
+debian
+hashicorp
+ui automator
+eks
+sr sam 34 35
+memcached
+conan
+vertica
+datastage
+mojolicious
+spss
+onemap
+jruby
+iis
+intelij idea
+mixpanel
+haproxy
+gatling
+concourse
+locust
+mybatis
+clickhouse
+browserstack
+relay
+telegraf
+aiops
+retrofit
+mvrx
+cakephp
+calabash
+maximo
+amqp
+abc
+ggplot
+coredns
+kvs
+leaflet
+ceph
+kepler
+jmx
+kvm
+modular
+aws appsync
+esri-leaflet
+elk
+metal
+maxscale
+jaeger
+bugzilla
+knime
+greensock
+ovirt
+glide
+visual studio
+mqtt
+arkit
+orm
+busted
+trac
+route53
+nhibernate
+checkmarx
+bazel
+jena
+sparksql
+filebeat
+datarobot
+stata
+yarn
+sentry
+lando
+ribbon
+tiered
+xen
+mode
+greenplum
+phonegap
+voldemort
+h2o
+rackspace
+openshift
+unicon
+cloudflare
+mesos
+msmq
+javaee
+argocd
+jinja
+ftp
+karma
+geopandas
+solace
+kubeflow
+shell
+openssl
+zuul
+cognito
+axway
+varnish
+pullreview
+dat
+sparkr
+rnn
+gulp
+chef
+amazon web services
+azure
+google cloud

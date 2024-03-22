@@ -90,7 +90,6 @@ employee
 budget
 attention
 environmental
-new
 property
 tender
 manufacturing
@@ -176,7 +175,6 @@ career
 soa
 photoshop
 field
-vba
 telco
 designer
 administrative
@@ -188,7 +186,6 @@ after
 creative
 teams
 facilities
-xd
 workplace
 interpersonal
 ems
