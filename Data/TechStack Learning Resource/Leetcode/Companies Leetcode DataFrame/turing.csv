@@ -1,8 +1,0 @@
-No,Title,Acceptance,Difficulty,Frequency,Array,Stack,Simulation,String,Hash Table,Graph,Depth-First Search,Breadth-First Search,Union Find,Matrix,Dynamic Programming,Recursion,Sorting,Sliding Window
-682,Baseball Game,75.8%,Easy,0.1220392401100567,1,1,1,0,0,0,0,0,0,0,0,0,0,0
-20,Valid Parentheses,40.5%,Easy,0.1105768322507929,0,1,0,1,0,0,0,0,0,0,0,0,0,0
-997,Find the Town Judge,49.8%,Easy,0.0806889112501427,1,0,0,0,1,1,0,0,0,0,0,0,0,0
-200,Number of Islands,58.5%,Medium,0.0508009902494925,1,0,0,0,0,0,1,1,1,1,0,0,0,0
-10,Regular Expression Matching,28.1%,Hard,0.0465200156348928,0,0,0,1,0,0,0,0,0,0,1,1,0,0
-56,Merge Intervals,47.1%,Medium,0.0202129165558593,1,0,0,0,0,0,0,0,0,0,0,0,1,0
-3,Longest Substring Without Repeating Characters,34.5%,Medium,0.0077145994953303,0,0,0,1,1,0,0,0,0,0,0,0,0,1

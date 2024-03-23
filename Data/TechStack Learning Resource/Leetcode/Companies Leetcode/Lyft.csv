@@ -1,8 +1,0 @@
-No,Title,Tags,Acceptance,Difficulty,Frequency
-158,Read N Characters Given read4 II - Call Multiple Times,[Array][Simulation][Interactive],42.1%,Hard,1.0327770308024722
-304,Range Sum Query 2D - Immutable,[Array][Design][Matrix][Prefix Sum],54.2%,Medium,0.6737290947028437
-981,Time Based Key-Value Store,[Hash Table][String][Binary Search][Design],49.6%,Medium,0.31468115860321527
-365,Water and Jug Problem,[Math][Depth-First Search][Breadth-First Search],39.8%,Medium,0.26826398659467937
-76,Minimum Window Substring,[Hash Table][String][Sliding Window],42.7%,Hard,0.12864578166797622
-109,Convert Sorted List to Binary Search Tree,[Linked List][Divide and Conquer][Tree][Binary Search Tree][Binary Tree],61.6%,Medium,0.10648348040245009
-994,Rotting Oranges,[Array][Breadth-First Search][Matrix],53.9%,Medium,0.06467770966866095

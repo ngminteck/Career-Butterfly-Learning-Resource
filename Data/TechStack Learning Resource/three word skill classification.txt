@@ -1,0 +1,11 @@
+integrated development environment
+database management system
+relatinatural language processing
+behavior driven development
+structured query language
+real time analytics
+software development kit
+machine learning algorithms
+graphical user interface
+model view controller
+extract transform load

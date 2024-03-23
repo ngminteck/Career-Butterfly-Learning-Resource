@@ -1,6 +1,0 @@
-No,Title,Tags,Acceptance,Difficulty,Frequency
-766,Toeplitz Matrix,[Array][Matrix],68.8%,Easy,0.06388312238556634
-509,Fibonacci Number,[Math][Dynamic Programming][Recursion][Memoization],70.8%,Easy,0.041634135121871245
-121,Best Time to Buy and Sell Stock,[Array][Dynamic Programming],53.5%,Easy,0.01938514785817615
-100,Same Tree,[Tree][Depth-First Search][Breadth-First Search][Binary Tree],61.7%,Easy,0.010346703788660356
-53,Maximum Subarray,[Array][Divide and Conquer][Dynamic Programming],50.6%,Medium,0.008490817302690046

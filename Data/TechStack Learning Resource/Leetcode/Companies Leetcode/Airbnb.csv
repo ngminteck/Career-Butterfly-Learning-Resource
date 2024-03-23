@@ -1,8 +1,0 @@
-No,Title,Tags,Acceptance,Difficulty,Frequency
-755,Pour Water,[Array][Simulation],46.7%,Medium,0.8359080556416618
-1235,Maximum Profit in Job Scheduling,[Array][Binary Search][Dynamic Programming][Sorting],54.8%,Hard,0.7590490501160502
-864,Shortest Path to Get All Keys,[Array][Bit Manipulation][Breadth-First Search][Matrix],53.8%,Hard,0.6837714751861048
-336,Palindrome Pairs,[Array][Hash Table][String][Trie],35.2%,Hard,0.6088506050063158
-39,Combination Sum,[Array][Backtracking],71.0%,Medium,0.4153755740404643
-269,Alien Dictionary,[Array][String][Depth-First Search][Breadth-First Search][Graph][Topological Sort],35.7%,Hard,0.22190054307461277
-787,Cheapest Flights Within K Stops,[Dynamic Programming][Depth-First Search][Breadth-First Search][Graph][Heap (Priority Queue)][Shortest Path],39.2%,Medium,0.047514875607513184

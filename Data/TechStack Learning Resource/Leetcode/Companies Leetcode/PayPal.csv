@@ -1,9 +1,0 @@
-No,Title,Tags,Acceptance,Difficulty,Frequency
-2366,Minimum Replacements to Sort the Array,[Array][Math][Greedy],53.7%,Hard,1.1183708026357566
-2062,Count Vowel Substrings of a String,[Hash Table][String],67.1%,Easy,0.7328875092094594
-851,Loud and Rich,[Array][Depth-First Search][Graph][Topological Sort],59.1%,Medium,0.7191226669632059
-895,Maximum Frequency Stack,[Hash Table][Stack][Design][Ordered Set],66.5%,Hard,0.33363937353690887
-1882,Process Tasks Using Servers,[Array][Heap (Priority Queue)],40.0%,Medium,0.2876820724517809
-2402,Meeting Rooms III,[Array][Hash Table][Sorting][Heap (Priority Queue)][Simulation],45.2%,Hard,0.23670108287626285
-242,Valid Anagram,[Hash Table][String][Sorting],64.3%,Easy,0.007094744197323518
-121,Best Time to Buy and Sell Stock,[Array][Dynamic Programming],53.5%,Easy,0.004881630392281271

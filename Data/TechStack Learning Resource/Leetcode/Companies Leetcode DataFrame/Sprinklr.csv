@@ -1,7 +1,0 @@
-No,Title,Acceptance,Difficulty,Frequency,Array,Dynamic Programming,Matrix,Hash Table,Greedy,Bit Manipulation,Tree,Graph,Strongly Connected Component,Math,Depth-First Search,Number Theory,Two Pointers,String,Design,Randomized
-1981,Minimize the Difference Between Target and Chosen Elements,34.1%,Medium,2.238400619382021,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
-2897,Apply Operations on Array to Maximize Sum of Squares,46.6%,Hard,1.449943259017751,1,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0
-2846,Minimum Edge Weight Equilibrium Queries in a Tree,43.4%,Hard,1.3068424153770777,1,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0
-2867,Count Valid Paths in a Tree,34.5%,Hard,0.9391176352517602,0,1,0,0,0,0,1,0,0,1,1,1,0,0,0,0
-763,Partition Labels,79.8%,Medium,0.1506602748874898,0,0,0,1,1,0,0,0,0,0,0,0,1,1,0,0
-380,Insert Delete GetRandom O(1),54.4%,Medium,0.0349991977802212,1,0,0,1,0,0,0,0,0,1,0,0,0,0,1,1

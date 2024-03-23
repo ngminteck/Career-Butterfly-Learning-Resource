@@ -1,8 +1,0 @@
-No,Title,Tags,Acceptance,Difficulty,Frequency
-682,Baseball Game,[Array][Stack][Simulation],75.8%,Easy,0.12203924011005679
-20,Valid Parentheses,[String][Stack],40.5%,Easy,0.1105768322507929
-997,Find the Town Judge,[Array][Hash Table][Graph],49.8%,Easy,0.08068891125014274
-200,Number of Islands,[Array][Depth-First Search][Breadth-First Search][Union Find][Matrix],58.5%,Medium,0.050800990249492584
-10,Regular Expression Matching,[String][Dynamic Programming][Recursion],28.1%,Hard,0.04652001563489285
-56,Merge Intervals,[Array][Sorting],47.1%,Medium,0.02021291655585931
-3,Longest Substring Without Repeating Characters,[Hash Table][String][Sliding Window],34.5%,Medium,0.0077145994953303374

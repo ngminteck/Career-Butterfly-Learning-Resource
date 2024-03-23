@@ -1,5 +1,0 @@
-No,Title,Tags,Acceptance,Difficulty,Frequency
-1524,Number of Sub-arrays With Odd Sum,[Array][Math][Dynamic Programming][Prefix Sum],43.5%,Medium,1.4544743550702814
-1654,Minimum Jumps to Reach Home,[Array][Dynamic Programming][Breadth-First Search],29.3%,Medium,1.282624098143622
-1488,Avoid Flood in The City,[Array][Hash Table][Binary Search][Greedy][Heap (Priority Queue)],27.0%,Medium,0.9039702474861144
-1535,Find the Winner of an Array Game,[Array][Simulation],57.2%,Medium,0.4519851237430572
