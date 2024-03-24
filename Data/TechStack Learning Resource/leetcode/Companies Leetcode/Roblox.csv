@@ -1,0 +1,10 @@
+No,Title,Tags,Acceptance,Difficulty,Frequency
+362,Design Hit Counter,[Array][Binary Search][Design][Queue][Data Stream],68.6%,Medium,1.1718597400324042
+2468,Split Message Based on Limit,[String][Binary Search],43.5%,Hard,1.104973765679068
+1472,Design Browser History,[Array][Linked List][Stack][Design][Doubly-Linked List][Data Stream],77.5%,Medium,1.0420368949972145
+767,Reorganize String,[Hash Table][String][Greedy][Sorting][Heap (Priority Queue)][Counting],54.5%,Medium,0.7521211830194965
+1419,Minimum Number of Frogs Croaking,[String][Counting],50.2%,Medium,0.6576404921030354
+2038,Remove Colored Pieces if Both Neighbors are the Same Color,[Math][String][Greedy][Game Theory],62.8%,Medium,0.36772478012531734
+56,Merge Intervals,[Array][Sorting],47.1%,Medium,0.16783472482771206
+41,First Missing Positive,[Array][Hash Table],37.8%,Hard,0.036301626676214796
+20,Valid Parentheses,[String][Stack],40.5%,Easy,0.007392382583176544

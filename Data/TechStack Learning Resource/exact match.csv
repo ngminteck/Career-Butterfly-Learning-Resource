@@ -5,11 +5,8 @@ webdriver,web crawler
 vbnet,visual basic .net
 vb.net,visual basic .net
 vb,visual basic
-containerization,container
 html5,html
 svn,subversion
-version control,git
-nosql,non-relational
 rdbms,relational
 unity3d,unity
 mssql,microsoft sql
@@ -17,4 +14,4 @@ shaders,shader
 uat,testing
 mui,material ui
 gui,graphical user interface
-ui,graphical user interface
+ui,user interface

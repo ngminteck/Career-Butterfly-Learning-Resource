@@ -1,0 +1,59 @@
+No,Title,Tags,Acceptance,Difficulty,Frequency
+1797,Design Authentication Manager,[Hash Table][Design],56.8%,Medium,0.9552197520835621
+2484,Count Palindromic Subsequences,[String][Dynamic Programming],37.0%,Hard,0.8348824366220822
+460,LFU Cache,[Hash Table][Linked List][Design][Doubly-Linked List],44.0%,Hard,0.717419042969379
+146,LRU Cache,[Hash Table][Linked List][Design][Doubly-Linked List],42.2%,Medium,0.5853883182964201
+316,Remove Duplicate Letters,[String][Stack][Greedy][Monotonic Stack],49.4%,Medium,0.5018899773269088
+1328,Break a Palindrome,[String][Greedy],51.8%,Medium,0.4865757423538663
+2099,Find Subsequence of Length K With the Largest Sum,[Array][Hash Table][Sorting][Heap (Priority Queue)],43.3%,Easy,0.35454501768090746
+253,Meeting Rooms II,[Array][Two Pointers][Greedy][Sorting][Heap (Priority Queue)][Prefix Sum],51.1%,Medium,0.3188804433076422
+1010,Pairs of Songs With Total Durations Divisible by 60,[Array][Hash Table][Counting],52.8%,Medium,0.30774963550259016
+359,Logger Rate Limiter,[Hash Table][Design][Data Stream],75.8%,Easy,0.25452986513488046
+697,Degree of an Array,[Array][Hash Table],56.4%,Easy,0.245122458032985
+300,Longest Increasing Subsequence,[Array][Binary Search][Dynamic Programming],55.0%,Medium,0.17236495554239675
+149,Max Points on a Line,[Array][Hash Table][Math][Geometry],26.4%,Hard,0.1629613095094132
+2006,Count Number of Pairs With Absolute Difference K,[Array][Hash Table][Counting],83.5%,Easy,0.1541506798272583
+1209,Remove All Adjacent Duplicates in String II,[String][Stack],57.4%,Medium,0.14897379164772453
+463,Island Perimeter,[Array][Depth-First Search][Breadth-First Search][Matrix],70.3%,Easy,0.1451820098444979
+394,Decode String,[String][Stack][Recursion],59.0%,Medium,0.13825661970102562
+450,Delete Node in a BST,[Tree][Binary Search Tree][Binary Tree],51.1%,Medium,0.1333332747437359
+200,Number of Islands,[Array][Depth-First Search][Breadth-First Search][Union Find][Matrix],58.5%,Medium,0.1305974051897351
+56,Merge Intervals,[Array][Sorting],47.1%,Medium,0.11947365313429092
+767,Reorganize String,[Hash Table][String][Greedy][Sorting][Heap (Priority Queue)][Counting],54.5%,Medium,0.11743683520286506
+378,Kth Smallest Element in a Sorted Matrix,[Array][Binary Search][Sorting][Heap (Priority Queue)][Matrix],62.3%,Medium,0.10705399616415937
+39,Combination Sum,[Array][Backtracking],71.0%,Medium,0.09686938665732826
+11,Container With Most Water,[Array][Two Pointers][Greedy],54.9%,Medium,0.09635691268943879
+409,Longest Palindrome,[Hash Table][String][Greedy],53.9%,Easy,0.09244453252200126
+20,Valid Parentheses,[String][Stack],40.5%,Easy,0.08699591900828725
+50,"Pow(x, n)",[Math][Recursion],34.5%,Medium,0.07529425330187599
+380,Insert Delete GetRandom O(1),[Array][Hash Table][Math][Design][Randomized],54.4%,Medium,0.06222847139840936
+23,Merge k Sorted Lists,[Linked List][Divide and Conquer][Heap (Priority Queue)][Merge Sort],52.2%,Hard,0.05876364050288331
+295,Find Median from Data Stream,[Two Pointers][Design][Sorting][Heap (Priority Queue)][Data Stream],51.8%,Hard,0.057569851821477835
+540,Single Element in a Sorted Array,[Array][Binary Search],59.0%,Medium,0.05421381659414747
+232,Implement Queue using Stacks,[Stack][Design][Queue],66.0%,Easy,0.048028437943868525
+42,Trapping Rain Water,[Array][Two Pointers][Dynamic Programming][Stack][Monotonic Stack],60.8%,Hard,0.04752742385552696
+787,Cheapest Flights Within K Stops,[Dynamic Programming][Depth-First Search][Breadth-First Search][Graph][Heap (Priority Queue)][Shortest Path],39.2%,Medium,0.047514875607513184
+994,Rotting Oranges,[Array][Breadth-First Search][Matrix],53.9%,Medium,0.04525659158812087
+239,Sliding Window Maximum,[Array][Queue][Sliding Window][Heap (Priority Queue)][Monotonic Queue],46.5%,Hard,0.04260495252775117
+1004,Max Consecutive Ones III,[Array][Binary Search][Sliding Window][Prefix Sum],62.7%,Medium,0.04137094624740334
+1143,Longest Common Subsequence,[String][Dynamic Programming],57.8%,Medium,0.040573516447166516
+19,Remove Nth Node From End of List,[Linked List][Two Pointers],44.8%,Medium,0.03891541624967355
+1,Two Sum,[Array][Hash Table],52.0%,Easy,0.03710860428520648
+41,First Missing Positive,[Array][Hash Table],37.8%,Hard,0.036301626676214796
+79,Word Search,[Array][String][Backtracking][Matrix],41.4%,Medium,0.03506055862573159
+103,Binary Tree Zigzag Level Order Traversal,[Tree][Breadth-First Search][Binary Tree],58.6%,Medium,0.03490755821080199
+134,Gas Station,[Array][Greedy],45.6%,Medium,0.03472571137382968
+139,Word Break,[Array][Hash Table][String][Dynamic Programming][Trie][Memoization],46.6%,Medium,0.03436764350420778
+33,Search in Rotated Sorted Array,[Array][Binary Search],40.5%,Medium,0.032897703507059034
+209,Minimum Size Subarray Sum,[Array][Binary Search][Sliding Window][Prefix Sum],46.8%,Medium,0.03207973561022761
+283,Move Zeroes,[Array][Two Pointers],61.6%,Easy,0.031350529884076016
+5,Longest Palindromic Substring,[String][Dynamic Programming],33.7%,Medium,0.03083491977700727
+54,Spiral Matrix,[Array][Matrix][Simulation],48.9%,Medium,0.028737609767356852
+560,Subarray Sum Equals K,[Array][Hash Table][Prefix Sum],43.4%,Medium,0.028411001832779885
+73,Set Matrix Zeroes,[Array][Hash Table][Matrix],55.0%,Medium,0.02419960801635886
+21,Merge Two Sorted Lists,[Linked List][Recursion],64.0%,Easy,0.023760357476126124
+75,Sort Colors,[Array][Two Pointers][Sorting],61.7%,Medium,0.01875347974830633
+55,Jump Game,[Array][Dynamic Programming][Greedy],38.5%,Medium,0.01691372244206185
+49,Group Anagrams,[Array][Hash Table][String][Sorting],68.2%,Medium,0.014604129584815372
+70,Climbing Stairs,[Math][Dynamic Programming][Memoization],52.8%,Easy,0.012890929396928217
+2,Add Two Numbers,[Linked List][Math][Recursion],42.4%,Medium,0.009701749635215725

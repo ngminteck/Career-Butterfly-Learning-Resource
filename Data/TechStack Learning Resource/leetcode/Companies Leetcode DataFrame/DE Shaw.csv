@@ -1,0 +1,5 @@
+No,Title,Acceptance,Difficulty,Frequency,String,Stack,Greedy,Monotonic Stack,Array,Dynamic Programming,Matrix,Math,Recursion,Simulation
+402,Remove K Digits,31.0%,Medium,0.1040998207994724,1,1,1,1,0,0,0,0,0,0
+221,Maximal Square,46.3%,Medium,0.0908791099909439,0,0,0,0,1,1,1,0,0,0
+224,Basic Calculator,43.2%,Hard,0.0598083598791504,1,1,0,0,0,0,0,1,1,0
+54,Spiral Matrix,48.9%,Medium,0.0287376097673568,0,0,0,0,1,0,1,0,0,1

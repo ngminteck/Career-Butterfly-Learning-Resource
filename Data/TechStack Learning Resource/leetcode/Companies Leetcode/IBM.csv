@@ -1,0 +1,20 @@
+No,Title,Tags,Acceptance,Difficulty,Frequency
+636,Exclusive Time of Functions,[Array][Stack],62.2%,Medium,2.8600261687837474
+1012,Numbers With Repeated Digits,[Math][Dynamic Programming],42.0%,Hard,2.8162368809214744
+1208,Get Equal Substrings Within Budget,[String][Binary Search][Sliding Window][Prefix Sum],50.7%,Medium,2.2429468266743147
+1529,Minimum Suffix Flips,[String][Greedy],73.1%,Medium,1.6696567724271552
+2964,Number of Divisible Triplet Sums,[Array][Hash Table],68.1%,Medium,1.55814461804655
+1492,The kth Factor of n,[Math][Number Theory],66.8%,Medium,1.3457090810048122
+253,Meeting Rooms II,[Array][Two Pointers][Greedy][Sorting][Heap (Priority Queue)][Prefix Sum],51.1%,Medium,1.208189254704871
+2491,Divide Players Into Teams of Equal Skill,[Array][Hash Table][Two Pointers][Sorting],59.4%,Medium,0.9088557533866369
+2598,Smallest Missing Non-negative Integer After Operations,[Array][Hash Table][Math][Greedy],39.0%,Medium,0.8873031950009028
+12,Integer to Roman,[Hash Table][Math][String],64.3%,Medium,0.4890959071805757
+412,Fizz Buzz,[Math][String][Simulation],71.8%,Easy,0.2731294587804852
+456,132 Pattern,[Array][Binary Search][Stack][Monotonic Stack][Ordered Set],33.7%,Medium,0.15656906069153992
+13,Roman to Integer,[Hash Table][Math][String],60.8%,Easy,0.06788708096841137
+121,Best Time to Buy and Sell Stock,[Array][Dynamic Programming],53.5%,Easy,0.06449225803932324
+334,Increasing Triplet Subsequence,[Array][Greedy],40.2%,Medium,0.037919234862293726
+300,Longest Increasing Subsequence,[Array][Binary Search][Dynamic Programming],55.0%,Medium,0.02965376657520356
+14,Longest Common Prefix,[String][Trie],42.4%,Easy,0.023101643380094797
+17,Letter Combinations of a Phone Number,[Hash Table][String][Backtracking],60.0%,Medium,0.0227670619135464
+1,Two Sum,[Array][Hash Table],52.0%,Easy,0.0030814291387936303

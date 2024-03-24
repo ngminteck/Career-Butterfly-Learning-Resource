@@ -1,0 +1,4 @@
+No,Title,Tags,Acceptance,Difficulty,Frequency
+1235,Maximum Profit in Job Scheduling,[Array][Binary Search][Dynamic Programming][Sorting],54.8%,Hard,0.1605966640662709
+621,Task Scheduler,[Array][Hash Table][Greedy][Sorting][Heap (Priority Queue)][Counting],58.3%,Medium,0.09265883048270479
+399,Evaluate Division,[Array][Depth-First Search][Breadth-First Search][Union Find][Graph][Shortest Path],61.5%,Medium,0.06793783358356612

@@ -1,0 +1,9 @@
+No,Title,Acceptance,Difficulty,Frequency,Array,Math,Greedy,Hash Table,String,Depth-First Search,Graph,Topological Sort,Stack,Design,Ordered Set,Heap (Priority Queue),Sorting,Simulation,Dynamic Programming
+2366,Minimum Replacements to Sort the Array,53.7%,Hard,1.1183708026357566,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0
+2062,Count Vowel Substrings of a String,67.1%,Easy,0.7328875092094594,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0
+851,Loud and Rich,59.1%,Medium,0.7191226669632059,1,0,0,0,0,1,1,1,0,0,0,0,0,0,0
+895,Maximum Frequency Stack,66.5%,Hard,0.3336393735369088,0,0,0,1,0,0,0,0,1,1,1,0,0,0,0
+1882,Process Tasks Using Servers,40.0%,Medium,0.2876820724517809,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+2402,Meeting Rooms III,45.2%,Hard,0.2367010828762628,1,0,0,1,0,0,0,0,0,0,0,1,1,1,0
+242,Valid Anagram,64.3%,Easy,0.0070947441973235,0,0,0,1,1,0,0,0,0,0,0,0,1,0,0
+121,Best Time to Buy and Sell Stock,53.5%,Easy,0.0048816303922812,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1

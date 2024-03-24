@@ -1,0 +1,6 @@
+No,Title,Acceptance,Difficulty,Frequency,Dynamic Programming,Greedy,Bit Manipulation,Math,String,Simulation,Array,Backtracking,Trie,Matrix,Binary Search,Sorting,Heap (Priority Queue),Hash Table,Linked List,Design,Hash Function
+2571,Minimum Operations to Reduce an Integer to 0,53.7%,Medium,0.9828459874365842,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+43,Multiply Strings,40.1%,Medium,0.592265955706165,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0
+212,Word Search II,36.2%,Hard,0.2016859239757458,0,0,0,0,1,0,1,1,1,1,0,0,0,0,0,0,0
+1268,Search Suggestions System,65.3%,Medium,0.1112256351102243,0,0,0,0,1,0,1,0,1,0,1,1,1,0,0,0,0
+706,Design HashMap,65.7%,Easy,0.0713314780054297,0,0,0,0,0,0,1,0,0,0,0,0,0,1,1,1,1

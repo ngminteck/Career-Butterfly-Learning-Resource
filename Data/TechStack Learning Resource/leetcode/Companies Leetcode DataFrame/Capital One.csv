@@ -1,0 +1,6 @@
+No,Title,Acceptance,Difficulty,Frequency,String,Binary Search,Array,Hash Table,Sorting,Prefix Sum,Ordered Set,Simulation,Backtracking,Trie,Matrix
+2468,Split Message Based on Limit,43.5%,Hard,0.6823213400967011,1,1,0,0,0,0,0,0,0,0,0
+2251,Number of Flowers in Full Bloom,56.8%,Hard,0.4183685129440722,0,1,1,1,1,1,1,0,0,0,0
+68,Text Justification,42.7%,Hard,0.1544156857914433,1,0,1,0,0,0,0,1,0,0,0
+212,Word Search II,36.2%,Hard,0.0543612092188873,1,0,1,0,0,0,0,0,1,1,1
+79,Word Search,41.4%,Medium,0.0512057248791973,1,0,1,0,0,0,0,0,1,0,1

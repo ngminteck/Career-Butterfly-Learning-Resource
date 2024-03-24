@@ -1,0 +1,4 @@
+No,Title,Tags,Acceptance,Difficulty,Frequency
+150,Evaluate Reverse Polish Notation,[Array][Math][Stack],51.0%,Medium,0.04735762312405405
+509,Fibonacci Number,[Math][Dynamic Programming][Recursion][Memoization],70.8%,Easy,0.029199154692262308
+242,Valid Anagram,[Hash Table][String][Sorting],64.3%,Easy,0.011040686260470564

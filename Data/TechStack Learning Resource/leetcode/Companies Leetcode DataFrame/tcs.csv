@@ -1,0 +1,6 @@
+No,Title,Acceptance,Difficulty,Frequency,Array,Matrix,Math,Dynamic Programming,Recursion,Memoization,Tree,Depth-First Search,Breadth-First Search,Binary Tree,Divide and Conquer
+766,Toeplitz Matrix,68.8%,Easy,0.0638831223855663,1,1,0,0,0,0,0,0,0,0,0
+509,Fibonacci Number,70.8%,Easy,0.0416341351218712,0,0,1,1,1,1,0,0,0,0,0
+121,Best Time to Buy and Sell Stock,53.5%,Easy,0.0193851478581761,1,0,0,1,0,0,0,0,0,0,0
+100,Same Tree,61.7%,Easy,0.0103467037886603,0,0,0,0,0,0,1,1,1,1,0
+53,Maximum Subarray,50.6%,Medium,0.00849081730269,1,0,0,1,0,0,0,0,0,0,1

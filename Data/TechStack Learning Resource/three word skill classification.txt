@@ -1,6 +1,5 @@
 integrated development environment
 database management system
-relatinatural language processing
 behavior driven development
 structured query language
 real time analytics
@@ -9,3 +8,5 @@ machine learning algorithms
 graphical user interface
 model view controller
 extract transform load
+application programming interface
+natural language processing

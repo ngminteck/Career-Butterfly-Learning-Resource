@@ -1,0 +1,12 @@
+Tag,Acceptance rate
+String,[0.38055282]
+Trie,[0.38350346]
+Backtracking,[0.40096523]
+Matrix,[0.40096523]
+Simulation,[0.40427663]
+Binary Search,[0.40758803]
+Array,[0.42468904]
+Hash Table,[0.42800044]
+Sorting,[0.42800044]
+Prefix Sum,[0.42800044]
+Ordered Set,[0.42800044]

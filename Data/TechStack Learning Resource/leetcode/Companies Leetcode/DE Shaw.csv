@@ -1,0 +1,5 @@
+No,Title,Tags,Acceptance,Difficulty,Frequency
+402,Remove K Digits,[String][Stack][Greedy][Monotonic Stack],31.0%,Medium,0.10409982079947241
+221,Maximal Square,[Array][Dynamic Programming][Matrix],46.3%,Medium,0.09087910999094394
+224,Basic Calculator,[Math][String][Stack][Recursion],43.2%,Hard,0.0598083598791504
+54,Spiral Matrix,[Array][Matrix][Simulation],48.9%,Medium,0.028737609767356852

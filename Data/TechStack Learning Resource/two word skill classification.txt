@@ -7,14 +7,12 @@ computer vision
 deep learning
 neural networks
 cross platform
-unit testing
 data science
 operating system
 data processing
 big data
 cloud computing
 design pattern
-business intelligence
 data management
 query language
 data analytics
@@ -25,7 +23,7 @@ red hat
 visual basic
 data warehouse
 data lake
-message queuing
+message queue
 embedded systems
 web development
 web server

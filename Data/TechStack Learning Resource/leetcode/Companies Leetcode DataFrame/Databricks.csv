@@ -1,0 +1,11 @@
+No,Title,Acceptance,Difficulty,Frequency,String,Bit Manipulation,Array,Binary Search,Design,Queue,Data Stream,Hash Table,Matrix,Simulation,Sorting,Prefix Sum,Ordered Set,Dynamic Programming
+751,IP to CIDR,54.8%,Medium,3.865384882428732,1,1,0,0,0,0,0,0,0,0,0,0,0,0
+362,Design Hit Counter,68.6%,Medium,3.3067490727975803,0,0,1,1,1,1,1,0,0,0,0,0,0,0
+348,Design Tic-Tac-Toe,57.9%,Medium,2.040468731680326,0,0,1,0,1,0,0,1,1,1,0,0,0,0
+2251,Number of Flowers in Full Bloom,56.8%,Hard,0.7741883905630712,0,0,1,1,0,0,0,1,0,0,1,1,1,0
+1244,Design A Leaderboard,67.9%,Medium,0.680877087968131,0,0,0,0,1,0,0,1,0,0,1,0,0,0
+1146,Snapshot Array,37.1%,Medium,0.5668534552356532,0,0,1,1,1,0,0,1,0,0,0,0,0,0
+352,Data Stream as Disjoint Intervals,60.0%,Hard,0.3894647667617232,0,0,0,1,1,0,0,0,0,0,0,0,1,0
+213,House Robber II,41.8%,Medium,0.2256719976675684,0,0,1,0,0,0,0,0,0,0,0,0,0,1
+1235,Maximum Profit in Job Scheduling,54.8%,Hard,0.1512309697239235,0,0,1,1,0,0,0,0,0,0,1,0,0,1
+198,House Robber,50.9%,Medium,0.0203569370687441,0,0,1,0,0,0,0,0,0,0,0,0,0,1

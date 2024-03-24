@@ -1,0 +1,23 @@
+No,Title,Tags,Acceptance,Difficulty,Frequency
+2332,The Latest Time to Catch a Bus,[Array][Two Pointers][Binary Search][Sorting],26.2%,Medium,0.6236345503996192
+2164,Sort Even and Odd Indices Independently,[Array][Sorting],62.8%,Easy,0.4013413909243023
+165,Compare Version Numbers,[Two Pointers][String],36.7%,Medium,0.17904823144898546
+283,Move Zeroes,[Array][Two Pointers],61.6%,Easy,0.1750901815558016
+1823,Find the Winner of the Circular Game,[Array][Math][Recursion][Queue][Simulation],78.2%,Medium,0.1629613095094132
+49,Group Anagrams,[Array][Hash Table][String][Sorting],68.2%,Medium,0.14462330838358536
+70,Climbing Stairs,[Math][Dynamic Programming][Memoization],52.8%,Easy,0.10195933842550295
+290,Word Pattern,[Hash Table][String],41.9%,Easy,0.06749187485411443
+121,Best Time to Buy and Sell Stock,[Array][Dynamic Programming],53.5%,Easy,0.04309979962372266
+394,Decode String,[String][Stack][Recursion],59.0%,Medium,0.04251437271498565
+39,Combination Sum,[Array][Backtracking],71.0%,Medium,0.03688942868571349
+202,Happy Number,[Hash Table][Math][Two Pointers],55.9%,Easy,0.0233110788684471
+345,Reverse Vowels of a String,[Two Pointers][String],52.6%,Easy,0.021243496694561038
+189,Rotate Array,[Array][Math][Two Pointers],40.3%,Medium,0.019388802116478133
+287,Find the Duplicate Number,[Array][Two Pointers][Binary Search][Bit Manipulation],59.4%,Medium,0.018622512098001826
+54,Spiral Matrix,[Array][Matrix][Simulation],48.9%,Medium,0.01825701097915445
+48,Rotate Image,[Array][Math][Matrix],73.8%,Medium,0.016750810424815358
+17,Letter Combinations of a Phone Number,[Hash Table][String][Backtracking],60.0%,Medium,0.015450288026844856
+42,Trapping Rain Water,[Array][Two Pointers][Dynamic Programming][Stack][Monotonic Stack],60.8%,Hard,0.013760107028950756
+20,Valid Parentheses,[String][Stack],40.5%,Easy,0.011215070820140031
+14,Longest Common Prefix,[String][Trie],42.4%,Easy,0.007243783938403874
+1,Two Sum,[Array][Hash Table],52.0%,Easy,0.0047725193990346675

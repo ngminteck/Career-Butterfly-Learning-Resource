@@ -1,0 +1,6 @@
+No,Title,Tags,Acceptance,Difficulty,Frequency
+210,Course Schedule II,[Depth-First Search][Breadth-First Search][Graph][Topological Sort],50.1%,Medium,0.06399307138522484
+37,Sudoku Solver,[Array][Hash Table][Backtracking][Matrix],60.5%,Hard,0.041672696400568025
+146,LRU Cache,[Hash Table][Linked List][Design][Doubly-Linked List],42.2%,Medium,0.01935232141591122
+42,Trapping Rain Water,[Array][Two Pointers][Dynamic Programming][Stack][Monotonic Stack],60.8%,Hard,0.013760107028950756
+15,3Sum,[Array][Two Pointers][Sorting],34.2%,Medium,0.006245141296780882

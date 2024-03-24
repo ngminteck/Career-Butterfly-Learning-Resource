@@ -1,0 +1,6 @@
+No,Title,Acceptance,Difficulty,Frequency,Array,Depth-First Search,Breadth-First Search,Union Find,Matrix,Hash Table,String,Sliding Window,Divide and Conquer,Sorting,Heap (Priority Queue),Bucket Sort,Counting,Quickselect,Backtracking,Dynamic Programming
+200,Number of Islands,58.5%,Medium,0.04563661405006,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0
+3,Longest Substring Without Repeating Characters,34.5%,Medium,0.0418904790277317,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0
+347,Top K Frequent Elements,62.7%,Medium,0.0363917738615123,1,0,0,0,0,1,0,0,1,1,1,1,1,1,0,0
+17,Letter Combinations of a Phone Number,60.0%,Medium,0.0194009493531573,0,0,0,0,0,1,1,0,0,0,0,0,0,0,1,0
+198,House Robber,50.9%,Medium,0.016990824508355,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1

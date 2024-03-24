@@ -56,3 +56,6 @@ devops
 frontend
 backend
 visualization
+games
+dependencies
+analytics
