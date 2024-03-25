@@ -34,3 +34,5 @@ user interface
 relational database
 virtual machine
 artificial intelligence
+system design
+data structures
