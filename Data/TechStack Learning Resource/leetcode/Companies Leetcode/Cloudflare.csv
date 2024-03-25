@@ -1,3 +1,3 @@
-No,Title,Tags,Acceptance,Difficulty,Frequency
-18,4Sum,[Array][Two Pointers][Sorting],36.1%,Medium,0.04292010203953846
-15,3Sum,[Array][Two Pointers][Sorting],34.2%,Medium,0.02146005101976923
+No,Title,Link,Tags,Acceptance,Difficulty,Frequency
+18,4Sum,https://leetcode.com/problems/4sum/description/,[Array][Two Pointers][Sorting],36.1%,Medium,0.0429201020395384
+15,3Sum,https://leetcode.com/problems/3sum/description/,[Array][Two Pointers][Sorting],34.2%,Medium,0.0214600510197692

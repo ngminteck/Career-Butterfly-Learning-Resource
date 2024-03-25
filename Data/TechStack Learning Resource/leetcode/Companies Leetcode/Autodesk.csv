@@ -1,3 +1,3 @@
-No,Title,Tags,Acceptance,Difficulty,Frequency
-70,Climbing Stairs,[Math][Dynamic Programming][Memoization],52.8%,Easy,0.005448311971565745
-242,Valid Anagram,[Hash Table][String][Sorting],64.3%,Easy,0.0027241559857828727
+No,Title,Link,Tags,Acceptance,Difficulty,Frequency
+70,Climbing Stairs,https://leetcode.com/problems/climbing-stairs/description/,[Math][Dynamic Programming][Memoization],52.8%,Easy,0.0054483119715657
+242,Valid Anagram,https://leetcode.com/problems/valid-anagram/description/,[Hash Table][String][Sorting],64.3%,Easy,0.0027241559857828

@@ -1,5 +1,5 @@
-No,Title,Tags,Acceptance,Difficulty,Frequency
-179,Largest Number,[Array][String][Greedy][Sorting],35.8%,Medium,0.02817829955420643
-15,3Sum,[Array][Two Pointers][Sorting],34.2%,Medium,0.014089149777103216
-629,K Inverse Pairs Array,[Dynamic Programming],50.1%,Hard,0
-630,Course Schedule III,[Array][Greedy][Sorting][Heap (Priority Queue)],40.1%,Hard,0
+No,Title,Link,Tags,Acceptance,Difficulty,Frequency
+179,Largest Number,https://leetcode.com/problems/largest-number/description/,[Array][String][Greedy][Sorting],35.8%,Medium,0.0281782995542064
+15,3Sum,https://leetcode.com/problems/3sum/description/,[Array][Two Pointers][Sorting],34.2%,Medium,0.0140891497771032
+629,K Inverse Pairs Array,https://leetcode.com/problems/k-inverse-pairs-array/description/,[Dynamic Programming],50.1%,Hard,0.0
+630,Course Schedule III,https://leetcode.com/problems/course-schedule-iii/description/,[Array][Greedy][Sorting][Heap (Priority Queue)],40.1%,Hard,0.0

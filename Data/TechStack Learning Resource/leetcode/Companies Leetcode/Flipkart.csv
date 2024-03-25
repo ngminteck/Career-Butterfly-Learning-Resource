@@ -1,19 +1,19 @@
-No,Title,Tags,Acceptance,Difficulty,Frequency
-2499,Minimum Total Cost to Make Arrays Unequal,[Array][Hash Table][Greedy][Counting],43.2%,Hard,1.8828006991128041
-420,Strong Password Checker,[String][Greedy][Heap (Priority Queue)],13.6%,Hard,1.2992829841302609
-934,Shortest Bridge,[Array][Depth-First Search][Breadth-First Search][Matrix],57.7%,Medium,0.7157652691477178
-719,Find K-th Smallest Pair Distance,[Array][Two Pointers][Binary Search][Sorting],37.7%,Hard,0.6019569424953487
-330,Patching Array,[Array][Greedy],41.5%,Hard,0.462623521948113
-2551,Put Marbles in Bags,[Array][Greedy][Sorting][Heap (Priority Queue)],66.8%,Hard,0.4321333551903257
-1463,Cherry Pickup II,[Array][Dynamic Programming][Matrix],72.0%,Hard,0.3184537311185346
-480,Sliding Window Median,[Array][Hash Table][Sliding Window][Heap (Priority Queue)],39.3%,Hard,0.20479441264601322
-983,Minimum Cost For Tickets,[Array][Dynamic Programming],65.3%,Medium,0.15238545430268916
-312,Burst Balloons,[Array][Dynamic Programming],58.5%,Hard,0.12675170563914387
-437,Path Sum III,[Tree][Depth-First Search][Binary Tree],46.5%,Medium,0.11150151620722211
-1235,Maximum Profit in Job Scheduling,[Array][Binary Search][Dynamic Programming][Sorting],54.8%,Hard,0.11060987154397002
-1011,Capacity To Ship Packages Within D Days,[Array][Binary Search],69.1%,Medium,0.10973238837921641
-735,Asteroid Collision,[Array][Stack][Simulation],44.6%,Medium,0.03356019649230184
-84,Largest Rectangle in Histogram,[Array][Stack][Monotonic Stack],44.0%,Hard,0.02781820547653065
-11,Container With Most Water,[Array][Two Pointers][Greedy],54.9%,Medium,0.016670139691058874
-42,Trapping Rain Water,[Array][Two Pointers][Dynamic Programming][Stack][Monotonic Stack],60.8%,Hard,0.013760107028950756
-3,Longest Substring Without Repeating Characters,[Hash Table][String][Sliding Window],34.5%,Medium,0.0049560255078589105
+No,Title,Link,Tags,Acceptance,Difficulty,Frequency
+2499,Minimum Total Cost to Make Arrays Unequal,https://leetcode.com/problems/minimum-total-cost-to-make-arrays-unequal/description/,[Array][Hash Table][Greedy][Counting],43.2%,Hard,1.882800699112804
+420,Strong Password Checker,https://leetcode.com/problems/strong-password-checker/description/,[String][Greedy][Heap (Priority Queue)],13.6%,Hard,1.2992829841302609
+934,Shortest Bridge,https://leetcode.com/problems/shortest-bridge/description/,[Array][Depth-First Search][Breadth-First Search][Matrix],57.7%,Medium,0.7157652691477178
+719,Find K-th Smallest Pair Distance,https://leetcode.com/problems/find-k-th-smallest-pair-distance/description/,[Array][Two Pointers][Binary Search][Sorting],37.7%,Hard,0.6019569424953487
+330,Patching Array,https://leetcode.com/problems/patching-array/description/,[Array][Greedy],41.5%,Hard,0.462623521948113
+2551,Put Marbles in Bags,https://leetcode.com/problems/put-marbles-in-bags/description/,[Array][Greedy][Sorting][Heap (Priority Queue)],66.8%,Hard,0.4321333551903257
+1463,Cherry Pickup II,https://leetcode.com/problems/cherry-pickup-ii/description/,[Array][Dynamic Programming][Matrix],72.0%,Hard,0.3184537311185346
+480,Sliding Window Median,https://leetcode.com/problems/sliding-window-median/description/,[Array][Hash Table][Sliding Window][Heap (Priority Queue)],39.3%,Hard,0.2047944126460132
+983,Minimum Cost For Tickets,https://leetcode.com/problems/minimum-cost-for-tickets/description/,[Array][Dynamic Programming],65.3%,Medium,0.1523854543026891
+312,Burst Balloons,https://leetcode.com/problems/burst-balloons/description/,[Array][Dynamic Programming],58.5%,Hard,0.1267517056391438
+437,Path Sum III,https://leetcode.com/problems/path-sum-iii/description/,[Tree][Depth-First Search][Binary Tree],46.5%,Medium,0.1115015162072221
+1235,Maximum Profit in Job Scheduling,https://leetcode.com/problems/maximum-profit-in-job-scheduling/description/,[Array][Binary Search][Dynamic Programming][Sorting],54.8%,Hard,0.11060987154397
+1011,Capacity To Ship Packages Within D Days,https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/description/,[Array][Binary Search],69.1%,Medium,0.1097323883792164
+735,Asteroid Collision,https://leetcode.com/problems/asteroid-collision/description/,[Array][Stack][Simulation],44.6%,Medium,0.0335601964923018
+84,Largest Rectangle in Histogram,https://leetcode.com/problems/largest-rectangle-in-histogram/description/,[Array][Stack][Monotonic Stack],44.0%,Hard,0.0278182054765306
+11,Container With Most Water,https://leetcode.com/problems/container-with-most-water/description/,[Array][Two Pointers][Greedy],54.9%,Medium,0.0166701396910588
+42,Trapping Rain Water,https://leetcode.com/problems/trapping-rain-water/description/,[Array][Two Pointers][Dynamic Programming][Stack][Monotonic Stack],60.8%,Hard,0.0137601070289507
+3,Longest Substring Without Repeating Characters,https://leetcode.com/problems/longest-substring-without-repeating-characters/description/,[Hash Table][String][Sliding Window],34.5%,Medium,0.0049560255078589

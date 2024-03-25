@@ -1,7 +1,7 @@
-No,Title,Tags,Acceptance,Difficulty,Frequency
-362,Design Hit Counter,[Array][Binary Search][Design][Queue][Data Stream],68.6%,Medium,0.7142121603690547
-40,Combination Sum II,[Array][Backtracking],54.2%,Medium,0.410633078266607
-224,Basic Calculator,[Math][String][Stack][Recursion],43.2%,Hard,0.10705399616415937
-39,Combination Sum,[Array][Backtracking],71.0%,Medium,0.0998958412956442
-78,Subsets,[Array][Backtracking][Bit Manipulation],77.1%,Medium,0.028841220390439494
-88,Merge Sorted Array,[Array][Two Pointers][Sorting],49.2%,Easy,0.018032947082876272
+No,Title,Link,Tags,Acceptance,Difficulty,Frequency
+362,Design Hit Counter,https://leetcode.com/problems/design-hit-counter/description/,[Array][Binary Search][Design][Queue][Data Stream],68.6%,Medium,0.7142121603690547
+40,Combination Sum II,https://leetcode.com/problems/combination-sum-ii/description/,[Array][Backtracking],54.2%,Medium,0.410633078266607
+224,Basic Calculator,https://leetcode.com/problems/basic-calculator/description/,[Math][String][Stack][Recursion],43.2%,Hard,0.1070539961641593
+39,Combination Sum,https://leetcode.com/problems/combination-sum/description/,[Array][Backtracking],71.0%,Medium,0.0998958412956442
+78,Subsets,https://leetcode.com/problems/subsets/description/,[Array][Backtracking][Bit Manipulation],77.1%,Medium,0.0288412203904394
+88,Merge Sorted Array,https://leetcode.com/problems/merge-sorted-array/description/,[Array][Two Pointers][Sorting],49.2%,Easy,0.0180329470828762

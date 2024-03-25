@@ -1,5 +1,5 @@
-No,Title,Tags,Acceptance,Difficulty,Frequency
-2133,Check if Every Row and Column Contains All Numbers,[Array][Hash Table][Matrix],51.7%,Easy,0.5866832728309206
-1160,Find Words That Can Be Formed by Characters,[Array][Hash Table][String],70.7%,Easy,0.40954307477896357
-68,Text Justification,[Array][String][Simulation],42.7%,Hard,0.23240287672700652
-207,Course Schedule,[Depth-First Search][Breadth-First Search][Graph][Topological Sort],46.6%,Medium,0.11038071609536937
+No,Title,Link,Tags,Acceptance,Difficulty,Frequency
+2133,Check if Every Row and Column Contains All Numbers,https://leetcode.com/problems/check-if-every-row-and-column-contains-all-numbers/description/,[Array][Hash Table][Matrix],51.7%,Easy,0.5866832728309206
+1160,Find Words That Can Be Formed by Characters,https://leetcode.com/problems/find-words-that-can-be-formed-by-characters/description/,[Array][Hash Table][String],70.7%,Easy,0.4095430747789635
+68,Text Justification,https://leetcode.com/problems/text-justification/description/,[Array][String][Simulation],42.7%,Hard,0.2324028767270065
+207,Course Schedule,https://leetcode.com/problems/course-schedule/description/,[Depth-First Search][Breadth-First Search][Graph][Topological Sort],46.6%,Medium,0.1103807160953693

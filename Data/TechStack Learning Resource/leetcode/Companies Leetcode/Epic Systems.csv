@@ -1,5 +1,5 @@
-No,Title,Tags,Acceptance,Difficulty,Frequency
-306,Additive Number,[String][Backtracking],31.4%,Medium,0.26883156897620775
-17,Letter Combinations of a Phone Number,[Hash Table][String][Backtracking],60.0%,Medium,0.14784842578508967
-54,Spiral Matrix,[Array][Matrix][Simulation],48.9%,Medium,0.02686528259397159
-20,Valid Parentheses,[String][Stack],40.5%,Easy,0.01773445493976858
+No,Title,Link,Tags,Acceptance,Difficulty,Frequency
+306,Additive Number,https://leetcode.com/problems/additive-number/description/,[String][Backtracking],31.4%,Medium,0.2688315689762077
+17,Letter Combinations of a Phone Number,https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/,[Hash Table][String][Backtracking],60.0%,Medium,0.1478484257850896
+54,Spiral Matrix,https://leetcode.com/problems/spiral-matrix/description/,[Array][Matrix][Simulation],48.9%,Medium,0.0268652825939715
+20,Valid Parentheses,https://leetcode.com/problems/valid-parentheses/description/,[String][Stack],40.5%,Easy,0.0177344549397685

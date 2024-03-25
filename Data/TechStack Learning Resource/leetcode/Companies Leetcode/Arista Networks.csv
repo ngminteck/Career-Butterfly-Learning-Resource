@@ -1,4 +1,4 @@
-No,Title,Tags,Acceptance,Difficulty,Frequency
-1060,Missing Element in Sorted Array,[Array][Binary Search],56.4%,Medium,0.6970333062438849
-93,Restore IP Addresses,[String][Backtracking],49.4%,Medium,0.3731218633879398
-92,Reverse Linked List II,[Linked List],47.5%,Medium,0.0492104205319947
+No,Title,Link,Tags,Acceptance,Difficulty,Frequency
+1060,Missing Element in Sorted Array,https://leetcode.com/problems/missing-element-in-sorted-array/description/,[Array][Binary Search],56.4%,Medium,0.6970333062438849
+93,Restore IP Addresses,https://leetcode.com/problems/restore-ip-addresses/description/,[String][Backtracking],49.4%,Medium,0.3731218633879398
+92,Reverse Linked List II,https://leetcode.com/problems/reverse-linked-list-ii/description/,[Linked List],47.5%,Medium,0.0492104205319947

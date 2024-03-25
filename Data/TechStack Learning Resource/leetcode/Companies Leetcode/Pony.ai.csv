@@ -1,5 +1,5 @@
-No,Title,Tags,Acceptance,Difficulty,Frequency
-786,K-th Smallest Prime Fraction,[Array][Binary Search][Sorting][Heap (Priority Queue)],53.6%,Medium,2.362304327695668
-1235,Maximum Profit in Job Scheduling,[Array][Binary Search][Dynamic Programming][Sorting],54.8%,Hard,0
-1824,Minimum Sideway Jumps,[Array][Dynamic Programming][Greedy],49.9%,Medium,0
-1838,Frequency of the Most Frequent Element,[Array][Binary Search][Greedy][Sliding Window][Sorting][Prefix Sum],45.3%,Medium,0
+No,Title,Link,Tags,Acceptance,Difficulty,Frequency
+786,K-th Smallest Prime Fraction,https://leetcode.com/problems/k-th-smallest-prime-fraction/description/,[Array][Binary Search][Sorting][Heap (Priority Queue)],53.6%,Medium,2.362304327695668
+1235,Maximum Profit in Job Scheduling,https://leetcode.com/problems/maximum-profit-in-job-scheduling/description/,[Array][Binary Search][Dynamic Programming][Sorting],54.8%,Hard,0.0
+1824,Minimum Sideway Jumps,https://leetcode.com/problems/minimum-sideway-jumps/description/,[Array][Dynamic Programming][Greedy],49.9%,Medium,0.0
+1838,Frequency of the Most Frequent Element,https://leetcode.com/problems/frequency-of-the-most-frequent-element/description/,[Array][Binary Search][Greedy][Sliding Window][Sorting][Prefix Sum],45.3%,Medium,0.0

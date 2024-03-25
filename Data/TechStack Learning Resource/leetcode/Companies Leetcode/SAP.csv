@@ -1,4 +1,4 @@
-No,Title,Tags,Acceptance,Difficulty,Frequency
-739,Daily Temperatures,[Array][Stack][Monotonic Stack],65.9%,Medium,0.007639328589109946
-121,Best Time to Buy and Sell Stock,[Array][Dynamic Programming],53.5%,Easy,0.004881630392281271
-1,Two Sum,[Array][Hash Table],52.0%,Easy,0.0021239321954525975
+No,Title,Link,Tags,Acceptance,Difficulty,Frequency
+739,Daily Temperatures,https://leetcode.com/problems/daily-temperatures/description/,[Array][Stack][Monotonic Stack],65.9%,Medium,0.0076393285891099
+121,Best Time to Buy and Sell Stock,https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/,[Array][Dynamic Programming],53.5%,Easy,0.0048816303922812
+1,Two Sum,https://leetcode.com/problems/two-sum/description/,[Array][Hash Table],52.0%,Easy,0.0021239321954525

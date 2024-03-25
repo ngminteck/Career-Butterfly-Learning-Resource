@@ -1,9 +1,9 @@
-No,Title,Tags,Acceptance,Difficulty,Frequency
-2420,Find All Good Indices,[Array][Dynamic Programming][Prefix Sum],38.3%,Medium,0.43780826479292606
-697,Degree of an Array,[Array][Hash Table],56.4%,Easy,0.245122458032985
-210,Course Schedule II,[Depth-First Search][Breadth-First Search][Graph][Topological Sort],50.1%,Medium,0.052436651273043935
-207,Course Schedule,[Depth-First Search][Breadth-First Search][Graph][Topological Sort],46.6%,Medium,0.030653741091002412
-200,Number of Islands,[Array][Depth-First Search][Breadth-First Search][Union Find][Matrix],58.5%,Medium,0.022075951699199795
-215,Kth Largest Element in an Array,[Array][Divide and Conquer][Sorting][Heap (Priority Queue)][Quickselect],66.8%,Medium,0.02075839977178062
-198,House Robber,[Array][Dynamic Programming],50.9%,Medium,0.02035693706874412
-33,Search in Rotated Sorted Array,[Array][Binary Search],40.5%,Medium,0.014754970746799198
+No,Title,Link,Tags,Acceptance,Difficulty,Frequency
+2420,Find All Good Indices,https://leetcode.com/problems/find-all-good-indices/description/,[Array][Dynamic Programming][Prefix Sum],38.3%,Medium,0.437808264792926
+697,Degree of an Array,https://leetcode.com/problems/degree-of-an-array/description/,[Array][Hash Table],56.4%,Easy,0.245122458032985
+210,Course Schedule II,https://leetcode.com/problems/course-schedule-ii/description/,[Depth-First Search][Breadth-First Search][Graph][Topological Sort],50.1%,Medium,0.0524366512730439
+207,Course Schedule,https://leetcode.com/problems/course-schedule/description/,[Depth-First Search][Breadth-First Search][Graph][Topological Sort],46.6%,Medium,0.0306537410910024
+200,Number of Islands,https://leetcode.com/problems/number-of-islands/description/,[Array][Depth-First Search][Breadth-First Search][Union Find][Matrix],58.5%,Medium,0.0220759516991997
+215,Kth Largest Element in an Array,https://leetcode.com/problems/kth-largest-element-in-an-array/description/,[Array][Divide and Conquer][Sorting][Heap (Priority Queue)][Quickselect],66.8%,Medium,0.0207583997717806
+198,House Robber,https://leetcode.com/problems/house-robber/description/,[Array][Dynamic Programming],50.9%,Medium,0.0203569370687441
+33,Search in Rotated Sorted Array,https://leetcode.com/problems/search-in-rotated-sorted-array/description/,[Array][Binary Search],40.5%,Medium,0.0147549707467991

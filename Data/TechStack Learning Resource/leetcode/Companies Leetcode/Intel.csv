@@ -1,4 +1,4 @@
-No,Title,Tags,Acceptance,Difficulty,Frequency
-138,Copy List with Random Pointer,[Hash Table][Linked List],55.5%,Medium,0.027455062826807677
-122,Best Time to Buy and Sell Stock II,[Array][Dynamic Programming][Greedy],66.0%,Medium,0.016227536621756702
-20,Valid Parentheses,[String][Stack],40.5%,Easy,0.005000010416705729
+No,Title,Link,Tags,Acceptance,Difficulty,Frequency
+138,Copy List with Random Pointer,https://leetcode.com/problems/copy-list-with-random-pointer/description/,[Hash Table][Linked List],55.5%,Medium,0.0274550628268076
+122,Best Time to Buy and Sell Stock II,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/description/,[Array][Dynamic Programming][Greedy],66.0%,Medium,0.0162275366217567
+20,Valid Parentheses,https://leetcode.com/problems/valid-parentheses/description/,[String][Stack],40.5%,Easy,0.0050000104167057

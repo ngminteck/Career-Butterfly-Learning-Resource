@@ -1,4 +1,4 @@
-No,Title,Tags,Acceptance,Difficulty,Frequency
-2204,Distance to a Cycle in Undirected Graph,[Depth-First Search][Breadth-First Search][Union Find][Graph],70.2%,Hard,1.4248875182643765
-2895,Minimum Processing Time,[Array][Greedy][Sorting],68.1%,Medium,0.7812544480702122
-38,Count and Say,[String],54.5%,Medium,0.13762137787604775
+No,Title,Link,Tags,Acceptance,Difficulty,Frequency
+2204,Distance to a Cycle in Undirected Graph,https://leetcode.com/problems/distance-to-a-cycle-in-undirected-graph/description/,[Depth-First Search][Breadth-First Search][Union Find][Graph],70.2%,Hard,1.4248875182643763
+2895,Minimum Processing Time,https://leetcode.com/problems/minimum-processing-time/description/,[Array][Greedy][Sorting],68.1%,Medium,0.7812544480702122
+38,Count and Say,https://leetcode.com/problems/count-and-say/description/,[String],54.5%,Medium,0.1376213778760477

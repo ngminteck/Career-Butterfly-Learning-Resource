@@ -1,3 +1,3 @@
-No,Title,Tags,Acceptance,Difficulty,Frequency
-416,Partition Equal Subset Sum,[Array][Dynamic Programming],46.2%,Medium,0.051227589206673384
-131,Palindrome Partitioning,[String][Dynamic Programming][Backtracking],67.2%,Medium,0.04668292188270772
+No,Title,Link,Tags,Acceptance,Difficulty,Frequency
+416,Partition Equal Subset Sum,https://leetcode.com/problems/partition-equal-subset-sum/description/,[Array][Dynamic Programming],46.2%,Medium,0.0512275892066733
+131,Palindrome Partitioning,https://leetcode.com/problems/palindrome-partitioning/description/,[String][Dynamic Programming][Backtracking],67.2%,Medium,0.0466829218827077

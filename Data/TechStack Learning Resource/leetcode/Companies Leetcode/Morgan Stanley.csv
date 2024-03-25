@@ -1,4 +1,4 @@
-No,Title,Tags,Acceptance,Difficulty,Frequency
-41,First Missing Positive,[Array][Hash Table],37.8%,Hard,0.05310902947174764
-56,Merge Intervals,[Array][Sorting],47.1%,Medium,0.027616480833600122
-1,Two Sum,[Array][Hash Table],52.0%,Easy,0.0021239321954525975
+No,Title,Link,Tags,Acceptance,Difficulty,Frequency
+41,First Missing Positive,https://leetcode.com/problems/first-missing-positive/description/,[Array][Hash Table],37.8%,Hard,0.0531090294717476
+56,Merge Intervals,https://leetcode.com/problems/merge-intervals/description/,[Array][Sorting],47.1%,Medium,0.0276164808336001
+1,Two Sum,https://leetcode.com/problems/two-sum/description/,[Array][Hash Table],52.0%,Easy,0.0021239321954525

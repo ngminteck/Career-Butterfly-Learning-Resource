@@ -1,3 +1,3 @@
-No,Title,Tags,Acceptance,Difficulty,Frequency
-208,Implement Trie (Prefix Tree),[Hash Table][String][Design][Trie],64.7%,Medium,0.013217945144060383
-133,Clone Graph,[Hash Table][Depth-First Search][Breadth-First Search][Graph],56.6%,Medium,0.006608972572030192
+No,Title,Link,Tags,Acceptance,Difficulty,Frequency
+208,Implement Trie (Prefix Tree),https://leetcode.com/problems/implement-trie-prefix-tree/description/,[Hash Table][String][Design][Trie],64.7%,Medium,0.0132179451440603
+133,Clone Graph,https://leetcode.com/problems/clone-graph/description/,[Hash Table][Depth-First Search][Breadth-First Search][Graph],56.6%,Medium,0.0066089725720301

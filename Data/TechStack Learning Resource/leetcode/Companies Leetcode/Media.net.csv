@@ -1,9 +1,9 @@
-No,Title,Tags,Acceptance,Difficulty,Frequency
-2835,Minimum Operations to Form Subsequence With Target Sum,[Array][Greedy][Bit Manipulation],31.7%,Hard,2.128670130852174
-2742,Painting the Walls,[Array][Dynamic Programming],51.1%,Hard,1.3514780542676954
-193,Valid Phone Numbers,[Shell],25.8%,Easy,0.5742859776832164
-21,Merge Two Sorted Lists,[Linked List][Recursion],64.0%,Easy,0.09571594162770494
-121,Best Time to Buy and Sell Stock,[Array][Dynamic Programming],53.5%,Easy,0.04639050711952697
-122,Best Time to Buy and Sell Stock II,[Array][Dynamic Programming][Greedy],66.0%,Medium,0.024753739152938287
-42,Trapping Rain Water,[Array][Two Pointers][Dynamic Programming][Stack][Monotonic Stack],60.8%,Hard,0.021131266996164362
-55,Jump Game,[Array][Dynamic Programming][Greedy],38.5%,Medium,0.016807118316381233
+No,Title,Link,Tags,Acceptance,Difficulty,Frequency
+2835,Minimum Operations to Form Subsequence With Target Sum,https://leetcode.com/problems/minimum-operations-to-form-subsequence-with-target-sum/description/,[Array][Greedy][Bit Manipulation],31.7%,Hard,2.128670130852174
+2742,Painting the Walls,https://leetcode.com/problems/painting-the-walls/description/,[Array][Dynamic Programming],51.1%,Hard,1.3514780542676954
+193,Valid Phone Numbers,https://leetcode.com/problems/valid-phone-numbers/description/,[Shell],25.8%,Easy,0.5742859776832164
+21,Merge Two Sorted Lists,https://leetcode.com/problems/merge-two-sorted-lists/description/,[Linked List][Recursion],64.0%,Easy,0.0957159416277049
+121,Best Time to Buy and Sell Stock,https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/,[Array][Dynamic Programming],53.5%,Easy,0.0463905071195269
+122,Best Time to Buy and Sell Stock II,https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/description/,[Array][Dynamic Programming][Greedy],66.0%,Medium,0.0247537391529382
+42,Trapping Rain Water,https://leetcode.com/problems/trapping-rain-water/description/,[Array][Two Pointers][Dynamic Programming][Stack][Monotonic Stack],60.8%,Hard,0.0211312669961643
+55,Jump Game,https://leetcode.com/problems/jump-game/description/,[Array][Dynamic Programming][Greedy],38.5%,Medium,0.0168071183163812

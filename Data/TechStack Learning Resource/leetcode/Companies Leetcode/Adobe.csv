@@ -1,214 +1,214 @@
-No,Title,Tags,Acceptance,Difficulty,Frequency
-535,Encode and Decode TinyURL,[Hash Table][String][Design][Hash Function],86.3%,Medium,0.96083797141521
-1658,Minimum Operations to Reduce X to Zero,[Array][Hash Table][Binary Search][Sliding Window][Prefix Sum],39.7%,Medium,0.9344130822327825
-458,Poor Pigs,[Math][Dynamic Programming][Combinatorics],59.9%,Hard,0.8916061798458892
-1705,Maximum Number of Eaten Apples,[Array][Greedy][Heap (Priority Queue)],38.8%,Medium,0.8406342027968305
-356,Line Reflection,[Array][Hash Table][Math],35.4%,Medium,0.8211213885732487
-823,Binary Trees With Factors,[Array][Hash Table][Dynamic Programming][Sorting],52.9%,Medium,0.784753744402374
-1282,Group the People Given the Group Size They Belong To,[Array][Hash Table],87.6%,Medium,0.74757474116062
-279,Perfect Squares,[Math][Dynamic Programming][Breadth-First Search],54.7%,Medium,0.7130070484343318
-1758,Minimum Changes To Make Alternating Binary String,[String],64.0%,Easy,0.6620350713852732
-2667,Create Hello World Function,,80.9%,Easy,0.6161249833232461
-1,Two Sum,[Array][Hash Table],52.0%,Easy,0.5651530062741874
-1930,Unique Length-3 Palindromic Subsequences,[Hash Table][String][Bit Manipulation][Prefix Sum],66.1%,Medium,0.5578637175086234
-456,132 Pattern,[Array][Binary Search][Stack][Monotonic Stack][Ordered Set],33.7%,Medium,0.5131385441363598
-368,Largest Divisible Subset,[Array][Math][Dynamic Programming][Sorting],45.2%,Medium,0.5047206317234034
-576,Out of Boundary Paths,[Dynamic Programming],48.1%,Medium,0.4693404899931309
-888,Fair Candy Swap,[Array][Hash Table][Binary Search][Sorting],61.5%,Easy,0.41836851294407224
-2035,Partition Array Into Two Arrays to Minimize Sum Difference,[Array][Two Pointers][Binary Search][Dynamic Programming][Bit Manipulation][Ordered Set][Bitmask],20.0%,Hard,0.41836851294407224
-606,Construct String from Binary Tree,[String][Tree][Depth-First Search][Binary Tree],69.0%,Medium,0.39730179746900346
-1422,Maximum Score After Splitting a String,[String][Prefix Sum],62.2%,Easy,0.3933437475758196
-1535,Find the Winner of an Array Game,[Array][Simulation],57.2%,Medium,0.37827896780400755
-1441,Build an Array With Stack Operations,[Array][Stack][Simulation],79.8%,Medium,0.3746934494414107
-128,Longest Consecutive Sequence,[Array][Hash Table][Union Find],47.3%,Medium,0.3652797911322508
-14,Longest Common Prefix,[String][Trie],42.4%,Easy,0.3638421350524408
-3000,Maximum Area of Longest Diagonal Rectangle,[Array],35.2%,Easy,0.36101334553733055
-2391,Minimum Amount of Time to Collect Garbage,[Array][String][Prefix Sum],85.7%,Medium,0.3513978868378886
-515,Find Largest Value in Each Tree Row,[Tree][Depth-First Search][Breadth-First Search][Binary Tree],65.7%,Medium,0.33520721431462625
-1239,Maximum Length of a Concatenated String with Unique Characters,[Array][String][Backtracking][Bit Manipulation],54.1%,Medium,0.325422400434628
-4,Median of Two Sorted Arrays,[Array][Binary Search][Divide and Conquer],39.4%,Hard,0.31591744682247913
-1287,Element Appearing More Than 25% In Sorted Array,[Array],61.1%,Easy,0.30774963550259016
-2009,Minimum Number of Operations to Make Array Continuous,[Array][Binary Search],53.1%,Hard,0.30538164955118186
-31,Next Permutation,[Array][Two Pointers],39.5%,Medium,0.30194025307883704
-405,Convert a Number to Hexadecimal,[Math][Bit Manipulation],48.1%,Easy,0.3007541540191337
-239,Sliding Window Maximum,[Array][Queue][Sliding Window][Heap (Priority Queue)][Monotonic Queue],46.5%,Hard,0.2973524774834634
-454,4Sum II,[Array][Hash Table],57.2%,Medium,0.29407187055055195
-1048,Longest String Chain,[Array][Hash Table][Two Pointers][String][Dynamic Programming],61.0%,Medium,0.2595111954850846
-220,Contains Duplicate III,[Array][Sliding Window][Sorting][Bucket Sort][Ordered Set],22.7%,Hard,0.25452986513488046
-2385,Amount of Time for Binary Tree to Be Infected,[Tree][Depth-First Search][Breadth-First Search][Binary Tree],63.0%,Medium,0.25452986513488046
-7,Reverse Integer,[Math],28.4%,Medium,0.23760797180577634
-532,K-diff Pairs in an Array,[Array][Hash Table][Two Pointers][Binary Search][Sorting],42.6%,Medium,0.2295744416445002
-1903,Largest Odd Number in String,[Math][String][Greedy],63.4%,Easy,0.22760642132910802
-1716,Calculate Money in Leetcode Bank,[Math],78.2%,Easy,0.219455778235025
-2,Add Two Numbers,[Linked List][Math][Recursion],42.4%,Medium,0.21811018862178536
-2235,Add Two Integers,[Math],87.5%,Easy,0.21215279757720032
-9,Palindrome Number,[Math],55.8%,Easy,0.20840506159972816
-15,3Sum,[Array][Two Pointers][Sorting],34.2%,Medium,0.2033722469417143
-88,Merge Sorted Array,[Array][Two Pointers][Sorting],49.2%,Easy,0.20211552143139105
-1021,Remove Outermost Parentheses,[String][Stack],82.2%,Easy,0.20112063922677242
-42,Trapping Rain Water,[Array][Two Pointers][Dynamic Programming][Stack][Monotonic Stack],60.8%,Hard,0.2002297505731169
-310,Minimum Height Trees,[Depth-First Search][Breadth-First Search][Graph][Topological Sort],38.8%,Medium,0.19966567025192705
-2413,Smallest Even Multiple,[Math][Number Theory],87.5%,Easy,0.19585140902620227
-2610,Convert an Array Into a 2D Array With Conditions,[Array][Hash Table],87.3%,Medium,0.19574457712609533
-137,Single Number II,[Array][Bit Manipulation],62.2%,Medium,0.1950000150537256
-455,Assign Cookies,[Array][Two Pointers][Greedy][Sorting],52.7%,Easy,0.1950000150537256
-337,House Robber III,[Dynamic Programming][Tree][Depth-First Search][Binary Tree],54.2%,Medium,0.19105523676270922
-1347,Minimum Number of Steps to Make Two Strings Anagram,[Hash Table][String][Counting],82.0%,Medium,0.18658595558041216
-875,Koko Eating Bananas,[Array][Binary Search],49.0%,Medium,0.18619881353074091
-1043,Partition Array for Maximum Sum,[Array][Dynamic Programming],76.4%,Medium,0.1735948056557174
-698,Partition to K Equal Sum Subsets,[Array][Dynamic Programming][Backtracking][Bit Manipulation][Memoization][Bitmask],38.5%,Medium,0.1720973230180951
-767,Reorganize String,[Hash Table][String][Greedy][Sorting][Heap (Priority Queue)][Counting],54.5%,Medium,0.16893998809812322
-66,Plus One,[Array][Math],45.0%,Easy,0.16803022668319867
-54,Spiral Matrix,[Array][Matrix][Simulation],48.9%,Medium,0.1673904263895277
-20,Valid Parentheses,[String][Stack],40.5%,Easy,0.1658966771265543
-802,Find Eventual Safe States,[Depth-First Search][Breadth-First Search][Graph][Topological Sort],62.2%,Medium,0.16229864091884685
-146,LRU Cache,[Hash Table][Linked List][Design][Doubly-Linked List],42.2%,Medium,0.16200585212178242
-779,K-th Symbol in Grammar,[Math][Bit Manipulation][Recursion],46.4%,Medium,0.15656906069153992
-68,Text Justification,[Array][String][Simulation],42.7%,Hard,0.15441568579144338
-367,Valid Perfect Square,[Math][Binary Search],43.6%,Easy,0.15441568579144338
-1295,Find Numbers with Even Number of Digits,[Array],77.2%,Easy,0.1536233927072112
-1235,Maximum Profit in Job Scheduling,[Array][Binary Search][Dynamic Programming][Sorting],54.8%,Hard,0.15123096972392353
-2859,Sum of Values at Indices With K Set Bits,[Array][Bit Manipulation],86.3%,Easy,0.15123096972392353
-2727,Is Object Empty,,78.4%,Easy,0.1500938791316439
-2715,Timeout Cancellation,,88.0%,Easy,0.14787032803970862
-70,Climbing Stairs,[Math][Dynamic Programming][Memoization],52.8%,Easy,0.14750243013725944
-179,Largest Number,[Array][String][Greedy][Sorting],35.8%,Medium,0.1466034741918754
-49,Group Anagrams,[Array][Hash Table][String][Sorting],68.2%,Medium,0.14462330838358536
-5,Longest Palindromic Substring,[String][Dynamic Programming],33.7%,Medium,0.14064383994762122
-867,Transpose Matrix,[Array][Matrix][Simulation],71.1%,Easy,0.13862989729590636
-1291,Sequential Digits,[Enumeration],65.4%,Medium,0.1348842676899421
-2620,Counter,,80.2%,Easy,0.1330864537962701
-173,Binary Search Tree Iterator,[Stack][Tree][Design][Binary Search Tree][Binary Tree][Iterator],71.6%,Medium,0.1293046812407275
-628,Maximum Product of Three Numbers,[Array][Math][Sorting],45.1%,Easy,0.12595240897761434
-80,Remove Duplicates from Sorted Array II,[Array][Two Pointers],57.4%,Medium,0.1246424452072766
-1009,Complement of Base 10 Integer,[Bit Manipulation],60.8%,Easy,0.11883400790235846
-1207,Unique Number of Occurrences,[Array][Hash Table],77.0%,Easy,0.10610650599454778
-48,Rotate Image,[Array][Math][Matrix],73.8%,Medium,0.10036495046594894
-136,Single Number,[Array][Bit Manipulation],72.5%,Easy,0.09972274823120689
-459,Repeated Substring Pattern,[String][String Matching],46.1%,Easy,0.09958470542943662
-796,Rotate String,[String][String Matching],57.7%,Easy,0.09909090264423091
-3,Longest Substring Without Repeating Characters,[Hash Table][String][Sliding Window],34.5%,Medium,0.09586331774732165
-135,Candy,[Array][Greedy],43.2%,Hard,0.09421188205526226
-653,Two Sum IV - Input is a BST,[Hash Table][Two Pointers][Tree][Depth-First Search][Breadth-First Search][Binary Search Tree][Binary Tree],61.2%,Easy,0.09374540917097383
-101,Symmetric Tree,[Tree][Depth-First Search][Breadth-First Search][Binary Tree],56.1%,Easy,0.09352605801082346
-1752,Check if Array Is Sorted and Rotated,[Array],50.9%,Easy,0.09275439349224782
-1480,Running Sum of 1d Array,[Array][Prefix Sum],86.7%,Easy,0.09218395607805856
-417,Pacific Atlantic Water Flow,[Array][Depth-First Search][Breadth-First Search][Matrix],55.1%,Medium,0.09138775158942865
-2704,To Be Or Not To Be,,61.9%,Easy,0.08943394263194869
-162,Find Peak Element,[Array][Binary Search],45.9%,Medium,0.0890902185518269
-1757,Recyclable and Low Fat Products,[Database],89.2%,Easy,0.08845933546747507
-11,Container With Most Water,[Array][Two Pointers][Greedy],54.9%,Medium,0.08757154879029228
-105,Construct Binary Tree from Preorder and Inorder Traversal,[Array][Hash Table][Divide and Conquer][Tree][Binary Tree],63.5%,Medium,0.08709563363542255
-125,Valid Palindrome,[Two Pointers][String],47.0%,Easy,0.0862755417835068
-94,Binary Tree Inorder Traversal,[Stack][Tree][Depth-First Search][Binary Tree],75.8%,Easy,0.08452758931834498
-8,String to Integer (atoi),[String],17.1%,Medium,0.08403892710469892
-1732,Find the Highest Altitude,[Array][Prefix Sum],82.9%,Easy,0.08345897538526194
-1657,Determine if Two Strings Are Close,[Hash Table][String][Sorting][Counting],55.3%,Medium,0.08184524810424337
-2621,Sleep,,86.1%,Easy,0.08184524810424337
-60,Permutation Sequence,[Math][Recursion],46.5%,Hard,0.08052638362008792
-414,Third Maximum Number,[Array][Sorting],34.5%,Easy,0.07924937165414055
-152,Maximum Product Subarray,[Array][Dynamic Programming],35.0%,Medium,0.0777467634798399
-221,Maximal Square,[Array][Dynamic Programming][Matrix],46.3%,Medium,0.07740806841223596
-410,Split Array Largest Sum,[Array][Binary Search][Dynamic Programming][Greedy][Prefix Sum],55.0%,Hard,0.07651914983419623
-119,Pascal's Triangle II,[Array][Dynamic Programming],63.7%,Easy,0.07579383936953364
-27,Remove Element,[Array][Two Pointers],56.2%,Easy,0.0753968022143459
-50,"Pow(x, n)",[Math][Recursion],34.5%,Medium,0.07529425330187599
-29,Divide Two Integers,[Math][Bit Manipulation],17.3%,Medium,0.07380397458336127
-560,Subarray Sum Equals K,[Array][Hash Table][Prefix Sum],43.4%,Medium,0.07339377143296942
-206,Reverse Linked List,[Linked List][Recursion],75.7%,Easy,0.07085115360026614
-6,Zigzag Conversion,[String],47.4%,Medium,0.06963369175880078
-176,Second Highest Salary,[Database],39.9%,Medium,0.06759329113252818
-2092,Find All People With Secret,[Depth-First Search][Breadth-First Search][Union Find][Graph][Sorting],46.0%,Hard,0.06646964500774162
-322,Coin Change,[Array][Dynamic Programming][Breadth-First Search],43.6%,Medium,0.06543625837210434
-138,Copy List with Random Pointer,[Hash Table][Linked List],55.5%,Medium,0.06528786549635204
-169,Majority Element,[Array][Hash Table][Divide and Conquer][Sorting][Counting],64.7%,Easy,0.0649072836084357
-21,Merge Two Sorted Lists,[Linked List][Recursion],64.0%,Easy,0.06465539915879236
-1978,Employees Whose Manager Left the Company,[Database],47.4%,Easy,0.06252035698133399
-205,Isomorphic Strings,[Hash Table][String],43.7%,Easy,0.061960627359177074
-938,Range Sum of BST,[Tree][Depth-First Search][Binary Search Tree][Binary Tree],86.7%,Easy,0.06174800706844705
-17,Letter Combinations of a Phone Number,[Hash Table][String][Backtracking],60.0%,Medium,0.0604185235984549
-451,Sort Characters By Frequency,[Hash Table][String][Sorting][Heap (Priority Queue)][Bucket Sort][Counting],72.4%,Medium,0.06025919151819684
-22,Generate Parentheses,[String][Dynamic Programming][Backtracking],74.2%,Medium,0.05805039128849884
-424,Longest Repeating Character Replacement,[Hash Table][String][Sliding Window],53.5%,Medium,0.05759749178333644
-37,Sudoku Solver,[Array][Hash Table][Backtracking][Matrix],60.5%,Hard,0.05667238709891086
-2877,Create a DataFrame from List,,80.7%,Easy,0.05564717871439152
-438,Find All Anagrams in a String,[Hash Table][String][Sliding Window],50.8%,Medium,0.05511036271051877
-34,Find First and Last Position of Element in Sorted Array,[Array][Binary Search],44.0%,Medium,0.0548270222760379
-130,Surrounded Regions,[Array][Depth-First Search][Breadth-First Search][Union Find][Matrix],39.0%,Medium,0.053921416793820044
-73,Set Matrix Zeroes,[Array][Hash Table][Matrix],55.0%,Medium,0.053648143557464514
-1672,Richest Customer Wealth,[Array][Matrix],87.8%,Easy,0.05363215491579521
-2635,Apply Transform Over Each Element in Array,,85.4%,Easy,0.053062844975211534
-229,Majority Element II,[Array][Hash Table][Sorting][Counting],51.2%,Medium,0.05292240145434251
-44,Wildcard Matching,[String][Dynamic Programming][Greedy][Recursion],27.7%,Hard,0.05189231600351913
-56,Merge Intervals,[Array][Sorting],47.1%,Medium,0.05139216886648019
-658,Find K Closest Elements,[Array][Two Pointers][Binary Search][Sliding Window][Sorting][Heap (Priority Queue)],47.2%,Medium,0.05135916837064474
-131,Palindrome Partitioning,[String][Dynamic Programming][Backtracking],67.2%,Medium,0.04939275532957643
-75,Sort Colors,[Array][Two Pointers][Sorting],61.7%,Medium,0.04883484792019348
-268,Missing Number,[Array][Hash Table][Math][Binary Search][Bit Manipulation][Sorting],66.4%,Easy,0.048479653376687165
-1193,Monthly Transactions I,[Database],58.2%,Medium,0.04740223889458392
-328,Odd Even Linked List,[Linked List],61.4%,Medium,0.04717856027509048
-12,Integer to Roman,[Hash Table][Math][String],64.3%,Medium,0.04715383735719155
-227,Basic Calculator II,[Math][String][Stack],43.4%,Medium,0.04535924939893056
-25,Reverse Nodes in k-Group,[Linked List][Recursion],58.1%,Hard,0.044255009004040724
-55,Jump Game,[Array][Dynamic Programming][Greedy],38.5%,Medium,0.0439389733525891
-207,Course Schedule,[Depth-First Search][Breadth-First Search][Graph][Topological Sort],46.6%,Medium,0.04333851047555593
-1768,Merge Strings Alternately,[Two Pointers][String],79.5%,Easy,0.043151469288772344
-121,Best Time to Buy and Sell Stock,[Array][Dynamic Programming],53.5%,Easy,0.04309979962372266
-84,Largest Rectangle in Histogram,[Array][Stack][Monotonic Stack],44.0%,Hard,0.04246922710911266
-69,Sqrt(x),[Math][Binary Search],38.5%,Easy,0.04180822530231373
-231,Power of Two,[Math][Bit Manipulation][Recursion],47.7%,Easy,0.04155722629276385
-746,Min Cost Climbing Stairs,[Array][Dynamic Programming],65.5%,Easy,0.04141378555075714
-61,Rotate List,[Linked List][Two Pointers],37.4%,Medium,0.039530838756635246
-191,Number of 1 Bits,[Divide and Conquer][Bit Manipulation],70.4%,Easy,0.03914394066850212
-19,Remove Nth Node From End of List,[Linked List][Two Pointers],44.8%,Medium,0.03891541624967355
-46,Permutations,[Array][Backtracking],78.0%,Medium,0.03815638790147632
-380,Insert Delete GetRandom O(1),[Array][Hash Table][Math][Design][Randomized],54.4%,Medium,0.03795522000043556
-45,Jump Game II,[Array][Dynamic Programming][Greedy],40.3%,Medium,0.03547869149924405
-18,4Sum,[Array][Two Pointers][Sorting],36.1%,Medium,0.035122135027826476
-35,Search Insert Position,[Array][Binary Search],45.5%,Easy,0.03500685613635896
-219,Contains Duplicate II,[Array][Hash Table][Sliding Window],44.7%,Easy,0.03427927748029735
-189,Rotate Array,[Array][Math][Two Pointers],40.3%,Medium,0.03421330062605349
-72,Edit Distance,[String][Dynamic Programming],56.1%,Medium,0.033901551675681346
-58,Length of Last Word,[String],49.0%,Easy,0.03381238708415533
-735,Asteroid Collision,[Array][Stack][Simulation],44.6%,Medium,0.03356019649230184
-1251,Average Selling Price,[Database],43.6%,Easy,0.033503971231401815
-32,Longest Valid Parentheses,[String][Dynamic Programming][Stack],33.9%,Hard,0.03344793406754009
-141,Linked List Cycle,[Hash Table][Linked List][Two Pointers],49.5%,Easy,0.030677252247047038
-198,House Robber,[Array][Dynamic Programming],50.9%,Medium,0.03030534949532895
-236,Lowest Common Ancestor of a Binary Tree,[Tree][Depth-First Search][Binary Tree],61.6%,Medium,0.03025949476311255
-567,Permutation in String,[Hash Table][Two Pointers][String][Sliding Window],44.3%,Medium,0.030145462786142038
-215,Kth Largest Element in an Array,[Array][Divide and Conquer][Sorting][Heap (Priority Queue)][Quickselect],66.8%,Medium,0.029656209582888043
-1431,Kids With the Greatest Number of Candies,[Array],87.3%,Easy,0.029392270127613595
-67,Add Binary,[Math][String][Bit Manipulation][Simulation],53.3%,Easy,0.028072018778686394
-151,Reverse Words in a String,[Two Pointers][String],40.9%,Medium,0.027617588343410788
-83,Remove Duplicates from Sorted List,[Linked List],52.2%,Easy,0.027455396452354876
-344,Reverse String,[Two Pointers][String],77.6%,Easy,0.026739561041899163
-876,Middle of the Linked List,[Linked List][Two Pointers],77.3%,Easy,0.025675351340230267
-110,Balanced Binary Tree,[Tree][Depth-First Search][Binary Tree],51.6%,Easy,0.025398190605610438
-36,Valid Sudoku,[Array][Hash Table][Matrix],59.3%,Medium,0.024892386692628724
-40,Combination Sum II,[Array][Backtracking],54.2%,Medium,0.024892386692628724
-739,Daily Temperatures,[Array][Stack][Monotonic Stack],65.9%,Medium,0.02457126073050533
-1071,Greatest Common Divisor of Strings,[Math][String],51.5%,Easy,0.021254785268323237
-300,Longest Increasing Subsequence,[Array][Binary Search][Dynamic Programming],55.0%,Medium,0.019950786419348727
-53,Maximum Subarray,[Array][Divide and Conquer][Dynamic Programming],50.6%,Medium,0.01900395029764534
-238,Product of Array Except Self,[Array][Prefix Sum],65.3%,Medium,0.018813263905953594
-287,Find the Duplicate Number,[Array][Two Pointers][Binary Search][Bit Manipulation],59.4%,Medium,0.018622512098001826
-197,Rising Temperature,[Database],46.9%,Easy,0.01821543989134118
-23,Merge k Sorted Lists,[Linked List][Divide and Conquer][Heap (Priority Queue)][Merge Sort],52.2%,Hard,0.017921626617355583
-62,Unique Paths,[Math][Dynamic Programming][Combinatorics],64.1%,Medium,0.017849648383542402
-78,Subsets,[Array][Backtracking][Bit Manipulation],77.1%,Medium,0.017513582492708304
-584,Find Customer Referee,[Database],69.4%,Easy,0.017101742152143374
-153,Find Minimum in Rotated Sorted Array,[Array][Binary Search],50.1%,Medium,0.0147767742300973
-513,Find Bottom Left Tree Value,[Tree][Depth-First Search][Breadth-First Search][Binary Tree],71.0%,Medium,0.0146094636421581
-200,Number of Islands,[Array][Depth-First Search][Breadth-First Search][Union Find][Matrix],58.5%,Medium,0.01451404288425404
-392,Is Subsequence,[Two Pointers][String][Dynamic Programming],47.9%,Easy,0.014378392927714884
-283,Move Zeroes,[Array][Two Pointers],61.6%,Easy,0.01405504514364441
-1148,Article Views I,[Database],74.6%,Easy,0.013642776403786526
-167,Two Sum II - Input Array Is Sorted,[Array][Two Pointers][Binary Search],61.0%,Medium,0.01330249080560885
-347,Top K Frequent Elements,[Array][Hash Table][Divide and Conquer][Sorting][Heap (Priority Queue)][Bucket Sort][Counting][Quickselect],62.7%,Medium,0.011614532420693054
-704,Binary Search,[Array][Binary Search],57.2%,Easy,0.011055944567589151
-242,Valid Anagram,[Hash Table][String][Sorting],64.3%,Easy,0.010612994282688776
-33,Search in Rotated Sorted Array,[Array][Binary Search],40.5%,Medium,0.009363364288750542
-13,Roman to Integer,[Hash Table][Math][String],60.8%,Easy,0.007846254455110375
-26,Remove Duplicates from Sorted Array,[Array][Two Pointers],55.0%,Easy,0.007207238404949222
-217,Contains Duplicate,[Array][Hash Table][Sorting],61.4%,Easy,0.006814336419730212
+No,Title,Link,Tags,Acceptance,Difficulty,Frequency
+535,Encode and Decode TinyURL,https://leetcode.com/problems/encode-and-decode-tinyurl/description/,[Hash Table][String][Design][Hash Function],86.3%,Medium,0.96083797141521
+1658,Minimum Operations to Reduce X to Zero,https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/description/,[Array][Hash Table][Binary Search][Sliding Window][Prefix Sum],39.7%,Medium,0.9344130822327824
+458,Poor Pigs,https://leetcode.com/problems/poor-pigs/description/,[Math][Dynamic Programming][Combinatorics],59.9%,Hard,0.8916061798458892
+1705,Maximum Number of Eaten Apples,https://leetcode.com/problems/maximum-number-of-eaten-apples/description/,[Array][Greedy][Heap (Priority Queue)],38.8%,Medium,0.8406342027968305
+356,Line Reflection,https://leetcode.com/problems/line-reflection/description/,[Array][Hash Table][Math],35.4%,Medium,0.8211213885732487
+823,Binary Trees With Factors,https://leetcode.com/problems/binary-trees-with-factors/description/,[Array][Hash Table][Dynamic Programming][Sorting],52.9%,Medium,0.784753744402374
+1282,Group the People Given the Group Size They Belong To,https://leetcode.com/problems/group-the-people-given-the-group-size-they-belong-to/description/,[Array][Hash Table],87.6%,Medium,0.74757474116062
+279,Perfect Squares,https://leetcode.com/problems/perfect-squares/description/,[Math][Dynamic Programming][Breadth-First Search],54.7%,Medium,0.7130070484343318
+1758,Minimum Changes To Make Alternating Binary String,https://leetcode.com/problems/minimum-changes-to-make-alternating-binary-string/description/,[String],64.0%,Easy,0.6620350713852732
+2667,Create Hello World Function,https://leetcode.com/problems/create-hello-world-function/description/,nan,80.9%,Easy,0.6161249833232461
+1,Two Sum,https://leetcode.com/problems/two-sum/description/,[Array][Hash Table],52.0%,Easy,0.5651530062741874
+1930,Unique Length-3 Palindromic Subsequences,https://leetcode.com/problems/unique-length-3-palindromic-subsequences/description/,[Hash Table][String][Bit Manipulation][Prefix Sum],66.1%,Medium,0.5578637175086234
+456,132 Pattern,https://leetcode.com/problems/132-pattern/description/,[Array][Binary Search][Stack][Monotonic Stack][Ordered Set],33.7%,Medium,0.5131385441363598
+368,Largest Divisible Subset,https://leetcode.com/problems/largest-divisible-subset/description/,[Array][Math][Dynamic Programming][Sorting],45.2%,Medium,0.5047206317234034
+576,Out of Boundary Paths,https://leetcode.com/problems/out-of-boundary-paths/description/,[Dynamic Programming],48.1%,Medium,0.4693404899931309
+888,Fair Candy Swap,https://leetcode.com/problems/fair-candy-swap/description/,[Array][Hash Table][Binary Search][Sorting],61.5%,Easy,0.4183685129440722
+2035,Partition Array Into Two Arrays to Minimize Sum Difference,https://leetcode.com/problems/partition-array-into-two-arrays-to-minimize-sum-difference/description/,[Array][Two Pointers][Binary Search][Dynamic Programming][Bit Manipulation][Ordered Set][Bitmask],20.0%,Hard,0.4183685129440722
+606,Construct String from Binary Tree,https://leetcode.com/problems/construct-string-from-binary-tree/description/,[String][Tree][Depth-First Search][Binary Tree],69.0%,Medium,0.3973017974690034
+1422,Maximum Score After Splitting a String,https://leetcode.com/problems/maximum-score-after-splitting-a-string/description/,[String][Prefix Sum],62.2%,Easy,0.3933437475758196
+1535,Find the Winner of an Array Game,https://leetcode.com/problems/find-the-winner-of-an-array-game/description/,[Array][Simulation],57.2%,Medium,0.3782789678040075
+1441,Build an Array With Stack Operations,https://leetcode.com/problems/build-an-array-with-stack-operations/description/,[Array][Stack][Simulation],79.8%,Medium,0.3746934494414107
+128,Longest Consecutive Sequence,https://leetcode.com/problems/longest-consecutive-sequence/description/,[Array][Hash Table][Union Find],47.3%,Medium,0.3652797911322508
+14,Longest Common Prefix,https://leetcode.com/problems/longest-common-prefix/description/,[String][Trie],42.4%,Easy,0.3638421350524408
+3000,Maximum Area of Longest Diagonal Rectangle,https://leetcode.com/problems/maximum-area-of-longest-diagonal-rectangle/description/,[Array],35.2%,Easy,0.3610133455373305
+2391,Minimum Amount of Time to Collect Garbage,https://leetcode.com/problems/minimum-amount-of-time-to-collect-garbage/description/,[Array][String][Prefix Sum],85.7%,Medium,0.3513978868378886
+515,Find Largest Value in Each Tree Row,https://leetcode.com/problems/find-largest-value-in-each-tree-row/description/,[Tree][Depth-First Search][Breadth-First Search][Binary Tree],65.7%,Medium,0.3352072143146262
+1239,Maximum Length of a Concatenated String with Unique Characters,https://leetcode.com/problems/maximum-length-of-a-concatenated-string-with-unique-characters/description/,[Array][String][Backtracking][Bit Manipulation],54.1%,Medium,0.325422400434628
+4,Median of Two Sorted Arrays,https://leetcode.com/problems/median-of-two-sorted-arrays/description/,[Array][Binary Search][Divide and Conquer],39.4%,Hard,0.3159174468224791
+1287,Element Appearing More Than 25% In Sorted Array,https://leetcode.com/problems/element-appearing-more-than-25-in-sorted-array/description/,[Array],61.1%,Easy,0.3077496355025901
+2009,Minimum Number of Operations to Make Array Continuous,https://leetcode.com/problems/minimum-number-of-operations-to-make-array-continuous/description/,[Array][Binary Search],53.1%,Hard,0.3053816495511818
+31,Next Permutation,https://leetcode.com/problems/next-permutation/description/,[Array][Two Pointers],39.5%,Medium,0.301940253078837
+405,Convert a Number to Hexadecimal,https://leetcode.com/problems/convert-a-number-to-hexadecimal/description/,[Math][Bit Manipulation],48.1%,Easy,0.3007541540191337
+239,Sliding Window Maximum,https://leetcode.com/problems/sliding-window-maximum/description/,[Array][Queue][Sliding Window][Heap (Priority Queue)][Monotonic Queue],46.5%,Hard,0.2973524774834634
+454,4Sum II,https://leetcode.com/problems/4sum-ii/description/,[Array][Hash Table],57.2%,Medium,0.2940718705505519
+1048,Longest String Chain,https://leetcode.com/problems/longest-string-chain/description/,[Array][Hash Table][Two Pointers][String][Dynamic Programming],61.0%,Medium,0.2595111954850846
+220,Contains Duplicate III,https://leetcode.com/problems/contains-duplicate-iii/description/,[Array][Sliding Window][Sorting][Bucket Sort][Ordered Set],22.7%,Hard,0.2545298651348804
+2385,Amount of Time for Binary Tree to Be Infected,https://leetcode.com/problems/amount-of-time-for-binary-tree-to-be-infected/description/,[Tree][Depth-First Search][Breadth-First Search][Binary Tree],63.0%,Medium,0.2545298651348804
+7,Reverse Integer,https://leetcode.com/problems/reverse-integer/description/,[Math],28.4%,Medium,0.2376079718057763
+532,K-diff Pairs in an Array,https://leetcode.com/problems/k-diff-pairs-in-an-array/description/,[Array][Hash Table][Two Pointers][Binary Search][Sorting],42.6%,Medium,0.2295744416445002
+1903,Largest Odd Number in String,https://leetcode.com/problems/largest-odd-number-in-string/description/,[Math][String][Greedy],63.4%,Easy,0.227606421329108
+1716,Calculate Money in Leetcode Bank,https://leetcode.com/problems/calculate-money-in-leetcode-bank/description/,[Math],78.2%,Easy,0.219455778235025
+2,Add Two Numbers,https://leetcode.com/problems/add-two-numbers/description/,[Linked List][Math][Recursion],42.4%,Medium,0.2181101886217853
+2235,Add Two Integers,https://leetcode.com/problems/add-two-integers/description/,[Math],87.5%,Easy,0.2121527975772003
+9,Palindrome Number,https://leetcode.com/problems/palindrome-number/description/,[Math],55.8%,Easy,0.2084050615997281
+15,3Sum,https://leetcode.com/problems/3sum/description/,[Array][Two Pointers][Sorting],34.2%,Medium,0.2033722469417143
+88,Merge Sorted Array,https://leetcode.com/problems/merge-sorted-array/description/,[Array][Two Pointers][Sorting],49.2%,Easy,0.202115521431391
+1021,Remove Outermost Parentheses,https://leetcode.com/problems/remove-outermost-parentheses/description/,[String][Stack],82.2%,Easy,0.2011206392267724
+42,Trapping Rain Water,https://leetcode.com/problems/trapping-rain-water/description/,[Array][Two Pointers][Dynamic Programming][Stack][Monotonic Stack],60.8%,Hard,0.2002297505731169
+310,Minimum Height Trees,https://leetcode.com/problems/minimum-height-trees/description/,[Depth-First Search][Breadth-First Search][Graph][Topological Sort],38.8%,Medium,0.199665670251927
+2413,Smallest Even Multiple,https://leetcode.com/problems/smallest-even-multiple/description/,[Math][Number Theory],87.5%,Easy,0.1958514090262022
+2610,Convert an Array Into a 2D Array With Conditions,https://leetcode.com/problems/convert-an-array-into-a-2d-array-with-conditions/description/,[Array][Hash Table],87.3%,Medium,0.1957445771260953
+137,Single Number II,https://leetcode.com/problems/single-number-ii/description/,[Array][Bit Manipulation],62.2%,Medium,0.1950000150537256
+455,Assign Cookies,https://leetcode.com/problems/assign-cookies/description/,[Array][Two Pointers][Greedy][Sorting],52.7%,Easy,0.1950000150537256
+337,House Robber III,https://leetcode.com/problems/house-robber-iii/description/,[Dynamic Programming][Tree][Depth-First Search][Binary Tree],54.2%,Medium,0.1910552367627092
+1347,Minimum Number of Steps to Make Two Strings Anagram,https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram/description/,[Hash Table][String][Counting],82.0%,Medium,0.1865859555804121
+875,Koko Eating Bananas,https://leetcode.com/problems/koko-eating-bananas/description/,[Array][Binary Search],49.0%,Medium,0.1861988135307409
+1043,Partition Array for Maximum Sum,https://leetcode.com/problems/partition-array-for-maximum-sum/description/,[Array][Dynamic Programming],76.4%,Medium,0.1735948056557174
+698,Partition to K Equal Sum Subsets,https://leetcode.com/problems/partition-to-k-equal-sum-subsets/description/,[Array][Dynamic Programming][Backtracking][Bit Manipulation][Memoization][Bitmask],38.5%,Medium,0.1720973230180951
+767,Reorganize String,https://leetcode.com/problems/reorganize-string/description/,[Hash Table][String][Greedy][Sorting][Heap (Priority Queue)][Counting],54.5%,Medium,0.1689399880981232
+66,Plus One,https://leetcode.com/problems/plus-one/description/,[Array][Math],45.0%,Easy,0.1680302266831986
+54,Spiral Matrix,https://leetcode.com/problems/spiral-matrix/description/,[Array][Matrix][Simulation],48.9%,Medium,0.1673904263895277
+20,Valid Parentheses,https://leetcode.com/problems/valid-parentheses/description/,[String][Stack],40.5%,Easy,0.1658966771265543
+802,Find Eventual Safe States,https://leetcode.com/problems/find-eventual-safe-states/description/,[Depth-First Search][Breadth-First Search][Graph][Topological Sort],62.2%,Medium,0.1622986409188468
+146,LRU Cache,https://leetcode.com/problems/lru-cache/description/,[Hash Table][Linked List][Design][Doubly-Linked List],42.2%,Medium,0.1620058521217824
+779,K-th Symbol in Grammar,https://leetcode.com/problems/k-th-symbol-in-grammar/description/,[Math][Bit Manipulation][Recursion],46.4%,Medium,0.1565690606915399
+68,Text Justification,https://leetcode.com/problems/text-justification/description/,[Array][String][Simulation],42.7%,Hard,0.1544156857914433
+367,Valid Perfect Square,https://leetcode.com/problems/valid-perfect-square/description/,[Math][Binary Search],43.6%,Easy,0.1544156857914433
+1295,Find Numbers with Even Number of Digits,https://leetcode.com/problems/find-numbers-with-even-number-of-digits/description/,[Array],77.2%,Easy,0.1536233927072112
+1235,Maximum Profit in Job Scheduling,https://leetcode.com/problems/maximum-profit-in-job-scheduling/description/,[Array][Binary Search][Dynamic Programming][Sorting],54.8%,Hard,0.1512309697239235
+2859,Sum of Values at Indices With K Set Bits,https://leetcode.com/problems/sum-of-values-at-indices-with-k-set-bits/description/,[Array][Bit Manipulation],86.3%,Easy,0.1512309697239235
+2727,Is Object Empty,https://leetcode.com/problems/is-object-empty/description/,nan,78.4%,Easy,0.1500938791316439
+2715,Timeout Cancellation,https://leetcode.com/problems/timeout-cancellation/description/,nan,88.0%,Easy,0.1478703280397086
+70,Climbing Stairs,https://leetcode.com/problems/climbing-stairs/description/,[Math][Dynamic Programming][Memoization],52.8%,Easy,0.1475024301372594
+179,Largest Number,https://leetcode.com/problems/largest-number/description/,[Array][String][Greedy][Sorting],35.8%,Medium,0.1466034741918754
+49,Group Anagrams,https://leetcode.com/problems/group-anagrams/description/,[Array][Hash Table][String][Sorting],68.2%,Medium,0.1446233083835853
+5,Longest Palindromic Substring,https://leetcode.com/problems/longest-palindromic-substring/description/,[String][Dynamic Programming],33.7%,Medium,0.1406438399476212
+867,Transpose Matrix,https://leetcode.com/problems/transpose-matrix/description/,[Array][Matrix][Simulation],71.1%,Easy,0.1386298972959063
+1291,Sequential Digits,https://leetcode.com/problems/sequential-digits/description/,[Enumeration],65.4%,Medium,0.1348842676899421
+2620,Counter,https://leetcode.com/problems/counter/description/,nan,80.2%,Easy,0.1330864537962701
+173,Binary Search Tree Iterator,https://leetcode.com/problems/binary-search-tree-iterator/description/,[Stack][Tree][Design][Binary Search Tree][Binary Tree][Iterator],71.6%,Medium,0.1293046812407275
+628,Maximum Product of Three Numbers,https://leetcode.com/problems/maximum-product-of-three-numbers/description/,[Array][Math][Sorting],45.1%,Easy,0.1259524089776143
+80,Remove Duplicates from Sorted Array II,https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/description/,[Array][Two Pointers],57.4%,Medium,0.1246424452072766
+1009,Complement of Base 10 Integer,https://leetcode.com/problems/complement-of-base-10-integer/description/,[Bit Manipulation],60.8%,Easy,0.1188340079023584
+1207,Unique Number of Occurrences,https://leetcode.com/problems/unique-number-of-occurrences/description/,[Array][Hash Table],77.0%,Easy,0.1061065059945477
+48,Rotate Image,https://leetcode.com/problems/rotate-image/description/,[Array][Math][Matrix],73.8%,Medium,0.1003649504659489
+136,Single Number,https://leetcode.com/problems/single-number/description/,[Array][Bit Manipulation],72.5%,Easy,0.0997227482312068
+459,Repeated Substring Pattern,https://leetcode.com/problems/repeated-substring-pattern/description/,[String][String Matching],46.1%,Easy,0.0995847054294366
+796,Rotate String,https://leetcode.com/problems/rotate-string/description/,[String][String Matching],57.7%,Easy,0.0990909026442309
+3,Longest Substring Without Repeating Characters,https://leetcode.com/problems/longest-substring-without-repeating-characters/description/,[Hash Table][String][Sliding Window],34.5%,Medium,0.0958633177473216
+135,Candy,https://leetcode.com/problems/candy/description/,[Array][Greedy],43.2%,Hard,0.0942118820552622
+653,Two Sum IV - Input is a BST,https://leetcode.com/problems/two-sum-iv-input-is-a-bst/description/,[Hash Table][Two Pointers][Tree][Depth-First Search][Breadth-First Search][Binary Search Tree][Binary Tree],61.2%,Easy,0.0937454091709738
+101,Symmetric Tree,https://leetcode.com/problems/symmetric-tree/description/,[Tree][Depth-First Search][Breadth-First Search][Binary Tree],56.1%,Easy,0.0935260580108234
+1752,Check if Array Is Sorted and Rotated,https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/description/,[Array],50.9%,Easy,0.0927543934922478
+1480,Running Sum of 1d Array,https://leetcode.com/problems/running-sum-of-1d-array/description/,[Array][Prefix Sum],86.7%,Easy,0.0921839560780585
+417,Pacific Atlantic Water Flow,https://leetcode.com/problems/pacific-atlantic-water-flow/description/,[Array][Depth-First Search][Breadth-First Search][Matrix],55.1%,Medium,0.0913877515894286
+2704,To Be Or Not To Be,https://leetcode.com/problems/to-be-or-not-to-be/description/,nan,61.9%,Easy,0.0894339426319486
+162,Find Peak Element,https://leetcode.com/problems/find-peak-element/description/,[Array][Binary Search],45.9%,Medium,0.0890902185518269
+1757,Recyclable and Low Fat Products,https://leetcode.com/problems/recyclable-and-low-fat-products/description/,[Database],89.2%,Easy,0.088459335467475
+11,Container With Most Water,https://leetcode.com/problems/container-with-most-water/description/,[Array][Two Pointers][Greedy],54.9%,Medium,0.0875715487902922
+105,Construct Binary Tree from Preorder and Inorder Traversal,https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/,[Array][Hash Table][Divide and Conquer][Tree][Binary Tree],63.5%,Medium,0.0870956336354225
+125,Valid Palindrome,https://leetcode.com/problems/valid-palindrome/description/,[Two Pointers][String],47.0%,Easy,0.0862755417835068
+94,Binary Tree Inorder Traversal,https://leetcode.com/problems/binary-tree-inorder-traversal/description/,[Stack][Tree][Depth-First Search][Binary Tree],75.8%,Easy,0.0845275893183449
+8,String to Integer (atoi),https://leetcode.com/problems/string-to-integer-atoi/description/,[String],17.1%,Medium,0.0840389271046989
+1732,Find the Highest Altitude,https://leetcode.com/problems/find-the-highest-altitude/description/,[Array][Prefix Sum],82.9%,Easy,0.0834589753852619
+1657,Determine if Two Strings Are Close,https://leetcode.com/problems/determine-if-two-strings-are-close/description/,[Hash Table][String][Sorting][Counting],55.3%,Medium,0.0818452481042433
+2621,Sleep,https://leetcode.com/problems/sleep/description/,nan,86.1%,Easy,0.0818452481042433
+60,Permutation Sequence,https://leetcode.com/problems/permutation-sequence/description/,[Math][Recursion],46.5%,Hard,0.0805263836200879
+414,Third Maximum Number,https://leetcode.com/problems/third-maximum-number/description/,[Array][Sorting],34.5%,Easy,0.0792493716541405
+152,Maximum Product Subarray,https://leetcode.com/problems/maximum-product-subarray/description/,[Array][Dynamic Programming],35.0%,Medium,0.0777467634798399
+221,Maximal Square,https://leetcode.com/problems/maximal-square/description/,[Array][Dynamic Programming][Matrix],46.3%,Medium,0.0774080684122359
+410,Split Array Largest Sum,https://leetcode.com/problems/split-array-largest-sum/description/,[Array][Binary Search][Dynamic Programming][Greedy][Prefix Sum],55.0%,Hard,0.0765191498341962
+119,Pascal's Triangle II,https://leetcode.com/problems/pascals-triangle-ii/description/,[Array][Dynamic Programming],63.7%,Easy,0.0757938393695336
+27,Remove Element,https://leetcode.com/problems/remove-element/description/,[Array][Two Pointers],56.2%,Easy,0.0753968022143459
+50,"Pow(x, n)",https://leetcode.com/problems/powx-n/description/,[Math][Recursion],34.5%,Medium,0.0752942533018759
+29,Divide Two Integers,https://leetcode.com/problems/divide-two-integers/description/,[Math][Bit Manipulation],17.3%,Medium,0.0738039745833612
+560,Subarray Sum Equals K,https://leetcode.com/problems/subarray-sum-equals-k/description/,[Array][Hash Table][Prefix Sum],43.4%,Medium,0.0733937714329694
+206,Reverse Linked List,https://leetcode.com/problems/reverse-linked-list/description/,[Linked List][Recursion],75.7%,Easy,0.0708511536002661
+6,Zigzag Conversion,https://leetcode.com/problems/zigzag-conversion/description/,[String],47.4%,Medium,0.0696336917588007
+176,Second Highest Salary,https://leetcode.com/problems/second-highest-salary/description/,[Database],39.9%,Medium,0.0675932911325281
+2092,Find All People With Secret,https://leetcode.com/problems/find-all-people-with-secret/description/,[Depth-First Search][Breadth-First Search][Union Find][Graph][Sorting],46.0%,Hard,0.0664696450077416
+322,Coin Change,https://leetcode.com/problems/coin-change/description/,[Array][Dynamic Programming][Breadth-First Search],43.6%,Medium,0.0654362583721043
+138,Copy List with Random Pointer,https://leetcode.com/problems/copy-list-with-random-pointer/description/,[Hash Table][Linked List],55.5%,Medium,0.065287865496352
+169,Majority Element,https://leetcode.com/problems/majority-element/description/,[Array][Hash Table][Divide and Conquer][Sorting][Counting],64.7%,Easy,0.0649072836084357
+21,Merge Two Sorted Lists,https://leetcode.com/problems/merge-two-sorted-lists/description/,[Linked List][Recursion],64.0%,Easy,0.0646553991587923
+1978,Employees Whose Manager Left the Company,https://leetcode.com/problems/employees-whose-manager-left-the-company/description/,[Database],47.4%,Easy,0.0625203569813339
+205,Isomorphic Strings,https://leetcode.com/problems/isomorphic-strings/description/,[Hash Table][String],43.7%,Easy,0.061960627359177
+938,Range Sum of BST,https://leetcode.com/problems/range-sum-of-bst/description/,[Tree][Depth-First Search][Binary Search Tree][Binary Tree],86.7%,Easy,0.061748007068447
+17,Letter Combinations of a Phone Number,https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/,[Hash Table][String][Backtracking],60.0%,Medium,0.0604185235984549
+451,Sort Characters By Frequency,https://leetcode.com/problems/sort-characters-by-frequency/description/,[Hash Table][String][Sorting][Heap (Priority Queue)][Bucket Sort][Counting],72.4%,Medium,0.0602591915181968
+22,Generate Parentheses,https://leetcode.com/problems/generate-parentheses/description/,[String][Dynamic Programming][Backtracking],74.2%,Medium,0.0580503912884988
+424,Longest Repeating Character Replacement,https://leetcode.com/problems/longest-repeating-character-replacement/description/,[Hash Table][String][Sliding Window],53.5%,Medium,0.0575974917833364
+37,Sudoku Solver,https://leetcode.com/problems/sudoku-solver/description/,[Array][Hash Table][Backtracking][Matrix],60.5%,Hard,0.0566723870989108
+2877,Create a DataFrame from List,https://leetcode.com/problems/create-a-dataframe-from-list/description/,nan,80.7%,Easy,0.0556471787143915
+438,Find All Anagrams in a String,https://leetcode.com/problems/find-all-anagrams-in-a-string/description/,[Hash Table][String][Sliding Window],50.8%,Medium,0.0551103627105187
+34,Find First and Last Position of Element in Sorted Array,https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description/,[Array][Binary Search],44.0%,Medium,0.0548270222760379
+130,Surrounded Regions,https://leetcode.com/problems/surrounded-regions/description/,[Array][Depth-First Search][Breadth-First Search][Union Find][Matrix],39.0%,Medium,0.05392141679382
+73,Set Matrix Zeroes,https://leetcode.com/problems/set-matrix-zeroes/description/,[Array][Hash Table][Matrix],55.0%,Medium,0.0536481435574645
+1672,Richest Customer Wealth,https://leetcode.com/problems/richest-customer-wealth/description/,[Array][Matrix],87.8%,Easy,0.0536321549157952
+2635,Apply Transform Over Each Element in Array,https://leetcode.com/problems/apply-transform-over-each-element-in-array/description/,nan,85.4%,Easy,0.0530628449752115
+229,Majority Element II,https://leetcode.com/problems/majority-element-ii/description/,[Array][Hash Table][Sorting][Counting],51.2%,Medium,0.0529224014543425
+44,Wildcard Matching,https://leetcode.com/problems/wildcard-matching/description/,[String][Dynamic Programming][Greedy][Recursion],27.7%,Hard,0.0518923160035191
+56,Merge Intervals,https://leetcode.com/problems/merge-intervals/description/,[Array][Sorting],47.1%,Medium,0.0513921688664801
+658,Find K Closest Elements,https://leetcode.com/problems/find-k-closest-elements/description/,[Array][Two Pointers][Binary Search][Sliding Window][Sorting][Heap (Priority Queue)],47.2%,Medium,0.0513591683706447
+131,Palindrome Partitioning,https://leetcode.com/problems/palindrome-partitioning/description/,[String][Dynamic Programming][Backtracking],67.2%,Medium,0.0493927553295764
+75,Sort Colors,https://leetcode.com/problems/sort-colors/description/,[Array][Two Pointers][Sorting],61.7%,Medium,0.0488348479201934
+268,Missing Number,https://leetcode.com/problems/missing-number/description/,[Array][Hash Table][Math][Binary Search][Bit Manipulation][Sorting],66.4%,Easy,0.0484796533766871
+1193,Monthly Transactions I,https://leetcode.com/problems/monthly-transactions-i/description/,[Database],58.2%,Medium,0.0474022388945839
+328,Odd Even Linked List,https://leetcode.com/problems/odd-even-linked-list/description/,[Linked List],61.4%,Medium,0.0471785602750904
+12,Integer to Roman,https://leetcode.com/problems/integer-to-roman/description/,[Hash Table][Math][String],64.3%,Medium,0.0471538373571915
+227,Basic Calculator II,https://leetcode.com/problems/basic-calculator-ii/description/,[Math][String][Stack],43.4%,Medium,0.0453592493989305
+25,Reverse Nodes in k-Group,https://leetcode.com/problems/reverse-nodes-in-k-group/description/,[Linked List][Recursion],58.1%,Hard,0.0442550090040407
+55,Jump Game,https://leetcode.com/problems/jump-game/description/,[Array][Dynamic Programming][Greedy],38.5%,Medium,0.0439389733525891
+207,Course Schedule,https://leetcode.com/problems/course-schedule/description/,[Depth-First Search][Breadth-First Search][Graph][Topological Sort],46.6%,Medium,0.0433385104755559
+1768,Merge Strings Alternately,https://leetcode.com/problems/merge-strings-alternately/description/,[Two Pointers][String],79.5%,Easy,0.0431514692887723
+121,Best Time to Buy and Sell Stock,https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/,[Array][Dynamic Programming],53.5%,Easy,0.0430997996237226
+84,Largest Rectangle in Histogram,https://leetcode.com/problems/largest-rectangle-in-histogram/description/,[Array][Stack][Monotonic Stack],44.0%,Hard,0.0424692271091126
+69,Sqrt(x),https://leetcode.com/problems/sqrtx/description/,[Math][Binary Search],38.5%,Easy,0.0418082253023137
+231,Power of Two,https://leetcode.com/problems/power-of-two/description/,[Math][Bit Manipulation][Recursion],47.7%,Easy,0.0415572262927638
+746,Min Cost Climbing Stairs,https://leetcode.com/problems/min-cost-climbing-stairs/description/,[Array][Dynamic Programming],65.5%,Easy,0.0414137855507571
+61,Rotate List,https://leetcode.com/problems/rotate-list/description/,[Linked List][Two Pointers],37.4%,Medium,0.0395308387566352
+191,Number of 1 Bits,https://leetcode.com/problems/number-of-1-bits/description/,[Divide and Conquer][Bit Manipulation],70.4%,Easy,0.0391439406685021
+19,Remove Nth Node From End of List,https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/,[Linked List][Two Pointers],44.8%,Medium,0.0389154162496735
+46,Permutations,https://leetcode.com/problems/permutations/description/,[Array][Backtracking],78.0%,Medium,0.0381563879014763
+380,Insert Delete GetRandom O(1),https://leetcode.com/problems/insert-delete-getrandom-o1/description/,[Array][Hash Table][Math][Design][Randomized],54.4%,Medium,0.0379552200004355
+45,Jump Game II,https://leetcode.com/problems/jump-game-ii/description/,[Array][Dynamic Programming][Greedy],40.3%,Medium,0.035478691499244
+18,4Sum,https://leetcode.com/problems/4sum/description/,[Array][Two Pointers][Sorting],36.1%,Medium,0.0351221350278264
+35,Search Insert Position,https://leetcode.com/problems/search-insert-position/description/,[Array][Binary Search],45.5%,Easy,0.0350068561363589
+219,Contains Duplicate II,https://leetcode.com/problems/contains-duplicate-ii/description/,[Array][Hash Table][Sliding Window],44.7%,Easy,0.0342792774802973
+189,Rotate Array,https://leetcode.com/problems/rotate-array/description/,[Array][Math][Two Pointers],40.3%,Medium,0.0342133006260534
+72,Edit Distance,https://leetcode.com/problems/edit-distance/description/,[String][Dynamic Programming],56.1%,Medium,0.0339015516756813
+58,Length of Last Word,https://leetcode.com/problems/length-of-last-word/description/,[String],49.0%,Easy,0.0338123870841553
+735,Asteroid Collision,https://leetcode.com/problems/asteroid-collision/description/,[Array][Stack][Simulation],44.6%,Medium,0.0335601964923018
+1251,Average Selling Price,https://leetcode.com/problems/average-selling-price/description/,[Database],43.6%,Easy,0.0335039712314018
+32,Longest Valid Parentheses,https://leetcode.com/problems/longest-valid-parentheses/description/,[String][Dynamic Programming][Stack],33.9%,Hard,0.03344793406754
+141,Linked List Cycle,https://leetcode.com/problems/linked-list-cycle/description/,[Hash Table][Linked List][Two Pointers],49.5%,Easy,0.030677252247047
+198,House Robber,https://leetcode.com/problems/house-robber/description/,[Array][Dynamic Programming],50.9%,Medium,0.0303053494953289
+236,Lowest Common Ancestor of a Binary Tree,https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/description/,[Tree][Depth-First Search][Binary Tree],61.6%,Medium,0.0302594947631125
+567,Permutation in String,https://leetcode.com/problems/permutation-in-string/description/,[Hash Table][Two Pointers][String][Sliding Window],44.3%,Medium,0.030145462786142
+215,Kth Largest Element in an Array,https://leetcode.com/problems/kth-largest-element-in-an-array/description/,[Array][Divide and Conquer][Sorting][Heap (Priority Queue)][Quickselect],66.8%,Medium,0.029656209582888
+1431,Kids With the Greatest Number of Candies,https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/description/,[Array],87.3%,Easy,0.0293922701276135
+67,Add Binary,https://leetcode.com/problems/add-binary/description/,[Math][String][Bit Manipulation][Simulation],53.3%,Easy,0.0280720187786863
+151,Reverse Words in a String,https://leetcode.com/problems/reverse-words-in-a-string/description/,[Two Pointers][String],40.9%,Medium,0.0276175883434107
+83,Remove Duplicates from Sorted List,https://leetcode.com/problems/remove-duplicates-from-sorted-list/description/,[Linked List],52.2%,Easy,0.0274553964523548
+344,Reverse String,https://leetcode.com/problems/reverse-string/description/,[Two Pointers][String],77.6%,Easy,0.0267395610418991
+876,Middle of the Linked List,https://leetcode.com/problems/middle-of-the-linked-list/description/,[Linked List][Two Pointers],77.3%,Easy,0.0256753513402302
+110,Balanced Binary Tree,https://leetcode.com/problems/balanced-binary-tree/description/,[Tree][Depth-First Search][Binary Tree],51.6%,Easy,0.0253981906056104
+36,Valid Sudoku,https://leetcode.com/problems/valid-sudoku/description/,[Array][Hash Table][Matrix],59.3%,Medium,0.0248923866926287
+40,Combination Sum II,https://leetcode.com/problems/combination-sum-ii/description/,[Array][Backtracking],54.2%,Medium,0.0248923866926287
+739,Daily Temperatures,https://leetcode.com/problems/daily-temperatures/description/,[Array][Stack][Monotonic Stack],65.9%,Medium,0.0245712607305053
+1071,Greatest Common Divisor of Strings,https://leetcode.com/problems/greatest-common-divisor-of-strings/description/,[Math][String],51.5%,Easy,0.0212547852683232
+300,Longest Increasing Subsequence,https://leetcode.com/problems/longest-increasing-subsequence/description/,[Array][Binary Search][Dynamic Programming],55.0%,Medium,0.0199507864193487
+53,Maximum Subarray,https://leetcode.com/problems/maximum-subarray/description/,[Array][Divide and Conquer][Dynamic Programming],50.6%,Medium,0.0190039502976453
+238,Product of Array Except Self,https://leetcode.com/problems/product-of-array-except-self/description/,[Array][Prefix Sum],65.3%,Medium,0.0188132639059535
+287,Find the Duplicate Number,https://leetcode.com/problems/find-the-duplicate-number/description/,[Array][Two Pointers][Binary Search][Bit Manipulation],59.4%,Medium,0.0186225120980018
+197,Rising Temperature,https://leetcode.com/problems/rising-temperature/description/,[Database],46.9%,Easy,0.0182154398913411
+23,Merge k Sorted Lists,https://leetcode.com/problems/merge-k-sorted-lists/description/,[Linked List][Divide and Conquer][Heap (Priority Queue)][Merge Sort],52.2%,Hard,0.0179216266173555
+62,Unique Paths,https://leetcode.com/problems/unique-paths/description/,[Math][Dynamic Programming][Combinatorics],64.1%,Medium,0.0178496483835424
+78,Subsets,https://leetcode.com/problems/subsets/description/,[Array][Backtracking][Bit Manipulation],77.1%,Medium,0.0175135824927083
+584,Find Customer Referee,https://leetcode.com/problems/find-customer-referee/description/,[Database],69.4%,Easy,0.0171017421521433
+153,Find Minimum in Rotated Sorted Array,https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/,[Array][Binary Search],50.1%,Medium,0.0147767742300973
+513,Find Bottom Left Tree Value,https://leetcode.com/problems/find-bottom-left-tree-value/description/,[Tree][Depth-First Search][Breadth-First Search][Binary Tree],71.0%,Medium,0.0146094636421581
+200,Number of Islands,https://leetcode.com/problems/number-of-islands/description/,[Array][Depth-First Search][Breadth-First Search][Union Find][Matrix],58.5%,Medium,0.014514042884254
+392,Is Subsequence,https://leetcode.com/problems/is-subsequence/description/,[Two Pointers][String][Dynamic Programming],47.9%,Easy,0.0143783929277148
+283,Move Zeroes,https://leetcode.com/problems/move-zeroes/description/,[Array][Two Pointers],61.6%,Easy,0.0140550451436444
+1148,Article Views I,https://leetcode.com/problems/article-views-i/description/,[Database],74.6%,Easy,0.0136427764037865
+167,Two Sum II - Input Array Is Sorted,https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/,[Array][Two Pointers][Binary Search],61.0%,Medium,0.0133024908056088
+347,Top K Frequent Elements,https://leetcode.com/problems/top-k-frequent-elements/description/,[Array][Hash Table][Divide and Conquer][Sorting][Heap (Priority Queue)][Bucket Sort][Counting][Quickselect],62.7%,Medium,0.011614532420693
+704,Binary Search,https://leetcode.com/problems/binary-search/description/,[Array][Binary Search],57.2%,Easy,0.0110559445675891
+242,Valid Anagram,https://leetcode.com/problems/valid-anagram/description/,[Hash Table][String][Sorting],64.3%,Easy,0.0106129942826887
+33,Search in Rotated Sorted Array,https://leetcode.com/problems/search-in-rotated-sorted-array/description/,[Array][Binary Search],40.5%,Medium,0.0093633642887505
+13,Roman to Integer,https://leetcode.com/problems/roman-to-integer/description/,[Hash Table][Math][String],60.8%,Easy,0.0078462544551103
+26,Remove Duplicates from Sorted Array,https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/,[Array][Two Pointers],55.0%,Easy,0.0072072384049492
+217,Contains Duplicate,https://leetcode.com/problems/contains-duplicate/description/,[Array][Hash Table][Sorting],61.4%,Easy,0.0068143364197302
