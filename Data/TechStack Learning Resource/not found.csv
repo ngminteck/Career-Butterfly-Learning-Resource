@@ -1,94 +1,91 @@
-Name,Search Keyword,Resource Path,Groups
-combine,unclassified,skill/combine.html,
-eclipse,unclassified,skill/eclipse.html,
-aquadata,unclassified,skill/aquadata.html,
-segment,unclassified,skill/segment.html,
-nexus,unclassified,skill/nexus.html,
-fisheye,unclassified,skill/fisheye.html,
-container,unclassified,skill/container.html,
-hyperion,unclassified,skill/hyperion.html,
-studs,unclassified,skill/studs.html,
-kepler,unclassified,skill/kepler.html,
-dat,unclassified,skill/dat.html,
-modular,unclassified,skill/modular.html,
-mantis,unclassified,skill/mantis.html,
-jcr,unclassified,skill/jcr.html,
-swing,unclassified,skill/swing.html,
-ali-cloud,unclassified,skill/ali-cloud.html,
-espresso,unclassified,skill/espresso.html,
-retrofit,unclassified,skill/retrofit.html,
-graphite,unclassified,skill/graphite.html,
-stripe,unclassified,skill/stripe.html,
-lora,unclassified,skill/lora.html,
-fn,unclassified,skill/fn.html,
-fission,unclassified,skill/fission.html,
-relay,unclassified,skill/relay.html,
-dojo,unclassified,skill/dojo.html,
-endur,unclassified,skill/endur.html,
-zeppelin,unclassified,skill/zeppelin.html,
-photoshop,unclassified,skill/photoshop.html,
-entity,unclassified,skill/entity.html,
-mq,unclassified,skill/mq.html,
-polymer,unclassified,skill/polymer.html,
-dash,unclassified,skill/dash.html,
-enzyme,unclassified,skill/enzyme.html,
-xray,unclassified,skill/xray.html,
-epoxy,unclassified,skill/epoxy.html,
-adobe xd,unclassified,skill/adobe xd.html,
-tencent,unclassified,skill/tencent.html,
-insomnia,unclassified,skill/insomnia.html,
-hudson,unclassified,skill/hudson.html,
-quasar,unclassified,skill/quasar.html,
-aliyun,unclassified,skill/aliyun.html,
-graven,unclassified,skill/graven.html,
-kvs,unclassified,skill/kvs.html,
-ranger,unclassified,skill/ranger.html,
-iss,unclassified,skill/iss.html,
-concourse,unclassified,skill/concourse.html,
-busted,unclassified,skill/busted.html,
-jackson,unclassified,skill/jackson.html,
-bottle,unclassified,skill/bottle.html,
-quartz,unclassified,skill/quartz.html,
-charles,unclassified,skill/charles.html,
-fresco,unclassified,skill/fresco.html,
-openauth,unclassified,skill/openauth.html,
-amplitude,unclassified,skill/amplitude.html,
-amber,unclassified,skill/amber.html,
-canal,unclassified,skill/canal.html,
-onemap,unclassified,skill/onemap.html,
-jersey,unclassified,skill/jersey.html,
-drone,unclassified,skill/drone.html,
-ireport,unclassified,skill/ireport.html,
-ems,unclassified,skill/ems.html,
-unicon,unclassified,skill/unicon.html,
-mocha,unclassified,skill/mocha.html,
-edb,unclassified,skill/edb.html,
-viper,unclassified,skill/viper.html,
-cocoa framework,unclassified,skill/cocoa framework.html,
-sonar,unclassified,skill/sonar.html,
-scout,unclassified,skill/scout.html,
-trac,unclassified,skill/trac.html,
-nose,unclassified,skill/nose.html,
-ecr,unclassified,skill/ecr.html,
-bourne,unclassified,skill/bourne.html,
-code climate,unclassified,skill/code climate.html,
-gauge,unclassified,skill/gauge.html,
-jws,unclassified,skill/jws.html,
-hooks,unclassified,skill/hooks.html,
-leaflet,unclassified,skill/leaflet.html,
-karma,unclassified,skill/karma.html,
-adobe,unclassified,skill/adobe.html,
-fink,unclassified,skill/fink.html,
-spa,unclassified,skill/spa.html,
-karate,unclassified,skill/karate.html,
-mvp,unclassified,skill/mvp.html,
-flux,unclassified,skill/flux.html,
-yii framework,unclassified,skill/yii framework.html,
-metal,unclassified,skill/metal.html,
-cvs,unclassified,skill/cvs.html,
-dapresy,unclassified,skill/dapresy.html,
-abc,unclassified,skill/abc.html,
-autonomy,unclassified,skill/autonomy.html,
-apollo,unclassified,skill/apollo.html,
-bamboo,unclassified,skill/bamboo.html,
-mode,unclassified,skill/mode.html,
+Name,Search Keyword,Resource Path
+canal,unclassified,skill unclassified/not tech/canal.html
+ireport,unclassified,skill unclassified/not tech/ireport.html
+mantis,unclassified,skill unclassified/not tech/mantis.html
+cocoa framework,unclassified,skill unclassified/not tech/cocoa framework.html
+jersey,unclassified,skill unclassified/not tech/jersey.html
+ranger,unclassified,skill unclassified/not tech/ranger.html
+gauge,unclassified,skill unclassified/not tech/gauge.html
+charles,unclassified,skill unclassified/not tech/charles.html
+hooks,unclassified,skill unclassified/not tech/hooks.html
+iss,unclassified,skill unclassified/not tech/iss.html
+quartz,unclassified,skill unclassified/not tech/quartz.html
+jws,unclassified,skill unclassified/not tech/jws.html
+autonomy,unclassified,skill unclassified/not tech/autonomy.html
+xray,unclassified,skill unclassified/not tech/xray.html
+kepler,unclassified,skill unclassified/not tech/kepler.html
+bourne,unclassified,skill unclassified/not tech/bourne.html
+kvs,unclassified,skill unclassified/not tech/kvs.html
+onemap,unclassified,skill unclassified/not tech/onemap.html
+fission,unclassified,skill unclassified/not tech/fission.html
+nose,unclassified,skill unclassified/not tech/nose.html
+karate,unclassified,skill unclassified/not tech/karate.html
+endur,unclassified,skill unclassified/not tech/endur.html
+flux,unclassified,skill unclassified/not tech/flux.html
+zeppelin,unclassified,skill unclassified/not tech/zeppelin.html
+dapresy,unclassified,skill unclassified/not tech/dapresy.html
+lora,unclassified,skill unclassified/not tech/lora.html
+spa,unclassified,skill unclassified/not tech/spa.html
+polymer,unclassified,skill unclassified/not tech/polymer.html
+amber,unclassified,skill unclassified/not tech/amber.html
+bamboo,unclassified,skill unclassified/not tech/bamboo.html
+fresco,unclassified,skill unclassified/not tech/fresco.html
+hudson,unclassified,skill unclassified/not tech/hudson.html
+sonar,unclassified,skill unclassified/not tech/sonar.html
+ecr,unclassified,skill unclassified/not tech/ecr.html
+ems,unclassified,skill unclassified/not tech/ems.html
+mode,unclassified,skill unclassified/not tech/mode.html
+metal,unclassified,skill unclassified/not tech/metal.html
+retrofit,unclassified,skill unclassified/not tech/retrofit.html
+container,unclassified,skill unclassified/not tech/container.html
+combine,unclassified,skill unclassified/not tech/combine.html
+bottle,unclassified,skill unclassified/not tech/bottle.html
+abc,unclassified,skill unclassified/not tech/abc.html
+apollo,unclassified,skill unclassified/not tech/apollo.html
+aquadata,unclassified,skill unclassified/not tech/aquadata.html
+fn,unclassified,skill unclassified/not tech/fn.html
+stripe,unclassified,skill unclassified/not tech/stripe.html
+dash,unclassified,skill unclassified/not tech/dash.html
+code climate,unclassified,skill unclassified/not tech/code climate.html
+dojo,unclassified,skill unclassified/not tech/dojo.html
+jackson,unclassified,skill unclassified/not tech/jackson.html
+enzyme,unclassified,skill unclassified/not tech/enzyme.html
+adobe,unclassified,skill unclassified/not tech/adobe.html
+mocha,unclassified,skill unclassified/not tech/mocha.html
+concourse,unclassified,skill unclassified/not tech/concourse.html
+entity,unclassified,skill unclassified/not tech/entity.html
+unicon,unclassified,skill unclassified/not tech/unicon.html
+swing,unclassified,skill unclassified/not tech/swing.html
+fisheye,unclassified,skill unclassified/not tech/fisheye.html
+graphite,unclassified,skill unclassified/not tech/graphite.html
+drone,unclassified,skill unclassified/not tech/drone.html
+modular,unclassified,skill unclassified/not tech/modular.html
+mvp,unclassified,skill unclassified/not tech/mvp.html
+scout,unclassified,skill unclassified/not tech/scout.html
+fink,unclassified,skill unclassified/not tech/fink.html
+karma,unclassified,skill unclassified/not tech/karma.html
+photoshop,unclassified,skill unclassified/not tech/photoshop.html
+tencent,unclassified,skill unclassified/not tech/tencent.html
+leaflet,unclassified,skill unclassified/not tech/leaflet.html
+trac,unclassified,skill unclassified/not tech/trac.html
+segment,unclassified,skill unclassified/not tech/segment.html
+adobe xd,unclassified,skill unclassified/not tech/adobe xd.html
+busted,unclassified,skill unclassified/not tech/busted.html
+hyperion,unclassified,skill unclassified/not tech/hyperion.html
+jcr,unclassified,skill unclassified/not tech/jcr.html
+insomnia,unclassified,skill unclassified/not tech/insomnia.html
+dat,unclassified,skill unclassified/not tech/dat.html
+studs,unclassified,skill unclassified/not tech/studs.html
+relay,unclassified,skill unclassified/not tech/relay.html
+epoxy,unclassified,skill unclassified/not tech/epoxy.html
+eclipse,unclassified,skill unclassified/not tech/eclipse.html
+nexus,unclassified,skill unclassified/not tech/nexus.html
+yii framework,unclassified,skill unclassified/not tech/yii framework.html
+amplitude,unclassified,skill unclassified/not tech/amplitude.html
+viper,unclassified,skill unclassified/not tech/viper.html
+cvs,unclassified,skill unclassified/not tech/cvs.html
+graven,unclassified,skill unclassified/not tech/graven.html
+edb,unclassified,skill unclassified/not tech/edb.html
+quasar,unclassified,skill unclassified/not tech/quasar.html
+openauth,unclassified,skill unclassified/not tech/openauth.html
+espresso,unclassified,skill unclassified/not tech/espresso.html
