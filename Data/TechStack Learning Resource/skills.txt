@@ -245,6 +245,7 @@ conan
 concurrency
 consul
 container linux
+container
 control m
 corda
 cordova
@@ -583,6 +584,7 @@ iota
 iotdb
 ip address
 ipython
+iq server
 ironmq
 istio
 j2ee
@@ -742,6 +744,8 @@ microservices
 microsoft game developer kit
 microsoft office
 microsoft quantum
+microsoft sql server
+microsoft sql
 microsoft systems center
 microstrategy
 migration
@@ -868,6 +872,7 @@ operating systems
 opsgenie
 oracle c
 oracle cloud
+oracle database
 oracle linux
 oracle net
 oracle sql
@@ -1125,6 +1130,7 @@ spacelift
 spacy
 spamassassin
 spanner
+spark graphx
 spark
 sparkml
 sparkr
@@ -1134,8 +1140,15 @@ spinnaker
 splunk
 spock
 spotfire
+spring batch
 spring boot
 spring cloud
+spring gateway
+spring integration
+spring jpa
+spring mvc
+spring security
+spring web
 spring
 sprint
 spss
@@ -1192,6 +1205,7 @@ syslog
 systemds
 systems design strategy
 systems design
+t sql
 tableau
 tailwind css
 talend
@@ -1317,6 +1331,7 @@ whatsup gold
 whitesource
 wicket
 wildfly
+windows batch
 windows server
 winform
 winforms
