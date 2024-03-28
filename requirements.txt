@@ -1,7 +1,7 @@
-sqlalchemy==2.0.27
 pandas==1.5.3
-numpy==1.24.4
-matplotlib==3.8.0
-seaborn==0.13.2
-scikit-learn==1.3.0
-xgboost==2.0.3
+spacy==3.7.2
+pypandoc==1.13
+pypandoc-binary==1.13
+html2text==2024.2.26
+flask==2.2.2
+werkzeug==2.2.2
