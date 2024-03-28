@@ -13,5 +13,5 @@ jobs:
           pip install -r requirements.txt
           python -m spacy download en_core_web_md
       - name: Run executable bash script
-        run: bash ./Learning-Resource/run.sh
+        run: bash Learning-Resource/run.sh
       
