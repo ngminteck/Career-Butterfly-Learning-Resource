@@ -1,0 +1,16 @@
+name: NUS ISS MTech IS
+on: [push, workflow_dispatch]
+
+jobs:
+  run-end-to-end-pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Run executable bash script
+        run: bash ./run.sh
+      
