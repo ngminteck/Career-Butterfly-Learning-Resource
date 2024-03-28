@@ -1,1 +1,1 @@
-python3 TechStack Learning Resource/Learning Resource.py
+python3 Learning-Resource/Learning-Resource.py
