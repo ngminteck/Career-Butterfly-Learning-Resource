@@ -1,1 +1,2 @@
-python3 Learning-Resource/Learning-Resource.py
+cd Learning-Resource
+python3 Learning-Resource.py
