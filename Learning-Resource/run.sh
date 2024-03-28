@@ -1,1 +1,1 @@
-python3 Learning Resource.py
+python3 Learning-Resource.py
