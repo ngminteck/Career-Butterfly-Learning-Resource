@@ -9,12 +9,13 @@ import shutil
 import zipfile
 import html2text
 import json
-import requests
-import io
-from flask import Flask, send_file, jsonify, request, make_response
+import re
+from flask import Flask, send_file, jsonify
 from werkzeug.serving import run_simple
 
+
 class Skill:
+
     def __init__(self, name, keyword, groups=None):
         filename = name
         filename = filename.replace('/', '-')
@@ -70,8 +71,13 @@ class TechStack:
         self.two_word_skill_classification_set = set()
         self.one_word_skill_classification_set = set()
         self.backup_keyword_dict_list = {}
+        self.partial_search_ignore_list = ["apache", "microsoft", "google", "amazon", "apple", "vmware", "ibm",
+                                           "oracle", "sap"]
         self.leetcode_list = ["c++", "c", "c#", "python", "java", "javascript", "typescript", "php", "swift", "kotlin",
                               "go", "ruby", "scala", "rust", "racket"]
+        self.one_keyword_dict_list = {}
+        self.two_keyword_dict_list = {}
+        self.three_keyword_dict_list = {}
         self.leetcode_company_dict_list = {}
         self.leetcode_overall_frequency_dict_list = {}
         self.ImportIgnoreSet()
@@ -79,9 +85,70 @@ class TechStack:
         self.ImportClassificationSet()
         self.ImportSkillDictList()
         self.GroupTextVectorization()
+        self.InitKeywordDictList()
         self.InitLeetCodeCompanyNameDictList()
         self.InitLeetcodeOverallFrequencyDictList()
         self.request_queue_no = 0
+
+    def GenerateSkillMatchScore(self, your_skill, job_skill):
+        result_dict = {"Your Skills List": None, "Job Skills List": None, "Match Score": None}
+        your_skill_set = self.ExtractSkillKeyword(your_skill)
+        job_skill_set = self.ExtractSkillKeyword(job_skill)
+        result_dict["Your Skills List"] = list(your_skill_set)
+        result_dict["Job Skills List"] = list(job_skill_set)
+        match_score = {}
+        for js in result_dict["Job Skills List"]:
+            if js in result_dict["Your Skills List"]:
+                match_score[js] = 1
+            else:
+                match_score[js] = 0
+        result_dict["Match Score"] = match_score
+        return result_dict
+
+    def ExtractSkillKeyword(self, text):
+        skill_set = set()
+        text = text.lower()
+        text = text.replace("e.g.,", "")
+        text = text.replace("\n", " ")
+        text = text.replace("!", "")
+        text = text.replace(",", "")
+        text = text.replace("(", "")
+        text = text.replace(")", "")
+        text = text.replace(":", "")
+        text = text.replace("\"", " ")
+        text = text.replace("/", " ")
+        text = text.replace(". ", " ")
+        print(text)
+        words = text.split()
+        # = []
+  
+        for i in range(2, len(words)): 
+            search_word = words[i - 2] + " " + words[i - 1] + " " + words[i]
+            if search_word in self.three_keyword_dict_list:
+                skill_set.add(self.three_keyword_dict_list[search_word])
+                #remove_index.append(i -2)
+                #remove_index.append(i -1)
+                #remove_index.append(i)
+        #for i in remove_index:
+          #  del words[i]
+        #remove_index.clear()
+        for i in range(1, len(words)): 
+            search_word = words[i - 1] + " " + words[i]
+            if search_word in self.two_keyword_dict_list:
+                skill_set.add(self.two_keyword_dict_list[search_word])
+                #remove_index.append(i -1)
+                #remove_index.append(i)
+      #  for i in remove_index:
+         #   del words[i]
+        #remove_index.clear()
+        for i in range(len(words)):
+            if words[i] in self.one_keyword_dict_list:
+                skill_set.add(self.one_keyword_dict_list[words[i]])
+                #remove_index.append(i)
+       # for i in remove_index:
+          #  del words[i]
+        print(words)
+        return skill_set
 
     def GetRequestQueueNo(self):
         self.request_queue_no += 1
@@ -101,27 +168,27 @@ class TechStack:
                 break
         difference_skill_dict_list = {}
         # difference_skill_dict_list = [dict_ for dict_ in job_skills if not any(dict_ == dict2 for dict2 in your_skills)]
+
         difference_skill_dict_list = job_skills
         if len(difference_skill_dict_list) != 0:
             skill_result_dict = self.GenerateSkillResource(difference_skill_dict_list, generated_directory)
             result_dict["Skill Learning Resource Content"] = skill_result_dict["Skill Learning Resource Content"]
             result_dict["Skill Learning Resource Remarks"] = skill_result_dict["Skill Learning Resource Remarks"]
 
-        filename = "learning resource/"+ generated_directory +"/response.json"
+        filename = "learning resource/" + generated_directory + "/response.json"
+        print(result_dict["Skill Learning Resource Remarks"])
 
         # Serialize and write the list of dictionaries to a file
         with open(filename, 'w') as file:
             json.dump(result_dict, file, indent=4)
-        
 
         self.ZipLearningResource(generated_directory)
-
 
     @staticmethod
     def ZipLearningResource(generated_directory):
         directory_path = "learning resource/" + generated_directory
         zip_filename = "learning resource/" + generated_directory + "/learning resource.zip"
-        valid_extensions = ('.html', '.docx', '.csv','.json')
+        valid_extensions = ('.html', '.docx', '.csv', '.json')
 
         with zipfile.ZipFile(zip_filename, 'w') as zipf:
             for folder_name, sub_folders, filenames in os.walk(directory_path):
@@ -211,7 +278,9 @@ class TechStack:
                       encoding='utf-8') as file:
                 file.write(html_content)
                 file.close()
-            pypandoc.convert_text(html_content, 'docx', format='html', outputfile="learning resource/" + generated_directory + "/leetcode learning resource.docx")
+            pypandoc.convert_text(html_content, 'docx', format='html',
+                                  outputfile="learning resource/" + generated_directory +
+                                             "/leetcode learning resource.docx")
             df1 = pd.read_csv("leetcode/Companies Leetcode/" + company_name_to_search + ".csv")
             df1[company + " Company Frequency"] = df1["Frequency"]
             df1 = df1.drop(columns=['Frequency'])
@@ -257,10 +326,12 @@ class TechStack:
                         leetcode_dict_list[no] = no + ". " + title + "\n" + link + "\n\n" + string_format
                         file.close()
 
-            with open("learning resource/" + generated_directory + "/leetcode question.html", 'w', encoding='utf-8') as file:
+            with (open("learning resource/" + generated_directory + "/leetcode question.html", 'w', encoding='utf-8')
+                  as file):
                 file.write(questions_content)
                 file.close()
-            pypandoc.convert_text(questions_content, 'docx', format='html', outputfile="learning resource/" + generated_directory + "/leetcode question.docx")
+            pypandoc.convert_text(questions_content, 'docx', format='html',
+                                  outputfile="learning resource/" + generated_directory + "/leetcode question.docx")
             return leetcode_dict_list
 
     def GenerateSkillResource(self, skills, generated_directory):
@@ -271,7 +342,9 @@ class TechStack:
         if len(document_prepare_set) == 0:
             return result_dict
 
-        result_dict["Skill Learning Resource Remarks"], result_dict["Skill Learning Resource Content"] = self.GenerateSkillResourceContent(skills, document_prepare_set, result_dict["Skill Learning Resource Remarks"], generated_directory)
+        result_dict["Skill Learning Resource Remarks"], result_dict["Skill Learning Resource Content"] =\
+            self.GenerateSkillResourceContent(skills, document_prepare_set,
+                                              result_dict["Skill Learning Resource Remarks"], generated_directory)
         return result_dict
 
     def GenerateSkillResourcePreProcessing(self, skills, remarks):
@@ -280,7 +353,8 @@ class TechStack:
         for key, value in skills.items():
             remarks, skills[key] = self.SkillLearningResourceFilter(key, value, remarks)
             if skills[key] != "":
-                remarks, document_prepare_set = self.SkillLearningResourceSearch(key, skills[key], document_prepare_set, remarks)
+                remarks, document_prepare_set = self.SkillLearningResourceSearch(key, skills[key],
+                                                                                 document_prepare_set, remarks)
         return remarks, document_prepare_set
 
     def GenerateSkillResourceContent(self, skills, document_prepare_set, remarks, generated_directory):
@@ -368,11 +442,9 @@ class TechStack:
         for sdl in self.skill_dict_list:
 
             check1 = sdl
-            if check1.endswith('s'):
-                check1 = check1[:-1]
+            check1 = re.sub(r'\b(\w+)s\b', r'\1', check1)
             check2 = text
-            if check2.endswith('s'):
-                check2 = check2[:-1]
+            check2 = re.sub(r'\b(\w+)s\b', r'\1', check2)
             if check1 == check2:
                 document_prepare_set.add(sdl)
                 return remarks, document_prepare_set
@@ -411,22 +483,23 @@ class TechStack:
         words = text.split()
         # check word by word
         for word in words:
-            if word in self.skill_dict_list:
-                document_prepare_set.add(word)
-                if len(remarks) != 0:
-                    remarks += "\n"
-                remarks += key
-                remarks += " also known as "
-                remarks += word.title()
-                found = True
-            elif word in self.group_dict_list:
-                document_prepare_set.add(word)
-                if len(remarks) != 0:
-                    remarks += "\n"
-                remarks += key
-                remarks += " also known as "
-                remarks += word.title()
-                found = True
+            if word not in self.partial_search_ignore_list:
+                if word in self.skill_dict_list:
+                    document_prepare_set.add(word)
+                    if len(remarks) != 0:
+                        remarks += "\n"
+                    remarks += key
+                    remarks += " also known as "
+                    remarks += word.title()
+                    found = True
+                elif word in self.group_dict_list:
+                    document_prepare_set.add(word)
+                    if len(remarks) != 0:
+                        remarks += "\n"
+                    remarks += key
+                    remarks += " also known as "
+                    remarks += word.title()
+                    found = True
 
         if not found:
             if len(remarks) != 0:
@@ -487,117 +560,6 @@ class TechStack:
         if name not in self.not_found_dict_list:
             path = "unclassified"
             self.not_found_dict_list[name] = Skill(name, path, keyword)
-
-    def ImportIgnoreSet(self):
-        f = open("ignore.txt", "r")
-        for c in f:
-            c = c.replace("\n", "")
-            self.ignore_set.add(c)
-        f.close()
-
-    def ImportClassificationSet(self):
-        file = open("three word skill classification.txt", "r")
-        for word in file:
-            word = word.replace("\n", "")
-            self.three_word_skill_classification_set.add(word)
-        file.close()
-        file = open("two word skill classification.txt", "r")
-        for word in file:
-            word = word.replace("\n", "")
-            self.two_word_skill_classification_set.add(word)
-        file.close()
-        file = open("one word skill classification.txt", "r")
-        for word in file:
-            word = word.replace("\n", "")
-            self.one_word_skill_classification_set.add(word)
-        file.close()
-
-    def ExportSkillDictList(self):
-        file_path = "skills.csv"
-        with open(file_path, 'w', newline='') as file:
-            writer = csv.writer(file)
-            writer.writerow(["Name", "Search Keyword", "Resource Path", "Groups"])
-            for key, value in self.skill_dict_list.items():
-                name = key
-                search = value.keyword_search
-                path = value.resource_path
-                groups = ""
-
-                for g in value.group_set:
-                    groups += "["
-                    groups += g
-                    groups += "]"
-
-                writer.writerow([name, search, path, groups])
-            file.close()
-        with open('skills.txt', 'w') as f:
-            for i in self.skill_dict_list:
-                f.write(i)
-                f.write("\n")
-            f.close()
-
-    def ImportSkillDictList(self):
-        df = pd.read_csv("skills.csv")
-        for index, row in df.iterrows():
-            name = str(row['Name'])
-            keyword = str(row['Search Keyword'])
-            groups = str(row['Groups'])
-            groups_set = None
-            groups = groups.replace('[', '')
-            groups_list = groups.split(']')
-            if len(groups_list) > 0:
-                groups_list = groups_list[:-1]
-                groups_set = set()
-                for g in groups_list:
-                    groups_set.add(g)
-            # auto create group also
-            self.AddSkillDictList(name, keyword, groups_set)
-
-    def ExportGroupDictList(self):
-        file_path = "groups.csv"
-        with open(file_path, 'w', newline='') as file:
-            writer = csv.writer(file)
-            writer.writerow(["Name", "Search Keyword", "Resource Path", "skills"])
-            for key, value in self.group_dict_list.items():
-                name = key
-                search = value.keyword_search
-                path = value.resource_path
-                skills = ""
-                for s in value.skill_set:
-                    skills += "["
-                    skills += s
-                    skills += "]"
-                writer.writerow([name, search, path, skills])
-            file.close()
-
-    def ExportMatchReplaceDictList(self):
-        file_path = "exact match.csv"
-        with open(file_path, 'w', newline='') as file:
-            writer = csv.writer(file)
-            writer.writerow(["Word", "Replace"])
-            for key, value in self.exact_match_replace_dict_list.items():
-                writer.writerow([key, value])
-            file.close()
-        file_path = "partial match.csv"
-        with open(file_path, 'w', newline='') as file:
-            writer = csv.writer(file)
-            writer.writerow(["Word", "Replace"])
-            for key, value in self.partial_match_replace_dict_list.items():
-                writer.writerow([key, value])
-            file.close()
-
-    def ExportNotFoundSet(self):
-        file_path = "not found.csv"
-        with open(file_path, 'w', newline='') as file:
-            writer = csv.writer(file)
-            writer.writerow(["Name", "Search Keyword", "Resource Path"])
-            for key, value in self.not_found_dict_list.items():
-                name = key
-                search = value.keyword_search
-                path = "skill unclassified/not tech/" + name + ".html"
-
-                writer.writerow([name, search, path])
-            file.close()
 
     def GroupTextVectorization(self):
         for word in self.group_dict_list:
@@ -826,6 +788,7 @@ class TechStack:
                     self.ReClassificationSkillDictList(filename, filename + " in tech", {"unknown"})
 
         self.GroupTextVectorization()
+        self.InitKeywordDictList()
         self.ExportSkillDictList()
         self.ExportGroupDictList()
 
@@ -836,8 +799,6 @@ class TechStack:
         h.reference_links = True
         directory = 'skill unclassified/not tech'
         filenames = [f for f in listdir(directory) if isfile(join(directory, f))]
-        ignore_word_list = ["a", "an", "the", "of", "on", "as", "by", "to", "with", "for", "is", "are", "was", "were",
-                            "in"]
         tech_word_list = ["software", "application", "applications", "platform", "platforms", "api", "web", "website",
                           "network", "networks", "security", "architecture", "development", "system", "systems",
                           "language", "cloud", "data", "open", "source", "windows"]
@@ -929,6 +890,138 @@ class TechStack:
                 f.write('\n')
             file.close()
 
+    def ImportIgnoreSet(self):
+        f = open("ignore.txt", "r")
+        for c in f:
+            c = c.replace("\n", "")
+            self.ignore_set.add(c)
+        f.close()
+
+    def ImportClassificationSet(self):
+        file = open("three word skill classification.txt", "r")
+        for word in file:
+            word = word.replace("\n", "")
+            self.three_word_skill_classification_set.add(word)
+        file.close()
+        file = open("two word skill classification.txt", "r")
+        for word in file:
+            word = word.replace("\n", "")
+            self.two_word_skill_classification_set.add(word)
+        file.close()
+        file = open("one word skill classification.txt", "r")
+        for word in file:
+            word = word.replace("\n", "")
+            self.one_word_skill_classification_set.add(word)
+        file.close()
+
+    def ExportSkillDictList(self):
+        file_path = "skills.csv"
+        with open(file_path, 'w', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow(["Name", "Search Keyword", "Resource Path", "Groups"])
+            for key, value in self.skill_dict_list.items():
+                name = key
+                search = value.keyword_search
+                path = value.resource_path
+                groups = ""
+
+                for g in value.group_set:
+                    groups += "["
+                    groups += g
+                    groups += "]"
+
+                writer.writerow([name, search, path, groups])
+            file.close()
+        with open('skills.txt', 'w') as f:
+            for i in self.skill_dict_list:
+                f.write(i)
+                f.write("\n")
+            f.close()
+
+    def ImportSkillDictList(self):
+        df = pd.read_csv("skills.csv")
+        for index, row in df.iterrows():
+            name = str(row['Name'])
+            keyword = str(row['Search Keyword'])
+            groups = str(row['Groups'])
+            groups_set = None
+            groups = groups.replace('[', '')
+            groups_list = groups.split(']')
+            if len(groups_list) > 0:
+                groups_list = groups_list[:-1]
+                groups_set = set()
+                for g in groups_list:
+                    groups_set.add(g)
+            # auto create group also
+            self.AddSkillDictList(name, keyword, groups_set)
+
+    def ExportGroupDictList(self):
+        file_path = "groups.csv"
+        with open(file_path, 'w', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow(["Name", "Search Keyword", "Resource Path", "skills"])
+            for key, value in self.group_dict_list.items():
+                name = key
+                search = value.keyword_search
+                path = value.resource_path
+                skills = ""
+                for s in value.skill_set:
+                    skills += "["
+                    skills += s
+                    skills += "]"
+                writer.writerow([name, search, path, skills])
+            file.close()
+
+    def ExportMatchReplaceDictList(self):
+        file_path = "exact match.csv"
+        with open(file_path, 'w', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow(["Word", "Replace"])
+            for key, value in self.exact_match_replace_dict_list.items():
+                writer.writerow([key, value])
+            file.close()
+        file_path = "partial match.csv"
+        with open(file_path, 'w', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow(["Word", "Replace"])
+            for key, value in self.partial_match_replace_dict_list.items():
+                writer.writerow([key, value])
+            file.close()
+
+    def ExportNotFoundSet(self):
+        file_path = "not found.csv"
+        with open(file_path, 'w', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow(["Name", "Search Keyword", "Resource Path"])
+            for key, value in self.not_found_dict_list.items():
+                name = key
+                search = value.keyword_search
+                path = "skill unclassified/not tech/" + name + ".html"
+
+                writer.writerow([name, search, path])
+            file.close()
+
+    def InitKeywordDictList(self):
+        self.one_keyword_dict_list.clear()
+        self.two_keyword_dict_list.clear()
+        self.three_keyword_dict_list.clear()
+        for s in self.skill_dict_list:
+            words = s.split()  
+            if len(words) == 1:
+                self.one_keyword_dict_list[s] = s
+            elif len(words) == 2:
+                self.two_keyword_dict_list[s] = s
+            else:
+                self.three_keyword_dict_list[s] = s
+        for s in self.group_dict_list:
+            words = s.split()
+            if len(words) == 1:
+                self.one_keyword_dict_list[s] = s
+            elif len(words) == 2:
+                self.two_keyword_dict_list[s] = s
+            else:
+                self.three_keyword_dict_list[s] = s
+
     def InitLeetCodeCompanyNameDictList(self):
         f = open("leetcode/companies.txt", "r")
 
@@ -946,7 +1039,6 @@ class TechStack:
 
     def AllThisWillBeRemoveOnceFinalize(self):
 
-        self.exact_match_replace_dict_list["aws"] = "amazon web services"
         self.exact_match_replace_dict_list["tdd"] = "testing"
         self.exact_match_replace_dict_list["webdriver"] = "web crawler"
         self.exact_match_replace_dict_list["vbnet"] = "visual basic .net"
@@ -954,7 +1046,6 @@ class TechStack:
         self.exact_match_replace_dict_list["vb"] = "visual basic"
         self.exact_match_replace_dict_list["html5"] = "html"
         self.exact_match_replace_dict_list["svn"] = "subversion"
-        self.exact_match_replace_dict_list["rdbms"] = "relational"
         self.exact_match_replace_dict_list["unity3d"] = "unity"
         self.exact_match_replace_dict_list["mssql"] = "microsoft sql"
         self.exact_match_replace_dict_list["shaders"] = "shader"
@@ -962,25 +1053,38 @@ class TechStack:
         self.exact_match_replace_dict_list["mui"] = "material ui"
         self.exact_match_replace_dict_list["gui"] = "graphical user interface"
         self.exact_match_replace_dict_list["ui"] = "user interface"
-        self.exact_match_replace_dict_list["mq"] = "message queue"
         self.exact_match_replace_dict_list["aliyun"] = "alibaba cloud"
         self.exact_match_replace_dict_list["ali-cloud"] = "alibaba cloud"
+        self.exact_match_replace_dict_list["asp.net mvc 5"] = "asp.net mvc"
 
         self.partial_match_replace_dict_list["ms"] = "microsoft"
-        self.partial_match_replace_dict_list["vm"] = "virtual machine"
-        self.partial_match_replace_dict_list["website"] = "web"
-        self.partial_match_replace_dict_list["test"] = "testing"
-        self.partial_match_replace_dict_list["networking"] = "network"
+        self.partial_match_replace_dict_list["db"] = "database"
 
         self.ExportMatchReplaceDictList()
 
+
 app = Flask(__name__)
 learning_resource = TechStack()
+#learning_resource.MakeDocsFromHtml()
+#learning_resource.SkillReClassification()
 
 
 @app.route('/')
 def hello():
     return 'Hello, World!'
+
+
+@app.route('/generate_skill_match_score', methods=['GET'])
+def generate_skill_match_score():
+    your_skill = "c, c++, c#, java, python, javascript, typescript"
+    job_skill = "Responsibilities:\nCollaborate with business stakeholders to understand their data needs and objectives.\nCollect, clean, and preprocess data from various sources for analysis.\nPerform exploratory data analysis to identify trends, patterns, and correlations.\nDevelop and implement predictive models and machine learning algorithms to solve business challenges.\nApply statistical analysis techniques to analyze complex datasets and draw meaningful conclusions.\nCreate data visualizations and reports to communicate insights effectively to non-technical audiences.\nCollaborate with data engineers to optimize data pipelines for efficient data processing.\nConduct A/B testing and experimentation to evaluate the effectiveness of different strategies.\nStay up-to-date with advancements in data science, machine learning, and artificial intelligence.\nAssist in the development and deployment of machine learning models into production environments.\nProvide data-driven insights and recommendations to support strategic decision-making.\nCollaborate with other data scientists, analysts, and cross-functional teams to drive data initiatives.\nRequirements:\nBachelor's degree in Data Science, Computer Science, Statistics, Mathematics, or a related field (or equivalent practical experience).\nProven experience as a Data Scientist or similar role, with a portfolio of data science projects that demonstrate your analytical skills.\nProficiency in programming languages such as Python or R for data manipulation and analysis.\nStrong understanding of statistical analysis, machine learning algorithms, and data visualization techniques.\nExperience with machine learning frameworks and libraries (e.g., scikit-learn, TensorFlow, PyTorch).\nFamiliarity with data manipulation libraries (e.g., Pandas, NumPy) and data visualization tools (e.g., Matplotlib, Seaborn).\nSolid understanding of SQL and database concepts for querying and extracting data.\nExcellent problem-solving skills and the ability to work with complex, unstructured datasets.\nEffective communication skills to explain technical concepts to non-technical stakeholders.\nExperience with big data technologies (e.g., Hadoop, Spark) is a plus.\nKnowledge of cloud platforms and services for data analysis (e.g., AWS, Azure) is advantageous.\nFamiliarity with natural language processing (NLP) and text analysis is a plus.\nAdvanced degree (Master's or PhD) in a related field is beneficial but not required."
+    result = learning_resource.GenerateSkillMatchScore(your_skill, job_skill)
+
+    for i in result["Job Skills List"]:
+        print(i)
+    
+    return jsonify(result)
+
 
 @app.route('/generate_learning_resource', methods=['GET'])
 def generate_learning_resource():
@@ -991,10 +1095,9 @@ def generate_learning_resource():
         nodeflair[s] =s
     file.close()
     generated_directory = str(learning_resource.GetRequestQueueNo())
-    learning_resource.GenerateLearningResource(None, nodeflair, "Google",generated_directory)
+    learning_resource.GenerateLearningResource(None, nodeflair, "JPMorgan", generated_directory)
     learning_resource_zip_path = "learning resource/" + generated_directory + "/learning resource.zip"
 
-    
     return send_file(learning_resource_zip_path, as_attachment=True, download_name='learning resource.zip')
 
 

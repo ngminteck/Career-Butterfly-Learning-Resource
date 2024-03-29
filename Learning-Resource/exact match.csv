@@ -1,5 +1,4 @@
 Word,Replace
-aws,amazon web services
 tdd,testing
 webdriver,web crawler
 vbnet,visual basic .net
@@ -7,7 +6,6 @@ vb.net,visual basic .net
 vb,visual basic
 html5,html
 svn,subversion
-rdbms,relational
 unity3d,unity
 mssql,microsoft sql
 shaders,shader
@@ -15,6 +13,6 @@ uat,testing
 mui,material ui
 gui,graphical user interface
 ui,user interface
-mq,message queue
 aliyun,alibaba cloud
 ali-cloud,alibaba cloud
+asp.net mvc 5,asp.net mvc
