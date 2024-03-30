@@ -1,9 +1,13 @@
 FROM python:3.10
-WORKDIR /Learning-Resource
-COPY ./Learning-Resource ./Learning-Resource
-COPY ./requirements.txt ./
+WORKDIR /app
+
+COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
+
 RUN python -m spacy download en_core_web_lg
 
+COPY . .
 
-CMD ["python3","Learning-Resource.py"]
+EXPOSE 5000
+
+CMD ["python", "Learning-Resource.py"]

@@ -10,16 +10,12 @@ import zipfile
 import html2text
 import json
 import re
-from collections import Counter
-from flask import Flask, send_file, jsonify
+from flask import Flask, send_file
 from werkzeug.serving import run_simple
-
-
 from spacy.matcher import PhraseMatcher
-# load default skills data base
 from skillNer.general_params import SKILL_DB
-# import skill extractor
 from skillNer.skill_extractor_class import SkillExtractor
+
 
 class Skill:
 
@@ -108,22 +104,22 @@ class TechStack:
         text = text.replace("/", " ")
         text = text.replace(". ", " ")
         words = text.split()
-  
-        for i in range(2, len(words)): 
+
+        for i in range(2, len(words)):
             search_word = words[i - 2] + " " + words[i - 1] + " " + words[i]
             if search_word in self.three_keyword_dict_list:
                 skill_set.add(self.three_keyword_dict_list[search_word])
-        for i in range(1, len(words)): 
+        for i in range(1, len(words)):
             search_word = words[i - 1] + " " + words[i]
             if search_word in self.two_keyword_dict_list:
                 skill_set.add(self.two_keyword_dict_list[search_word])
         for i in range(len(words)):
             if words[i] in self.one_keyword_dict_list:
                 skill_set.add(self.one_keyword_dict_list[words[i]])
-                
-        annotations =self.skill_extractor.annotate(text)
 
-        #self.skill_extractor.describe(annotations)
+        annotations = self.skill_extractor.annotate(text)
+
+        # self.skill_extractor.describe(annotations)
 
         result = annotations["results"]
         skill_list_1 = result["full_matches"]
@@ -224,7 +220,6 @@ class TechStack:
             final_df = appended_df.head(100).copy()
             final_df.to_csv("learning resource/" + generated_directory + "/leetcode question list.csv",
                             encoding='utf-8', index=False)
-           
 
     def GenerateSkillResource(self, skills, generated_directory):
         result_dict = {"Skill Learning Resource Content": None, "Skill Learning Resource Remarks": str("")}
@@ -234,9 +229,9 @@ class TechStack:
         if len(document_prepare_set) == 0:
             return result_dict
 
-        result_dict["Skill Learning Resource Remarks"], result_dict["Skill Learning Resource Content"] =\
-            self.GenerateSkillResourceContent(skills, document_prepare_set,
-                                              result_dict["Skill Learning Resource Remarks"], generated_directory)
+        result_dict["Skill Learning Resource Remarks"], result_dict["Skill Learning Resource Content"] = \
+            self.GenerateSkillResourceContent(document_prepare_set, result_dict["Skill Learning Resource Remarks"],
+                                              generated_directory)
         return result_dict
 
     def GenerateSkillResourcePreProcessing(self, skills, remarks):
@@ -249,7 +244,7 @@ class TechStack:
                                                                                  document_prepare_set, remarks)
         return remarks, document_prepare_set
 
-    def GenerateSkillResourceContent(self, skills, document_prepare_set, remarks, generated_directory):
+    def GenerateSkillResourceContent(self, document_prepare_set, remarks, generated_directory):
         skill_dict = {}
         html_content = ""
         for d in document_prepare_set:
@@ -279,16 +274,16 @@ class TechStack:
                     h.inline_links = False
                     h.reference_links = True
                     clean_text = h.handle(file_content)
-                    clean_text = clean_text.replace("[1]","")
-                    clean_text = clean_text.replace("[2]","")
-                    clean_text = clean_text.replace("[3]","")
-                    clean_text = clean_text.replace("[4]","")
-                    clean_text = clean_text.replace("[5]","")
-                    clean_text = clean_text.replace("[6]","")
-                    clean_text = clean_text.replace("[7]","")
-                    clean_text = clean_text.replace("[8]","")
-                    clean_text = clean_text.replace("[9]","")
-                    clean_text = clean_text.replace("**","")
+                    clean_text = clean_text.replace("[1]", "")
+                    clean_text = clean_text.replace("[2]", "")
+                    clean_text = clean_text.replace("[3]", "")
+                    clean_text = clean_text.replace("[4]", "")
+                    clean_text = clean_text.replace("[5]", "")
+                    clean_text = clean_text.replace("[6]", "")
+                    clean_text = clean_text.replace("[7]", "")
+                    clean_text = clean_text.replace("[8]", "")
+                    clean_text = clean_text.replace("[9]", "")
+                    clean_text = clean_text.replace("**", "")
                     skill_dict[title] = clean_text
                 file.close()
         with open("learning resource/" + generated_directory + "/skill learning resource.html", 'w',
@@ -305,7 +300,7 @@ class TechStack:
         if text.find('(') != -1:
             text = text.split("(")[0]
             text = text.rsplit()[0]
-       
+
         if text in self.exact_match_replace_dict_list:
             text = self.exact_match_replace_dict_list.get(text)
         words = text.split()
@@ -459,7 +454,6 @@ class TechStack:
             path = "unclassified"
             self.not_found_dict_list[name] = Skill(name, path, keyword)
 
-
     def CopyReplaceFolder(self, source_dir, dest_dir, filename):
         if dest_dir == "unknown":
             keyword = filename + " in tech"
@@ -469,14 +463,13 @@ class TechStack:
         dest_dir = "skill classified/" + dest_dir
         if not os.path.exists(dest_dir):
             os.makedirs(dest_dir)
-       
+
         source_path_html = source_dir + "/" + filename + ".html"
-      
+
         destination_path_html = dest_dir + "/" + filename + ".html"
-       
+
         if source_path_html != destination_path_html:
             shutil.copyfile(source_path_html, destination_path_html)
-
 
     def DeleteAllSkillFile(self):
         for directory in self.three_word_skill_classification_set:
@@ -706,8 +699,8 @@ class TechStack:
                 words = text_content.split()
                 for i in range(len(words)):
                     first_word = words[i]
-                    #if '1.' in first_word:
-                        #break
+                    # if '1.' in first_word:
+                    # break
                     if first_word.endswith('.'):
                         first_word = first_word[:-1]
                     if first_word in ignore_word_list:
@@ -732,7 +725,7 @@ class TechStack:
 
                     if i + 2 >= len(words):
                         break
-                        
+
                     third_word = words[i + 2]
                     if third_word.endswith('.'):
                         third_word = third_word[:-1]
@@ -757,13 +750,6 @@ class TechStack:
                 f.write(str(s) + " - " + str(three_word_dict_list[s]))
                 f.write('\n')
             file.close()
-
-    def ImportIgnoreSet(self):
-        f = open("ignore.txt", "r")
-        for c in f:
-            c = c.replace("\n", "")
-            self.ignore_set.add(c)
-        f.close()
 
     def ImportClassificationSet(self):
         file = open("word classification/three word skill classification.txt", "r")
@@ -840,7 +826,6 @@ class TechStack:
                 writer.writerow([name, search, path, skills])
             file.close()
 
-
     def ExportNotFoundSet(self):
         file_path = "not found.csv"
         with open(file_path, 'w', newline='') as file:
@@ -859,7 +844,7 @@ class TechStack:
         self.two_keyword_dict_list.clear()
         self.three_keyword_dict_list.clear()
         for s in self.skill_dict_list:
-            words = s.split()  
+            words = s.split()
             if len(words) == 1:
                 self.one_keyword_dict_list[s] = s
             elif len(words) == 2:
@@ -927,16 +912,28 @@ class TechStack:
                 match_score[js] = 1
             else:
                 match_score[js] = 0
+                if js in self.group_dict_list:
+                    group_skill_set = self.group_dict_list[js].skill_set
+                    for gss in group_skill_set:
+                        if gss in result_dict["Your Skills List"]:
+                            match_score[js] = 1
+                            break
+
         result_dict["Match Score"] = match_score
         return result_dict
 
-    def GenerateLearningResource(self, your_skills, job_skills, company_name, generated_directory):
+    def GenerateLearningResource(self, resume, job_description, company_name, generated_directory):
         result_dict = {"Skill Learning Resource Content": None,
-                       "Skill Learning Resource Remarks": str("")}
+                       "Skill Learning Resource Remarks": str(""),
+                       "Match Score": None}
         if not os.path.exists("learning resource/" + generated_directory):
             os.makedirs("learning resource/" + generated_directory)
 
-        
+        result = self.GenerateSkillMatchScore(resume, job_description)
+
+        job_skills = result["Job Skills List"]
+        result_dict["Match Score"] = result["Match Score"]
+
         for i in range(len(job_skills)):
             text = job_skills[i]
             text = text.lower()
@@ -944,16 +941,12 @@ class TechStack:
                 print("Getting leetcode learning resource..")
                 self.GenerateLeetcodeResource(company_name, generated_directory)
                 break
-        counter1 = Counter(job_skills)
-        counter2 = Counter(your_skills)
-        result_counter = counter1 - counter2
-        result_list = list(result_counter.elements())
-        
-        difference_skill_dict_list = {}
 
-        for i in range(len(result_list)):
-            skill = result_list[i]
-            difference_skill_dict_list[skill] = skill
+        ms_dict = result["Match Score"]
+        difference_skill_dict_list = {}
+        for key, value in ms_dict.items():
+            if value == 0:
+                difference_skill_dict_list[key] = key
 
         if len(difference_skill_dict_list) != 0:
             print("Getting skill learning resource..")
@@ -962,28 +955,28 @@ class TechStack:
             result_dict["Skill Learning Resource Remarks"] = skill_result_dict["Skill Learning Resource Remarks"]
 
         filename = "learning resource/" + generated_directory + "/response.json"
-        #print(result_dict["Skill Learning Resource Remarks"])
+        # print(result_dict["Skill Learning Resource Remarks"])
 
-            
         # Serialize and write the list of dictionaries to a file
         with open(filename, 'w') as file:
             json.dump(result_dict, file, indent=4)
 
         self.ZipLearningResource(generated_directory)
 
+
 app = Flask(__name__)
 learning_resource = TechStack()
 
-#learning_resource.SkillReClassification()
-#learning_resource.FindClassificationKeyword()
+
+# learning_resource.SkillReClassification()
+# learning_resource.FindClassificationKeyword()
 
 
-
-#@app.route('/generate_learning_resource', methods=['GET'])
+# @app.route('/generate_learning_resource', methods=['GET'])
 @app.route('/')
 def generate_learning_resource():
     print("triggered")
-    resume ="""
+    resume = """
     Clarence Ng Min Teck 黄明德
 Singapore
 ng_min_teck@hotmail.com 88454484
@@ -999,7 +992,8 @@ Currently pursuing part-time master's study in AI, focusing on computer vision a
 predicts procedural generate 3d reconstruction building interior environment, layout, and dimension with different
 text/image/video models. Another research interest is to make AI translate existing songs with different languages
 and style covers, using translation and LLM to generate multiple sentences with about the same meaning and try
-to fit the tune, also AI tries to learn the singer's voice and generate what will be sound like when singing in different
+to fit the tune, also AI tries to learn the singer's voice and generate what will be sound like when singing in 
+different
 language and style. Or storybook to movie, movie to storybook, etc. I Still thinking about maybe going for a Ph.D.
 study after my master's course.
 Skills
@@ -1263,20 +1257,47 @@ Processing (NLP)   •   Computer Vision   •   C (Programming Language)
     """
 
     job_description = """
-    Responsibilities:\nCollaborate with business stakeholders to understand their data needs and objectives.\nCollect, clean, and preprocess data from various sources for analysis.\nPerform exploratory data analysis to identify trends, patterns, and correlations.\nDevelop and implement predictive models and machine learning algorithms to solve business challenges.\nApply statistical analysis techniques to analyze complex datasets and draw meaningful conclusions.\nCreate data visualizations and reports to communicate insights effectively to non-technical audiences.\nCollaborate with data engineers to optimize data pipelines for efficient data processing.\nConduct A/B testing and experimentation to evaluate the effectiveness of different strategies.\nStay up-to-date with advancements in data science, machine learning, and artificial intelligence.\nAssist in the development and deployment of machine learning models into production environments.\nProvide data-driven insights and recommendations to support strategic decision-making.\nCollaborate with other data scientists, analysts, and cross-functional teams to drive data initiatives.\nRequirements:\nBachelor's degree in Data Science, Computer Science, Statistics, Mathematics, or a related field (or equivalent practical experience).\nProven experience as a Data Scientist or similar role, with a portfolio of data science projects that demonstrate your analytical skills.\nProficiency in programming languages such as Python or R for data manipulation and analysis.\nStrong understanding of statistical analysis, machine learning algorithms, and data visualization techniques.\nExperience with machine learning frameworks and libraries (e.g., scikit-learn, TensorFlow, PyTorch).\nFamiliarity with data manipulation libraries (e.g., Pandas, NumPy) and data visualization tools (e.g., Matplotlib, Seaborn).\nSolid understanding of SQL and database concepts for querying and extracting data.\nExcellent problem-solving skills and the ability to work with complex, unstructured datasets.\nEffective communication skills to explain technical concepts to non-technical stakeholders.\nExperience with big data technologies (e.g., Hadoop, Spark) is a plus.\nKnowledge of cloud platforms and services for data analysis (e.g., AWS, Azure) is advantageous.\nFamiliarity with natural language processing (NLP) and text analysis is a plus.\nAdvanced degree (Master's or PhD) in a related field is beneficial but not required.
+    Responsibilities:\nCollaborate with business stakeholders to understand their data needs and objectives.\n
+    Collect, clean, and preprocess data from various sources for analysis.\n
+    Perform exploratory data analysis to identify trends, patterns, and correlations.\n
+    Develop and implement predictive models and machine learning algorithms to solve business challenges.\n
+    Apply statistical analysis techniques to analyze complex datasets and draw meaningful conclusions.\n
+    Create data visualizations and reports to communicate insights effectively to non-technical audiences.\n
+    Collaborate with data engineers to optimize data pipelines for efficient data processing.\n
+    Conduct A/B testing and experimentation to evaluate the effectiveness of different strategies.\n
+    Stay up-to-date with advancements in data science, machine learning, and artificial intelligence.\n
+    Assist in the development and deployment of machine learning models into production environments.\n
+    Provide data-driven insights and recommendations to support strategic decision-making.\n
+    Collaborate with other data scientists, analysts, and cross-functional teams to drive data initiatives.\n
+    Requirements:\n
+    Bachelor's degree in Data Science, Computer Science, Statistics, Mathematics, or a related field 
+    (or equivalent practical experience).\n
+    Proven experience as a Data Scientist or similar role, with a portfolio of data science projects that 
+    demonstrate your analytical skills.\n
+    Proficiency in programming languages such as Python or R for data manipulation and analysis.\n
+    Strong understanding of statistical analysis, machine learning algorithms, and data visualization techniques.\n
+    Experience with machine learning frameworks and libraries (e.g., scikit-learn, TensorFlow, PyTorch).\n
+    Familiarity with data manipulation libraries (e.g., Pandas, NumPy) and data visualization tools (e.g.,
+     Matplotlib, Seaborn).\nSolid understanding of SQL and database concepts for querying and extracting data.\n
+     Excellent problem-solving skills and the ability to work with complex, unstructured datasets.\n
+     Effective communication skills to explain technical concepts to non-technical stakeholders.\n
+     Experience with big data technologies (e.g., Hadoop, Spark) is a plus.\n
+     Knowledge of cloud platforms and services for data analysis (e.g., AWS, Azure) is advantageous.\n
+     Familiarity with natural language processing (NLP) and text analysis is a plus.\n
+     Advanced degree (Master's or PhD) in a related field is beneficial but not required.
     """
     company = "JPMorgan"
-    
-    result = learning_resource.GenerateSkillMatchScore(resume, job_description)
- 
-    your_skill = list(result["Your Skills List"])
-    job_skill = list(result["Job Skills List"])
-    
+
     generated_directory = str(learning_resource.GetRequestQueueNo())
-    learning_resource.GenerateLearningResource(your_skill, job_skill, company, generated_directory)
+    learning_resource.GenerateLearningResource(resume, job_description, company, generated_directory)
     learning_resource_zip_path = "learning resource/" + generated_directory + "/learning resource.zip"
 
     return send_file(learning_resource_zip_path, as_attachment=True, download_name='learning resource.zip')
+
+
+@app.route("/ping")
+def ping():
+    return 'ping'
 
 
 # To run the Flask app with Werkzeug's run_simple function:
