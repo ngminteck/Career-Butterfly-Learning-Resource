@@ -10,6 +10,7 @@ import zipfile
 import html2text
 import json
 import re
+from collections import Counter
 from flask import Flask, send_file, jsonify
 from werkzeug.serving import run_simple
 
@@ -93,21 +94,6 @@ class TechStack:
         self.InitLeetcodeOverallFrequencyDictList()
         self.request_queue_no = 0
 
-    def GenerateSkillMatchScore(self, your_skill, job_skill):
-        result_dict = {"Your Skills List": None, "Job Skills List": None, "Match Score": None}
-        your_skill_set = self.ExtractSkillKeyword(your_skill)
-        job_skill_set = self.ExtractSkillKeyword(job_skill)
-        result_dict["Your Skills List"] = list(your_skill_set)
-        result_dict["Job Skills List"] = list(job_skill_set)
-        match_score = {}
-        for js in result_dict["Job Skills List"]:
-            if js in result_dict["Your Skills List"]:
-                match_score[js] = 1
-            else:
-                match_score[js] = 0
-        result_dict["Match Score"] = match_score
-        return result_dict
-
     def ExtractSkillKeyword(self, text):
         skill_set = set()
         text = text.lower()
@@ -159,39 +145,6 @@ class TechStack:
     def GetRequestQueueNo(self):
         self.request_queue_no += 1
         return self.request_queue_no
-
-    def GenerateLearningResource(self, your_skills, job_skills, company_name, generated_directory):
-        result_dict = {"Skill Learning Resource Content": None,
-                       "Skill Learning Resource Remarks": str("")}
-        if not os.path.exists("learning resource/" + generated_directory):
-            os.makedirs("learning resource/" + generated_directory)
-
-        for key in job_skills:
-            text = key
-            text = text.lower()
-            if text in self.leetcode_list:
-                self.GenerateLeetcodeResource(company_name, generated_directory)
-                break
-        difference_skill_dict_list = {}
-        # difference_skill_dict_list = [dict_ for dict_ in job_skills if not any(dict_ == dict2 for dict2 in your_skills)]
-
-        difference_skill_dict_list = job_skills
-        if len(difference_skill_dict_list) != 0:
-            skill_result_dict = self.GenerateSkillResource(difference_skill_dict_list, generated_directory)
-            result_dict["Skill Learning Resource Content"] = skill_result_dict["Skill Learning Resource Content"]
-            result_dict["Skill Learning Resource Remarks"] = skill_result_dict["Skill Learning Resource Remarks"]
-
-        filename = "learning resource/" + generated_directory + "/response.json"
-        #print(result_dict["Skill Learning Resource Remarks"])
-
-        for key, value in result_dict["Leetcode Question"].items():
-            print(key,value)
-            
-        # Serialize and write the list of dictionaries to a file
-        with open(filename, 'w') as file:
-            json.dump(result_dict, file, indent=4)
-
-        self.ZipLearningResource(generated_directory)
 
     @staticmethod
     def ZipLearningResource(generated_directory):
@@ -516,26 +469,14 @@ class TechStack:
         dest_dir = "skill classified/" + dest_dir
         if not os.path.exists(dest_dir):
             os.makedirs(dest_dir)
-        source_path_doc = source_dir + "/" + filename + ".docx"
+       
         source_path_html = source_dir + "/" + filename + ".html"
-        destination_path_doc = dest_dir + "/" + filename + ".docx"
+      
         destination_path_html = dest_dir + "/" + filename + ".html"
-        if source_path_doc != destination_path_doc:
-            shutil.copyfile(source_path_doc, destination_path_doc)
+       
         if source_path_html != destination_path_html:
             shutil.copyfile(source_path_html, destination_path_html)
 
-    @staticmethod
-    def MakeDocsFromHtml():
-        directory = 'skill unclassified/not tech/'
-        filenames = [f for f in listdir(directory) if isfile(join(directory, f))]
-        for f in filenames:
-            print(f)
-            words = f.rsplit(".")
-            extension = words[len(words) - 1]
-            if extension == "html":
-                filename = f.replace(".html", "")
-                pypandoc.convert_file(directory + "/" + f, 'docx', outputfile=directory + "/" + filename + ".docx")
 
     def DeleteAllSkillFile(self):
         for directory in self.three_word_skill_classification_set:
@@ -702,11 +643,6 @@ class TechStack:
 
                 if have_classified:
                     file_path = directory + "/" + filename + ".html"
-                    if os.path.isfile(file_path):
-                        os.remove(file_path)
-                    else:
-                        print(f"The file {file_path} does not exist.")
-                    file_path = directory + "/" + filename + ".docx"
                     if os.path.isfile(file_path):
                         os.remove(file_path)
                     else:
@@ -977,22 +913,77 @@ class TechStack:
         self.partial_match_replace_dict_list["ms"] = "microsoft"
         self.partial_match_replace_dict_list["db"] = "database"
 
+    def GenerateSkillMatchScore(self, your_skill, job_skill):
+        result_dict = {"Your Skills List": None, "Job Skills List": None, "Match Score": None}
+        print("extract resume skill...")
+        your_skill_set = self.ExtractSkillKeyword(your_skill)
+        print("extract job skill...")
+        job_skill_set = self.ExtractSkillKeyword(job_skill)
+        result_dict["Your Skills List"] = list(your_skill_set)
+        result_dict["Job Skills List"] = list(job_skill_set)
+        match_score = {}
+        for js in result_dict["Job Skills List"]:
+            if js in result_dict["Your Skills List"]:
+                match_score[js] = 1
+            else:
+                match_score[js] = 0
+        result_dict["Match Score"] = match_score
+        return result_dict
 
+    def GenerateLearningResource(self, your_skills, job_skills, company_name, generated_directory):
+        result_dict = {"Skill Learning Resource Content": None,
+                       "Skill Learning Resource Remarks": str("")}
+        if not os.path.exists("learning resource/" + generated_directory):
+            os.makedirs("learning resource/" + generated_directory)
+
+        
+        for i in range(len(job_skills)):
+            text = job_skills[i]
+            text = text.lower()
+            if text in self.leetcode_list:
+                print("Getting leetcode learning resource..")
+                self.GenerateLeetcodeResource(company_name, generated_directory)
+                break
+        counter1 = Counter(job_skills)
+        counter2 = Counter(your_skills)
+        result_counter = counter1 - counter2
+        result_list = list(result_counter.elements())
+        
+        difference_skill_dict_list = {}
+
+        for i in range(len(result_list)):
+            skill = result_list[i]
+            difference_skill_dict_list[skill] = skill
+
+        if len(difference_skill_dict_list) != 0:
+            print("Getting skill learning resource..")
+            skill_result_dict = self.GenerateSkillResource(difference_skill_dict_list, generated_directory)
+            result_dict["Skill Learning Resource Content"] = skill_result_dict["Skill Learning Resource Content"]
+            result_dict["Skill Learning Resource Remarks"] = skill_result_dict["Skill Learning Resource Remarks"]
+
+        filename = "learning resource/" + generated_directory + "/response.json"
+        #print(result_dict["Skill Learning Resource Remarks"])
+
+            
+        # Serialize and write the list of dictionaries to a file
+        with open(filename, 'w') as file:
+            json.dump(result_dict, file, indent=4)
+
+        self.ZipLearningResource(generated_directory)
 
 app = Flask(__name__)
 learning_resource = TechStack()
-#learning_resource.MakeDocsFromHtml()
+
 #learning_resource.SkillReClassification()
-learning_resource.FindClassificationKeyword()
+#learning_resource.FindClassificationKeyword()
 
+
+
+#@app.route('/generate_learning_resource', methods=['GET'])
 @app.route('/')
-def hello():
-    return 'Hello, World!'
-
-
-@app.route('/generate_skill_match_score', methods=['GET'])
-def generate_skill_match_score():
-    your_skill = """
+def generate_learning_resource():
+    print("triggered")
+    resume ="""
     Clarence Ng Min Teck 黄明德
 Singapore
 ng_min_teck@hotmail.com 88454484
@@ -1270,25 +1261,19 @@ Skills
 C++   •   C#   •   Python   •   Java   •   TypeScript   •   SQL   •   Machine Learning   •   Natural Language
 Processing (NLP)   •   Computer Vision   •   C (Programming Language)
     """
-    job_skill = "Responsibilities:\nCollaborate with business stakeholders to understand their data needs and objectives.\nCollect, clean, and preprocess data from various sources for analysis.\nPerform exploratory data analysis to identify trends, patterns, and correlations.\nDevelop and implement predictive models and machine learning algorithms to solve business challenges.\nApply statistical analysis techniques to analyze complex datasets and draw meaningful conclusions.\nCreate data visualizations and reports to communicate insights effectively to non-technical audiences.\nCollaborate with data engineers to optimize data pipelines for efficient data processing.\nConduct A/B testing and experimentation to evaluate the effectiveness of different strategies.\nStay up-to-date with advancements in data science, machine learning, and artificial intelligence.\nAssist in the development and deployment of machine learning models into production environments.\nProvide data-driven insights and recommendations to support strategic decision-making.\nCollaborate with other data scientists, analysts, and cross-functional teams to drive data initiatives.\nRequirements:\nBachelor's degree in Data Science, Computer Science, Statistics, Mathematics, or a related field (or equivalent practical experience).\nProven experience as a Data Scientist or similar role, with a portfolio of data science projects that demonstrate your analytical skills.\nProficiency in programming languages such as Python or R for data manipulation and analysis.\nStrong understanding of statistical analysis, machine learning algorithms, and data visualization techniques.\nExperience with machine learning frameworks and libraries (e.g., scikit-learn, TensorFlow, PyTorch).\nFamiliarity with data manipulation libraries (e.g., Pandas, NumPy) and data visualization tools (e.g., Matplotlib, Seaborn).\nSolid understanding of SQL and database concepts for querying and extracting data.\nExcellent problem-solving skills and the ability to work with complex, unstructured datasets.\nEffective communication skills to explain technical concepts to non-technical stakeholders.\nExperience with big data technologies (e.g., Hadoop, Spark) is a plus.\nKnowledge of cloud platforms and services for data analysis (e.g., AWS, Azure) is advantageous.\nFamiliarity with natural language processing (NLP) and text analysis is a plus.\nAdvanced degree (Master's or PhD) in a related field is beneficial but not required."
-    result = learning_resource.GenerateSkillMatchScore(your_skill, job_skill)
 
-    for i in result["Job Skills List"]:
-        print(i)
+    job_description = """
+    Responsibilities:\nCollaborate with business stakeholders to understand their data needs and objectives.\nCollect, clean, and preprocess data from various sources for analysis.\nPerform exploratory data analysis to identify trends, patterns, and correlations.\nDevelop and implement predictive models and machine learning algorithms to solve business challenges.\nApply statistical analysis techniques to analyze complex datasets and draw meaningful conclusions.\nCreate data visualizations and reports to communicate insights effectively to non-technical audiences.\nCollaborate with data engineers to optimize data pipelines for efficient data processing.\nConduct A/B testing and experimentation to evaluate the effectiveness of different strategies.\nStay up-to-date with advancements in data science, machine learning, and artificial intelligence.\nAssist in the development and deployment of machine learning models into production environments.\nProvide data-driven insights and recommendations to support strategic decision-making.\nCollaborate with other data scientists, analysts, and cross-functional teams to drive data initiatives.\nRequirements:\nBachelor's degree in Data Science, Computer Science, Statistics, Mathematics, or a related field (or equivalent practical experience).\nProven experience as a Data Scientist or similar role, with a portfolio of data science projects that demonstrate your analytical skills.\nProficiency in programming languages such as Python or R for data manipulation and analysis.\nStrong understanding of statistical analysis, machine learning algorithms, and data visualization techniques.\nExperience with machine learning frameworks and libraries (e.g., scikit-learn, TensorFlow, PyTorch).\nFamiliarity with data manipulation libraries (e.g., Pandas, NumPy) and data visualization tools (e.g., Matplotlib, Seaborn).\nSolid understanding of SQL and database concepts for querying and extracting data.\nExcellent problem-solving skills and the ability to work with complex, unstructured datasets.\nEffective communication skills to explain technical concepts to non-technical stakeholders.\nExperience with big data technologies (e.g., Hadoop, Spark) is a plus.\nKnowledge of cloud platforms and services for data analysis (e.g., AWS, Azure) is advantageous.\nFamiliarity with natural language processing (NLP) and text analysis is a plus.\nAdvanced degree (Master's or PhD) in a related field is beneficial but not required.
+    """
+    company = "JPMorgan"
     
-    return jsonify(result)
-
-
-@app.route('/generate_learning_resource', methods=['GET'])
-def generate_learning_resource():
-    nodeflair = {}
-    file = open("nodeflair skill.txt", "r")
-    for s in file:
-        s = s.replace("\n", "")
-        nodeflair[s] =s
-    file.close()
+    result = learning_resource.GenerateSkillMatchScore(resume, job_description)
+ 
+    your_skill = list(result["Your Skills List"])
+    job_skill = list(result["Job Skills List"])
+    
     generated_directory = str(learning_resource.GetRequestQueueNo())
-    learning_resource.GenerateLearningResource(None, nodeflair, "JPMorgan", generated_directory)
+    learning_resource.GenerateLearningResource(your_skill, job_skill, company, generated_directory)
     learning_resource_zip_path = "learning resource/" + generated_directory + "/learning resource.zip"
 
     return send_file(learning_resource_zip_path, as_attachment=True, download_name='learning resource.zip')
