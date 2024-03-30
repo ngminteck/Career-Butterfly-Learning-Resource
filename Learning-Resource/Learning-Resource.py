@@ -13,6 +13,11 @@ import re
 from flask import Flask, send_file, jsonify
 from werkzeug.serving import run_simple
 
+from spacy.matcher import PhraseMatcher
+# load default skills data base
+from skillNer.general_params import SKILL_DB
+# import skill extractor
+from skillNer.skill_extractor_class import SkillExtractor
 
 class Skill:
 
@@ -59,7 +64,7 @@ class Group:
 
 class TechStack:
     def __init__(self):
-        self.nlp = spacy.load('en_core_web_md')
+        self.nlp = spacy.load('en_core_web_lg')
         self.skill_dict_list = {}
         self.group_dict_list = {}
         self.exact_match_replace_dict_list = {}
