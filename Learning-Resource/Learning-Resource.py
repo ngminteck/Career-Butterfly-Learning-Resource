@@ -13,6 +13,7 @@ import re
 from flask import Flask, send_file, jsonify
 from werkzeug.serving import run_simple
 
+
 from spacy.matcher import PhraseMatcher
 # load default skills data base
 from skillNer.general_params import SKILL_DB
@@ -69,8 +70,6 @@ class TechStack:
         self.group_dict_list = {}
         self.exact_match_replace_dict_list = {}
         self.partial_match_replace_dict_list = {}
-        self.vector_group_dict_list = {}
-        self.ignore_set = set()
         self.not_found_dict_list = {}
         self.three_word_skill_classification_set = set()
         self.two_word_skill_classification_set = set()
@@ -85,11 +84,9 @@ class TechStack:
         self.three_keyword_dict_list = {}
         self.leetcode_company_dict_list = {}
         self.leetcode_overall_frequency_dict_list = {}
-        self.ImportIgnoreSet()
         self.AllThisWillBeRemoveOnceFinalize()
         self.ImportClassificationSet()
         self.ImportSkillDictList()
-        self.GroupTextVectorization()
         self.InitKeywordDictList()
         self.InitLeetCodeCompanyNameDictList()
         self.InitLeetcodeOverallFrequencyDictList()
@@ -123,7 +120,7 @@ class TechStack:
         text = text.replace("\"", " ")
         text = text.replace("/", " ")
         text = text.replace(". ", " ")
-        print(text)
+        #print(text)
         words = text.split()
         # = []
   
@@ -152,7 +149,7 @@ class TechStack:
                 #remove_index.append(i)
        # for i in remove_index:
           #  del words[i]
-        print(words)
+        #print(words)
         return skill_set
 
     def GetRequestQueueNo(self):
@@ -181,8 +178,11 @@ class TechStack:
             result_dict["Skill Learning Resource Remarks"] = skill_result_dict["Skill Learning Resource Remarks"]
 
         filename = "learning resource/" + generated_directory + "/response.json"
-        print(result_dict["Skill Learning Resource Remarks"])
+        #print(result_dict["Skill Learning Resource Remarks"])
 
+        for key, value in result_dict["Leetcode Question"].items():
+            print(value)
+            
         # Serialize and write the list of dictionaries to a file
         with open(filename, 'w') as file:
             json.dump(result_dict, file, indent=4)
@@ -407,12 +407,7 @@ class TechStack:
         if text.find('(') != -1:
             text = text.split("(")[0]
             text = text.rsplit()[0]
-        if text in self.ignore_set:
-            if len(remarks) != 0:
-                remarks += "\n"
-            remarks += key
-            remarks += " not found"
-            return remarks, str("")
+       
         if text in self.exact_match_replace_dict_list:
             text = self.exact_match_replace_dict_list.get(text)
         words = text.split()
@@ -566,22 +561,6 @@ class TechStack:
             path = "unclassified"
             self.not_found_dict_list[name] = Skill(name, path, keyword)
 
-    def GroupTextVectorization(self):
-        for word in self.group_dict_list:
-            if self.nlp.vocab[word].has_vector:
-                vector_word = self.nlp(word)
-                if vector_word not in self.vector_group_dict_list:
-                    self.vector_group_dict_list[vector_word] = set()
-                self.vector_group_dict_list[vector_word].add(word)
-
-    def VectorSearch(self, word):
-        if self.nlp.vocab[word].has_vector:
-            vector_word = self.nlp(word)
-            for vw in self.vector_group_dict_list:
-                similarity_score = vector_word.similarity(vw)
-                if similarity_score >= 0.9:
-                    for w in self.vector_group_dict_list[vw]:
-                        print(w)
 
     def CopyReplaceFolder(self, source_dir, dest_dir, filename):
         if dest_dir == "unknown":
@@ -691,10 +670,8 @@ class TechStack:
         self.backup_keyword_dict_list.clear()
         for s in self.skill_dict_list:
             self.backup_keyword_dict_list[s] = self.skill_dict_list[s].keyword_search
-
         self.skill_dict_list.clear()
         self.group_dict_list.clear()
-        self.vector_group_dict_list.clear()
         self.DeleteAllSkillFile()
         h = html2text.HTML2Text()
         h.ignore_links = False
@@ -792,7 +769,6 @@ class TechStack:
                 else:
                     self.ReClassificationSkillDictList(filename, filename + " in tech", {"unknown"})
 
-        self.GroupTextVectorization()
         self.InitKeywordDictList()
         self.ExportSkillDictList()
         self.ExportGroupDictList()
@@ -831,13 +807,13 @@ class TechStack:
         h.ignore_links = False
         h.inline_links = False
         h.reference_links = True
-        directory = 'skill classified/unknown'
+        directory = 'skill'
         filenames = [f for f in listdir(directory) if isfile(join(directory, f))]
         one_word_dict_list = {}
         two_word_dict_list = {}
         three_word_dict_list = {}
         ignore_word_list = ["a", "an", "the", "of", "on", "as", "by", "to", "with", "for", "is", "are", "was", "were",
-                            "in"]
+                            "in", "you", "and", "or"]
         for f in filenames:
             words = f.rsplit(".")
             extension = words[len(words) - 1]
@@ -849,8 +825,8 @@ class TechStack:
                 words = text_content.split()
                 for i in range(len(words)):
                     first_word = words[i]
-                    if '1.' in first_word:
-                        break
+                    #if '1.' in first_word:
+                        #break
                     if first_word.endswith('.'):
                         first_word = first_word[:-1]
                     if first_word in ignore_word_list:
@@ -859,6 +835,9 @@ class TechStack:
                     if one_word not in one_word_dict_list:
                         one_word_dict_list[one_word] = 0
                     one_word_dict_list[one_word] += 1
+
+                    if i + 1 >= len(words):
+                        break
 
                     second_word = words[i + 1]
                     if second_word.endswith('.'):
@@ -870,6 +849,9 @@ class TechStack:
                         two_word_dict_list[two_word] = 0
                     two_word_dict_list[two_word] += 1
 
+                    if i + 2 >= len(words):
+                        break
+                        
                     third_word = words[i + 2]
                     if third_word.endswith('.'):
                         third_word = third_word[:-1]
@@ -879,17 +861,17 @@ class TechStack:
                     if three_word not in three_word_dict_list:
                         three_word_dict_list[three_word] = 0
                     three_word_dict_list[three_word] += 1
-        with open('count one word.txt', 'w', encoding="utf-8") as f:
+        with open('word classification/count one word.txt', 'w', encoding="utf-8") as f:
             for s in sorted(one_word_dict_list, key=one_word_dict_list.get, reverse=True):
                 f.write(str(s) + " - " + str(one_word_dict_list[s]))
                 f.write('\n')
             file.close()
-        with open('count two word.txt', 'w', encoding="utf-8") as f:
+        with open('word classification/count two word.txt', 'w', encoding="utf-8") as f:
             for s in sorted(two_word_dict_list, key=two_word_dict_list.get, reverse=True):
                 f.write(str(s) + " - " + str(two_word_dict_list[s]))
                 f.write('\n')
             file.close()
-        with open('count three word.txt', 'w', encoding="utf-8") as f:
+        with open('word classification/count three word.txt', 'w', encoding="utf-8") as f:
             for s in sorted(three_word_dict_list, key=three_word_dict_list.get, reverse=True):
                 f.write(str(s) + " - " + str(three_word_dict_list[s]))
                 f.write('\n')
@@ -903,17 +885,17 @@ class TechStack:
         f.close()
 
     def ImportClassificationSet(self):
-        file = open("three word skill classification.txt", "r")
+        file = open("word classification/three word skill classification.txt", "r")
         for word in file:
             word = word.replace("\n", "")
             self.three_word_skill_classification_set.add(word)
         file.close()
-        file = open("two word skill classification.txt", "r")
+        file = open("word classification/two word skill classification.txt", "r")
         for word in file:
             word = word.replace("\n", "")
             self.two_word_skill_classification_set.add(word)
         file.close()
-        file = open("one word skill classification.txt", "r")
+        file = open("word classification/one word skill classification.txt", "r")
         for word in file:
             word = word.replace("\n", "")
             self.one_word_skill_classification_set.add(word)
@@ -977,21 +959,6 @@ class TechStack:
                 writer.writerow([name, search, path, skills])
             file.close()
 
-    def ExportMatchReplaceDictList(self):
-        file_path = "exact match.csv"
-        with open(file_path, 'w', newline='') as file:
-            writer = csv.writer(file)
-            writer.writerow(["Word", "Replace"])
-            for key, value in self.exact_match_replace_dict_list.items():
-                writer.writerow([key, value])
-            file.close()
-        file_path = "partial match.csv"
-        with open(file_path, 'w', newline='') as file:
-            writer = csv.writer(file)
-            writer.writerow(["Word", "Replace"])
-            for key, value in self.partial_match_replace_dict_list.items():
-                writer.writerow([key, value])
-            file.close()
 
     def ExportNotFoundSet(self):
         file_path = "not found.csv"
@@ -1065,14 +1032,13 @@ class TechStack:
         self.partial_match_replace_dict_list["ms"] = "microsoft"
         self.partial_match_replace_dict_list["db"] = "database"
 
-        self.ExportMatchReplaceDictList()
 
 
 app = Flask(__name__)
 learning_resource = TechStack()
 #learning_resource.MakeDocsFromHtml()
 #learning_resource.SkillReClassification()
-
+learning_resource.FindClassificationKeyword()
 
 @app.route('/')
 def hello():
@@ -1081,7 +1047,284 @@ def hello():
 
 @app.route('/generate_skill_match_score', methods=['GET'])
 def generate_skill_match_score():
-    your_skill = "c, c++, c#, java, python, javascript, typescript"
+    your_skill = """
+    Clarence Ng Min Teck 黄明德
+Singapore
+ng_min_teck@hotmail.com 88454484
+linkedin.com/in/clarencengminteck
+Summary
+Born in Singapore and grew up in Singapore. Since young, I have been interested in Science, Geography,
+and Technology, with an academic background in computer science, information technology, multimedia,
+mathematics, and physics. My hobbies are playing video games, learning new stuff in online learning, and reading
+an articles about technology, science, space, and people's lifestyles around the world. I have many missions
+or goals in my life, like making MMO or open-world games about Singapore/World or building a little Singapore
+somewhere in the north as the earth is heating it.
+Currently pursuing part-time master's study in AI, focusing on computer vision and NLP. My research interest is AI
+predicts procedural generate 3d reconstruction building interior environment, layout, and dimension with different
+text/image/video models. Another research interest is to make AI translate existing songs with different languages
+and style covers, using translation and LLM to generate multiple sentences with about the same meaning and try
+to fit the tune, also AI tries to learn the singer's voice and generate what will be sound like when singing in different
+language and style. Or storybook to movie, movie to storybook, etc. I Still thinking about maybe going for a Ph.D.
+study after my master's course.
+Skills
+Programming languages: C/C++, C#, Java, Python, Groovy, JavaScript, Typescript
+Frameworks & Lib: .NET, Spring, Angular, Cuda, Imgui, WPF, OpenGL, Vulkan, Nvidia PhysX, Pandas, NumPy,
+Scikit learn, Spacy, NLTK, PySpark, Seaborn, Matplotlib, Selenium Base, Junit, PyTest, streamlit, transformers,
+PyTorch, xgboost, restful
+Databases: MS SQL, MySQL, JPA, Cassandra, SQLite, Neo4j
+Cloud: Azure, AWS
+Platform: Window, Linux, Ubuntu, Databrick
+Game Engine: Unreal Engine, Unity
+Web Development: HTML, CSS
+IDE:VS Code, IntelliJ, Anaconda, Pycharm
+Experience
+Software Engineer
+J.P. Morgan
+Sep 2022 - Present (1 year 7 months)
+CIB Tech Department, Payment Technology
+- Enhanced existing features or fixed bugs using Java, Spring, and Groovy at XXXXXXXX payment
+system
+- Performed automation testing for monthly releases
+- Resolved issues and inquiries for low-level environmental issues
+- Documented and created Jira tickets for each task
+- Supported XXX migration
+Clarence Ng Min Teck 黄明德 - page 1
+-- Collaborate with various payment components and sub-component teams worldwide
+Software Engineer
+JPMorgan Chase & Co.
+Sep 2022 - Present (1 year 7 months)
+CIB Tech Department, Payment Technology
+- Enhanced existing features or fixed bugs using Java, Spring, and Groovy at XXXXXXXX payment
+system
+- Performed automation testing for monthly releases
+- Resolved issues and inquiries for low-level environmental issues
+- Documented and created Jira tickets for each task
+- Supported XXX migration
+- Collaborate with various payment components and sub-component teams worldwide
+Alumni Trainee in Full Stack Developer
+Wiley Edge
+Jun 2022 - Aug 2023 (1 year 3 months)
+- Trained in full-stack development using Java, Spring, JavaScript, Angular ,MySQL and Cloud
+Interactive Media Programmer
+MetaMedia People - MMP Singapore
+Jul 2021 - Dec 2021 (6 months)
+- Programmed user interactive programs for the Monetary Authority of Singapore gallery (Zone C & E),
+such as interactive media, questionnaires, games, e-books, etc.
+- Worked with one artist and one producer for each project
+- Met with MAS client and received feedback
+Interactive Media Programmer
+MetaMedia People - MMP Singapore
+Jan 2021 - Jun 2021 (6 months)
+- Programmed user interactive programs for the Monetary Authority of Singapore gallery (Zone C & E),
+such as interactive media, questionnaires, games, e-books, etc.
+- Worked with one artist and one producer for each project
+- Met with MAS client and received feedback
+Quality Assurance
+PTW
+May 2017 - Oct 2017 (6 months)
+Quality assurance video game, IT hardware and game test
+Pnsf ops team
+Singapore Police Force
+May 2015 - May 2017 (2 years 1 month)
+Clarence Ng Min Teck 黄明德 - page 2
+Manage incident, dispatch resources to the incident.
+Fiber team
+Singtel
+Mar 2015 - May 2015 (3 months)
+Data entry and assign outsource contractors to attend any job case
+Poly Internship programer
+AviationLearn Pte Ltd
+Apr 2014 - Aug 2014 (5 months)
+Internship, programing assistance
+Game Master
+Cherry Credits Pte Ltd
+2012 - 2013 (1 year)
+Qa and game test
+Education
+National University of Singapore
+Master's degree, Artificial Intelligence
+Jan 2024 - Dec 2025
+Intelligent Reasoning Systems
+1. Machine Reasoning - supervised and unsupervised machine learning such as DT, KNN, NB, data
+preprocessing, grid search, and various machine learning tools like sci-kit learn, spacy
+2. Reasoning Systems - recommendation system, evolutionary & genetic algorithms
+3. Cognitive Systems
+Pattern Recognition Systems
+1. Problem Solving using Pattern Recognition
+2. Intelligent Sensing and Sense-making
+3. Pattern Recognition and Machine Learning Systems
+Intelligent Sensing Systems
+1. Vision Systems
+2. Spatial Reasoning from Sensor Data
+3. Real-Time Audio-Visual Sensing and Sense Making
+Practical Language Processing
+1. Text Analytics
+2. New Media and Sentiment Mining
+3. Text Processing using Machine Learning
+4. Conversational UI
+DigiPen Institute of Technology
+BA Computer Science and Game Design, Computer Science and Game Design
+Clarence Ng Min Teck 黄明德 - page 3
+Sep 2017 - Aug 2021
+Technical
+CS 100 Computer Environment ( Basic Assembly code)
+CS 120 High-level Programming I: The C Programming Language
+CS 170 High-level Programming II: The C++ Programming Language
+CS 180 Operating Systems I: Man-Machine Interface (Context Switching, Basic Multi-thread)
+CS 225 Advanced C/C++
+CS 230 Game Implementation Techniques (Game loop, physics collision)
+CS 251 Introduction to Computer Graphics (OpenGL)
+CS 280 Data Structures
+CS 330 Algorithm Analysis
+CS 380 Artificial Intelligence for Games
+Game Project (Create Custom Engine, Lua, ImGui-UI Lib, Rapidjson-Serializer Lib)
+Unreal Engine 4 Blueprint and C++
+Math & Physic
+MAT 140 Linear Algebra and Geometry
+MAT 150 Calculus and Analytic Geometry I
+MAT 200 Calculus and Analytic Geometry II
+MAT 225 Calculus and Analytic Geometry III
+MAT 250 Linear Algebra
+MAT 258 Discrete Mathematics
+MAT 351 Quaternions, Interpolation and Animation
+PHY 200 Motion Dynamics
+PHY 250 Waves, Optics, and Thermodynamics
+Singapore Institute of Technology
+BSc (Hons) Computer Science in Interactive Media and Game Development,
+Computer Science, Game Design & Mathematics
+Sep 2017 - Aug 2021
+Game Design
+GAT101 Game History and Analysis
+GAT210 Game Mechanics I
+GAT211 Game Mechanics II
+GAT240 Technology for Designer (Unity3d/Unreal)
+GAT250 2D Game Design I (Level Design, puzzle game, top-down shooter, unity)
+GAT251 2D Game Design II (3D Level Design, RPG, Unreal )
+GAT260 User Experience Design (User Interface)
+GAT315 3D Game Design I (3D Level Design, Multiplayer Map, Unreal)
+GAT316 3D Game Design II (3D Level Design, Game Project, Custom Engine)
+Game Project and Internship
+GAM 100 Project Introduction (Ascii Game Project)
+GAM 150 Project I (2D Game Project using the in-house game engine)
+GAM 200 & 250 Project II (2D Game Project I using own build custom game engine)
+GAM 300 & 350 Project III (3D Game Project I using own build custom game engine)
+GAM 390 Internship I
+GAM 490 Internship II
+Clarence Ng Min Teck 黄明德 - page 4
+Other
+ENG 116 Storytelling
+ENG 230 Speculative Fiction
+MUS 115 Fundamentals of Music and Sound Design
+PSY 101 Introduction to Psychology
+COM 150 Interpersonal and Workplace Communication
+Singapore Polytechnic
+Diploma Computer Science and Game development, Computer Science (c#,c+
++,python and etc), Modeling, Animation, Level Design
+2012 - 2015
+Technical
+Java Programming
+Database Management System (Ms SQL)
+Web Client Development
+Infocomm Security
+Network and Operating System
+Interactive Computer Graphic (Adobe Flash)
+Mobile Game Development (Window phone, Dead*)
+Introduction game Development (C#)
+3D Game Development (C++, Directx)
+Console Game Development (Xbox)
+Simulation Physics and Artificial Intelligence (Python)
+Multiplayer Online Games (C#, unity)
+Design
+3D Level Design and Scripting Studio (Unreal Engine, 3ds Max)
+Digital Visual Design (Photoshop, Illustrator)
+Wiley Edge
+Full Stack Development, Finance Technology
+May 2022 - Sep 2023
+-Java Programming
+-Spring
+-Maven
+-MySQL
+-JDBC
+-JDBC Template
+-REST
+-JQuery
+-Spring Boot
+Institute of Technical Education
+Nitec of Multimedia Technology, Multimedia, photoshop, video edit, website
+development
+2010 - 2012
+Clarence Ng Min Teck 黄明德 - page 5
+Learn how to use photoshop, illustor , video editng and webpage development
+National University of Singapore
+French Language, French Language
+Mar 2023 - Jun 2023
+Sejong Korean Language School
+Korean Language
+Jan 2018 - Dec 2019
+Udemy
+Game Development
+Jan 2020 - Aug 2021
+profile https://www.udemy.com/user/ng-min-teck/
+-OpenGL
+-Vulkan
+-Unreal Ability System
+-Unreal C++
+-Unreal Multiplayer C++
+-Basic GIS
+Licenses & Certifications
+Sejong Korean Language beginner Certificate - sejong language school
+SIT korean Language Level 1 and 2 - Singapore Institute of Technology
+SIT Japanese language Level 1 - Singapore Institute of Technology
+Microsoft Certified: Azure Fundamentals - Microsoft
+991194635
+Computer Graphics with Modern OpenGL and C++ - Udemy
+UC-be23cec3-03be-4e06-9dec-a06b83a3a1d5
+Unreal Engine C++ Developer: Learn C++ and Make Video Games - Udemy
+UC-d8fd0da1-05cd-43bd-bbfb-006ddc6a5c71
+Unreal Multiplayer Master: Video Game Dev In C++ - Udemy
+UC-35a20bf2-90de-475f-9ea2-f4507ebce0ae
+Clarence Ng Min Teck 黄明德 - page 6
+Learn the Vulkan API with C++ - Udemy
+UC-c9cc1608-fbd9-43df-bd03-34f1d531a6e8
+Microsoft Certified: Azure Data Fundamentals - Microsoft
+CUDA programming Masterclass with C++ - Udemy
+UC-3ac6300b-b31e-4b17-a8b3-56cad0aec958
+Fundamentals of Accelerated Computing C/C++ - NVIDIA
+588b850026ca4931932e032cf6172168
+Modern C++ Concurrency in Depth ( C++17/20) - Udemy
+UC-52adb448-f749-4822-b1ca-5f876a56d1ed
+Microsoft Certified: Azure AI Fundamentals - Microsoft
+Certified Scrum Developer® (CSD®) - Scrum Alliance
+Issued Sep 2021 - Expires Sep 2023
+1446792
+Pro Unreal Engine Game Coding - Udemy
+UC-6bc7703d-2ca8-4903-943b-cda43e90effb
+Parallel and Concurrent Programming with C++ Part 1 - LinkedIn
+Parallel and Concurrent Programming with C++ Part 2 - LinkedIn
+Training Neural Networks in C++ - LinkedIn
+Accelerating CUDA C++ Applications with Concurrent Streams - NVIDIA
+5a7fb8443b184379ad1ef5ee65c46964
+Scaling Workloads Across Multiple GPUs with CUDA C++ - NVIDIA
+20c88c3b5f204c889d7e02dd10307717
+Rust Essential Training - LinkedIn
+IELTS Academic - British Council
+Issued Dec 2021 - Expires Dec 2023
+Clarence Ng Min Teck 黄明德 - page 7
+21SG005938NGM002A
+The Complete Quantum Computing Course - Udemy
+UC-beb73e63-3440-42a0-87b1-bcd3f033f515/
+Learning Groovy - LinkedIn
+Software Development - Columbia Engineering
+French Elementary 1 - National University of Singapore
+76084369
+AWS Certified Cloud Practitioner - Amazon Web Services (AWS)
+G05TYDE18JBQ193N
+XFDS112: R Programming Fundamentals - EdX
+1555b0f59779471bb65a3795b1fcefbc
+Skills
+C++   •   C#   •   Python   •   Java   •   TypeScript   •   SQL   •   Machine Learning   •   Natural Language
+Processing (NLP)   •   Computer Vision   •   C (Programming Language)
+    """
     job_skill = "Responsibilities:\nCollaborate with business stakeholders to understand their data needs and objectives.\nCollect, clean, and preprocess data from various sources for analysis.\nPerform exploratory data analysis to identify trends, patterns, and correlations.\nDevelop and implement predictive models and machine learning algorithms to solve business challenges.\nApply statistical analysis techniques to analyze complex datasets and draw meaningful conclusions.\nCreate data visualizations and reports to communicate insights effectively to non-technical audiences.\nCollaborate with data engineers to optimize data pipelines for efficient data processing.\nConduct A/B testing and experimentation to evaluate the effectiveness of different strategies.\nStay up-to-date with advancements in data science, machine learning, and artificial intelligence.\nAssist in the development and deployment of machine learning models into production environments.\nProvide data-driven insights and recommendations to support strategic decision-making.\nCollaborate with other data scientists, analysts, and cross-functional teams to drive data initiatives.\nRequirements:\nBachelor's degree in Data Science, Computer Science, Statistics, Mathematics, or a related field (or equivalent practical experience).\nProven experience as a Data Scientist or similar role, with a portfolio of data science projects that demonstrate your analytical skills.\nProficiency in programming languages such as Python or R for data manipulation and analysis.\nStrong understanding of statistical analysis, machine learning algorithms, and data visualization techniques.\nExperience with machine learning frameworks and libraries (e.g., scikit-learn, TensorFlow, PyTorch).\nFamiliarity with data manipulation libraries (e.g., Pandas, NumPy) and data visualization tools (e.g., Matplotlib, Seaborn).\nSolid understanding of SQL and database concepts for querying and extracting data.\nExcellent problem-solving skills and the ability to work with complex, unstructured datasets.\nEffective communication skills to explain technical concepts to non-technical stakeholders.\nExperience with big data technologies (e.g., Hadoop, Spark) is a plus.\nKnowledge of cloud platforms and services for data analysis (e.g., AWS, Azure) is advantageous.\nFamiliarity with natural language processing (NLP) and text analysis is a plus.\nAdvanced degree (Master's or PhD) in a related field is beneficial but not required."
     result = learning_resource.GenerateSkillMatchScore(your_skill, job_skill)
 
