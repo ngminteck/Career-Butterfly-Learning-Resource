@@ -66,6 +66,7 @@ class Group:
 class TechStack:
     def __init__(self):
         self.nlp = spacy.load('en_core_web_lg')
+        self.skill_extractor = SkillExtractor(self.nlp, SKILL_DB, PhraseMatcher)
         self.skill_dict_list = {}
         self.group_dict_list = {}
         self.exact_match_replace_dict_list = {}
@@ -120,36 +121,39 @@ class TechStack:
         text = text.replace("\"", " ")
         text = text.replace("/", " ")
         text = text.replace(". ", " ")
-        #print(text)
         words = text.split()
-        # = []
   
         for i in range(2, len(words)): 
             search_word = words[i - 2] + " " + words[i - 1] + " " + words[i]
             if search_word in self.three_keyword_dict_list:
                 skill_set.add(self.three_keyword_dict_list[search_word])
-                #remove_index.append(i -2)
-                #remove_index.append(i -1)
-                #remove_index.append(i)
-        #for i in remove_index:
-          #  del words[i]
-        #remove_index.clear()
         for i in range(1, len(words)): 
             search_word = words[i - 1] + " " + words[i]
             if search_word in self.two_keyword_dict_list:
                 skill_set.add(self.two_keyword_dict_list[search_word])
-                #remove_index.append(i -1)
-                #remove_index.append(i)
-      #  for i in remove_index:
-         #   del words[i]
-        #remove_index.clear()
         for i in range(len(words)):
             if words[i] in self.one_keyword_dict_list:
                 skill_set.add(self.one_keyword_dict_list[words[i]])
-                #remove_index.append(i)
-       # for i in remove_index:
-          #  del words[i]
-        #print(words)
+                
+        annotations =self.skill_extractor.annotate(text)
+
+        #self.skill_extractor.describe(annotations)
+
+        result = annotations["results"]
+        skill_list_1 = result["full_matches"]
+        skill_list_2 = result["ngram_scored"]
+
+        for i in range(len(skill_list_1)):
+            info = skill_list_1[i]
+            skill = info["doc_node_value"]
+            skill = skill.lower()
+            skill_set.add(skill)
+        for i in range(len(skill_list_2)):
+            info = skill_list_2[i]
+            skill = info["doc_node_value"]
+            skill = skill.lower()
+            skill_set.add(skill)
+
         return skill_set
 
     def GetRequestQueueNo(self):
@@ -157,7 +161,7 @@ class TechStack:
         return self.request_queue_no
 
     def GenerateLearningResource(self, your_skills, job_skills, company_name, generated_directory):
-        result_dict = {"Leetcode Question": None, "Skill Learning Resource Content": None,
+        result_dict = {"Skill Learning Resource Content": None,
                        "Skill Learning Resource Remarks": str("")}
         if not os.path.exists("learning resource/" + generated_directory):
             os.makedirs("learning resource/" + generated_directory)
@@ -166,7 +170,7 @@ class TechStack:
             text = key
             text = text.lower()
             if text in self.leetcode_list:
-                result_dict["Leetcode Question"] = self.GenerateLeetcodeResource(company_name, generated_directory)
+                self.GenerateLeetcodeResource(company_name, generated_directory)
                 break
         difference_skill_dict_list = {}
         # difference_skill_dict_list = [dict_ for dict_ in job_skills if not any(dict_ == dict2 for dict2 in your_skills)]
@@ -181,7 +185,7 @@ class TechStack:
         #print(result_dict["Skill Learning Resource Remarks"])
 
         for key, value in result_dict["Leetcode Question"].items():
-            print(value)
+            print(key,value)
             
         # Serialize and write the list of dictionaries to a file
         with open(filename, 'w') as file:
@@ -203,7 +207,6 @@ class TechStack:
                         zipf.write(file_path, arcname=filename)
 
     def GenerateLeetcodeResource(self, company, generated_directory):
-        leetcode_dict_list = {}
         check_company = company
         check_company = check_company.lower()
         company_name_to_search = str("")
@@ -218,46 +221,11 @@ class TechStack:
             shutil.copyfile("leetcode/leetcode learning resource.docx",
                             "learning resource/" + generated_directory + "/leetcode learning resource.docx")
             df = pd.read_csv("leetcode/Top 100 Question List.csv")
-            questions_content = str("")
-            for index, row in df.iterrows():
-                no = str(row['No'])
-                title = str(row['Title'])
-                link = str(row['Link'])
-                path = "leetcode/Question/" + no + ".html"
-                if os.path.isfile(path):
-                    with open(path, "r", encoding="utf-8") as file:
-                        file_content = file.read()
-
-                        questions_content += "<h1><u><b>"
-                        questions_content += no
-                        questions_content += ". "
-                        questions_content += title
-                        questions_content += "</b></u></h1>\n"
-                        questions_content += link
-                        questions_content += "\n"
-                        questions_content += file_content
-
-                        h = html2text.HTML2Text()
-                        h.ignore_links = False
-                        h.inline_links = False
-                        h.reference_links = False
-                        string_format = h.handle(file_content)
-                        string_format = string_format.replace("**", "")
-                        leetcode_dict_list[no] = no + ". " + title + "\n" + link + "\n\n" + string_format
-                        file.close()
-
-            with open("learning resource/" + generated_directory + "/leetcode question.html", 'w',
-                      encoding='utf-8') as file:
-                file.write(questions_content)
-                file.close()
-            pypandoc.convert_text(questions_content, 'docx', format='html',
-                                  outputfile='learning resource/' + generated_directory + '/leetcode question.docx')
             df[company + " Company Frequency"] = 0
             df["Overall Frequency"] = df["Frequency"]
             df = df.drop(columns=['Frequency'])
             df.to_csv("learning resource/" + generated_directory + "/leetcode question list.csv", encoding='utf-8',
                       index=False)
-            return leetcode_dict_list
         else:
             html_content = ""
             title = "<h1><u><b>" + company + " Leetcode Tag Type Appear in the Question Count</b></u></h1>\n"
@@ -303,41 +271,7 @@ class TechStack:
             final_df = appended_df.head(100).copy()
             final_df.to_csv("learning resource/" + generated_directory + "/leetcode question list.csv",
                             encoding='utf-8', index=False)
-            questions_content = ""
-            for index, row in final_df.iterrows():
-                no = str(row['No'])
-                title = str(row['Title'])
-                link = str(row['Link'])
-                path = "leetcode/Question/" + no + ".html"
-                if os.path.isfile(path):
-                    with open(path, "r", encoding="utf-8") as file:
-                        file_content = file.read()
-
-                        questions_content += "<h1><u><b>"
-                        questions_content += no
-                        questions_content += ". "
-                        questions_content += title
-                        questions_content += "</b></u></h1>\n"
-                        questions_content += link
-                        questions_content += "\n"
-                        questions_content += file_content
-
-                        h = html2text.HTML2Text()
-                        h.ignore_links = False
-                        h.inline_links = False
-                        h.reference_links = False
-                        string_format = h.handle(file_content)
-                        string_format = string_format.replace("**", "")
-                        leetcode_dict_list[no] = no + ". " + title + "\n" + link + "\n\n" + string_format
-                        file.close()
-
-            with (open("learning resource/" + generated_directory + "/leetcode question.html", 'w', encoding='utf-8')
-                  as file):
-                file.write(questions_content)
-                file.close()
-            pypandoc.convert_text(questions_content, 'docx', format='html',
-                                  outputfile="learning resource/" + generated_directory + "/leetcode question.docx")
-            return leetcode_dict_list
+           
 
     def GenerateSkillResource(self, skills, generated_directory):
         result_dict = {"Skill Learning Resource Content": None, "Skill Learning Resource Remarks": str("")}
@@ -391,7 +325,18 @@ class TechStack:
                     h.ignore_links = False
                     h.inline_links = False
                     h.reference_links = True
-                    skill_dict[title] = h.handle(file_content)
+                    clean_text = h.handle(file_content)
+                    clean_text = clean_text.replace("[1]","")
+                    clean_text = clean_text.replace("[2]","")
+                    clean_text = clean_text.replace("[3]","")
+                    clean_text = clean_text.replace("[4]","")
+                    clean_text = clean_text.replace("[5]","")
+                    clean_text = clean_text.replace("[6]","")
+                    clean_text = clean_text.replace("[7]","")
+                    clean_text = clean_text.replace("[8]","")
+                    clean_text = clean_text.replace("[9]","")
+                    clean_text = clean_text.replace("**","")
+                    skill_dict[title] = clean_text
                 file.close()
         with open("learning resource/" + generated_directory + "/skill learning resource.html", 'w',
                   encoding='utf-8') as file:
