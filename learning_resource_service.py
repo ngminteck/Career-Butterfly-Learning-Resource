@@ -3,6 +3,7 @@ import pandas as pd
 import pypandoc
 import csv
 import os
+import glob
 from os import listdir
 from os.path import isfile, join
 import shutil
@@ -10,11 +11,12 @@ import zipfile
 import html2text
 import json
 import re
-from flask import Flask, send_file
-from werkzeug.serving import run_simple
+from flask import Flask, send_file, request
 from spacy.matcher import PhraseMatcher
 from skillNer.general_params import SKILL_DB
 from skillNer.skill_extractor_class import SkillExtractor
+from werkzeug.serving import run_simple
+from waitress import serve
 
 
 class Skill:
@@ -40,27 +42,7 @@ class Skill:
         self.keyword_search = keyword
 
 
-class Group:
-    def __init__(self, name, skills):
-        filename = name
-        filename = filename.replace('/', '-')
-        filename = filename.replace("\\", '-')
-        filename = filename + ".html"
-        path = os.path.join("group", filename)
-        path = path.replace("\\", '/')
-        self.resource_path = path  # for the resource path
-        self.keyword_search = name + " in tech"  # keyword for searching LLM
-        self.skill_set = skills
-
-    def UpdateSkillSet(self, skill):
-        self.skill_set.update(skill)
-        # print("group skill set updated.")
-
-    def ChangeKeyword(self, keyword):
-        self.keyword_search = keyword
-
-
-class TechStack:
+class LearningResourceService:
     def __init__(self):
         self.nlp = spacy.load('en_core_web_lg')
         self.skill_extractor = SkillExtractor(self.nlp, SKILL_DB, PhraseMatcher)
@@ -90,19 +72,107 @@ class TechStack:
         self.InitLeetcodeOverallFrequencyDictList()
         self.request_queue_no = 0
 
+    @staticmethod
+    def WordPreprocessing(string_text):
+        string_text = string_text.replace("[", "")
+        string_text = string_text.replace("]", "")
+        string_text = string_text.replace("(", "")
+        string_text = string_text.replace(")", "")
+        string_text = string_text.replace(":", "")
+        string_text = string_text.replace("*", "")
+        string_text = string_text.replace("\\", "")
+        string_text = string_text.replace("\"", "")
+        string_text = string_text.replace("’s", "")
+        string_text = string_text.replace("?", "")
+        string_text = string_text.replace("!", "")
+        string_text = string_text.replace("&", "")
+        string_text = string_text.replace("%", "")
+        string_text = string_text.replace("_", "")
+        string_text = string_text.replace(",", "")
+        string_text = string_text.replace("*", "")
+        string_text = string_text.replace("\n", " ")
+        string_text = string_text.replace("/", " ")
+        string_text = re.sub(r'\s+', ' ', string_text)
+        string_text = re.sub(r'\s-\s', ' ', string_text)
+        string_text = re.sub(r'\s\.\s', ' ', string_text)
+        string_text = string_text.replace(" -", " ")
+        string_text = string_text.replace("- ", " ")
+        string_text = string_text.replace(". ", " ")
+        string_text = string_text.lower()
+        return string_text
+
+    def ConvertHtmlToString(self, html_text):
+        h = html2text.HTML2Text()
+        h.ignore_images = True
+        h.ignore_links = False
+        h.inline_links = True
+        h.reference_links = False
+        string_text = h.handle(html_text)
+        string_text = re.sub(r'https://\S+', '', string_text)
+        string_text = re.sub(r'[^\x00-\x7F]+', '', string_text)
+        string_text = string_text.replace("[1]", "")
+        string_text = string_text.replace("[2]", "")
+        string_text = string_text.replace("[3]", "")
+        string_text = string_text.replace("[4]", "")
+        string_text = string_text.replace("[5]", "")
+        string_text = string_text.replace("[6]", "")
+        string_text = string_text.replace("[7]", "")
+        string_text = string_text.replace("[8]", "")
+        string_text = string_text.replace("[9]", "")
+        string_text = string_text.replace("[0]", "")
+        string_text = string_text.replace("**", "")
+        string_text = self.WordPreprocessing(string_text)
+        return string_text
+
+    @staticmethod
+    def ConvertHtmlToString2(html_text):
+        h = html2text.HTML2Text()
+        h.ignore_images = True
+        h.ignore_links = False
+        h.inline_links = False
+        h.reference_links = False
+        string_text = h.handle(html_text)
+        string_text = string_text.replace("[1]", "")
+        string_text = string_text.replace("[2]", "")
+        string_text = string_text.replace("[3]", "")
+        string_text = string_text.replace("[4]", "")
+        string_text = string_text.replace("[5]", "")
+        string_text = string_text.replace("[6]", "")
+        string_text = string_text.replace("[7]", "")
+        string_text = string_text.replace("[8]", "")
+        string_text = string_text.replace("[9]", "")
+        string_text = string_text.replace("[0]", "")
+        string_text = string_text.replace("**", "")
+        return string_text
+
+    def AddSkillDictList(self, name, keyword, groups=None):
+        if name not in self.skill_dict_list:
+            self.skill_dict_list[name] = Skill(name, keyword, groups)
+            if groups is not None:
+                for g in groups:
+                    if g in self.group_dict_list:
+                        self.group_dict_list.get(g).add(name)
+                    else:
+                        new_set = set()
+                        new_set.add(name)
+                        self.group_dict_list[g] = new_set
+
+        else:
+            self.skill_dict_list[name].UpdateGroupSet(groups)
+
+    def ReClassificationSkillDictList(self, name, keyword, groups):
+        search_keyword = keyword
+        if name in self.backup_keyword_dict_list:
+            search_keyword = self.backup_keyword_dict_list[name]
+        self.AddSkillDictList(name, search_keyword, groups)
+
+    def GetRequestQueueNo(self):
+        #self.request_queue_no += 1
+        return self.request_queue_no
+
     def ExtractSkillKeyword(self, text):
         skill_set = set()
-        text = text.lower()
-        text = text.replace("e.g.,", "")
-        text = text.replace("\n", " ")
-        text = text.replace("!", "")
-        text = text.replace(",", "")
-        text = text.replace("(", "")
-        text = text.replace(")", "")
-        text = text.replace(":", "")
-        text = text.replace("\"", " ")
-        text = text.replace("/", " ")
-        text = text.replace(". ", " ")
+        text = self.WordPreprocessing(text)
         words = text.split()
 
         for i in range(2, len(words)):
@@ -117,43 +187,27 @@ class TechStack:
             if words[i] in self.one_keyword_dict_list:
                 skill_set.add(self.one_keyword_dict_list[words[i]])
 
-        annotations = self.skill_extractor.annotate(text)
+        try:
+            annotations = self.skill_extractor.annotate(text)
+            # self.skill_extractor.describe(annotations)
+            result = annotations["results"]
+            skill_list_1 = result["full_matches"]
+            skill_list_2 = result["ngram_scored"]
 
-        # self.skill_extractor.describe(annotations)
+            for i in range(len(skill_list_1)):
+                info = skill_list_1[i]
+                skill = info["doc_node_value"]
+                skill = skill.lower()
+                skill_set.add(skill)
+            for i in range(len(skill_list_2)):
+                info = skill_list_2[i]
+                skill = info["doc_node_value"]
+                skill = skill.lower()
+                skill_set.add(skill)
+        except:
+            print("skillNer error.")
 
-        result = annotations["results"]
-        skill_list_1 = result["full_matches"]
-        skill_list_2 = result["ngram_scored"]
-
-        for i in range(len(skill_list_1)):
-            info = skill_list_1[i]
-            skill = info["doc_node_value"]
-            skill = skill.lower()
-            skill_set.add(skill)
-        for i in range(len(skill_list_2)):
-            info = skill_list_2[i]
-            skill = info["doc_node_value"]
-            skill = skill.lower()
-            skill_set.add(skill)
-
-        return skill_set
-
-    def GetRequestQueueNo(self):
-        self.request_queue_no += 1
-        return self.request_queue_no
-
-    @staticmethod
-    def ZipLearningResource(generated_directory):
-        directory_path = "learning resource/" + generated_directory
-        zip_filename = "learning resource/" + generated_directory + "/learning resource.zip"
-        valid_extensions = ('.html', '.docx', '.csv', '.json')
-
-        with zipfile.ZipFile(zip_filename, 'w') as zipf:
-            for folder_name, sub_folders, filenames in os.walk(directory_path):
-                for filename in filenames:
-                    if filename.endswith(valid_extensions):
-                        file_path = os.path.join(folder_name, filename)
-                        zipf.write(file_path, arcname=filename)
+        return list(skill_set)
 
     def GenerateLeetcodeResource(self, company, generated_directory):
         check_company = company
@@ -166,14 +220,14 @@ class TechStack:
                 break
         if company_name_to_search == "":
             shutil.copyfile("leetcode/leetcode learning resource.html",
-                            "learning resource/" + generated_directory + "/leetcode learning resource.html")
+                            "output/" + generated_directory + "/leetcode learning resource.html")
             shutil.copyfile("leetcode/leetcode learning resource.docx",
-                            "learning resource/" + generated_directory + "/leetcode learning resource.docx")
+                            "output/" + generated_directory + "/leetcode learning resource.docx")
             df = pd.read_csv("leetcode/Top 100 Question List.csv")
             df[company + " Company Frequency"] = 0
             df["Overall Frequency"] = df["Frequency"]
             df = df.drop(columns=['Frequency'])
-            df.to_csv("learning resource/" + generated_directory + "/leetcode question list.csv", encoding='utf-8',
+            df.to_csv("output/" + generated_directory + "/leetcode question list.csv", encoding='utf-8',
                       index=False)
         else:
             html_content = ""
@@ -196,12 +250,12 @@ class TechStack:
             with open("leetcode/leetcode learning resource.html", "r", encoding="utf-8") as file:
                 html_content += file.read()
                 file.close()
-            with open("learning resource/" + generated_directory + "/leetcode learning resource.html", 'w',
+            with open("output/" + generated_directory + "/leetcode learning resource.html", 'w',
                       encoding='utf-8') as file:
                 file.write(html_content)
                 file.close()
             pypandoc.convert_text(html_content, 'docx', format='html',
-                                  outputfile="learning resource/" + generated_directory +
+                                  outputfile="output/" + generated_directory +
                                              "/leetcode learning resource.docx")
             df1 = pd.read_csv("leetcode/Companies Leetcode/" + company_name_to_search + ".csv")
             df1[company + " Company Frequency"] = df1["Frequency"]
@@ -218,7 +272,7 @@ class TechStack:
             appended_df = pd.concat([df1, df], ignore_index=True)
             appended_df = appended_df.drop_duplicates(keep='first')
             final_df = appended_df.head(100).copy()
-            final_df.to_csv("learning resource/" + generated_directory + "/leetcode question list.csv",
+            final_df.to_csv("output/" + generated_directory + "/leetcode question list.csv",
                             encoding='utf-8', index=False)
 
     def GenerateSkillResource(self, skills, generated_directory):
@@ -251,9 +305,6 @@ class TechStack:
             if d in self.skill_dict_list:
                 v = self.skill_dict_list.get(d)
                 path = v.resource_path
-            elif d in self.skill_dict_list:
-                v = self.group_dict_list.get(d)
-                path = v.resource_path
             else:
                 continue
             if not os.path.isfile(path):
@@ -269,29 +320,14 @@ class TechStack:
                     html_content += "</b></u></h1>"
                     file_content = file.read()
                     html_content += file_content
-                    h = html2text.HTML2Text()
-                    h.ignore_links = False
-                    h.inline_links = False
-                    h.reference_links = True
-                    clean_text = h.handle(file_content)
-                    clean_text = clean_text.replace("[1]", "")
-                    clean_text = clean_text.replace("[2]", "")
-                    clean_text = clean_text.replace("[3]", "")
-                    clean_text = clean_text.replace("[4]", "")
-                    clean_text = clean_text.replace("[5]", "")
-                    clean_text = clean_text.replace("[6]", "")
-                    clean_text = clean_text.replace("[7]", "")
-                    clean_text = clean_text.replace("[8]", "")
-                    clean_text = clean_text.replace("[9]", "")
-                    clean_text = clean_text.replace("**", "")
-                    skill_dict[title] = clean_text
+                    skill_dict[title] = self.ConvertHtmlToString2(file_content)
                 file.close()
-        with open("learning resource/" + generated_directory + "/skill learning resource.html", 'w',
+        with open("output/" + generated_directory + "/skill learning resource.html", 'w',
                   encoding='utf-8') as file:
             file.write(html_content)
             file.close()
         pypandoc.convert_text(html_content, 'docx', format='html',
-                              outputfile="learning resource/" + generated_directory + "/skill learning resource.docx")
+                              outputfile="output/" + generated_directory + "/skill learning resource.docx")
         return remarks, skill_dict
 
     def SkillLearningResourceFilter(self, key, text, remarks):
@@ -385,14 +421,6 @@ class TechStack:
                     remarks += " also known as "
                     remarks += word.title()
                     found = True
-                elif word in self.group_dict_list:
-                    document_prepare_set.add(word)
-                    if len(remarks) != 0:
-                        remarks += "\n"
-                    remarks += key
-                    remarks += " also known as "
-                    remarks += word.title()
-                    found = True
 
         if not found:
             if len(remarks) != 0:
@@ -401,149 +429,18 @@ class TechStack:
             remarks += " not found"
         return remarks, document_prepare_set
 
-    def AddSkillDictList(self, name, keyword, groups=None):
-        if name not in self.skill_dict_list:
-            self.skill_dict_list[name] = Skill(name, keyword, groups)
-            # print(name,"added in skill_dict_list.")
-            if groups is not None:
-                for g in groups:
-                    if g in self.group_dict_list:
-                        self.group_dict_list.get(g).UpdateSkillSet({name})
-                        # print(name,"added in",g,".")
-                    else:
-                        self.group_dict_list[g] = Group(g, {name})
-                        # print("new group:",g,"have been created and added",name,".")
-        else:
-            self.UpdateSkillDictList(name, groups)
-
-    def ReClassificationSkillDictList(self, name, keyword, groups):
-        search_keyword = keyword
-        if name in self.backup_keyword_dict_list:
-            search_keyword = self.backup_keyword_dict_list[name]
-        self.AddSkillDictList(name, search_keyword, groups)
-
-    def UpdateSkillDictList(self, name, groups):
-        if name in self.skill_dict_list:
-            self.skill_dict_list[name].UpdateGroupSet(groups)
-
-    def AddGroupDictList(self, name, skills):
-        if skills is not None:
-            if name in self.group_dict_list:
-                self.UpdateGroupDictList(name, skills)
-            else:
-                found_set = set()
-                for s in skills:
-                    if s in self.skill_dict_list:
-                        self.skill_dict_list[s].UpdateGroupSet({name})
-                        found_set.add(s)
-                        # print(s,"added in",name,"group set.")
-                self.group_dict_list[name] = Group(name, found_set)
-
-    def UpdateGroupDictList(self, name, skills):
-        if name in self.group_dict_list:
-            found_set = set()
-            for s in skills:
-                if s in self.skill_dict_list:
-                    found_set.add(s)
-            self.group_dict_list[name].UpdateSkillSet(found_set)
-        else:
-            self.AddGroupDictList(name, skills)
-
-    def AddNotFoundDictList(self, name, keyword):
-        if name not in self.not_found_dict_list:
-            path = "unclassified"
-            self.not_found_dict_list[name] = Skill(name, path, keyword)
-
-    def CopyReplaceFolder(self, source_dir, dest_dir, filename):
-        if dest_dir == "unknown":
-            keyword = filename + " in tech"
-        else:
-            keyword = filename
-        self.ReClassificationSkillDictList(filename, keyword, {dest_dir})
-        dest_dir = "skill classified/" + dest_dir
-        if not os.path.exists(dest_dir):
-            os.makedirs(dest_dir)
-
-        source_path_html = source_dir + "/" + filename + ".html"
-
-        destination_path_html = dest_dir + "/" + filename + ".html"
-
-        if source_path_html != destination_path_html:
-            shutil.copyfile(source_path_html, destination_path_html)
-
-    def DeleteAllSkillFile(self):
-        for directory in self.three_word_skill_classification_set:
-            path = "skill classified/" + directory
-            if os.path.isdir(path):
-                for filename in os.listdir(path):
-                    file_path = os.path.join(path, filename)
-                    try:
-                        if os.path.isfile(file_path) or os.path.islink(file_path):
-                            os.unlink(file_path)
-                        elif os.path.isdir(file_path):
-                            shutil.rmtree(file_path)
-                    except Exception as e:
-                        print(f'Failed to delete {file_path}. Reason: {e}')
-        for directory in self.two_word_skill_classification_set:
-            path = "skill classified/" + directory
-            if os.path.isdir(directory):
-                for filename in os.listdir(path):
-                    file_path = os.path.join(path, filename)
-                    try:
-                        if os.path.isfile(file_path) or os.path.islink(file_path):
-                            os.unlink(file_path)
-                        elif os.path.isdir(file_path):
-                            shutil.rmtree(file_path)
-                    except Exception as e:
-                        print(f'Failed to delete {file_path}. Reason: {e}')
-        for directory in self.one_word_skill_classification_set:
-            path = "skill classified/" + directory
-            if os.path.isdir(path):
-                for filename in os.listdir(path):
-                    file_path = os.path.join(path, filename)
-                    try:
-                        if os.path.isfile(file_path) or os.path.islink(file_path):
-                            os.unlink(file_path)
-                        elif os.path.isdir(file_path):
-                            shutil.rmtree(file_path)
-                    except Exception as e:
-                        print(f'Failed to delete {file_path}. Reason: {e}')
-        source_dir = 'skill'
-        destination_dir = 'skill classified/unknown'
-        os.makedirs(destination_dir, exist_ok=True)
-
-        for file_name in os.listdir(source_dir):
-            source_file = os.path.join(source_dir, file_name)
-            destination_file = os.path.join(destination_dir, file_name)
-            shutil.copy(source_file, destination_file)
-
     @staticmethod
-    def FilterHtmlContent(text_content):
-        text_content = text_content.lower()
-        text_content = text_content.replace("[1]", "")
-        text_content = text_content.replace("[2]", "")
-        text_content = text_content.replace("[3]", "")
-        text_content = text_content.replace("[4]", "")
-        text_content = text_content.replace("[5]", "")
-        text_content = text_content.replace("[6]", "")
-        text_content = text_content.replace("[7]", "")
-        text_content = text_content.replace("[8]", "")
-        text_content = text_content.replace("[9]", "")
-        text_content = text_content.replace("[0]", "")
-        text_content = text_content.replace("[", "")
-        text_content = text_content.replace("]", "")
-        text_content = text_content.replace("(", "")
-        text_content = text_content.replace(")", "")
-        text_content = text_content.replace("*", "")
-        text_content = text_content.replace("\"", "")
-        text_content = text_content.replace("’s", "")
-        text_content = text_content.replace("!", "")
-        text_content = text_content.replace(":", "")
-        text_content = text_content.replace(",", "")
-        text_content = text_content.replace("\n", " ")
-        text_content = text_content.replace("/", " ")
-        text_content = text_content.replace("-", " ")
-        return text_content
+    def ZipLearningResource(generated_directory):
+        directory_path = "output/" + generated_directory
+        zip_filename = "output/" + generated_directory + "/learning resource.zip"
+        valid_extensions = ('.html', '.docx', '.csv', '.json')
+
+        with zipfile.ZipFile(zip_filename, 'w') as zipf:
+            for folder_name, sub_folders, filenames in os.walk(directory_path):
+                for filename in filenames:
+                    if filename.endswith(valid_extensions):
+                        file_path = os.path.join(folder_name, filename)
+                        zipf.write(file_path, arcname=filename)
 
     def SkillReClassification(self):
         self.backup_keyword_dict_list.clear()
@@ -551,23 +448,20 @@ class TechStack:
             self.backup_keyword_dict_list[s] = self.skill_dict_list[s].keyword_search
         self.skill_dict_list.clear()
         self.group_dict_list.clear()
-        self.DeleteAllSkillFile()
-        h = html2text.HTML2Text()
-        h.ignore_links = False
-        h.inline_links = False
-        h.reference_links = True
-        directory = 'skill classified/unknown'
+        directory = 'skill'
         filenames = [f for f in listdir(directory) if isfile(join(directory, f))]
 
         for f in filenames:
             words = f.rsplit(".")
             extension = words[len(words) - 1]
             if extension == "html":
+                print(f)
                 filename = f.replace(".html", "")
                 with open(directory + "/" + f, 'r', encoding="utf-8") as file:
                     html_content = file.read()
                     file.close()
-                text_content = self.FilterHtmlContent(h.handle(html_content))
+                text_content = self.ConvertHtmlToString(html_content)
+
                 words = text_content.split()
                 have_classified = False
                 for i in range(len(words)):
@@ -576,33 +470,11 @@ class TechStack:
                         first_word = first_word[:-1]
 
                     one_word = first_word
-                    one_word = one_word.replace("microservices", "microservice")
-                    one_word = one_word.replace("protocols", "protocol")
-                    one_word = one_word.replace("networks", "network")
-                    one_word = one_word.replace("website", "web")
-                    one_word = one_word.replace("test", "testing")
-                    one_word = one_word.replace("visualizations", "visualization")
-                    one_word = one_word.replace("aws", "amazon")
 
                     if one_word in self.one_word_skill_classification_set:
-                        self.CopyReplaceFolder(directory, one_word, filename)
+                        self.ReClassificationSkillDictList(filename, filename, {one_word})
                         have_classified = True
 
-                    if one_word == "ai":
-                        one_word = "artificial intelligence"
-                        if one_word in self.two_word_skill_classification_set:
-                            self.CopyReplaceFolder(directory, one_word, filename)
-                            have_classified = True
-                    if one_word == "api":
-                        one_word = "application programming interface"
-                        if one_word in self.three_word_skill_classification_set:
-                            self.CopyReplaceFolder(directory, one_word, filename)
-                            have_classified = True
-                    if one_word == "nlp":
-                        one_word = "natural language processing"
-                        if one_word in self.three_word_skill_classification_set:
-                            self.CopyReplaceFolder(directory, one_word, filename)
-                            have_classified = True
 
                     if i + 1 >= len(words):
                         break
@@ -611,17 +483,9 @@ class TechStack:
                         second_word = second_word[:-1]
 
                     two_word = first_word + " " + second_word
-                    two_word = two_word.replace(" servers", " server")
-                    two_word = two_word.replace(" services", " service")
-                    two_word = two_word.replace(" applications", " application")
-                    two_word = two_word.replace(" apps", " application")
-                    two_word = two_word.replace(" app", " application")
-                    two_word = two_word.replace(" databases", " database")
-                    two_word = two_word.replace(" machines", " machine")
-                    two_word = two_word.replace("website", "web")
 
                     if two_word in self.two_word_skill_classification_set:
-                        self.CopyReplaceFolder(directory, two_word, filename)
+                        self.ReClassificationSkillDictList(filename, filename, {two_word})
                         have_classified = True
 
                     if i + 2 >= len(words):
@@ -631,141 +495,72 @@ class TechStack:
                         third_word = third_word[:-1]
                     three_word = first_word + " " + second_word + " " + third_word
                     if three_word in self.three_word_skill_classification_set:
-                        self.CopyReplaceFolder(directory, three_word, filename)
+                        self.ReClassificationSkillDictList(filename, filename, {three_word})
                         have_classified = True
 
-                if have_classified:
-                    file_path = directory + "/" + filename + ".html"
-                    if os.path.isfile(file_path):
-                        os.remove(file_path)
-                    else:
-                        print(f"The file {file_path} does not exist.")
-                else:
+                if not have_classified:
                     self.ReClassificationSkillDictList(filename, filename + " in tech", {"unknown"})
 
         self.InitKeywordDictList()
         self.ExportSkillDictList()
         self.ExportGroupDictList()
 
-    def ClassificationUnClassifiedSkill(self):
-        h = html2text.HTML2Text()
-        h.ignore_links = False
-        h.inline_links = False
-        h.reference_links = True
-        directory = 'skill unclassified/not tech'
-        filenames = [f for f in listdir(directory) if isfile(join(directory, f))]
-        tech_word_list = ["software", "application", "applications", "platform", "platforms", "api", "web", "website",
-                          "network", "networks", "security", "architecture", "development", "system", "systems",
-                          "language", "cloud", "data", "open", "source", "windows"]
-        for f in filenames:
-            words = f.rsplit(".")
-            extension = words[len(words) - 1]
-            if extension == "html":
-                with open(directory + "/" + f, 'r', encoding="utf-8") as file:
-                    html_content = file.read()
-                    file.close()
-                text_content = self.FilterHtmlContent(h.handle(html_content))
-                words = text_content.split()
-                is_tech = False
-                for i in range(len(words)):
-                    if words[i] in tech_word_list:
-                        is_tech = True
-                        break
-                if is_tech:
-                    source_file = os.path.join("skill unclassified/not tech", f)
-                    destination_file = os.path.join("skill unclassified/tech", f)
-                    shutil.copy(source_file, destination_file)
-
     def FindClassificationKeyword(self):
-        h = html2text.HTML2Text()
-        h.ignore_links = False
-        h.inline_links = False
-        h.reference_links = True
         directory = 'skill'
         filenames = [f for f in listdir(directory) if isfile(join(directory, f))]
-        one_word_dict_list = {}
-        two_word_dict_list = {}
-        three_word_dict_list = {}
-        ignore_word_list = ["a", "an", "the", "of", "on", "as", "by", "to", "with", "for", "is", "are", "was", "were",
-                            "in", "you", "and", "or"]
+        skillNer_dict_list = {}
+
         for f in filenames:
             words = f.rsplit(".")
             extension = words[len(words) - 1]
             if extension == "html":
+                print(f)
                 with open(directory + "/" + f, 'r', encoding="utf-8") as file:
                     html_content = file.read()
                     file.close()
-                text_content = self.FilterHtmlContent(h.handle(html_content))
-                words = text_content.split()
-                for i in range(len(words)):
-                    first_word = words[i]
-                    # if '1.' in first_word:
-                    # break
-                    if first_word.endswith('.'):
-                        first_word = first_word[:-1]
-                    if first_word in ignore_word_list:
-                        continue
-                    one_word = first_word
-                    if one_word not in one_word_dict_list:
-                        one_word_dict_list[one_word] = 0
-                    one_word_dict_list[one_word] += 1
+                string_text = self.ConvertHtmlToString(html_content)
 
-                    if i + 1 >= len(words):
-                        break
+                try:
+                    annotations = self.skill_extractor.annotate(string_text)
+                    # self.skill_extractor.describe(annotations)
+                    result = annotations["results"]
+                    skill_list_1 = result["full_matches"]
+                    skill_list_2 = result["ngram_scored"]
 
-                    second_word = words[i + 1]
-                    if second_word.endswith('.'):
-                        second_word = second_word[:-1]
-                    if second_word in ignore_word_list:
-                        continue
-                    two_word = first_word + " " + second_word
-                    if two_word not in two_word_dict_list:
-                        two_word_dict_list[two_word] = 0
-                    two_word_dict_list[two_word] += 1
+                    for i in range(len(skill_list_1)):
+                        info = skill_list_1[i]
+                        skill = info["doc_node_value"]
+                        skill = skill.lower()
+                        if skill not in skillNer_dict_list:
+                            skillNer_dict_list[skill] = 0
+                        skillNer_dict_list[skill] += 1
+                    for i in range(len(skill_list_2)):
+                        info = skill_list_2[i]
+                        skill = info["doc_node_value"]
+                        skill = skill.lower()
+                        if skill not in skillNer_dict_list:
+                            skillNer_dict_list[skill] = 0
+                        skillNer_dict_list[skill] += 1
+                except:
+                    print(f, "error.")
 
-                    if i + 2 >= len(words):
-                        break
-
-                    third_word = words[i + 2]
-                    if third_word.endswith('.'):
-                        third_word = third_word[:-1]
-                    if third_word in ignore_word_list:
-                        continue
-                    three_word = first_word + " " + second_word + " " + third_word
-                    if three_word not in three_word_dict_list:
-                        three_word_dict_list[three_word] = 0
-                    three_word_dict_list[three_word] += 1
-        with open('word classification/count one word.txt', 'w', encoding="utf-8") as f:
-            for s in sorted(one_word_dict_list, key=one_word_dict_list.get, reverse=True):
-                f.write(str(s) + " - " + str(one_word_dict_list[s]))
-                f.write('\n')
-            file.close()
-        with open('word classification/count two word.txt', 'w', encoding="utf-8") as f:
-            for s in sorted(two_word_dict_list, key=two_word_dict_list.get, reverse=True):
-                f.write(str(s) + " - " + str(two_word_dict_list[s]))
-                f.write('\n')
-            file.close()
-        with open('word classification/count three word.txt', 'w', encoding="utf-8") as f:
-            for s in sorted(three_word_dict_list, key=three_word_dict_list.get, reverse=True):
-                f.write(str(s) + " - " + str(three_word_dict_list[s]))
+        with open('word classification/skillNer word.txt', 'w', encoding="utf-8") as f:
+            for s in sorted(skillNer_dict_list, key=skillNer_dict_list.get, reverse=True):
+                f.write(str(s) + " - " + str(skillNer_dict_list[s]))
                 f.write('\n')
             file.close()
 
     def ImportClassificationSet(self):
-        file = open("word classification/three word skill classification.txt", "r")
+        file = open("word classification/classification words.txt", "r")
         for word in file:
             word = word.replace("\n", "")
-            self.three_word_skill_classification_set.add(word)
-        file.close()
-        file = open("word classification/two word skill classification.txt", "r")
-        for word in file:
-            word = word.replace("\n", "")
-            self.two_word_skill_classification_set.add(word)
-        file.close()
-        file = open("word classification/one word skill classification.txt", "r")
-        for word in file:
-            word = word.replace("\n", "")
-            self.one_word_skill_classification_set.add(word)
+            word_list = word.split()
+            if len(word_list) == 1:
+                self.one_word_skill_classification_set.add(word)
+            elif len(word_list) == 2:
+                self.two_word_skill_classification_set.add(word)
+            else:
+                self.three_word_skill_classification_set.add(word)
         file.close()
 
     def ExportSkillDictList(self):
@@ -813,17 +608,15 @@ class TechStack:
         file_path = "groups.csv"
         with open(file_path, 'w', newline='') as file:
             writer = csv.writer(file)
-            writer.writerow(["Name", "Search Keyword", "Resource Path", "skills"])
+            writer.writerow(["Name", "skills"])
             for key, value in self.group_dict_list.items():
                 name = key
-                search = value.keyword_search
-                path = value.resource_path
                 skills = ""
-                for s in value.skill_set:
+                for s in value:
                     skills += "["
                     skills += s
                     skills += "]"
-                writer.writerow([name, search, path, skills])
+                writer.writerow([name, skills])
             file.close()
 
     def ExportNotFoundSet(self):
@@ -844,14 +637,6 @@ class TechStack:
         self.two_keyword_dict_list.clear()
         self.three_keyword_dict_list.clear()
         for s in self.skill_dict_list:
-            words = s.split()
-            if len(words) == 1:
-                self.one_keyword_dict_list[s] = s
-            elif len(words) == 2:
-                self.two_keyword_dict_list[s] = s
-            else:
-                self.three_keyword_dict_list[s] = s
-        for s in self.group_dict_list:
             words = s.split()
             if len(words) == 1:
                 self.one_keyword_dict_list[s] = s
@@ -901,33 +686,65 @@ class TechStack:
     def GenerateSkillMatchScore(self, your_skill, job_skill):
         result_dict = {"Your Skills List": None, "Job Skills List": None, "Match Score": None}
         print("extract resume skill...")
-        your_skill_set = self.ExtractSkillKeyword(your_skill)
+        result_dict["Your Skills List"] = self.ExtractSkillKeyword(your_skill)
         print("extract job skill...")
-        job_skill_set = self.ExtractSkillKeyword(job_skill)
-        result_dict["Your Skills List"] = list(your_skill_set)
-        result_dict["Job Skills List"] = list(job_skill_set)
-        match_score = {}
-        for js in result_dict["Job Skills List"]:
-            if js in result_dict["Your Skills List"]:
-                match_score[js] = 1
-            else:
-                match_score[js] = 0
-                if js in self.group_dict_list:
-                    group_skill_set = self.group_dict_list[js].skill_set
-                    for gss in group_skill_set:
-                        if gss in result_dict["Your Skills List"]:
-                            match_score[js] = 1
-                            break
+        result_dict["Job Skills List"] = self.ExtractSkillKeyword(job_skill)
 
-        result_dict["Match Score"] = match_score
+        match_list = []
+
+        for js in result_dict["Job Skills List"]:
+            info = {"Skill": str(js), "Score": 0, "Remarks": str("")}
+            if js in result_dict["Your Skills List"]:
+                info["Score"] = 1
+                info["Remarks"] = "Exact match with 1 of the user skill."
+                match_list.append(info)
+                continue
+
+            found = False
+            if js in self.group_dict_list:
+                group_skill_set = self.group_dict_list[js]
+                for gss in group_skill_set:
+                    if gss in result_dict["Your Skills List"]:
+                        info["Score"] = 1
+                        info["Remarks"] = gss.title() + " is " + js.title() + "."
+                        found = True
+                        break
+            if found:
+                match_list.append(info)
+                continue
+
+            # future implement for comparing related functional user skills like mysql and oracle SQL, which both are sql will have some score point
+            # if js in self.skill_dict_list:
+            # group_skill_set = self.skill_dict_list[js].grouup_set
+
+            info["Remarks"] = js.title() + " not found with in user skill."
+            match_list.append(info)
+
+        result_dict["Match Score"] = match_list
         return result_dict
 
     def GenerateLearningResource(self, resume, job_description, company_name, generated_directory):
         result_dict = {"Skill Learning Resource Content": None,
                        "Skill Learning Resource Remarks": str(""),
                        "Match Score": None}
-        if not os.path.exists("learning resource/" + generated_directory):
-            os.makedirs("learning resource/" + generated_directory)
+
+        if not os.path.exists("output"):
+            os.makedirs("output")
+        if not os.path.exists("output/" + generated_directory):
+            os.makedirs("output/" + generated_directory)
+
+        # Path to the specific folder
+        folder_path = "output/" + generated_directory
+
+        # List all files in the folder
+        files = glob.glob(folder_path + '/*')
+
+        # Loop through the list and delete each file
+        for f in files:
+            try:
+                os.remove(f)
+            except OSError as e:
+                print(f"Error: {f} : {e.strerror}")
 
         result = self.GenerateSkillMatchScore(resume, job_description)
 
@@ -942,10 +759,12 @@ class TechStack:
                 self.GenerateLeetcodeResource(company_name, generated_directory)
                 break
 
-        ms_dict = result["Match Score"]
+        ms_list = result["Match Score"]
         difference_skill_dict_list = {}
-        for key, value in ms_dict.items():
-            if value == 0:
+        for i in range(len(ms_list)):
+            info = ms_list[i]
+            if info["Score"] != 1:
+                key = info["Skill"]
                 difference_skill_dict_list[key] = key
 
         if len(difference_skill_dict_list) != 0:
@@ -954,7 +773,7 @@ class TechStack:
             result_dict["Skill Learning Resource Content"] = skill_result_dict["Skill Learning Resource Content"]
             result_dict["Skill Learning Resource Remarks"] = skill_result_dict["Skill Learning Resource Remarks"]
 
-        filename = "learning resource/" + generated_directory + "/response.json"
+        filename = "output/" + generated_directory + "/response.json"
         # print(result_dict["Skill Learning Resource Remarks"])
 
         # Serialize and write the list of dictionaries to a file
@@ -964,19 +783,19 @@ class TechStack:
         self.ZipLearningResource(generated_directory)
 
 
+
+
 app = Flask(__name__)
-learning_resource = TechStack()
+learning_resource = LearningResourceService()
 
-
-# learning_resource.SkillReClassification()
-# learning_resource.FindClassificationKeyword()
 
 
 # @app.route('/generate_learning_resource', methods=['GET'])
 @app.route('/')
 def generate_learning_resource():
     print("triggered")
-    resume = """
+
+    resume_sample = """
     Clarence Ng Min Teck 黄明德
 Singapore
 ng_min_teck@hotmail.com 88454484
@@ -987,7 +806,7 @@ and Technology, with an academic background in computer science, information tec
 mathematics, and physics. My hobbies are playing video games, learning new stuff in online learning, and reading
 an articles about technology, science, space, and people's lifestyles around the world. I have many missions
 or goals in my life, like making MMO or open-world games about Singapore/World or building a little Singapore
-somewhere in the north as the earth is heating it.
+somewhere in the north as the earth is heating it.s
 Currently pursuing part-time master's study in AI, focusing on computer vision and NLP. My research interest is AI
 predicts procedural generate 3d reconstruction building interior environment, layout, and dimension with different
 text/image/video models. Another research interest is to make AI translate existing songs with different languages
@@ -1256,7 +1075,7 @@ C++   •   C#   •   Python   •   Java   •   TypeScript   •   SQL   • 
 Processing (NLP)   •   Computer Vision   •   C (Programming Language)
     """
 
-    job_description = """
+    job_description_sample = """
     Responsibilities:\nCollaborate with business stakeholders to understand their data needs and objectives.\n
     Collect, clean, and preprocess data from various sources for analysis.\n
     Perform exploratory data analysis to identify trends, patterns, and correlations.\n
@@ -1286,11 +1105,26 @@ Processing (NLP)   •   Computer Vision   •   C (Programming Language)
      Familiarity with natural language processing (NLP) and text analysis is a plus.\n
      Advanced degree (Master's or PhD) in a related field is beneficial but not required.
     """
-    company = "JPMorgan"
+    company_sample = "JPMorgan"
+
+    resume = request.args.get('param1', default=None, type=str)
+    job_description = request.args.get('param2', default=None, type=str)
+    company = request.args.get('param3', default=None, type=str)
+
+    if resume is None:
+        resume = resume_sample
+
+    if job_description is None:
+        job_description = job_description_sample
+
+    if company is None:
+        company = company_sample
+
 
     generated_directory = str(learning_resource.GetRequestQueueNo())
     learning_resource.GenerateLearningResource(resume, job_description, company, generated_directory)
-    learning_resource_zip_path = "learning resource/" + generated_directory + "/learning resource.zip"
+    learning_resource_zip_path = "output/" + generated_directory + "/learning resource.zip"
+
 
     return send_file(learning_resource_zip_path, as_attachment=True, download_name='learning resource.zip')
 
@@ -1299,7 +1133,7 @@ Processing (NLP)   •   Computer Vision   •   C (Programming Language)
 def ping():
     return 'ping'
 
-
 # To run the Flask app with Werkzeug's run_simple function:
 if __name__ == '__main__':
-    run_simple('localhost', 5000, app)
+    serve(app, host='0.0.0.0', port=5000)
+    #run_simple('localhost', 5000, app)

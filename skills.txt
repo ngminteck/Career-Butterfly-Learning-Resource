@@ -36,11 +36,13 @@ amazon file cache
 amazon lake formation
 amazon lambda
 amazon vpc
+amazon
 ambari
 amcharts
 amplify
 amqp
 anaconda
+analytics
 andriod jetpack
 android ndk
 android sdk
@@ -65,6 +67,8 @@ appdna
 appdynamics
 appium
 appkit
+apple
+application programming interface
 aptos
 aquasec
 arcgis server
@@ -78,6 +82,7 @@ arm
 array
 arrow
 artifactory
+artificial intelligence
 asp.mvc
 asp.net core
 asp.net mvc
@@ -134,6 +139,7 @@ babel
 babylon.js
 backblaze
 backbone
+backend
 bash scripting
 bash
 batik
@@ -143,7 +149,9 @@ beam
 beautiful soup
 beelin
 behat
+behavior driven development
 behavioral
+big data
 bigquery
 bigtable
 binance smart chain
@@ -155,6 +163,7 @@ blackduck
 blazor
 ble
 block storage
+blockchain
 bloodhound
 boofcv
 boomi
@@ -213,6 +222,7 @@ chroma
 ci
 circleci
 cisco stealthwatch
+cisco
 citrix
 clair
 class
@@ -223,9 +233,11 @@ clion
 clojure
 cloud bees flow
 cloud build
+cloud computing
 cloud dataprep
 cloud sql
 cloud tasks
+cloud
 cloudera
 cloudflare
 cloudformation
@@ -260,6 +272,8 @@ consul
 container linux
 container
 containerization
+continuous delivery
+continuous integration
 control m
 corda
 cordova
@@ -276,6 +290,7 @@ cpanel
 cplex
 crashlytics
 creational
+cross platform
 crystal
 css
 csv
@@ -291,14 +306,22 @@ dapper
 dart
 dask
 data analysis
+data analytics
 data extraction
+data lake
+data management
 data manpulation
 data mart
 data mining
 data modeling
+data processing
+data science
 data structure
 data visualization
+data warehouse
+database management system
 database sharding
+database
 databricks
 datadog
 dataflow
@@ -323,20 +346,24 @@ dds
 debian
 decorator
 decrypt
+deep learning
 deepface
 delphi
 delta lake
 deno
+dependencies
 dependency injection
 derby
 deserialization
 design pattern
 devexpress
+devops
 dhcp
 dhtml
 digitalocean
 directx
 distributed systems
+distributed
 django rest
 django
 dl4j
@@ -419,6 +446,7 @@ exploratory data analysis
 express
 expressjs
 extjs
+extract transform load
 f#
 fabric
 facade
@@ -470,6 +498,8 @@ ftp
 fullstack
 fusioncharts
 galen
+game development
+games
 garden
 gatling
 gatsby
@@ -482,6 +512,7 @@ gensim
 geojson
 geopandas
 geoserver
+geospatial
 gephi
 geronimmo
 geronimo
@@ -514,6 +545,7 @@ google docs
 google kubernetes engine
 google sheets
 google slides
+google
 gradio
 gradle
 grafana
@@ -599,8 +631,10 @@ influxdb
 infogram
 informatica
 infrastructure code
+infrastructure
 inheritance
 instana
+integrated development environment
 intelij idea
 intellij
 inversify
@@ -713,6 +747,7 @@ liferay
 lightgbm
 linkerd
 linq
+linux
 liquibase
 lisp
 list
@@ -735,6 +770,9 @@ lucene
 luigi
 lxc
 mac address
+machine learning algorithms
+machine learning
+macos
 magento
 mahout
 mailgun
@@ -744,6 +782,7 @@ mapr
 mapreduce
 mariadb
 markdown
+markup language
 material ui
 matlab
 matplotlib
@@ -768,6 +807,7 @@ meteor
 metricbeat
 mfc
 micronaut
+microservice
 microservices
 microsoft game developer kit
 microsoft office
@@ -775,6 +815,7 @@ microsoft quantum
 microsoft sql server
 microsoft sql
 microsoft systems center
+microsoft
 microstrategy
 migration
 mina
@@ -787,6 +828,7 @@ mobile
 mobx
 mockito
 mod perl
+model view controller
 mojolicious
 mongodb atlas
 mongodb
@@ -834,6 +876,8 @@ network monitoring
 network montioring
 network protocol
 network topology
+network
+neural networks
 new relic
 newsql
 nextjs
@@ -849,6 +893,7 @@ nmap
 node.js
 nomad
 non-relational
+nosql
 npm
 nuget
 numpy
@@ -856,6 +901,7 @@ nunit
 nutch
 nuttx
 nuxtjs
+nvidia
 oauth
 oauth2
 object pool
@@ -897,6 +943,7 @@ openstack
 opentsdb
 openvino
 openvz
+operating system
 operating systems
 opsgenie
 oracle c
@@ -907,6 +954,7 @@ oracle net
 oracle sql
 oracle virtual box
 oracle virtual machine
+oracle
 orc
 orientdb
 orm
@@ -926,6 +974,7 @@ pax
 pcf
 pdfbox
 penetration testing
+penetration
 pentaho
 percona xtradb
 perforce
@@ -976,6 +1025,7 @@ private cloud
 programming
 prolog
 prometheus
+protocol
 prototype
 protractor
 prtg
@@ -1009,6 +1059,7 @@ qualys
 quantum
 quarkus
 qubole
+query language
 query
 queue
 quorum
@@ -1039,10 +1090,12 @@ reactivecocoa
 reactivex
 realm
 red hat fuse
+red hat
 redis
 redshift
 redux-saga
 redux
+relational database
 relational
 reliability
 remix
@@ -1090,6 +1143,7 @@ sap abap
 sap basis
 sap bi
 sap bw
+sap
 sas
 sass
 scala
@@ -1106,9 +1160,9 @@ scss
 scylladb
 sdn
 seaborn
-security monitoring
 security montioring
 security onion
+security
 selenium base
 selenium
 semantic ui
@@ -1117,6 +1171,7 @@ sensu
 sentry
 serialization
 server
+serverless
 service bus
 servicenow
 servlets
@@ -1149,6 +1204,7 @@ soapui
 socket
 socketio
 sockets
+software development kit
 software development life cycle
 solace
 solana
@@ -1222,6 +1278,7 @@ structs
 structural
 structured analysis
 structured design
+structured query language
 struts
 stylus
 subnet mask
@@ -1267,6 +1324,7 @@ terraform
 test labs
 test studio
 testcomplete
+testing
 testng
 testrail
 text analysis
@@ -1318,10 +1376,12 @@ uml
 undertow
 unity
 unix
+unknown
 uno platform
 unreal engine
 unstructured data
 unstructured datasets
+user interface
 uwp
 vagrant
 validata qs
@@ -1336,6 +1396,7 @@ vector database
 veeam
 velocity
 vercel
+version control
 vert.x
 vertex ai
 vertica
@@ -1351,6 +1412,7 @@ visualization
 viz
 vkey
 vmware certified professional
+vmware
 voldemort
 vpc
 vreazlise
@@ -1364,9 +1426,15 @@ w3af
 wax
 wcf
 web api
+web application
 web crawler
+web development
+web framework
+web server
+web service
 web token
 web workers
+web
 web3.js
 webgl
 webhooks
@@ -1384,6 +1452,7 @@ wicket
 wildfly
 windows batch
 windows server
+windows
 winform
 winforms
 winui

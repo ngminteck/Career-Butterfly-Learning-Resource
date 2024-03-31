@@ -10,3 +10,4 @@ werkzeug==2.2.2
 skillner==1.0.3
 ipython==8.20.0
 ipython-genutils==0.2.0
+waitress==3.0.0
