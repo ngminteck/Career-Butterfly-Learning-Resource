@@ -551,9 +551,8 @@ class LearningResourceService:
         company_name_to_search = str("")
 
         for c in self.leetcode_company_dict_list:
-            check = c.lower()
-            if check == check_company:
-                company_name_to_search = c
+            if c == check_company:
+                company_name_to_search = self.leetcode_company_dict_list[c]
                 break
 
 
@@ -585,7 +584,13 @@ class LearningResourceService:
             html_content += "  <th>Count</th>\n"
             html_content += "</tr>\n"
             try:
-                df = pd.read_csv("company-leetcode-question-tag-count/" + company_name_to_search + ".csv")
+                folder = "company-leetcode-question-tag-count"
+                file = folder + "/" + company_name_to_search + ".csv"
+                dir_exists = False
+                dir_exists = os.path.exists(folder)
+                file_exists = False
+                file_exists = os.path.exists(file)
+                df = pd.read_csv(file)
                 for index, row in df.iterrows():
                     html_content += "<tr>\n"
                     tag_html = "  <td>" + str(row["Tag"]) + "</td>\n"
@@ -595,7 +600,7 @@ class LearningResourceService:
                     html_content += "</tr>\n"
                 html_content += "</table>\n"
             except:
-                return "ELSE BLOCK - getting company tag count error."
+                return "folder exist?" + str(dir_exists)  + " file exist? " + str(file_exists) + "company name:" + company_name_to_search
 
             try:
                 with open("leetcode/leetcode learning resource.html", "r", encoding="utf-8") as file:
