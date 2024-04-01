@@ -1,0 +1,353 @@
+{
+    "Skill Learning Resource Content": {
+        "Unstructured Datasets": "[CertainlyUnstructured data refers to information that doesn\u2019t fit into a\nstandard format, making it challenging to store, process, and analyze using\ntraditional relational databases or spreadsheets].\n\nHere are five free resources where you can learn more about unstructured\ndata:\n\n  1. [Databricks] : Databricks provides an in-depth explanation of unstructured data, its benefits, and examples.\n\n  2. [NetApp] : NetApp offers insights into unstructured data, emphasizing that it\u2019s not stored in a structured database format.\n\n  3. [Coursera] : Coursera defines unstructured data and discusses its challenges and applications.\n\n  4. [IBM Blog] : IBM compares structured and unstructured data, highlighting the best practices for managing unstructured data.\n\n  5. [CareerFoundry] : CareerFoundry lists ten great places to find open, free datasets for your data projects.\n\nFeel free to explore these resources to enhance your understanding of\nunstructured data! \ud83d\udcca\ud83d\udd0d\n\n   : https://www.databricks.com/resources/ebook/s/what-is-unstructured-data\n\n   : https://www.netapp.com/data-storage/unstructured-data/what-is-\nunstructured-data/\n\n   : https://www.coursera.org/articles/what-is-unstructured-data\n\n   : https://www.ibm.com/blog/structured-vs-unstructured-data/\n\n   : https://careerfoundry.com/en/blog/data-analytics/where-to-find-free-\ndatasets/\n\n",
+        "Text Analysis": "[Text analysis , also known as text mining , is the process of\ncompiling, analyzing, and extracting valuable insights or information from\nlarge volumes of unstructured texts , using machine learning and NLP\n(natural language processing) techniques].\n\nHere are five free resources where you can learn more about text analysis:\n\n  1. [][MonkeyLearn\u2019s Beginner\u2019s Guide] : This guide provides an overview of text analysis, its basics, methods, and real-world applications.\n  2. [][BytesView Blog] : Explore their comprehensive content on text analysis, covering everything you need to know.\n  3. [][Indeed\u2019s How-To Guide] : Learn about the steps and methods involved in text analysis, especially when dealing with unstructured data.\n  4. [][Ontotext Fundamentals Series] : Dive deeper into customized text mining pipelines and the importance of TA in managing content.\n  5. [][DataKwery\u2019s Text Analysis Courses] : Explore a variety of data science courses specifically focused on text analysis.\n\nHappy learning! \ud83d\udcda\ud83d\udd0d\n\n   : https://www.bytesview.com/blog/text-analysis/\n\n   : https://monkeylearn.com/text-analysis/\n\n   : https://www.indeed.com/career-advice/career-development/how-to-do-\ntext-analysis\n\n   : https://www.ontotext.com/knowledgehub/fundamentals/text-analysis/\n\n   : https://www.datakwery.com/techniques/text-analysis/\n\n",
+        "Scikit-Learn": "Explore\n\nScikit-learn , also known as sklearn , is a Python library for\nmachine learning. It provides simple and efficient tools for\npredictive data analysis, making it accessible to everyone. You can use it for\ntasks like classification, regression, clustering, dimensionality reduction,\nand more. [Sklearn is built on NumPy , SciPy , and matplotlib ,\nand it\u2019s open source with a commercially usable BSD license].\n\nHere are five free reference links where you can learn more about scikit-\nlearn:\n\n  1. [][Scikit-learn Official Documentation] : Dive into the official documentation to explore various functionalities and examples.\n  2. [][Scikit-learn Tutorials] : Learn the basics of machine learning with practical examples and tutorials.\n  3. [][An Introduction to Machine Learning with Scikit-learn] : Understand the problem setting, loading datasets, and basic learning concepts.\n  4. [][Getting Started with Scikit-learn] : Explore the basics of fitting, predicting, and using estimators in scikit-learn.\n  5. [Scikit-learn External Resources : Find additional videos, talks, and tutorials related to scikit-learn].\n\nHappy learning! \ud83d\ude80\ud83d\udcda\n\n   : https://scikit-learn.org/stable/index.html\n\n   : https://scikit-learn.org/stable/tutorial/index.html\n\n   : https://scikit-learn.org/stable/tutorial/basic/tutorial.html\n\n   : https://scikit-learn.org/stable/getting_started.html\n\n",
+        "Database": "Certainly! [In a nutshell, a database is a structured collection of\ninformation stored in a computer system, organized in a way that makes it easy\nto retrieve and manipulate data]. Here are some free resources where\nyou can learn more about databases:\n\n  1. [edX] : Offers online courses covering various database systems.\n  2. [][W3Schools SQL Tutorial] : Provides interactive SQL tutorials for MySQL, SQL Server, and more.\n  3. [][freeCodeCamp\u2019s Relational Database Curriculum] : Includes beginner-friendly courses on SQL and relational databases.\n  4. [][Coursera] : Offers a range of database courses from top universities and industry leaders.\n  5. [][Holistics] : Lists additional tools and resources for learning SQL and database concepts.\n\nFeel free to explore these links to enhance your understanding of databases!\n\ud83d\udcda\ud83d\udd0d\n\n   : https://www.guru99.com/introduction-to-database-sql.html\n\n   : https://www.edx.org/learn/databases\n\n   : https://www.w3schools.com/sql/\n\n   : https://www.freecodecamp.org/news/learn-sql-free-relational-database-\ncourses-for-beginners/\n\n   : https://www.coursera.org/courses?query=database\n\n   : https://www.holistics.io/blog/top-database-documentation-tools/\n\n",
+        "Testing": "Certainly! [In a nutshell, software testing is the process of evaluating\nthe functionality of a software to verify and validate that it meets the\nexpected requirements and is defect-free]. Now, let\u2019s explore some\nfree resources to enhance your understanding of software testing:\n\n  1. [][Software Testing Basics] : This course covers essential concepts, including the Software Development Life Cycle (SDLC), testing models, and documentation.\n  2. [Foundations of Software Testing and Validation (University of Leeds): A beginner-friendly course focusing on software testing fundamentals].\n  3. [][Introduction to Software Testing] (University of Minnesota): Learn about testing, problem-solving, and software engineering principles.\n  4. [Introduction to Software Engineering (IBM): Gain insights into software engineering, programming, and agile development].\n  5. [][Free Software Testing Courses on Udemy] : Explore a variety of courses on Udemy, covering manual testing, test automation, performance testing, security testing, and more.\n\nFeel free to dive into these resources and enhance your software testing\nskills! \ud83d\ude80\n\n   : https://www.mygreatlearning.com/academy/learn-for-\nfree/courses/software-testing-fundamentals1\n\n   : https://www.classcentral.com/subject/software-testing\n\n   : https://www.coursera.org/learn/introduction-software-testing\n\n   : https://www.udemy.com/topic/software-testing/free/\n\n",
+        "Machine Learning Algorithms": "[Machine learning algorithms are computational models that allow computers\nto understand patterns and forecast or make judgments based on data without\nthe need for explicit programming].\n\nHere are five free resources where you can learn more about machine\nlearning:\n\n  1. [][Machine Learning Crash Course by Google Developers] : This practical introduction covers key concepts, including loss, gradient descent, and deep neural networks, with real-world case studies and hands-on exercises.\n  2. [Stanford University\u2019s Machine Learning Course] : A comprehensive course that dives into the foundations of machine learning.\n  3. [Machine Learning Foundations: A Case Study Approach by University of Washington] : Learn through case studies and practical examples.\n  4. [Machine Learning for All by University of London] : An accessible course suitable for beginners.\n  5. [Machine Learning with Python by IBM] : Explore machine learning using Python and practical examples.\n\nFeel free to explore these resources and enhance your understanding of machine\nlearning! \ud83e\udd16\ud83d\udcda\n\n   : https://www.geeksforgeeks.org/machine-learning-algorithms/\n\n   : https://developers.google.com/machine-learning/crash-course/\n\n   : https://www.freecodecamp.org/news/best-machine-learning-courses/\n\n",
+        "Hadoop": "Apache Hadoop is an open-source framework that enables distributed\nprocessing of large data sets across clusters of computers using simple\nprogramming models. [It provides a software architecture for both storage and\nprocessing of big data, utilizing the MapReduce programming model\n].\n\nHere are five free reference links where you can learn more about Apache\nHadoop:\n\n  1. [][Official Apache Hadoop Website] : The official website provides comprehensive documentation, tutorials, and resources for understanding Hadoop\u2019s architecture, components, and usage .\n  2. [][edX Hadoop Courses] : edX offers online courses that cover Hadoop fundamentals, including its ecosystem, architecture, and practical applications .\n  3. [][TutorialsPoint Hadoop Tutorial] : This tutorial covers Hadoop basics, HDFS, MapReduce, and other essential concepts with practical examples .\n  4. [][GeeksforGeeks Hadoop Tutorial] : GeeksforGeeks provides detailed articles on Hadoop components, configuration, and usage .\n  5. [][Google Cloud Learn: What is Hadoop?] : Google Cloud\u2019s resource explains Hadoop\u2019s history, benefits, challenges, and use cases .\n\nFeel free to explore these resources to enhance your understanding of Apache\nHadoop! \ud83d\ude80\n\n   : https://www.edx.org/learn/hadoop\n\n   : https://www.tutorialspoint.com/hadoop/index.htm\n\n   : https://hadoop.apache.org/\n\n   : https://www.geeksforgeeks.org/hadoop-tutorial/\n\n   : https://cloud.google.com/learn/what-is-hadoop\n\n",
+        "Exploratory Data Analysis": "Explore\n\nExploratory Data Analysis (EDA) is the process of summarizing,\nvisualizing, and understanding the main characteristics of a dataset to\nuncover patterns, relationships, and potential insights.\n\nHere are five free reference links where you can learn more about EDA:\n\n  1. [][CareerFoundry Tutorial on Descriptive Statistics and Exploratory Data Analysis] : This tutorial covers descriptive statistics and pivot tables, helping you gain insights from data.\n  2. [][DataCamp\u2019s Exploratory Data Analysis in Python Course] : Learn how to explore, visualize, and extract insights from data using Python.\n  3. [][UCI Data Preprocessing and Exploratory Data Analysis on Udemy] : A free tutorial that covers data preprocessing and EDA.\n  4. [][Coursera\u2019s Exploratory Data Analysis Course] : Dive into principles of analytic graphs, exploratory graphs, and plotting systems using R.\n  5. [][DataCamp\u2019s Python Exploratory Data Analysis Tutorial] : Learn EDA basics in Python with Pandas, Matplotlib, and NumPy.\n\nHappy exploring! \ud83d\udcca\ud83d\udd0d\n\n   : https://careerfoundry.com/en/tutorials/data-analytics-for-\nbeginners/descriptive-statistics-and-exploratory-data-analysis\n\n   : https://www.datacamp.com/courses/exploratory-data-analysis-in-python\n\n   : https://www.udemy.com/course/uci-data-preprocessing-and-exploratory-\ndata-analysis/\n\n   : https://www.coursera.org/learn/exploratory-data-analysis\n\n   : https://www.datacamp.com/tutorial/exploratory-data-analysis-python\n\n",
+        "Spark": "Explore\n\n[CertainlyApache Spark is a lightning-fast, open-source data-processing\nengine used for machine learning and AI applications, backed by a large open-\nsource community in the big data domain ]. It easily\nhandles large-scale data sets and is well-suited for tasks like PySpark.\n\nHere are five free reference links where you can learn more about Apache\nSpark:\n\n  1. AWS Introduction to Apache Spark : This resource provides an overview of Spark, its features, and how it works. [You\u2019ll find tutorials and examples to get started ].\n  2. [IBM\u2019s Explanation of Apache Spark : IBM offers insights into Spark\u2019s capabilities, including its use for machine learning, AI, and real-time data processing ].\n  3. [Google Cloud\u2019s Overview of Apache Spark : Learn about Spark\u2019s unified analytics engine, its modules (SQL, streaming, machine learning, and graph processing), and its compatibility with various data sources ].\n  4. Apache Spark Official Documentation : The official Spark website offers comprehensive documentation, tutorials, and quick-start guides. [You can explore Spark\u2019s features, architecture, and APIs ].\n  5. Udemy\u2019s Spark Starter Kit : This free Udemy course delves into Spark in depth, providing a strong foundation. [It covers essential concepts and practical examples ].\n\nFeel free to explore these resources to enhance your understanding of Apache\nSpark! \ud83d\ude80\n\n   : https://aws.amazon.com/what-is/apache-spark/\n\n   : https://www.ibm.com/topics/apache-spark\n\n   : https://www.ibm.com/id-en/topics/apache-spark\n\n   : https://cloud.google.com/learn/what-is-apache-spark\n\n   : https://spark.apache.org/\n\n   : https://www.udemy.com/course/sparkstarterkit/\n\n",
+        "Cloud": "Certainly! [In a nutshell, cloud computing refers to accessing servers,\nsoftware, and databases over the Internet, eliminating the need for managing\nphysical servers or running applications on local\nmachines].\n\nHere are five free resources where you can learn more about cloud\ncomputing:\n\n  1. [Cloudflare Learning Center] : Understand cloud basics, explore different cloud models, and learn how the cloud works.\n  2. [Google Cloud] : Dive into on-demand availability of computing resources and grasp the essentials of cloud computing.\n  3. [IBM Cloud Computing] : Explore cloud resources, virtual servers, data storage, and more with pay-per-use pricing.\n  4. [PhoenixNAP] : Learn about cloud virtualization, scalability, hybrid cloud, DevOps, and automation.\n  5. [Coursera Cloud Computing Courses] : Discover essential concepts like IaaS, PaaS, and SaaS, and explore different layers of cloud computing.\n\nFeel free to explore these resources and enhance your understanding of cloud\ntechnology! \ud83c\udf10\u2601\ufe0f\n\n   : https://www.cloudflare.com/learning/cloud/what-is-the-cloud/\n\n   : https://cloud.google.com/learn/what-is-cloud-computing\n\n   : https://www.ibm.com/topics/cloud-computing\n\n   : https://phoenixnap.com/blog/what-is-cloud-computing\n\n   : https://www.coursera.org/collections/cloud-computing-for-beginners\n\n",
+        "Statistical Analysis": "Explore\n\nStatistical analysis involves collecting and analyzing data to discern\npatterns, relationships, and insights. It helps us make informed decisions\nbased on data-driven evidence.\n\nHere are five free reference links where you can learn more about\nstatistical analysis:\n\n  1. [Coursera : Explore their article on \u201cWhat Is Statistical Analysis? Definition, Types, and Jobs\u201d to understand the fundamentals and career opportunities in this field].\n  2. [Built In : Read their concise explanation of statistical analysis and its importance in research and data interpretation].\n  3. [Simplilearn : Dive into their comprehensive guide on \u201cTypes, Methods, and Examples of Statistical Analysis\u201d to learn about descriptive, inferential, predictive, and other types of statistical analysis].\n  4. [Business News Daily : Discover how statistical analysis is used to identify trends, remove bias, and inform decision-making in business intelligence].\n  5. [DataCamp : Explore their tutorial on \u201cUnveiling the Magic of Statistical Machine Learning\u201d , which delves into the fusion of statistics and machine learning].\n\nRemember, statistical analysis is a powerful tool that empowers us to extract\nmeaningful insights from data, whether it\u2019s for scientific research, business\ndecisions, or personal understanding. Happy learning! \ud83d\udcca\ud83d\udcc8\n\n   : https://www.coursera.org/articles/statistical-analytics\n\n   : https://builtin.com/data-science/statistical-analysis\n\n   : https://www.simplilearn.com/what-is-statistical-analysis-article\n\n   : https://www.businessnewsdaily.com/6000-statistical-analysis.html\n\n   : https://www.datacamp.com/tutorial/unveiling-the-magic-of-statistical-\nmachine-learning\n\n"
+    },
+    "Skill Learning Resource Remarks": "algorithms not found\nextracting data not found\ndata engineers not found\ncross functional teams not found\nexploratory datum analysis not found\ndata manipulation not found\na b testing also known as Testing\ncommunication skills not found\ncollect not found\nsources not found\nmachine learn not found\ntools e not found\nanalysis perform not found\ne not found\ncloud platforms also known as Cloud\nproblem solve not found\ncommunicate not found\nexperimentation not found\ncomputer science not found\nstatistics mathematics not found\nlibraries not found\ndecision make not found\nmachine learn algorithm not found\nstrategic decision make not found\ncollaborate not found\ndraw not found\ndata technologies not found\npredictive models not found\nscience computer not found\ndata pipeline not found\nanalytical skill not found\npreprocess data not found",
+    "Match Score": [
+        {
+            "Skill": "unstructured datasets",
+            "Score": 0,
+            "Remarks": "Unstructured Datasets not found with in user skill."
+        },
+        {
+            "Skill": "aws",
+            "Score": 1,
+            "Remarks": "Exact match with 1 of the user skill."
+        },
+        {
+            "Skill": "algorithms",
+            "Score": 0,
+            "Remarks": "Algorithms not found with in user skill."
+        },
+        {
+            "Skill": "data visualization",
+            "Score": 1,
+            "Remarks": "Seaborn is Data Visualization."
+        },
+        {
+            "Skill": "r",
+            "Score": 1,
+            "Remarks": "Xgboost is R."
+        },
+        {
+            "Skill": "extracting data",
+            "Score": 0,
+            "Remarks": "Extracting Data not found with in user skill."
+        },
+        {
+            "Skill": "visualization",
+            "Score": 1,
+            "Remarks": "Neo4J is Visualization."
+        },
+        {
+            "Skill": "testing",
+            "Score": 0,
+            "Remarks": "Testing not found with in user skill."
+        },
+        {
+            "Skill": "data engineers",
+            "Score": 0,
+            "Remarks": "Data Engineers not found with in user skill."
+        },
+        {
+            "Skill": "cross functional teams",
+            "Score": 0,
+            "Remarks": "Cross Functional Teams not found with in user skill."
+        },
+        {
+            "Skill": "exploratory data analysis",
+            "Score": 0,
+            "Remarks": "Exploratory Data Analysis not found with in user skill."
+        },
+        {
+            "Skill": "exploratory datum analysis",
+            "Score": 0,
+            "Remarks": "Exploratory Datum Analysis not found with in user skill."
+        },
+        {
+            "Skill": "data manipulation",
+            "Score": 0,
+            "Remarks": "Data Manipulation not found with in user skill."
+        },
+        {
+            "Skill": "sql",
+            "Score": 1,
+            "Remarks": "Exact match with 1 of the user skill."
+        },
+        {
+            "Skill": "a b testing",
+            "Score": 0,
+            "Remarks": "A B Testing not found with in user skill."
+        },
+        {
+            "Skill": "artificial intelligence",
+            "Score": 1,
+            "Remarks": "Nvidia is Artificial Intelligence."
+        },
+        {
+            "Skill": "text analysis",
+            "Score": 0,
+            "Remarks": "Text Analysis not found with in user skill."
+        },
+        {
+            "Skill": "communication skills",
+            "Score": 0,
+            "Remarks": "Communication Skills not found with in user skill."
+        },
+        {
+            "Skill": "collect",
+            "Score": 0,
+            "Remarks": "Collect not found with in user skill."
+        },
+        {
+            "Skill": "scikit learn",
+            "Score": 1,
+            "Remarks": "Exact match with 1 of the user skill."
+        },
+        {
+            "Skill": "scikit-learn",
+            "Score": 0,
+            "Remarks": "Scikit-Learn not found with in user skill."
+        },
+        {
+            "Skill": "pytorch",
+            "Score": 1,
+            "Remarks": "Exact match with 1 of the user skill."
+        },
+        {
+            "Skill": "sources",
+            "Score": 0,
+            "Remarks": "Sources not found with in user skill."
+        },
+        {
+            "Skill": "data processing",
+            "Score": 1,
+            "Remarks": "Pyspark is Data Processing."
+        },
+        {
+            "Skill": "machine learn",
+            "Score": 0,
+            "Remarks": "Machine Learn not found with in user skill."
+        },
+        {
+            "Skill": "tools e",
+            "Score": 0,
+            "Remarks": "Tools E not found with in user skill."
+        },
+        {
+            "Skill": "data science",
+            "Score": 1,
+            "Remarks": "Pyspark is Data Science."
+        },
+        {
+            "Skill": "hadoop",
+            "Score": 0,
+            "Remarks": "Hadoop not found with in user skill."
+        },
+        {
+            "Skill": "analysis perform",
+            "Score": 0,
+            "Remarks": "Analysis Perform not found with in user skill."
+        },
+        {
+            "Skill": "machine learning",
+            "Score": 1,
+            "Remarks": "Pytorch is Machine Learning."
+        },
+        {
+            "Skill": "datasets",
+            "Score": 1,
+            "Remarks": "Pytorch is Datasets."
+        },
+        {
+            "Skill": "e",
+            "Score": 0,
+            "Remarks": "E not found with in user skill."
+        },
+        {
+            "Skill": "cloud platforms",
+            "Score": 0,
+            "Remarks": "Cloud Platforms not found with in user skill."
+        },
+        {
+            "Skill": "natural language processing",
+            "Score": 1,
+            "Remarks": "Transformers is Natural Language Processing."
+        },
+        {
+            "Skill": "matplotlib",
+            "Score": 1,
+            "Remarks": "Exact match with 1 of the user skill."
+        },
+        {
+            "Skill": "seaborn",
+            "Score": 1,
+            "Remarks": "Exact match with 1 of the user skill."
+        },
+        {
+            "Skill": "problem solve",
+            "Score": 0,
+            "Remarks": "Problem Solve not found with in user skill."
+        },
+        {
+            "Skill": "numpy",
+            "Score": 1,
+            "Remarks": "Exact match with 1 of the user skill."
+        },
+        {
+            "Skill": "communicate",
+            "Score": 0,
+            "Remarks": "Communicate not found with in user skill."
+        },
+        {
+            "Skill": "experimentation",
+            "Score": 0,
+            "Remarks": "Experimentation not found with in user skill."
+        },
+        {
+            "Skill": "computer science",
+            "Score": 0,
+            "Remarks": "Computer Science not found with in user skill."
+        },
+        {
+            "Skill": "statistics mathematics",
+            "Score": 0,
+            "Remarks": "Statistics Mathematics not found with in user skill."
+        },
+        {
+            "Skill": "database",
+            "Score": 0,
+            "Remarks": "Database not found with in user skill."
+        },
+        {
+            "Skill": "tensorflow",
+            "Score": 1,
+            "Remarks": "Transformers is Tensorflow."
+        },
+        {
+            "Skill": "azure",
+            "Score": 1,
+            "Remarks": "Exact match with 1 of the user skill."
+        },
+        {
+            "Skill": "libraries",
+            "Score": 0,
+            "Remarks": "Libraries not found with in user skill."
+        },
+        {
+            "Skill": "decision make",
+            "Score": 0,
+            "Remarks": "Decision Make not found with in user skill."
+        },
+        {
+            "Skill": "statistical analysis",
+            "Score": 0,
+            "Remarks": "Statistical Analysis not found with in user skill."
+        },
+        {
+            "Skill": "data analysis",
+            "Score": 1,
+            "Remarks": "Pandas is Data Analysis."
+        },
+        {
+            "Skill": "big data",
+            "Score": 1,
+            "Remarks": "Pyspark is Big Data."
+        },
+        {
+            "Skill": "spark",
+            "Score": 0,
+            "Remarks": "Spark not found with in user skill."
+        },
+        {
+            "Skill": "machine learn algorithm",
+            "Score": 0,
+            "Remarks": "Machine Learn Algorithm not found with in user skill."
+        },
+        {
+            "Skill": "python",
+            "Score": 1,
+            "Remarks": "Exact match with 1 of the user skill."
+        },
+        {
+            "Skill": "strategic decision make",
+            "Score": 0,
+            "Remarks": "Strategic Decision Make not found with in user skill."
+        },
+        {
+            "Skill": "collaborate",
+            "Score": 0,
+            "Remarks": "Collaborate not found with in user skill."
+        },
+        {
+            "Skill": "draw",
+            "Score": 0,
+            "Remarks": "Draw not found with in user skill."
+        },
+        {
+            "Skill": "data technologies",
+            "Score": 0,
+            "Remarks": "Data Technologies not found with in user skill."
+        },
+        {
+            "Skill": "machine learning algorithms",
+            "Score": 0,
+            "Remarks": "Machine Learning Algorithms not found with in user skill."
+        },
+        {
+            "Skill": "pandas",
+            "Score": 1,
+            "Remarks": "Exact match with 1 of the user skill."
+        },
+        {
+            "Skill": "predictive models",
+            "Score": 0,
+            "Remarks": "Predictive Models not found with in user skill."
+        },
+        {
+            "Skill": "science computer",
+            "Score": 0,
+            "Remarks": "Science Computer not found with in user skill."
+        },
+        {
+            "Skill": "programming languages",
+            "Score": 1,
+            "Remarks": "Exact match with 1 of the user skill."
+        },
+        {
+            "Skill": "programming",
+            "Score": 1,
+            "Remarks": "Exact match with 1 of the user skill."
+        },
+        {
+            "Skill": "cloud",
+            "Score": 1,
+            "Remarks": "Exact match with 1 of the user skill."
+        },
+        {
+            "Skill": "data pipeline",
+            "Score": 0,
+            "Remarks": "Data Pipeline not found with in user skill."
+        },
+        {
+            "Skill": "analytical skill",
+            "Score": 0,
+            "Remarks": "Analytical Skill not found with in user skill."
+        },
+        {
+            "Skill": "preprocess data",
+            "Score": 0,
+            "Remarks": "Preprocess Data not found with in user skill."
+        }
+    ]
+}
