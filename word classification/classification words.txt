@@ -5,8 +5,7 @@ html
 analytics
 sql
 api
-javascript
-library 
+javascript 
 web application
 machine learning
 kubernetes 
@@ -77,7 +76,6 @@ ruby
 data integration
 unix
 distributed systems
-java ee
 data structure
 typescript
 deep learning
@@ -98,3 +96,11 @@ js
 .net
 artificial intelligence
 ai
+frontend
+backend
+fullstack
+azure
+quantum
+mq
+message queue
+monitoring

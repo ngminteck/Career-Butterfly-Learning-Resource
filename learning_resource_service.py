@@ -328,6 +328,7 @@ class LearningResourceService:
         self.partial_match_replace_dict_list["ms"] = "microsoft"
         self.partial_match_replace_dict_list["db"] = "database"
 
+
     """
     not in use, this for if handle more than 1 request
     """
@@ -484,11 +485,13 @@ class LearningResourceService:
                 info = skill_list_1[i]
                 skill = info["doc_node_value"]
                 skill = skill.lower()
+                skill = re.sub(r'\bdatum\b', 'data', skill)
                 skill_set.add(skill)
             for i in range(len(skill_list_2)):
                 info = skill_list_2[i]
                 skill = info["doc_node_value"]
                 skill = skill.lower()
+                skill = re.sub(r'\bdatum\b', 'data', skill)
                 skill_set.add(skill)
         except:
             print("skillNer error.")
@@ -508,23 +511,28 @@ class LearningResourceService:
         match_list = []
 
         for js in result_dict["Job Skills List"]:
-            info = {"Skill": str(js), "Score": 0, "Remarks": str("")}
+            info = {"Skill": str(js), "Score": 0.0, "Remarks": str("")}
             if js in result_dict["Your Skills List"]:
-                info["Score"] = 1
-                info["Remarks"] = "Exact match with 1 of the user skill."
+                info["Score"] = 1.0
+                info["Remarks"] = "Exact match with one of the user skill."
                 match_list.append(info)
                 continue
 
             found = False
+            related_text = ""
             if js in self.group_dict_list:
                 group_skill_set = self.group_dict_list[js]
                 for gss in group_skill_set:
                     if gss in result_dict["Your Skills List"]:
-                        info["Score"] = 1
-                        info["Remarks"] = gss.title() + " is " + js.title() + "."
+                        related_text += js.title()
+                        related_text += " is a related with "
+                        related_text += gss.title()
+                        related_text += ", which the user have it. "
                         found = True
-                        break
+
             if found:
+                info["Score"] = 0.5
+                info["Remarks"] = related_text[:-2]
                 match_list.append(info)
                 continue
 
@@ -533,7 +541,7 @@ class LearningResourceService:
             # if js in self.skill_dict_list:
             # group_skill_set = self.skill_dict_list[js]
 
-            info["Remarks"] = js.title() + " not found with in user skill."
+            info["Remarks"] = js.title() + " not found within the user skill."
             match_list.append(info)
 
         result_dict["Match Score"] = match_list
@@ -558,21 +566,25 @@ class LearningResourceService:
 
         if company_name_to_search == "":
             try:
-                shutil.copyfile("leetcode/leetcode learning resource.html","output/" + generated_directory + "/leetcode learning resource.html")
+                shutil.copyfile("leetcode/leetcode learning resource.html", "output/" + generated_directory +
+                                "/leetcode learning resource.html")
             except:
                 return "IF BLOCK - Generate leetcode learning resource.html failed."
             try:
-                shutil.copyfile("leetcode/leetcode learning resource.docx","output/" + generated_directory + "/leetcode learning resource.docx")
+                shutil.copyfile("leetcode/leetcode learning resource.docx", "output/" + generated_directory +
+                                "/leetcode learning resource.docx")
             except:
                 return "IF BLOCK - Generate leetcode learning resource.docx failed."
 
-            try:
-                df = pd.read_csv("leetcode/Top 100 Question List.csv")
+            file_to_open = "leetcode/Top 100 Question List.csv"
+            if os.path.exists(file_to_open):
+                df = pd.read_csv(file_to_open)
                 df[company + " Company Frequency"] = 0
                 df["Overall Frequency"] = df["Frequency"]
                 df = df.drop(columns=['Frequency'])
-                df.to_csv("output/" + generated_directory + "/leetcode question list.csv", encoding='utf-8',index=False)
-            except:
+                df.to_csv("output/" + generated_directory + "/leetcode question list.csv", encoding='utf-8',
+                          index=False)
+            else:
                 return "IF BLOCK - Generate leetcode question list failed."
         else:
             html_content = ""
@@ -583,14 +595,9 @@ class LearningResourceService:
             html_content += "  <th>Tag</th>\n"
             html_content += "  <th>Count</th>\n"
             html_content += "</tr>\n"
-            try:
-                folder = "company-leetcode-question-tag-count"
-                file = folder + "/" + company_name_to_search + ".csv"
-                dir_exists = False
-                dir_exists = os.path.exists(folder)
-                file_exists = False
-                file_exists = os.path.exists(file)
-                df = pd.read_csv(file)
+            file_to_open = "company-leetcode-question-tag-count/" + company_name_to_search + ".csv"
+            if os.path.exists(file_to_open):
+                df = pd.read_csv(file_to_open)
                 for index, row in df.iterrows():
                     html_content += "<tr>\n"
                     tag_html = "  <td>" + str(row["Tag"]) + "</td>\n"
@@ -599,25 +606,27 @@ class LearningResourceService:
                     html_content += count_html
                     html_content += "</tr>\n"
                 html_content += "</table>\n"
-            except:
-                return "folder exist?" + str(dir_exists)  + " file exist? " + str(file_exists) + "company name:" + company_name_to_search
+            else:
+                return file_to_open + " not exist."
 
-            try:
-                with open("leetcode/leetcode learning resource.html", "r", encoding="utf-8") as file:
+            file_to_open = "leetcode/leetcode learning resource.html"
+            if os.path.exists(file_to_open):
+                with open(file_to_open, "r", encoding="utf-8") as file:
                     html_content += file.read()
                     file.close()
-            except:
+            else:
                 return "ELSE BLOCK - in reading leetcode resource.html error."
 
-
-            with open("output/" + generated_directory + "/leetcode learning resource.html", 'w',encoding='utf-8') as file:
+            with (open("output/" + generated_directory + "/leetcode learning resource.html", 'w', encoding='utf-8') as
+                  file):
                 file.write(html_content)
                 file.close()
-            pypandoc.convert_text(html_content, 'docx', format='html', outputfile="output/" + generated_directory +"/leetcode learning resource.docx")
+            pypandoc.convert_text(html_content, 'docx', format='html', outputfile="output/" + generated_directory +
+                                                                                  "/leetcode learning resource.docx")
 
-
-            try:
-                df1 = pd.read_csv("company-leetcode-question-list/" + company_name_to_search + ".csv")
+            file_to_open = "company-leetcode-question-list/" + company_name_to_search + ".csv"
+            if os.path.exists(file_to_open):
+                df1 = pd.read_csv(file_to_open)
                 df1[company + " Company Frequency"] = df1["Frequency"]
                 df1 = df1.drop(columns=['Frequency'])
                 df1["Overall Frequency"] = str("")
@@ -625,16 +634,22 @@ class LearningResourceService:
                     no = str(row['No'])
                     if no in self.leetcode_overall_frequency_dict_list:
                         df1.at[index, "Overall Frequency"] = self.leetcode_overall_frequency_dict_list[no]
-                df = pd.read_csv("leetcode/Top 100 Question List.csv")
+            else:
+                return file_to_open + "not exist."
+
+            file_to_open = "leetcode/Top 100 Question List.csv"
+            if os.path.exists(file_to_open):
+                df = pd.read_csv(file_to_open)
                 df[company + " Company Frequency"] = 0
                 df["Overall Frequency"] = df['Frequency']
                 df = df.drop(columns=['Frequency'])
                 appended_df = pd.concat([df1, df], ignore_index=True)
                 appended_df = appended_df.drop_duplicates(keep='first')
                 final_df = appended_df.head(100).copy()
-                final_df.to_csv("output/" + generated_directory + "/leetcode question list.csv",encoding='utf-8', index=False)
-            except:
-                return "ELSE BLOCK - Generate leetcode quesiton list failed."
+                final_df.to_csv("output/" + generated_directory + "/leetcode question list.csv", encoding='utf-8',
+                                index=False)
+            else:
+                return file_to_open + " not exist."
             return "LEETCODE SUCCESS"
 
     """
@@ -644,29 +659,32 @@ class LearningResourceService:
     content.
     """
     def GenerateSkillResource(self, skills, generated_directory):
-        result_dict = {"Skill Learning Resource Content": None, "Skill Learning Resource Remarks": str("")}
-
-        result_dict["Skill Learning Resource Remarks"], document_prepare_set = self.GenerateSkillResourcePreProcessing(
-            skills, result_dict["Skill Learning Resource Remarks"])
+        result_dict = {"Skill Learning Resource Content": None, "Skill Learning Resource Remarks": None}
+        remarks_list = []
+        remarks, document_prepare_set = self.GenerateSkillResourcePreProcessing(skills)
+        remarks_list.extend(remarks)
         if len(document_prepare_set) == 0:
             return result_dict
 
-        result_dict["Skill Learning Resource Remarks"], result_dict["Skill Learning Resource Content"] = \
-            self.GenerateSkillResourceContent(document_prepare_set, result_dict["Skill Learning Resource Remarks"],
-                                              generated_directory)
+        remarks, result_dict["Skill Learning Resource Content"] = (
+            self.GenerateSkillResourceContent(document_prepare_set, generated_directory))
+        remarks_list.extend(remarks)
+        result_dict["Skill Learning Resource Remarks"] = remarks_list
         return result_dict
 
-    def GenerateSkillResourcePreProcessing(self, skills, remarks):
+    def GenerateSkillResourcePreProcessing(self, skills):
         document_prepare_set = set()
-
+        remarks_list = []
         for key, value in skills.items():
-            remarks, skills[key] = self.SkillLearningResourceFilter(key, value, remarks)
+            remarks, skills[key] = self.SkillLearningResourceFilter(key, value)
+            remarks_list.extend(remarks)
             if skills[key] != "":
-                remarks, document_prepare_set = self.SkillLearningResourceSearch(key, skills[key],
-                                                                                 document_prepare_set, remarks)
-        return remarks, document_prepare_set
+                remarks, document_prepare_set = self.SkillLearningResourceSearch(key, skills[key], document_prepare_set)
+                remarks_list.extend(remarks)
+        return remarks_list, document_prepare_set
 
-    def SkillLearningResourceFilter(self, key, text, remarks):
+    def SkillLearningResourceFilter(self, key, text):
+        remark_list = []
         text = text.lower()
         text = text.replace("/", " ")
         if text.find('(') != -1:
@@ -687,21 +705,14 @@ class LearningResourceService:
         new_text = new_text[:-1]
         lower_key = key.lower()
         if lower_key != new_text:
-            if len(remarks) != 0:
-                remarks += "\n"
-            remarks += key
-            remarks += " also known as "
-            remarks += new_text.title()
-        return remarks, new_text
+            remark_list.append(key.title() + "also known as " + new_text.title())
+        return remark_list, new_text
 
-    def SkillLearningResourceSearch(self, key, text, document_prepare_set, remarks):
+    def SkillLearningResourceSearch(self, key, text, document_prepare_set):
+        remark_list = []
         if text in self.skill_dict_list:
             document_prepare_set.add(text)
-            return remarks, document_prepare_set
-
-        if text in self.group_dict_list:
-            document_prepare_set.add(text)
-            return remarks, document_prepare_set
+            return remark_list, document_prepare_set
 
         # check for . - space and .js
         for sdl in self.skill_dict_list:
@@ -712,28 +723,28 @@ class LearningResourceService:
             check2 = re.sub(r'\b(\w+)s\b', r'\1', check2)
             if check1 == check2:
                 document_prepare_set.add(sdl)
-                return remarks, document_prepare_set
+                return remark_list, document_prepare_set
             check1 = sdl
             check1 = check1.replace(".", "")
             check2 = text
             check2 = check2.replace(".", "")
             if check1 == check2:
                 document_prepare_set.add(sdl)
-                return remarks, document_prepare_set
+                return remark_list, document_prepare_set
             check1 = sdl
             check1 = check1.replace("-", " ")
             check2 = text
             check2 = check2.replace("-", " ")
             if check1 == check2:
                 document_prepare_set.add(sdl)
-                return remarks, document_prepare_set
+                return remark_list, document_prepare_set
             check1 = sdl
             check1 = check1.replace(" ", "")
             check2 = text
             check2 = check2.replace(" ", "")
             if check1 == check2:
                 document_prepare_set.add(sdl)
-                return remarks, document_prepare_set
+                return remark_list, document_prepare_set
             check1 = sdl
             check1 = check1.replace(".js", "")
             check1 = check1.replace("js", "")
@@ -742,7 +753,7 @@ class LearningResourceService:
             check2 = check2.replace("js", "")
             if check1 == check2:
                 document_prepare_set.add(sdl)
-                return remarks, document_prepare_set
+                return remark_list, document_prepare_set
 
         found = False
         words = text.split()
@@ -751,23 +762,17 @@ class LearningResourceService:
             if word not in self.partial_search_ignore_list:
                 if word in self.skill_dict_list:
                     document_prepare_set.add(word)
-                    if len(remarks) != 0:
-                        remarks += "\n"
-                    remarks += key
-                    remarks += " also known as "
-                    remarks += word.title()
+                    remark_list.append(key.title() + " also known as " + word.title())
                     found = True
 
         if not found:
-            if len(remarks) != 0:
-                remarks += "\n"
-            remarks += key
-            remarks += " not found"
-        return remarks, document_prepare_set
+            remark_list.append(key.title() + " not found in learning resource database.")
+        return remark_list, document_prepare_set
 
-    def GenerateSkillResourceContent(self, document_prepare_set, remarks, generated_directory):
+    def GenerateSkillResourceContent(self, document_prepare_set, generated_directory):
         skill_dict = {}
         html_content = ""
+        remark_list = []
         for d in document_prepare_set:
             if d in self.skill_dict_list:
                 v = self.skill_dict_list.get(d)
@@ -775,10 +780,7 @@ class LearningResourceService:
             else:
                 continue
             if not os.path.isfile(path):
-                if len(remarks) != 0:
-                    remarks += "\n"
-                remarks += "can't generate content for "
-                remarks += d.title()
+                remark_list.append(d.title() + " not found in learning resource database.")
             else:
                 with open(path, "r", encoding="utf-8") as file:
                     title = d.title()
@@ -795,7 +797,7 @@ class LearningResourceService:
             file.close()
         pypandoc.convert_text(html_content, 'docx', format='html',
                               outputfile="output/" + generated_directory + "/skill learning resource.docx")
-        return remarks, skill_dict
+        return remark_list, skill_dict
 
     """
     This method to zip all the file and ready to send to the user
@@ -819,7 +821,7 @@ class LearningResourceService:
     def GenerateLearningResource(self, resume, job_description, company_name, generated_directory):
 
         result_dict = {"Skill Learning Resource Content": None,
-                       "Skill Learning Resource Remarks": str(""),
+                       "Skill Learning Resource Remarks": None,
                        "Match Score": None}
 
         if not os.path.exists("output"):
@@ -840,9 +842,7 @@ class LearningResourceService:
             except OSError as e:
                 print(f"Error: {f} : {e.strerror}")
 
-
         result = self.GenerateSkillMatchScore(resume, job_description)
-
 
         job_skills = result["Job Skills List"]
         result_dict["Match Score"] = result["Match Score"]
@@ -853,7 +853,7 @@ class LearningResourceService:
             if text in self.leetcode_list:
                 print("Getting leetcode learning resource..")
                 debug_result = self.GenerateLeetcodeResource(company_name, generated_directory)
-                if debug_result !="LEETCODE SUCCESS":
+                if debug_result != "LEETCODE SUCCESS":
                     return debug_result
                 break
 
@@ -884,6 +884,7 @@ class LearningResourceService:
 
 app = Flask(__name__)
 learning_resource = LearningResourceService()
+#learning_resource.SkillReClassification()
 
 
 # @app.route('/generate_learning_resource', methods=['GET'])
@@ -959,9 +960,11 @@ IDE:VS Code, IntelliJ, Anaconda, Pycharm
     learning_resource_zip_path = "output/" + generated_directory + "/learning resource.zip"
     return send_file(learning_resource_zip_path, as_attachment=True, download_name='learning resource.zip')
 
+
 @app.route("/ping")
 def ping():
     return 'ping'
+
 
 if __name__ == '__main__':
     serve(app, host='0.0.0.0', port=5000)
