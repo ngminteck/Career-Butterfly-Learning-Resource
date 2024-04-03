@@ -11,7 +11,7 @@ import zipfile
 import html2text
 import json
 import re
-from flask import Flask, send_file, request
+from flask import Flask, send_file, request,jsonify
 from spacy.matcher import PhraseMatcher
 from skillNer.general_params import SKILL_DB
 from skillNer.skill_extractor_class import SkillExtractor
@@ -92,6 +92,7 @@ class LearningResourceService:
     except, dash which keep only if in between 2 word, 
     dot if in between 2 word and if . is the first character of the word
     """
+
     @staticmethod
     def WordPreprocessing(string_text):
         string_text = string_text.replace("[", "")
@@ -124,6 +125,7 @@ class LearningResourceService:
     """
     Convert HTML to text format, remove all image, link and rich text format
     """
+
     def ConvertHtmlToString(self, html_text):
         h = html2text.HTML2Text()
         h.ignore_images = True
@@ -133,23 +135,14 @@ class LearningResourceService:
         string_text = h.handle(html_text)
         string_text = re.sub(r'https://\S+', '', string_text)
         string_text = re.sub(r'[^\x00-\x7F]+', '', string_text)
-        string_text = string_text.replace("[1]", "")
-        string_text = string_text.replace("[2]", "")
-        string_text = string_text.replace("[3]", "")
-        string_text = string_text.replace("[4]", "")
-        string_text = string_text.replace("[5]", "")
-        string_text = string_text.replace("[6]", "")
-        string_text = string_text.replace("[7]", "")
-        string_text = string_text.replace("[8]", "")
-        string_text = string_text.replace("[9]", "")
-        string_text = string_text.replace("[0]", "")
-        string_text = string_text.replace("**", "")
+        string_text = re.sub(r'\[\d+]\s*', '', string_text)
         string_text = self.WordPreprocessing(string_text)
         return string_text
 
     """
     Convert HTML to text format, keep all image and link, but remove rich text format
     """
+
     @staticmethod
     def ConvertHtmlToString2(html_text):
         h = html2text.HTML2Text()
@@ -158,22 +151,15 @@ class LearningResourceService:
         h.inline_links = False
         h.reference_links = False
         string_text = h.handle(html_text)
-        string_text = string_text.replace("[1]", "")
-        string_text = string_text.replace("[2]", "")
-        string_text = string_text.replace("[3]", "")
-        string_text = string_text.replace("[4]", "")
-        string_text = string_text.replace("[5]", "")
-        string_text = string_text.replace("[6]", "")
-        string_text = string_text.replace("[7]", "")
-        string_text = string_text.replace("[8]", "")
-        string_text = string_text.replace("[9]", "")
-        string_text = string_text.replace("[0]", "")
+        string_text = re.sub(r'[^\x00-\x7F]+', '', string_text)
+        string_text = re.sub(r'\[\d+]\s*', '', string_text)
         string_text = string_text.replace("**", "")
         return string_text
 
     """
     Below method just how construct the skill dict list, import & export data
     """
+
     def AddSkillDictList(self, name, keyword, groups=None):
         if name not in self.skill_dict_list:
             self.skill_dict_list[name] = Skill(name, keyword, groups)
@@ -328,18 +314,19 @@ class LearningResourceService:
         self.partial_match_replace_dict_list["ms"] = "microsoft"
         self.partial_match_replace_dict_list["db"] = "database"
 
-
     """
     not in use, this for if handle more than 1 request
     """
+
     def GetRequestQueueNo(self):
-        #self.request_queue_no += 1
+        # self.request_queue_no += 1
         return self.request_queue_no
 
     """
     This function for finding all technical term keyword from all skill the learning resource, 
     so that we can group those skill by relation.
     """
+
     def FindClassificationKeyword(self):
         directory = 'skill'
         filenames = [f for f in listdir(directory) if isfile(join(directory, f))]
@@ -388,6 +375,7 @@ class LearningResourceService:
     """
     This function for classified all skill in the relation keyword.
     """
+
     def SkillReClassification(self):
         self.backup_keyword_dict_list.clear()
         for s in self.skill_dict_list:
@@ -457,6 +445,7 @@ class LearningResourceService:
     the second stage is using spacy skillNer model to extract all the hard skill and soft skill are not in the 
     skill_dict_list
     """
+
     def ExtractSkillKeyword(self, text):
         skill_set = set()
         text = self.WordPreprocessing(text)
@@ -501,6 +490,7 @@ class LearningResourceService:
     """
     This function for compare both user and job description skill 
     """
+
     def GenerateSkillMatchScore(self, your_skill, job_skill):
         result_dict = {"Your Skills List": None, "Job Skills List": None, "Match Score": None}
         print("extract resume skill...")
@@ -552,6 +542,7 @@ class LearningResourceService:
     which consist frequency question from the company and
     learning resource to learn all different type of question tag.
     """
+
     def GenerateLeetcodeResource(self, company, generated_directory):
 
         check_company = company
@@ -563,19 +554,7 @@ class LearningResourceService:
                 company_name_to_search = self.leetcode_company_dict_list[c]
                 break
 
-
         if company_name_to_search == "":
-            try:
-                shutil.copyfile("leetcode/leetcode learning resource.html", "output/" + generated_directory +
-                                "/leetcode learning resource.html")
-            except:
-                return "IF BLOCK - Generate leetcode learning resource.html failed."
-            try:
-                shutil.copyfile("leetcode/leetcode learning resource.docx", "output/" + generated_directory +
-                                "/leetcode learning resource.docx")
-            except:
-                return "IF BLOCK - Generate leetcode learning resource.docx failed."
-
             file_to_open = "leetcode/Top 100 Question List.csv"
             if os.path.exists(file_to_open):
                 df = pd.read_csv(file_to_open)
@@ -586,44 +565,12 @@ class LearningResourceService:
                           index=False)
             else:
                 return "IF BLOCK - Generate leetcode question list failed."
+            try:
+                shutil.copyfile("leetcode/leetcode learning resource.html", "output/" + generated_directory +
+                                "/leetcode learning resource.html")
+            except:
+                return "IF BLOCK - Generate leetcode learning resource.html failed."
         else:
-            html_content = ""
-            title = "<h1><u><b>" + company + " Leetcode Tag Type Appear in the Question Count</b></u></h1>\n"
-            html_content += title
-            html_content += "<table>\n"
-            html_content += "<tr>\n"
-            html_content += "  <th>Tag</th>\n"
-            html_content += "  <th>Count</th>\n"
-            html_content += "</tr>\n"
-            file_to_open = "company-leetcode-question-tag-count/" + company_name_to_search + ".csv"
-            if os.path.exists(file_to_open):
-                df = pd.read_csv(file_to_open)
-                for index, row in df.iterrows():
-                    html_content += "<tr>\n"
-                    tag_html = "  <td>" + str(row["Tag"]) + "</td>\n"
-                    count_html = "  <td>" + str(row["Appearance"]) + "</td>\n"
-                    html_content += tag_html
-                    html_content += count_html
-                    html_content += "</tr>\n"
-                html_content += "</table>\n"
-            else:
-                return file_to_open + " not exist."
-
-            file_to_open = "leetcode/leetcode learning resource.html"
-            if os.path.exists(file_to_open):
-                with open(file_to_open, "r", encoding="utf-8") as file:
-                    html_content += file.read()
-                    file.close()
-            else:
-                return "ELSE BLOCK - in reading leetcode resource.html error."
-
-            with (open("output/" + generated_directory + "/leetcode learning resource.html", 'w', encoding='utf-8') as
-                  file):
-                file.write(html_content)
-                file.close()
-            pypandoc.convert_text(html_content, 'docx', format='html', outputfile="output/" + generated_directory +
-                                                                                  "/leetcode learning resource.docx")
-
             file_to_open = "company-leetcode-question-list/" + company_name_to_search + ".csv"
             if os.path.exists(file_to_open):
                 df1 = pd.read_csv(file_to_open)
@@ -650,7 +597,40 @@ class LearningResourceService:
                                 index=False)
             else:
                 return file_to_open + " not exist."
-            return "LEETCODE SUCCESS"
+
+            file_to_open = "company-leetcode-question-tag-count/" + company_name_to_search + ".csv"
+            if os.path.exists(file_to_open):
+                df = pd.read_csv(file_to_open)
+                html_content = ""
+                title = "<h1><u><b>" + company + " Leetcode Tag Type Appear in the Question Count</b></u></h1>\n"
+                html_content += title
+                html_content += "<table>\n"
+                html_content += "<tr>\n"
+                html_content += "  <th>Tag</th>\n"
+                html_content += "  <th>Count</th>\n"
+                html_content += "</tr>\n"
+                for index, row in df.iterrows():
+                    html_content += "<tr>\n"
+                    tag_html = "  <td>" + str(row["Tag"]) + "</td>\n"
+                    count_html = "  <td>" + str(row["Appearance"]) + "</td>\n"
+                    html_content += tag_html
+                    html_content += count_html
+                    html_content += "</tr>\n"
+                html_content += "</table>\n"
+                file_to_open = "leetcode/leetcode learning resource.html"
+                if os.path.exists(file_to_open):
+                    with open(file_to_open, "r", encoding="utf-8") as file:
+                        html_content += file.read()
+                        file.close()
+                    with (open("output/" + generated_directory + "/leetcode learning resource.html", 'w',
+                               encoding='utf-8') as file):
+                        file.write(html_content)
+                        file.close()
+                else:
+                    return "ELSE BLOCK - in reading leetcode resource.html error."
+            else:
+                return file_to_open + " not exist."
+            return "Getting leetcode resource successfully."
 
     """
     This method is generate the skill learning resource which the job description required and the user did not 
@@ -658,6 +638,7 @@ class LearningResourceService:
     It chopped up 3 stages, preprocessing which consist (filter and search) and generate the skill learning resource
     content.
     """
+
     def GenerateSkillResource(self, skills, generated_directory):
         result_dict = {"Skill Learning Resource Content": None, "Skill Learning Resource Remarks": None}
         remarks_list = []
@@ -795,13 +776,13 @@ class LearningResourceService:
                   encoding='utf-8') as file:
             file.write(html_content)
             file.close()
-        pypandoc.convert_text(html_content, 'docx', format='html',
-                              outputfile="output/" + generated_directory + "/skill learning resource.docx")
+
         return remark_list, skill_dict
 
     """
     This method to zip all the file and ready to send to the user
     """
+
     @staticmethod
     def ZipLearningResource(generated_directory):
         directory_path = "output/" + generated_directory
@@ -818,11 +799,15 @@ class LearningResourceService:
     """
     The main function which the user will call from the flask.
     """
+
     def GenerateLearningResource(self, resume, job_description, company_name, generated_directory):
 
         result_dict = {"Skill Learning Resource Content": None,
-                       "Skill Learning Resource Remarks": None,
-                       "Match Score": None}
+                       "Leetcode Question List": None,
+                       "Leetcode Learning Resource Content": None}
+
+        debug_list = {"Skill Learning Resource Remarks": None,
+                      "Match Score": None}
 
         if not os.path.exists("output"):
             os.makedirs("output")
@@ -845,17 +830,7 @@ class LearningResourceService:
         result = self.GenerateSkillMatchScore(resume, job_description)
 
         job_skills = result["Job Skills List"]
-        result_dict["Match Score"] = result["Match Score"]
-
-        for i in range(len(job_skills)):
-            text = job_skills[i]
-            text = text.lower()
-            if text in self.leetcode_list:
-                print("Getting leetcode learning resource..")
-                debug_result = self.GenerateLeetcodeResource(company_name, generated_directory)
-                if debug_result != "LEETCODE SUCCESS":
-                    return debug_result
-                break
+        debug_list["Match Score"] = result["Match Score"]
 
         ms_list = result["Match Score"]
         difference_skill_dict_list = {}
@@ -869,27 +844,65 @@ class LearningResourceService:
             print("Getting skill learning resource..")
             skill_result_dict = self.GenerateSkillResource(difference_skill_dict_list, generated_directory)
             result_dict["Skill Learning Resource Content"] = skill_result_dict["Skill Learning Resource Content"]
-            result_dict["Skill Learning Resource Remarks"] = skill_result_dict["Skill Learning Resource Remarks"]
+            debug_list["Skill Learning Resource Remarks"] = skill_result_dict["Skill Learning Resource Remarks"]
 
-        filename = "output/" + generated_directory + "/response.json"
-        # print(result_dict["Skill Learning Resource Remarks"])
+        for i in range(len(job_skills)):
+            text = job_skills[i]
+            text = text.lower()
+            if text in self.leetcode_list:
+                print("Getting leetcode learning resource..")
+                debug_result = self.GenerateLeetcodeResource(company_name, generated_directory)
+                if debug_result != "Getting leetcode resource successfully.":
+                    return debug_result
+                file_to_open = "output/" + generated_directory + "/leetcode question list.csv"
+                if os.path.exists(file_to_open):
+                    with open(file_to_open, mode='r') as infile:
+                        reader = csv.DictReader(infile)
+                        result_dict["Leetcode Question List"] = [row for row in reader]
 
-        # Serialize and write the list of dictionaries to a file
+                file_to_open = "output/" + generated_directory + "/leetcode learning resource.html"
+                if os.path.exists(file_to_open):
+                    with open(file_to_open, mode='r', encoding="utf-8") as file:
+                        html_content = file.read()
+                        result_dict["Leetcode Learning Resource Content"] = self.ConvertHtmlToString2(html_content)
+                break
+
+        filename = "output/" + generated_directory + "/debug.json"
         with open(filename, 'w') as file:
-            json.dump(result_dict, file, indent=4)
+            json.dump(debug_list, file, indent=4)
+
+        return "success", result_dict
+
+    def DownloadSkillResourceContent(self, generated_directory, docx_format):
+        if docx_format:
+            file_to_open = "output/" + generated_directory + "/skill learning resource.html"
+            if os.path.exists(file_to_open):
+                with open(file_to_open, mode='r', encoding="utf-8") as file:
+                    html_content = file.read()
+                    pypandoc.convert_text(html_content, 'docx', format='html',
+                                          outputfile="output/" + generated_directory + "/skill learning resource.docx")
+
+            file_to_open = "output/" + generated_directory + "/leetcode learning resource.html"
+            if os.path.exists(file_to_open):
+                with open(file_to_open, mode='r', encoding="utf-8") as file:
+                    html_content = file.read()
+                    pypandoc.convert_text(html_content, 'docx', format='html',
+                                          outputfile="output/" + generated_directory
+                                                     + "/leetcode learning resource.docx")
 
         self.ZipLearningResource(generated_directory)
-        return "success"
 
 
 app = Flask(__name__)
 learning_resource = LearningResourceService()
-#learning_resource.SkillReClassification()
+
+
+# learning_resource.SkillReClassification()
 
 
 # @app.route('/generate_learning_resource', methods=['GET'])
-@app.route('/')
-def generate_learning_resource():
+@app.route('/generate_learning_resource_text_format')
+def generate_learning_resource_text_format():
     print("triggered")
 
     resume_sample = """
@@ -953,10 +966,114 @@ IDE:VS Code, IntelliJ, Anaconda, Pycharm
         company = company_sample
 
     generated_directory = str(learning_resource.GetRequestQueueNo())
-    result = learning_resource.GenerateLearningResource(resume, job_description, company, generated_directory)
+    result, learning_resource_content = learning_resource.GenerateLearningResource(resume, job_description, company,
+                                                                                   generated_directory)
     if result != "success":
         return result
 
+    return jsonify(learning_resource_content)
+
+
+@app.route('/generate_learning_resource_html_format')
+def generate_learning_resource_html_format():
+    print("triggered")
+
+    resume_sample = """
+
+Programming languages: C/C++, C#, Java, Python, Groovy, JavaScript, Typescript
+Frameworks & Lib: .NET, Spring, Angular, Cuda, Imgui, WPF, OpenGL, Vulkan, Nvidia PhysX, Pandas, NumPy,
+Scikit learn, Spacy, NLTK, PySpark, Seaborn, Matplotlib, Selenium Base, Junit, PyTest, streamlit, transformers,
+PyTorch, xgboost, restful
+Databases: MS SQL, MySQL, JPA, Cassandra, SQLite, Neo4j
+Cloud: Azure, AWS
+Platform: Window, Linux, Ubuntu, Databricks
+Game Engine: Unreal Engine, Unity
+Web Development: HTML, CSS
+IDE:VS Code, IntelliJ, Anaconda, Pycharm
+
+    """
+
+    job_description_sample = """
+    Responsibilities:\nCollaborate with business stakeholders to understand their data needs and objectives.\n
+    Collect, clean, and preprocess data from various sources for analysis.\n
+    Perform exploratory data analysis to identify trends, patterns, and correlations.\n
+    Develop and implement predictive models and machine learning algorithms to solve business challenges.\n
+    Apply statistical analysis techniques to analyze complex datasets and draw meaningful conclusions.\n
+    Create data visualizations and reports to communicate insights effectively to non-technical audiences.\n
+    Collaborate with data engineers to optimize data pipelines for efficient data processing.\n
+    Conduct A/B testing and experimentation to evaluate the effectiveness of different strategies.\n
+    Stay up-to-date with advancements in data science, machine learning, and artificial intelligence.\n
+    Assist in the development and deployment of machine learning models into production environments.\n
+    Provide data-driven insights and recommendations to support strategic decision-making.\n
+    Collaborate with other data scientists, analysts, and cross-functional teams to drive data initiatives.\n
+    Requirements:\n
+    Bachelor's degree in Data Science, Computer Science, Statistics, Mathematics, or a related field 
+    (or equivalent practical experience).\n
+    Proven experience as a Data Scientist or similar role, with a portfolio of data science projects that 
+    demonstrate your analytical skills.\n
+    Proficiency in programming languages such as Python or R for data manipulation and analysis.\n
+    Strong understanding of statistical analysis, machine learning algorithms, and data visualization techniques.\n
+    Experience with machine learning frameworks and libraries (e.g., scikit-learn, TensorFlow, PyTorch).\n
+    Familiarity with data manipulation libraries (e.g., Pandas, NumPy) and data visualization tools (e.g.,
+     Matplotlib, Seaborn).\nSolid understanding of SQL and database concepts for querying and extracting data.\n
+     Excellent problem-solving skills and the ability to work with complex, unstructured datasets.\n
+     Effective communication skills to explain technical concepts to non-technical stakeholders.\n
+     Experience with big data technologies (e.g., Hadoop, Spark) is a plus.\n
+     Knowledge of cloud platforms and services for data analysis (e.g., AWS, Azure) is advantageous.\n
+     Familiarity with natural language processing (NLP) and text analysis is a plus.\n
+     Advanced degree (Master's or PhD) in a related field is beneficial but not required.
+    """
+    company_sample = "JPMorgan"
+
+    resume = request.args.get('param1', default=None, type=str)
+    job_description = request.args.get('param2', default=None, type=str)
+    company = request.args.get('param3', default=None, type=str)
+
+    if resume is None:
+        resume = resume_sample
+
+    if job_description is None:
+        job_description = job_description_sample
+
+    if company is None:
+        company = company_sample
+
+    generated_directory = str(learning_resource.GetRequestQueueNo())
+    result, learning_resource_content = learning_resource.GenerateLearningResource(resume, job_description, company,
+                                                                                   generated_directory)
+    if result != "success":
+        return result
+
+    html_content = ""
+    file_to_open = "output/" + generated_directory + "/skill learning resource.html"
+    if os.path.exists(file_to_open):
+        with open(file_to_open, "r", encoding="utf-8") as file:
+            html_content = file.read()
+
+    file_to_open = "output/" + generated_directory + "/leetcode question list.csv"
+    if os.path.exists(file_to_open):
+        df = pd.read_csv(file_to_open)
+        html_content += "<h1><u><b>"
+        html_content += company
+        html_content += " 100 Leetcode QuestionList</b></u></h1>"
+        html_content += df.to_html()
+
+    file_to_open = "output/" + generated_directory + "/leetcode learning resource.html"
+    if os.path.exists(file_to_open):
+        with open(file_to_open, "r", encoding="utf-8") as file:
+            html_content += file.read()
+
+    return html_content
+
+
+@app.route('/download_learning_resource')
+def download_learning_resource():
+    with_docx_format = request.args.get('param1', default=None, type=str)
+    if with_docx_format is None:
+        with_docx_format = False
+
+    generated_directory = str(learning_resource.GetRequestQueueNo())
+    learning_resource.DownloadSkillResourceContent(generated_directory, True)
     learning_resource_zip_path = "output/" + generated_directory + "/learning resource.zip"
     return send_file(learning_resource_zip_path, as_attachment=True, download_name='learning resource.zip')
 
@@ -968,4 +1085,4 @@ def ping():
 
 if __name__ == '__main__':
     serve(app, host='0.0.0.0', port=5000)
-    #run_simple('localhost', 5000, app)
+    # run_simple('localhost', 5000, app)
