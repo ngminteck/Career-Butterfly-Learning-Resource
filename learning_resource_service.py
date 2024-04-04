@@ -561,8 +561,7 @@ class LearningResourceService:
                 df[company + " Company Frequency"] = 0
                 df["Overall Frequency"] = df["Frequency"]
                 df = df.drop(columns=['Frequency'])
-                df.to_csv("output/" + generated_directory + "/leetcode question list.csv", encoding='utf-8',
-                          index=False)
+                df.to_csv("output/" + generated_directory + "/leetcode question list.csv", encoding='utf-8',index=False)
             else:
                 return "IF BLOCK - Generate leetcode question list failed."
             try:
@@ -630,7 +629,7 @@ class LearningResourceService:
                     return "ELSE BLOCK - in reading leetcode resource.html error."
             else:
                 return file_to_open + " not exist."
-            return "Getting leetcode resource successfully."
+        return "Getting leetcode resource successfully."
 
     """
     This method is generate the skill learning resource which the job description required and the user did not 
@@ -640,18 +639,17 @@ class LearningResourceService:
     """
 
     def GenerateSkillResource(self, skills, generated_directory):
-        result_dict = {"Skill Learning Resource Content": None, "Skill Learning Resource Remarks": None}
+
         remarks_list = []
         remarks, document_prepare_set = self.GenerateSkillResourcePreProcessing(skills)
         remarks_list.extend(remarks)
         if len(document_prepare_set) == 0:
-            return result_dict
+            return remarks_list
 
-        remarks, result_dict["Skill Learning Resource Content"] = (
-            self.GenerateSkillResourceContent(document_prepare_set, generated_directory))
+        remarks = self.GenerateSkillResourceContent(document_prepare_set, generated_directory)
         remarks_list.extend(remarks)
-        result_dict["Skill Learning Resource Remarks"] = remarks_list
-        return result_dict
+
+        return remarks_list
 
     def GenerateSkillResourcePreProcessing(self, skills):
         document_prepare_set = set()
@@ -751,7 +749,6 @@ class LearningResourceService:
         return remark_list, document_prepare_set
 
     def GenerateSkillResourceContent(self, document_prepare_set, generated_directory):
-        skill_dict = {}
         html_content = ""
         remark_list = []
         for d in document_prepare_set:
@@ -770,14 +767,13 @@ class LearningResourceService:
                     html_content += "</b></u></h1>"
                     file_content = file.read()
                     html_content += file_content
-                    skill_dict[title] = self.ConvertHtmlToString2(file_content)
                 file.close()
         with open("output/" + generated_directory + "/skill learning resource.html", 'w',
                   encoding='utf-8') as file:
             file.write(html_content)
             file.close()
 
-        return remark_list, skill_dict
+        return remark_list
 
     """
     This method to zip all the file and ready to send to the user
@@ -801,36 +797,23 @@ class LearningResourceService:
     """
 
     def GenerateLearningResource(self, resume, job_description, company_name, generated_directory):
-
-        result_dict = {"Skill Learning Resource Content": None,
-                       "Leetcode Question List": None,
-                       "Leetcode Learning Resource Content": None}
-
-        debug_list = {"Skill Learning Resource Remarks": None,
-                      "Match Score": None}
+        debug_list = {"Skill Learning Resource Remarks": None, "Match Score": None}
+        result = self.GenerateSkillMatchScore(resume, job_description)
+        job_skills = result["Job Skills List"]
+        debug_list["Match Score"] = result["Match Score"]
 
         if not os.path.exists("output"):
             os.makedirs("output")
         if not os.path.exists("output/" + generated_directory):
             os.makedirs("output/" + generated_directory)
 
-        # Path to the specific folder
         folder_path = "output/" + generated_directory
-
-        # List all files in the folder
         files = glob.glob(folder_path + '/*')
-
-        # Loop through the list and delete each file
         for f in files:
             try:
                 os.remove(f)
             except OSError as e:
                 print(f"Error: {f} : {e.strerror}")
-
-        result = self.GenerateSkillMatchScore(resume, job_description)
-
-        job_skills = result["Job Skills List"]
-        debug_list["Match Score"] = result["Match Score"]
 
         ms_list = result["Match Score"]
         difference_skill_dict_list = {}
@@ -842,9 +825,7 @@ class LearningResourceService:
 
         if len(difference_skill_dict_list) != 0:
             print("Getting skill learning resource..")
-            skill_result_dict = self.GenerateSkillResource(difference_skill_dict_list, generated_directory)
-            result_dict["Skill Learning Resource Content"] = skill_result_dict["Skill Learning Resource Content"]
-            debug_list["Skill Learning Resource Remarks"] = skill_result_dict["Skill Learning Resource Remarks"]
+            debug_list["Skill Learning Resource Remarks"] = self.GenerateSkillResource(difference_skill_dict_list, generated_directory)
 
         for i in range(len(job_skills)):
             text = job_skills[i]
@@ -854,41 +835,26 @@ class LearningResourceService:
                 debug_result = self.GenerateLeetcodeResource(company_name, generated_directory)
                 if debug_result != "Getting leetcode resource successfully.":
                     return debug_result
-                file_to_open = "output/" + generated_directory + "/leetcode question list.csv"
-                if os.path.exists(file_to_open):
-                    with open(file_to_open, mode='r') as infile:
-                        reader = csv.DictReader(infile)
-                        result_dict["Leetcode Question List"] = [row for row in reader]
-
-                file_to_open = "output/" + generated_directory + "/leetcode learning resource.html"
-                if os.path.exists(file_to_open):
-                    with open(file_to_open, mode='r', encoding="utf-8") as file:
-                        html_content = file.read()
-                        result_dict["Leetcode Learning Resource Content"] = self.ConvertHtmlToString2(html_content)
-                break
 
         filename = "output/" + generated_directory + "/debug.json"
         with open(filename, 'w') as file:
             json.dump(debug_list, file, indent=4)
 
-        return "success", result_dict
+        return "success"
 
-    def DownloadSkillResourceContent(self, generated_directory, docx_format):
-        if docx_format:
-            file_to_open = "output/" + generated_directory + "/skill learning resource.html"
-            if os.path.exists(file_to_open):
-                with open(file_to_open, mode='r', encoding="utf-8") as file:
-                    html_content = file.read()
-                    pypandoc.convert_text(html_content, 'docx', format='html',
-                                          outputfile="output/" + generated_directory + "/skill learning resource.docx")
+    def DownloadSkillResourceContent(self, generated_directory):
 
-            file_to_open = "output/" + generated_directory + "/leetcode learning resource.html"
-            if os.path.exists(file_to_open):
-                with open(file_to_open, mode='r', encoding="utf-8") as file:
-                    html_content = file.read()
-                    pypandoc.convert_text(html_content, 'docx', format='html',
-                                          outputfile="output/" + generated_directory
-                                                     + "/leetcode learning resource.docx")
+        file_to_open = "output/" + generated_directory + "/skill learning resource.html"
+        if os.path.exists(file_to_open):
+            with open(file_to_open, mode='r', encoding="utf-8") as file:
+                html_content = file.read()
+                pypandoc.convert_text(html_content, 'docx', format='html',outputfile="output/" + generated_directory + "/skill learning resource.docx")
+
+        file_to_open = "output/" + generated_directory + "/leetcode learning resource.html"
+        if os.path.exists(file_to_open):
+            with open(file_to_open, mode='r', encoding="utf-8") as file:
+                html_content = file.read()
+                pypandoc.convert_text(html_content, 'docx', format='html',outputfile="output/" + generated_directory+ "/leetcode learning resource.docx")
 
         self.ZipLearningResource(generated_directory)
 
@@ -899,148 +865,24 @@ learning_resource = LearningResourceService()
 
 # learning_resource.SkillReClassification()
 
-
-# @app.route('/generate_learning_resource', methods=['GET'])
-@app.route('/generate_learning_resource_text_format')
-def generate_learning_resource_text_format():
-    print("triggered")
-
-    resume_sample = """
-
-Programming languages: C/C++, C#, Java, Python, Groovy, JavaScript, Typescript
-Frameworks & Lib: .NET, Spring, Angular, Cuda, Imgui, WPF, OpenGL, Vulkan, Nvidia PhysX, Pandas, NumPy,
-Scikit learn, Spacy, NLTK, PySpark, Seaborn, Matplotlib, Selenium Base, Junit, PyTest, streamlit, transformers,
-PyTorch, xgboost, restful
-Databases: MS SQL, MySQL, JPA, Cassandra, SQLite, Neo4j
-Cloud: Azure, AWS
-Platform: Window, Linux, Ubuntu, Databricks
-Game Engine: Unreal Engine, Unity
-Web Development: HTML, CSS
-IDE:VS Code, IntelliJ, Anaconda, Pycharm
-
-    """
-
-    job_description_sample = """
-    Responsibilities:\nCollaborate with business stakeholders to understand their data needs and objectives.\n
-    Collect, clean, and preprocess data from various sources for analysis.\n
-    Perform exploratory data analysis to identify trends, patterns, and correlations.\n
-    Develop and implement predictive models and machine learning algorithms to solve business challenges.\n
-    Apply statistical analysis techniques to analyze complex datasets and draw meaningful conclusions.\n
-    Create data visualizations and reports to communicate insights effectively to non-technical audiences.\n
-    Collaborate with data engineers to optimize data pipelines for efficient data processing.\n
-    Conduct A/B testing and experimentation to evaluate the effectiveness of different strategies.\n
-    Stay up-to-date with advancements in data science, machine learning, and artificial intelligence.\n
-    Assist in the development and deployment of machine learning models into production environments.\n
-    Provide data-driven insights and recommendations to support strategic decision-making.\n
-    Collaborate with other data scientists, analysts, and cross-functional teams to drive data initiatives.\n
-    Requirements:\n
-    Bachelor's degree in Data Science, Computer Science, Statistics, Mathematics, or a related field 
-    (or equivalent practical experience).\n
-    Proven experience as a Data Scientist or similar role, with a portfolio of data science projects that 
-    demonstrate your analytical skills.\n
-    Proficiency in programming languages such as Python or R for data manipulation and analysis.\n
-    Strong understanding of statistical analysis, machine learning algorithms, and data visualization techniques.\n
-    Experience with machine learning frameworks and libraries (e.g., scikit-learn, TensorFlow, PyTorch).\n
-    Familiarity with data manipulation libraries (e.g., Pandas, NumPy) and data visualization tools (e.g.,
-     Matplotlib, Seaborn).\nSolid understanding of SQL and database concepts for querying and extracting data.\n
-     Excellent problem-solving skills and the ability to work with complex, unstructured datasets.\n
-     Effective communication skills to explain technical concepts to non-technical stakeholders.\n
-     Experience with big data technologies (e.g., Hadoop, Spark) is a plus.\n
-     Knowledge of cloud platforms and services for data analysis (e.g., AWS, Azure) is advantageous.\n
-     Familiarity with natural language processing (NLP) and text analysis is a plus.\n
-     Advanced degree (Master's or PhD) in a related field is beneficial but not required.
-    """
-    company_sample = "JPMorgan"
-
-    resume = request.args.get('param1', default=None, type=str)
-    job_description = request.args.get('param2', default=None, type=str)
-    company = request.args.get('param3', default=None, type=str)
-
-    if resume is None:
-        resume = resume_sample
-
-    if job_description is None:
-        job_description = job_description_sample
-
-    if company is None:
-        company = company_sample
-
-    generated_directory = str(learning_resource.GetRequestQueueNo())
-    result, learning_resource_content = learning_resource.GenerateLearningResource(resume, job_description, company,
-                                                                                   generated_directory)
-    if result != "success":
-        return result
-
-    return jsonify(learning_resource_content)
-
-
 @app.route('/generate_learning_resource_html_format')
 def generate_learning_resource_html_format():
-    print("triggered")
-
-    resume_sample = """
-
-Programming languages: C/C++, C#, Java, Python, Groovy, JavaScript, Typescript
-Frameworks & Lib: .NET, Spring, Angular, Cuda, Imgui, WPF, OpenGL, Vulkan, Nvidia PhysX, Pandas, NumPy,
-Scikit learn, Spacy, NLTK, PySpark, Seaborn, Matplotlib, Selenium Base, Junit, PyTest, streamlit, transformers,
-PyTorch, xgboost, restful
-Databases: MS SQL, MySQL, JPA, Cassandra, SQLite, Neo4j
-Cloud: Azure, AWS
-Platform: Window, Linux, Ubuntu, Databricks
-Game Engine: Unreal Engine, Unity
-Web Development: HTML, CSS
-IDE:VS Code, IntelliJ, Anaconda, Pycharm
-
-    """
-
-    job_description_sample = """
-    Responsibilities:\nCollaborate with business stakeholders to understand their data needs and objectives.\n
-    Collect, clean, and preprocess data from various sources for analysis.\n
-    Perform exploratory data analysis to identify trends, patterns, and correlations.\n
-    Develop and implement predictive models and machine learning algorithms to solve business challenges.\n
-    Apply statistical analysis techniques to analyze complex datasets and draw meaningful conclusions.\n
-    Create data visualizations and reports to communicate insights effectively to non-technical audiences.\n
-    Collaborate with data engineers to optimize data pipelines for efficient data processing.\n
-    Conduct A/B testing and experimentation to evaluate the effectiveness of different strategies.\n
-    Stay up-to-date with advancements in data science, machine learning, and artificial intelligence.\n
-    Assist in the development and deployment of machine learning models into production environments.\n
-    Provide data-driven insights and recommendations to support strategic decision-making.\n
-    Collaborate with other data scientists, analysts, and cross-functional teams to drive data initiatives.\n
-    Requirements:\n
-    Bachelor's degree in Data Science, Computer Science, Statistics, Mathematics, or a related field 
-    (or equivalent practical experience).\n
-    Proven experience as a Data Scientist or similar role, with a portfolio of data science projects that 
-    demonstrate your analytical skills.\n
-    Proficiency in programming languages such as Python or R for data manipulation and analysis.\n
-    Strong understanding of statistical analysis, machine learning algorithms, and data visualization techniques.\n
-    Experience with machine learning frameworks and libraries (e.g., scikit-learn, TensorFlow, PyTorch).\n
-    Familiarity with data manipulation libraries (e.g., Pandas, NumPy) and data visualization tools (e.g.,
-     Matplotlib, Seaborn).\nSolid understanding of SQL and database concepts for querying and extracting data.\n
-     Excellent problem-solving skills and the ability to work with complex, unstructured datasets.\n
-     Effective communication skills to explain technical concepts to non-technical stakeholders.\n
-     Experience with big data technologies (e.g., Hadoop, Spark) is a plus.\n
-     Knowledge of cloud platforms and services for data analysis (e.g., AWS, Azure) is advantageous.\n
-     Familiarity with natural language processing (NLP) and text analysis is a plus.\n
-     Advanced degree (Master's or PhD) in a related field is beneficial but not required.
-    """
-    company_sample = "JPMorgan"
 
     resume = request.args.get('param1', default=None, type=str)
     job_description = request.args.get('param2', default=None, type=str)
     company = request.args.get('param3', default=None, type=str)
 
-    if resume is None:
-        resume = resume_sample
+    if resume is None or not isinstance(resume, str):
+        resume = ""
 
-    if job_description is None:
-        job_description = job_description_sample
+    if job_description is None or not isinstance(job_description, str):
+        job_description = ""
 
-    if company is None:
-        company = company_sample
+    if job_description is None or not isinstance(company, str):
+        company = ""
 
     generated_directory = str(learning_resource.GetRequestQueueNo())
-    result, learning_resource_content = learning_resource.GenerateLearningResource(resume, job_description, company,
-                                                                                   generated_directory)
+    result = learning_resource.GenerateLearningResource(resume, job_description, company, generated_directory)
     if result != "success":
         return result
 
@@ -1063,19 +905,21 @@ IDE:VS Code, IntelliJ, Anaconda, Pycharm
         with open(file_to_open, "r", encoding="utf-8") as file:
             html_content += file.read()
 
-    return html_content
-
+    if html_content == "":
+        return "No learning content generated."
+    else:
+        return html_content
 
 @app.route('/download_learning_resource')
 def download_learning_resource():
-    with_docx_format = request.args.get('param1', default=None, type=str)
-    if with_docx_format is None:
-        with_docx_format = False
 
     generated_directory = str(learning_resource.GetRequestQueueNo())
-    learning_resource.DownloadSkillResourceContent(generated_directory, True)
+    learning_resource.DownloadSkillResourceContent(generated_directory)
     learning_resource_zip_path = "output/" + generated_directory + "/learning resource.zip"
-    return send_file(learning_resource_zip_path, as_attachment=True, download_name='learning resource.zip')
+    if os.path.exists(learning_resource_zip_path):
+        return send_file(learning_resource_zip_path, as_attachment=True, download_name='learning resource.zip')
+    else:
+        return "Download failed, please try again later."
 
 
 @app.route("/ping")
