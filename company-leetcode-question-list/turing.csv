@@ -1,8 +1,0 @@
-No,Title,Link,Tags,Acceptance,Difficulty,Frequency
-682,Baseball Game,https://leetcode.com/problems/baseball-game/description/,[Array][Stack][Simulation],75.8%,Easy,0.1220392401100567
-20,Valid Parentheses,https://leetcode.com/problems/valid-parentheses/description/,[String][Stack],40.5%,Easy,0.1105768322507929
-997,Find the Town Judge,https://leetcode.com/problems/find-the-town-judge/description/,[Array][Hash Table][Graph],49.8%,Easy,0.0806889112501427
-200,Number of Islands,https://leetcode.com/problems/number-of-islands/description/,[Array][Depth-First Search][Breadth-First Search][Union Find][Matrix],58.5%,Medium,0.0508009902494925
-10,Regular Expression Matching,https://leetcode.com/problems/regular-expression-matching/description/,[String][Dynamic Programming][Recursion],28.1%,Hard,0.0465200156348928
-56,Merge Intervals,https://leetcode.com/problems/merge-intervals/description/,[Array][Sorting],47.1%,Medium,0.0202129165558593
-3,Longest Substring Without Repeating Characters,https://leetcode.com/problems/longest-substring-without-repeating-characters/description/,[Hash Table][String][Sliding Window],34.5%,Medium,0.0077145994953303

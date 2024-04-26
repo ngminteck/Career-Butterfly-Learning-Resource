@@ -11,7 +11,7 @@ import zipfile
 import html2text
 import json
 import re
-from flask import Flask, send_file, request,jsonify
+from flask import Flask, send_file, request, jsonify
 from spacy.matcher import PhraseMatcher
 from skillNer.general_params import SKILL_DB
 from skillNer.skill_extractor_class import SkillExtractor
@@ -544,24 +544,22 @@ class LearningResourceService:
     """
 
     def GenerateLeetcodeResource(self, company, generated_directory):
-
         check_company = company
         check_company = check_company.lower()
         company_name_to_search = str("")
-
         for c in self.leetcode_company_dict_list:
             if c == check_company:
                 company_name_to_search = self.leetcode_company_dict_list[c]
                 break
-
         if company_name_to_search == "":
             file_to_open = "leetcode/Top 100 Question List.csv"
             if os.path.exists(file_to_open):
                 df = pd.read_csv(file_to_open)
-                df[company + " Company Frequency"] = 0
-                df["Overall Frequency"] = df["Frequency"]
+                #df[company + " Company Frequency"] = 0
+                #df["Overall Frequency"] = df["Frequency"]
                 df = df.drop(columns=['Frequency'])
-                df.to_csv("output/" + generated_directory + "/leetcode question list.csv", encoding='utf-8',index=False)
+                df.to_csv("output/" + generated_directory + "/leetcode question list.csv",
+                          encoding='utf-8', index=False)
             else:
                 return "IF BLOCK - Generate leetcode question list failed."
             try:
@@ -573,21 +571,20 @@ class LearningResourceService:
             file_to_open = "company-leetcode-question-list/" + company_name_to_search + ".csv"
             if os.path.exists(file_to_open):
                 df1 = pd.read_csv(file_to_open)
-                df1[company + " Company Frequency"] = df1["Frequency"]
+                #df1[company + " Company Frequency"] = df1["Frequency"]
                 df1 = df1.drop(columns=['Frequency'])
-                df1["Overall Frequency"] = str("")
-                for index, row in df1.iterrows():
-                    no = str(row['No'])
-                    if no in self.leetcode_overall_frequency_dict_list:
-                        df1.at[index, "Overall Frequency"] = self.leetcode_overall_frequency_dict_list[no]
+                #df1["Overall Frequency"] = str("")
+                #for index, row in df1.iterrows():
+                #    no = str(row['No'])
+                #    if no in self.leetcode_overall_frequency_dict_list:
+                #        df1.at[index, "Overall Frequency"] = self.leetcode_overall_frequency_dict_list[no]
             else:
                 return file_to_open + "not exist."
-
             file_to_open = "leetcode/Top 100 Question List.csv"
             if os.path.exists(file_to_open):
                 df = pd.read_csv(file_to_open)
-                df[company + " Company Frequency"] = 0
-                df["Overall Frequency"] = df['Frequency']
+                #df[company + " Company Frequency"] = 0
+                #df["Overall Frequency"] = df['Frequency']
                 df = df.drop(columns=['Frequency'])
                 appended_df = pd.concat([df1, df], ignore_index=True)
                 appended_df = appended_df.drop_duplicates(keep='first')
@@ -596,7 +593,6 @@ class LearningResourceService:
                                 index=False)
             else:
                 return file_to_open + " not exist."
-
             file_to_open = "company-leetcode-question-tag-count/" + company_name_to_search + ".csv"
             if os.path.exists(file_to_open):
                 df = pd.read_csv(file_to_open)
@@ -825,7 +821,8 @@ class LearningResourceService:
 
         if len(difference_skill_dict_list) != 0:
             print("Getting skill learning resource..")
-            debug_list["Skill Learning Resource Remarks"] = self.GenerateSkillResource(difference_skill_dict_list, generated_directory)
+            debug_list["Skill Learning Resource Remarks"] = (
+                self.GenerateSkillResource(difference_skill_dict_list, generated_directory))
 
         for i in range(len(job_skills)):
             text = job_skills[i]
@@ -848,22 +845,46 @@ class LearningResourceService:
         if os.path.exists(file_to_open):
             with open(file_to_open, mode='r', encoding="utf-8") as file:
                 html_content = file.read()
-                pypandoc.convert_text(html_content, 'docx', format='html',outputfile="output/" + generated_directory + "/skill learning resource.docx")
+                pypandoc.convert_text(html_content, 'docx', format='html',
+                                      outputfile="output/" + generated_directory + "/skill learning resource.docx")
 
         file_to_open = "output/" + generated_directory + "/leetcode learning resource.html"
         if os.path.exists(file_to_open):
             with open(file_to_open, mode='r', encoding="utf-8") as file:
                 html_content = file.read()
-                pypandoc.convert_text(html_content, 'docx', format='html',outputfile="output/" + generated_directory+ "/leetcode learning resource.docx")
+                pypandoc.convert_text(html_content, 'docx', format='html',
+                                      outputfile="output/" + generated_directory + "/leetcode learning resource.docx")
 
         self.ZipLearningResource(generated_directory)
+
+    def ExtractSkill(self, text):
+        confidence_tech_skill_list = []
+        non_confidence_tech_skill_list = []
+        result = self.ExtractSkillKeyword(text)
+        for i in range(len(result)):
+            if result[i] in self.skill_dict_list:
+                confidence_tech_skill_list.append(result[i])
+            else:
+                non_confidence_tech_skill_list.append(result[i])
+        return confidence_tech_skill_list, non_confidence_tech_skill_list
 
 
 app = Flask(__name__)
 learning_resource = LearningResourceService()
-
-
 # learning_resource.SkillReClassification()
+
+
+@app.route('/extract_skill')
+def extract_skill():
+    text = request.args.get('param1', default=None, type=str)
+    if text is None or not isinstance(text, str):
+        return str("Please check the type")
+
+    confidence_tech_skill, non_confidence_tech_skill = learning_resource.ExtractSkill(text)
+    result_dict = {'confidence_tech_skill': confidence_tech_skill,
+                   'non_confidence_tech_skill': non_confidence_tech_skill}
+    return jsonify(result_dict)
+
 
 @app.route('/generate_learning_resource_html_format')
 def generate_learning_resource_html_format():
@@ -909,6 +930,7 @@ def generate_learning_resource_html_format():
         return "No learning content generated."
     else:
         return html_content
+
 
 @app.route('/download_learning_resource')
 def download_learning_resource():

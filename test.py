@@ -57,7 +57,8 @@ components.html(response.text, scrolling=True, width=1280, height=720)
 # Define the function to handle the download
 def download_file():
     # Define the base URL of your Flask app
-    base_url = 'http://144.126.241.79/learning_resource'
+    #base_url = 'http://144.126.241.79/learning_resource'
+    base_url = 'http://localhost:5000'
     # Define the route endpoint and parameters
     route = '/download_learning_resource'
     # Make the GET request to the Flask route
