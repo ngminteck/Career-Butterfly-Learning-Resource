@@ -3,8 +3,8 @@ import streamlit.components.v1 as components
 import streamlit as st
 
 # Define the base URL of your Flask app
-base_url = 'http://144.126.241.79/learning_resource'
-
+#base_url = 'http://144.126.241.79/learning_resource'
+base_url = 'http://localhost:8200'
 # Define the route endpoint and parameters
 route = '/generate_learning_resource_html_format'
 resume = """
@@ -58,7 +58,7 @@ components.html(response.text, scrolling=True, width=1280, height=720)
 def download_file():
     # Define the base URL of your Flask app
     #base_url = 'http://144.126.241.79/learning_resource'
-    base_url = 'http://localhost:5000'
+    base_url = 'http://localhost:8200'
     # Define the route endpoint and parameters
     route = '/download_learning_resource'
     # Make the GET request to the Flask route

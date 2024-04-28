@@ -1,0 +1,197 @@
+{
+    "Skill Learning Resource Remarks": [
+        "Microsoft Azure also known as Azure",
+        "Database Query also known as Database",
+        "Database Query also known as Query",
+        "Good Practices not found in learning resource database.",
+        "Communicating not found in learning resource database.",
+        "Computer Science not found in learning resource database.",
+        "Limited not found in learning resource database.",
+        "Drawing not found in learning resource database.",
+        "Data Architectures not found in learning resource database.",
+        "Data not found in learning resource database.",
+        "Scale not found in learning resource database.",
+        "Leadership not found in learning resource database.",
+        "Virtual Team not found in learning resource database.",
+        "Data Engineering not found in learning resource database.",
+        "Dispersed not found in learning resource database.",
+        "Cloud Platform also known as Cloud"
+    ],
+    "Match Score": [
+        {
+            "Skill": "microsoft azure",
+            "Score": 0.0,
+            "Remarks": "Microsoft Azure not found within the user skill."
+        },
+        {
+            "Skill": "azure",
+            "Score": 1.0,
+            "Remarks": "Exact match with one of the user skill."
+        },
+        {
+            "Skill": "c++",
+            "Score": 1.0,
+            "Remarks": "Exact match with one of the user skill."
+        },
+        {
+            "Skill": "nosql",
+            "Score": 0.5,
+            "Remarks": "Nosql is a related with Cassandra, which the user have it"
+        },
+        {
+            "Skill": "c",
+            "Score": 1.0,
+            "Remarks": "Exact match with one of the user skill."
+        },
+        {
+            "Skill": "database",
+            "Score": 0.0,
+            "Remarks": "Database not found within the user skill."
+        },
+        {
+            "Skill": "cloud",
+            "Score": 1.0,
+            "Remarks": "Exact match with one of the user skill."
+        },
+        {
+            "Skill": "databricks",
+            "Score": 0.0,
+            "Remarks": "Databricks not found within the user skill."
+        },
+        {
+            "Skill": "database query",
+            "Score": 0.0,
+            "Remarks": "Database Query not found within the user skill."
+        },
+        {
+            "Skill": "c#",
+            "Score": 1.0,
+            "Remarks": "Exact match with one of the user skill."
+        },
+        {
+            "Skill": "good practices",
+            "Score": 0.0,
+            "Remarks": "Good Practices not found within the user skill."
+        },
+        {
+            "Skill": "communicating",
+            "Score": 0.0,
+            "Remarks": "Communicating not found within the user skill."
+        },
+        {
+            "Skill": "spark",
+            "Score": 0.0,
+            "Remarks": "Spark not found within the user skill."
+        },
+        {
+            "Skill": "computer science",
+            "Score": 0.0,
+            "Remarks": "Computer Science not found within the user skill."
+        },
+        {
+            "Skill": "sql",
+            "Score": 1.0,
+            "Remarks": "Exact match with one of the user skill."
+        },
+        {
+            "Skill": "limited",
+            "Score": 0.0,
+            "Remarks": "Limited not found within the user skill."
+        },
+        {
+            "Skill": "drawing",
+            "Score": 0.0,
+            "Remarks": "Drawing not found within the user skill."
+        },
+        {
+            "Skill": "javascript",
+            "Score": 1.0,
+            "Remarks": "Exact match with one of the user skill."
+        },
+        {
+            "Skill": "data architectures",
+            "Score": 0.0,
+            "Remarks": "Data Architectures not found within the user skill."
+        },
+        {
+            "Skill": "c #",
+            "Score": 1.0,
+            "Remarks": "Exact match with one of the user skill."
+        },
+        {
+            "Skill": "data warehouse",
+            "Score": 0.0,
+            "Remarks": "Data Warehouse not found within the user skill."
+        },
+        {
+            "Skill": "ci",
+            "Score": 0.0,
+            "Remarks": "Ci not found within the user skill."
+        },
+        {
+            "Skill": "data",
+            "Score": 0.0,
+            "Remarks": "Data not found within the user skill."
+        },
+        {
+            "Skill": "synapse",
+            "Score": 0.0,
+            "Remarks": "Synapse not found within the user skill."
+        },
+        {
+            "Skill": "scale",
+            "Score": 0.0,
+            "Remarks": "Scale not found within the user skill."
+        },
+        {
+            "Skill": "distributed",
+            "Score": 0.0,
+            "Remarks": "Distributed not found within the user skill."
+        },
+        {
+            "Skill": "java",
+            "Score": 1.0,
+            "Remarks": "Exact match with one of the user skill."
+        },
+        {
+            "Skill": "leadership",
+            "Score": 0.0,
+            "Remarks": "Leadership not found within the user skill."
+        },
+        {
+            "Skill": "virtual team",
+            "Score": 0.0,
+            "Remarks": "Virtual Team not found within the user skill."
+        },
+        {
+            "Skill": "data engineering",
+            "Score": 0.0,
+            "Remarks": "Data Engineering not found within the user skill."
+        },
+        {
+            "Skill": "python",
+            "Score": 1.0,
+            "Remarks": "Exact match with one of the user skill."
+        },
+        {
+            "Skill": "dispersed",
+            "Score": 0.0,
+            "Remarks": "Dispersed not found within the user skill."
+        },
+        {
+            "Skill": "rdbms",
+            "Score": 0.0,
+            "Remarks": "Rdbms not found within the user skill."
+        },
+        {
+            "Skill": "distributed systems",
+            "Score": 0.0,
+            "Remarks": "Distributed Systems not found within the user skill."
+        },
+        {
+            "Skill": "cloud platform",
+            "Score": 0.0,
+            "Remarks": "Cloud Platform not found within the user skill."
+        }
+    ]
+}

@@ -1,4 +1,4 @@
-name: base
+name: learning_resource_crawler
 channels:
   - anaconda
   - conda-forge
@@ -576,4 +576,3 @@ dependencies:
       - wsproto==1.2.0
       - yfiles-jupyter-graphs==1.5.1
       - zope-interface==6.2
-prefix: C:\Users\ng_mi\anaconda3

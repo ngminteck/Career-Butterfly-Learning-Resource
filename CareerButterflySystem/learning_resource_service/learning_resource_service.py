@@ -18,7 +18,7 @@ from skillNer.skill_extractor_class import SkillExtractor
 from werkzeug.serving import run_simple
 from waitress import serve
 
-main_path = "data/"
+main_path = "../../DataCollection/learning_resource_crawler/data/"
 
 """
 Sorry did not follow in python, all method also lower case.
@@ -36,7 +36,7 @@ class Skill:
         filename = filename.replace('/', '-')
         filename = filename.replace("\\", '-')
         filename = filename + ".html"
-        path = os.path.join("skill", filename)
+        path = os.path.join("skill-learning-resource", filename)
         path = path.replace("\\", '/')
         self.resource_path = path  # for the resource path
         self.keyword_search = keyword  # keyword for searching LLM
@@ -744,6 +744,7 @@ class LearningResourceService:
             if d in self.skill_dict_list:
                 v = self.skill_dict_list.get(d)
                 path = main_path + v.resource_path
+                print(path)
             else:
                 continue
             if not os.path.isfile(path):
@@ -943,5 +944,5 @@ def ping():
 
 
 if __name__ == '__main__':
-    serve(app, host='0.0.0.0', port=5000)
+    serve(app, host='0.0.0.0', port=8200)
     # run_simple('localhost', 5000, app)
