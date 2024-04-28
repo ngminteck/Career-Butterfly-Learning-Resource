@@ -18,6 +18,8 @@ from skillNer.skill_extractor_class import SkillExtractor
 from werkzeug.serving import run_simple
 from waitress import serve
 
+main_path = "data/"
+
 """
 Sorry did not follow in python, all method also lower case.
 """
@@ -182,7 +184,7 @@ class LearningResourceService:
         self.AddSkillDictList(name, search_keyword, groups)
 
     def ImportClassificationSet(self):
-        file = open("word classification/classification words.txt", "r")
+        file = open(main_path + "classification words.txt", "r")
         for word in file:
             word = word.replace("\n", "")
             word_list = word.split()
@@ -195,8 +197,7 @@ class LearningResourceService:
         file.close()
 
     def ExportSkillDictList(self):
-        file_path = "skills.csv"
-        with open(file_path, 'w', newline='') as file:
+        with open(main_path + "skills.csv", 'w', newline='') as file:
             writer = csv.writer(file)
             writer.writerow(["Name", "Search Keyword", "Resource Path", "Groups"])
             for key, value in self.skill_dict_list.items():
@@ -212,14 +213,9 @@ class LearningResourceService:
 
                 writer.writerow([name, search, path, groups])
             file.close()
-        with open('skills.txt', 'w') as f:
-            for i in self.skill_dict_list:
-                f.write(i)
-                f.write("\n")
-            f.close()
 
     def ImportSkillDictList(self):
-        df = pd.read_csv("skills.csv")
+        df = pd.read_csv(main_path + "skills.csv")
         for index, row in df.iterrows():
             name = str(row['Name'])
             keyword = str(row['Search Keyword'])
@@ -236,8 +232,7 @@ class LearningResourceService:
             self.AddSkillDictList(name, keyword, groups_set)
 
     def ExportGroupDictList(self):
-        file_path = "groups.csv"
-        with open(file_path, 'w', newline='') as file:
+        with open(main_path + "groups.csv", 'w', newline='') as file:
             writer = csv.writer(file)
             writer.writerow(["Name", "skills"])
             for key, value in self.group_dict_list.items():
@@ -251,8 +246,7 @@ class LearningResourceService:
             file.close()
 
     def ExportNotFoundSet(self):
-        file_path = "not found.csv"
-        with open(file_path, 'w', newline='') as file:
+        with open(main_path + "not found.csv", 'w', newline='') as file:
             writer = csv.writer(file)
             writer.writerow(["Name", "Search Keyword", "Resource Path"])
             for key, value in self.not_found_dict_list.items():
@@ -277,8 +271,7 @@ class LearningResourceService:
                 self.three_keyword_dict_list[s] = s
 
     def InitLeetCodeCompanyNameDictList(self):
-        f = open("leetcode/companies.txt", "r")
-
+        f = open(main_path + "companies.txt", "r")
         for c in f:
             c = c.replace("\n", "")
             key = c
@@ -287,7 +280,7 @@ class LearningResourceService:
         f.close()
 
     def InitLeetcodeOverallFrequencyDictList(self):
-        df = pd.read_csv("leetcode/Question List.csv")
+        df = pd.read_csv(main_path + "Question List.csv")
         for index, row in df.iterrows():
             self.leetcode_overall_frequency_dict_list[str(row["No"])] = str(row["Frequency"])
 
@@ -328,7 +321,7 @@ class LearningResourceService:
     """
 
     def FindClassificationKeyword(self):
-        directory = 'skill'
+        directory = main_path + 'skill-learning-resource'
         filenames = [f for f in listdir(directory) if isfile(join(directory, f))]
         skillNer_dict_list = {}
 
@@ -366,7 +359,7 @@ class LearningResourceService:
                 except:
                     print(f, "error.")
 
-        with open('word classification/skillNer word.txt', 'w', encoding="utf-8") as f:
+        with open(main_path + 'skillNer word.txt', 'w', encoding="utf-8") as f:
             for s in sorted(skillNer_dict_list, key=skillNer_dict_list.get, reverse=True):
                 f.write(str(s) + " - " + str(skillNer_dict_list[s]))
                 f.write('\n')
@@ -382,7 +375,7 @@ class LearningResourceService:
             self.backup_keyword_dict_list[s] = self.skill_dict_list[s].keyword_search
         self.skill_dict_list.clear()
         self.group_dict_list.clear()
-        directory = 'skill'
+        directory = main_path +'skill-learning-resource'
         filenames = [f for f in listdir(directory) if isfile(join(directory, f))]
 
         for f in filenames:
@@ -552,7 +545,7 @@ class LearningResourceService:
                 company_name_to_search = self.leetcode_company_dict_list[c]
                 break
         if company_name_to_search == "":
-            file_to_open = "leetcode/Top 100 Question List.csv"
+            file_to_open = main_path + "Top 100 Question List.csv"
             if os.path.exists(file_to_open):
                 df = pd.read_csv(file_to_open)
                 #df[company + " Company Frequency"] = 0
@@ -563,12 +556,12 @@ class LearningResourceService:
             else:
                 return "IF BLOCK - Generate leetcode question list failed."
             try:
-                shutil.copyfile("leetcode/leetcode learning resource.html", "output/" + generated_directory +
+                shutil.copyfile(main_path + "leetcode learning resource.html", "output/" + generated_directory +
                                 "/leetcode learning resource.html")
             except:
                 return "IF BLOCK - Generate leetcode learning resource.html failed."
         else:
-            file_to_open = "company-leetcode-question-list/" + company_name_to_search + ".csv"
+            file_to_open = main_path + "company-leetcode-question-list/" + company_name_to_search + ".csv"
             if os.path.exists(file_to_open):
                 df1 = pd.read_csv(file_to_open)
                 #df1[company + " Company Frequency"] = df1["Frequency"]
@@ -580,7 +573,7 @@ class LearningResourceService:
                 #        df1.at[index, "Overall Frequency"] = self.leetcode_overall_frequency_dict_list[no]
             else:
                 return file_to_open + "not exist."
-            file_to_open = "leetcode/Top 100 Question List.csv"
+            file_to_open = main_path + "Top 100 Question List.csv"
             if os.path.exists(file_to_open):
                 df = pd.read_csv(file_to_open)
                 #df[company + " Company Frequency"] = 0
@@ -593,7 +586,7 @@ class LearningResourceService:
                                 index=False)
             else:
                 return file_to_open + " not exist."
-            file_to_open = "company-leetcode-question-tag-count/" + company_name_to_search + ".csv"
+            file_to_open = main_path + "company-leetcode-question-tag-count/" + company_name_to_search + ".csv"
             if os.path.exists(file_to_open):
                 df = pd.read_csv(file_to_open)
                 html_content = ""
@@ -612,7 +605,7 @@ class LearningResourceService:
                     html_content += count_html
                     html_content += "</tr>\n"
                 html_content += "</table>\n"
-                file_to_open = "leetcode/leetcode learning resource.html"
+                file_to_open = main_path + "leetcode learning resource.html"
                 if os.path.exists(file_to_open):
                     with open(file_to_open, "r", encoding="utf-8") as file:
                         html_content += file.read()
@@ -750,7 +743,7 @@ class LearningResourceService:
         for d in document_prepare_set:
             if d in self.skill_dict_list:
                 v = self.skill_dict_list.get(d)
-                path = v.resource_path
+                path = main_path + v.resource_path
             else:
                 continue
             if not os.path.isfile(path):
